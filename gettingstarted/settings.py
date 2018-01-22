@@ -155,3 +155,8 @@ LOGGING = {
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
