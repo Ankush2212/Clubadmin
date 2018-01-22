@@ -25,7 +25,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = 'CHANGE_ME!!!! (P.S. the SECRET_KEY environment variable will be used, if set, instead).'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = false
+DEBUG = True
 
 #ALLOWED_HOSTS = ['https://stark-dusk-77176.herokuapp.com']
 ALLOWED_HOSTS =  ['stark-dusk-77176.herokuapp.com', '.herokuapp.com']
