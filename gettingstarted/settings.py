@@ -27,7 +27,8 @@ SECRET_KEY = 'CHANGE_ME!!!! (P.S. the SECRET_KEY environment variable will be us
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS =  ['stark-dusk-77176.herokuapp.com', '.herokuapp.com']
+# ALLOWED_HOSTS =  ['stark-dusk-77176.herokuapp.com', '.herokuapp.com']
+ALLOWED_HOSTS =  ['*']
 
 
 
@@ -78,13 +79,7 @@ WSGI_APPLICATION = 'gettingstarted.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
-   'OPTIONS': {
-        'timeout': 50,
-    }
+    'default': dj_database_url.config()
 }
 
 # add this
@@ -94,6 +89,8 @@ DATABASES['default'].update(db_from_env)
 DATABASES['default']['CONN_MAX_AGE'] = 500
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
+# Honor the 'X-Forwarded-Proto' header for request.is_secure() 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -156,7 +153,10 @@ LOGGING = {
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
 
-# try:
-    # from .local_settings import *
-# except ImportError:
-    # pass
+# Tries to import local settings, if on dev, 
+# import everything in local_Settings, which overrides the dj_database_url
+# If on deploy, local_settings won't be found so just ignore the ImportError
+try:
+    from .local_settings import *
+except ImportError:
+    pass
