@@ -79,7 +79,13 @@ WSGI_APPLICATION = 'gettingstarted.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+   'OPTIONS': {
+        'timeout': 50,
+    }
 }
 
 # add this
@@ -153,10 +159,3 @@ LOGGING = {
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
 
-# Tries to import local settings, if on dev, 
-# import everything in local_Settings, which overrides the dj_database_url
-# If on deploy, local_settings won't be found so just ignore the ImportError
-try:
-    from .local_settings import *
-except ImportError:
-    pass
