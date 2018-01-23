@@ -87,7 +87,6 @@ WSGI_APPLICATION = 'gettingstarted.wsgi.application'
         # 'timeout': 50,
     # }
 # }
-#DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 
 # add this
 
