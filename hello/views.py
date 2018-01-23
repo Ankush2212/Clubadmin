@@ -89,17 +89,17 @@ def logout1(request):
 
 #backed login
 
-# def addadmindetails(request):
+def addadmindetails(request):
 
-	# adminsignup1 = adminsignup()
-	# adminsignup1.firstname='admin'
-	# #adminsignup1.lastname='admin'
-	# adminsignup1.email='admin@gmail.com'
-	# adminsignup1.password='admin@123' 
-	# adminsignup1.save()
-	# #contacts = adminsignup.objects.all()
-	# return HttpResponse("You're logged out.")
-	# #return render(request)
+	adminsignup1 = adminsignup()
+	adminsignup1.firstname='admin'
+	#adminsignup1.lastname='admin'
+	adminsignup1.email='admin@gmail.com'
+	adminsignup1.password='admin@123' 
+	adminsignup1.save()
+	#contacts = adminsignup.objects.all()
+	return HttpResponse("You're logged out.")
+	#return render(request)
 	
 ##################################backed login##############################################
 def admin(request):
