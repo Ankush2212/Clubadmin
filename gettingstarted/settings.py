@@ -82,8 +82,8 @@ DATABASES = {
 db_from_env = dj_database_url.config()
 # DATABASES['default'].update(db_from_env)
 DATABASES['default'] =  dj_database_url.config()
-DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
-DATABASES['default']['NAME'] = 'django'
+#DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+#DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 DATABASES['default']['CONN_MAX_AGE'] = 500
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
