@@ -77,7 +77,6 @@ WSGI_APPLICATION = 'gettingstarted.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-		'NAME': os.path.join(BASE_DIR, 'public.db'),
     }
 }
 db_from_env = dj_database_url.config()
