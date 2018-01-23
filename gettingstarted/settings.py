@@ -25,7 +25,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = 'CHANGE_ME!!!! (P.S. the SECRET_KEY environment variable will be used, if set, instead).'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS =  ['stark-dusk-77176.herokuapp.com', '.herokuapp.com']
 ALLOWED_HOSTS =  ['*']
@@ -90,10 +90,10 @@ DATABASES = {
 
 # add this
 
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
-#DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
-DATABASES['default']['CONN_MAX_AGE'] = 500
+# db_from_env = dj_database_url.config()
+# DATABASES['default'].update(db_from_env)
+# DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+# DATABASES['default']['CONN_MAX_AGE'] = 500
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 # Honor the 'X-Forwarded-Proto' header for request.is_secure() 
