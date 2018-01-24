@@ -85,24 +85,28 @@ WSGI_APPLICATION = 'gettingstarted.wsgi.application'
     # }
 # }
 
-DATABASES = {
+# DATABASES = {
  
- 'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'test',  # Or path to database file if using sqlite3.
-        'USER': 'postgres',  # Not used with sqlite3.
-        'PASSWORD': '',  # Not used with sqlite3.
-        'HOST': '',  # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',  # Set to empty string for default. Not used with sqlite3. 
- }
+ # 'default': {
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        # 'NAME': 'test',  # Or path to database file if using sqlite3.
+        # 'USER': 'postgres',  # Not used with sqlite3.
+        # 'PASSWORD': '',  # Not used with sqlite3.
+        # 'HOST': '',  # Set to empty string for localhost. Not used with sqlite3.
+        # 'PORT': '',  # Set to empty string for default. Not used with sqlite3. 
+ # }
 
+# }
+
+DATABASES = {
+    'default': dj_database_url.config()
 }
 
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
-DATABASES['default'] =  dj_database_url.config()
-DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
-DATABASES['default']['NAME'] = 'test'
+# db_from_env = dj_database_url.config(conn_max_age=600)
+# DATABASES['default'].update(db_from_env)
+# DATABASES['default'] =  dj_database_url.config()
+# DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+# DATABASES['default']['NAME'] = 'test'
 #DATABASES['default']['CONN_MAX_AGE'] = 500
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
