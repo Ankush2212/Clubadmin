@@ -102,11 +102,11 @@ DATABASES = {
     'default': dj_database_url.config()
 }
 
-# db_from_env = dj_database_url.config(conn_max_age=600)
-# DATABASES['default'].update(db_from_env)
-# DATABASES['default'] =  dj_database_url.config()
-# DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
-# DATABASES['default']['NAME'] = 'test'
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
+DATABASES['default'] =  dj_database_url.config()
+DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+DATABASES['default']['NAME'] = 'test'
 #DATABASES['default']['CONN_MAX_AGE'] = 500
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
