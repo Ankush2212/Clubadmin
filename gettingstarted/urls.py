@@ -24,6 +24,7 @@ urlpatterns = [
 	url(r'^backend/adduser1', hello.views.adduser1, name='adduser1'), 
 	url(r'^backend/hotelservices', hello.views.services, name='services'), 
 	url(r'^backend/welcome', hello.views.home, name='home'), 
+	url(r'^backend/getuser', hello.views.getuser, name='getuser'), 
 	url(r'^backend/logoutadmin', hello.views.logoutadmin, name='logoutadmin'), 
 	url(r'^updateuserrecord', hello.views.updateuserrecord, name='updateuserrecord'),
 	url(r'^user_details/(?P<userid>\d+)/$', hello.views.user_details, name='user_details'),

@@ -217,6 +217,9 @@ def adduser1(request):
 	#return HttpResponse("dfdfdsfdsf")
 
 
+def getuser(request):
+	return render(request, 'backend/getuser.html') 
+
 
 def logoutadmin(request):
 	#return HttpResponse(request.session['id'])
