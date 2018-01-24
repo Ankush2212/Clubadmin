@@ -84,14 +84,12 @@ WSGI_APPLICATION = 'gettingstarted.wsgi.application'
     # }
 # }
 
-DATABASES = {
- "default": 
- {
-  "ENGINE": "django.db.backends.postgresql_psycopg2", #one of those should work
-  "NAME": 'gettingstarted',
- 
- }
- }
+env = os.environ.copy()
+db_url = env.get('DATABASE_URL', False)
+
+if db_url != False:
+    import dj_database_url
+    DATABASES['default'] =  dj_database_url.config()
 
 
 
