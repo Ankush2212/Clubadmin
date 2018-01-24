@@ -88,7 +88,6 @@ DATABASES = {
  "default": 
  {
   "ENGINE": "django.db.backends.postgresql_psycopg2", #one of those should work
-  'ENGINE': 'django.db.backends.postgresql',   #one of those should work
   "NAME": 'gettingstarted',
  
  }
