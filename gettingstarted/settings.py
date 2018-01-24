@@ -74,15 +74,28 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'gettingstarted.wsgi.application'
 
+# DATABASES = {
+    # 'default': {
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+		# 'NAME': os.path.join('test'),
+    # },
+   # 'OPTIONS': {
+        # 'timeout': 50,
+    # }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-		'NAME': os.path.join('test'),
-    },
-   'OPTIONS': {
-        'timeout': 50,
-    }
-}
+ "default": 
+ {
+  "ENGINE": "django.db.backends.postgresql_psycopg2", #one of those should work
+  'ENGINE': 'django.db.backends.postgresql',   #one of those should work
+  "NAME": 'gettingstarted',
+ 
+ }
+ }
+
+
+
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 DATABASES['default'] =  dj_database_url.config()
