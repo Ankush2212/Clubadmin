@@ -218,8 +218,10 @@ def adduser1(request):
 
 
 def getuser(request):
-	getdata =  adduser.objects.all()
-	return render(request, 'backend/getuser.html',{'getrecord':getdata}) 
+	getsession = request.session.get('adminid')
+	getrecord1 =  adminsignup.objects.get(id=getsession)
+	getdata1 =  adduser.objects.all()
+	return render(request, 'backend/getuser.html',{'getadta':getrecord1,'getrecord':getdata1}) 
 
 
 def logoutadmin(request):
