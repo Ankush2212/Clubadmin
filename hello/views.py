@@ -233,3 +233,10 @@ def logoutadmin(request):
 		#return HttpResponse(str(e))
 		return HttpResponse("You're logged out.")
 	return redirect(admin)
+	
+	
+	
+#################add employee and get employeeee###########
+def addemployee(request):
+	#return render(request, 'backend/getuser.html',{'getadta':getrecord1,'getrecord':getdata1})
+	return render(request, 'backend/addnewemployee.html')
