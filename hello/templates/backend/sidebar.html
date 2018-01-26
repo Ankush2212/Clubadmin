@@ -33,19 +33,15 @@
                 <ul class="nav side-menu">
                   <li><a href="{% url 'home' %}" ><i class="fa fa-home"></i> Home </a></li>
                   
-				 
-				 <li><a><i class="fa fa-desktop"></i> User Details <span class="fa fa-chevron-down"></span></a>
-				   <ul class="nav child_menu">
-                      <li><a href="{% url 'adduser1' %}" >Add Users</a></li>
-                      <li><a href="{% url 'getuser' %}" > Get Users </a></li>
-				 
-				 </ul>
-                  </li>
+				  <li><a href="{% url 'adduser1' %}" ><i class="fa fa-desktop"></i> Add Users</a></li>
+                    
+				  <li><a href="{% url 'getuser' %}" > <i class="fa fa-desktop"></i> Get Users </a></li>
 				  
-				  <li><a><i class="fa fa-desktop"></i> Employee Details <span class="fa fa-chevron-down"></span></a>
+				  <li><a><i class="fa fa-desktop"></i> Employee Details <span class="fa fa-chevron-down">
+				  </span></a>
 				   <ul class="nav child_menu">
                       <li><a href="{% url 'addemployee' %}" >Add Employee</a></li>
-                      <li><a href="{% url 'getemployee' %}" > Get Employee </a></li>
+                      <!--li><a href="{% url 'getemployee' %}" > Get Employee </a></li-->
 				 
 				 </ul>
                   </li>
