@@ -250,7 +250,7 @@ def addemployee(request):
 				contactnumber = request.POST.get('contactnumber')
 				now = datetime.datetime.now()
 				#print(request.POST)
-				#return HttpResponse(now)
+				return HttpResponse(employeename)
 				data = adduser(employeename=employeename,contactnumber=contactnumber,username=username,dateofjoin=now,email=email)
 				data.save()
 				error = "New employee added successfully"
