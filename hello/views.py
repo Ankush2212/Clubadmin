@@ -9,6 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from .models import adduser 
 from .models import adminsignup 
+from .models import employeedetail 
 import datetime
 
 
@@ -251,7 +252,7 @@ def addemployee(request):
 				now = datetime.datetime.now()
 				#print(request.POST)
 				#return HttpResponse(employeename)
-				data = addemployee(employeename=employeename,contactnumber=contactnumber,username=username,dateofjoin=now,email=email)
+				data = employeedetail(employeename=employeename,contactnumber=contactnumber,username=username,dateofjoin=now,email=email)
 				data.save()
 				error = "New employee added successfully"
 				return render(request, 'backend/addnewemployee.html',{'getadta':getrecord,'success':error})

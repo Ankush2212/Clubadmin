@@ -27,7 +27,7 @@ class adduser(models.Model):
 	dateofjoin = models.CharField(max_length=250)
 	status = models.IntegerField()
 	email = models.EmailField(blank=True)
-class addemployee(models.Model):
+class employeedetail(models.Model):
 	employeename = models.CharField(max_length=250)
 	username = models.CharField(max_length=250)
 	dateofjoin = models.CharField(max_length=250)
