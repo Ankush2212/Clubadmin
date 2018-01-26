@@ -31,7 +31,6 @@ class addemployee(models.Model):
 	employeename = models.CharField(max_length=250)
 	username = models.CharField(max_length=250)
 	dateofjoin = models.CharField(max_length=250)
-	contact = models.CharField(max_length=250)
-	status = models.IntegerField()
+	contactnumber = models.CharField(max_length=250)
 	email = models.EmailField(blank=True)
 

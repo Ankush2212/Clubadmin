@@ -238,5 +238,34 @@ def logoutadmin(request):
 	
 #################add employee and get employeeee###########
 def addemployee(request):
-	#return render(request, 'backend/getuser.html',{'getadta':getrecord1,'getrecord':getdata1})
-	return render(request, 'backend/addnewemployee.html')
+	getsession = request.session.get('adminid')
+	getrecord =  adminsignup.objects.get(id=getsession)
+	error='';
+	if getsession:
+		if request.method== 'POST':
+			try:
+				employeename = request.POST.get('employeename')
+				username = request.POST.get('username')
+				email = request.POST.get('email')
+				contactnumber = request.POST.get('contactnumber')
+				now = datetime.datetime.now()
+				#print(request.POST)
+				#return HttpResponse(now)
+				data = adduser(employeename=employeename,contactnumber=contactnumber,username=username,dateofjoin=now,email=email)
+				data.save()
+				error = "New employee added successfully"
+				return render(request, 'backend/addnewemployee.html',{'getadta':getrecord,'success':error})
+			except KeyError:
+				#return HttpResponse(str(e))
+				error="New employee not added due to error."
+				return render(request, 'backend/addnewemployee.html',{ 'getadta':getrecord,'success':error})
+		else:
+			error=""
+			return render(request, 'backend/addnewemployee.html',{'getadta':getrecord,'success':error}) 
+					
+				
+			
+		return render(request, 'backend/addnewemployee.html') 
+	else:
+		return redirect(admin)
+	#return render(request, 'backend/addnewemployee.html')
