@@ -284,7 +284,7 @@ def deleteemployee(request):
 		try:
 			delemp = request.POST.get('id')
 			empid = int(delemp)
-			return HttpResponse(delemp))
+			return HttpResponse(empid)
 			#delemp = request.POST.get(id)
 			employeedetail.objects.filter(id=delemp).delete()
 			successer="Employee deleted successfully."
