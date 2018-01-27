@@ -291,7 +291,7 @@ def deleteemployee(request):
 			getrecord1 =  adminsignup.objects.get(id=getsession)
 			getemployeedetails =  employeedetail.objects.all()
 			successer="Employee deleted successfully."
-			return render(request, 'backend/getemployee.html',{'getadta':getrecord1,'getemployeedetail':getemployeedetails,'success':successer})
+			return redirect(request, 'backend/getemployee.html',{'getadta':getrecord1,'getemployeedetail':getemployeedetails,'success':successer})
 		except KeyError:
 				#return HttpResponse(str(e))
 				error="Due to error employee not deleted."
