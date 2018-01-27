@@ -279,6 +279,7 @@ def getemployee(request):
 	return render(request, 'backend/getemployee.html',{'getadta':getrecord1,'getemployeedetail':getemployeedetails}) 
 	
 
-def deleteemployee(request,userid):
-	Contact.objects.filter(id=userid).delete()
-	return redirect(getdata)
+def deleteemployee(request):
+	return HttpResponse("You're logged out.")
+	#Contact.objects.filter(id=userid).delete()
+	#return redirect(getdata)
