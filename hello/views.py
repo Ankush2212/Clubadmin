@@ -283,10 +283,12 @@ def deleteemployee(request):
 	
 		try:
 			delemp = request.POST.get('id')
-			return HttpResponse(delemp)
+			employeedetail.objects.filter(id=delemp).delete()
+			successer="Employee deleted successfully."
+			return render(request, 'backend/getemployee.html',{'success':successer})
 		except KeyError:
 				#return HttpResponse(str(e))
-				error="New employee not added due to error."
+				error="Due to error employee not deleted."
 				return render(request, 'backend/addnewemployee.html',{ 'getadta':getrecord,'success':error})
 	
 		
