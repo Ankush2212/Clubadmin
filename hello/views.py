@@ -290,6 +290,6 @@ def deleteemployee(request):
 				return render(request, 'backend/addnewemployee.html',{ 'getadta':getrecord,'success':error})
 	
 		
-	return HttpResponse("You're logged out.")
+	#return HttpResponse("You're logged out.")
 	#Contact.objects.filter(id=userid).delete()
 	#return redirect(getdata)
