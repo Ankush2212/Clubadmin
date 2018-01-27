@@ -284,6 +284,14 @@ def deleteemployee(request):
 		try:
 			delemp = request.POST.get('id')
 			return HttpResponse(delemp)
+		except KeyError:
+				#return HttpResponse(str(e))
+				error="New employee not added due to error."
+				return render(request, 'backend/addnewemployee.html',{ 'getadta':getrecord,'success':error})
+	else:
+		error=""
+		return render(request, 'backend/getemployee.html',{'getadta':getrecord,'success':error})
+		
 	return HttpResponse("You're logged out.")
 	#Contact.objects.filter(id=userid).delete()
 	#return redirect(getdata)
