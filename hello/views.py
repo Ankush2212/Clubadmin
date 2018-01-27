@@ -282,7 +282,9 @@ def getemployee(request):
 def deleteemployee(request):
 	
 		try:
-			delemp = request.POST.get('id')
+			delemp = request.POST.get(id)
+			return HttpResponse(delemp))
+			#delemp = request.POST.get(id)
 			employeedetail.objects.filter(id=delemp).delete()
 			successer="Employee deleted successfully."
 			return render(request, 'backend/getemployee.html',{'success':successer})
