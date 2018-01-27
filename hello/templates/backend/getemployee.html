@@ -85,7 +85,7 @@
                           <p style="text-align: center;">Are you sure to delete an employee</p>
                         </div>
                         <div class="modal-footer">
-						<form action="{% url 'deleteemployee' data.id  %}" method="post">
+						<form action="{% url 'deleteemployee'%}" method="post">
 						<div class="col-md-12" style="text-align: center;">
 						<input type="hidden" id="user_id" name="id">
 						<input type="submit" class="yes btn btn-primary" value="Yes">
