@@ -270,3 +270,10 @@ def addemployee(request):
 	else:
 		return redirect(admin)
 	#return render(request, 'backend/addnewemployee.html')
+	
+	
+def getemployee(request):
+	getsession = request.session.get('adminid')
+	getrecord1 =  adminsignup.objects.get(id=getsession)
+	getemployeedetails =  employeedetail.objects.all()
+	return render(request, 'backend/getemployee.html',{'getadta':getrecord1,'getemployeedetail':getemployeedetails}) 

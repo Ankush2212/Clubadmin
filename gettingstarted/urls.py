@@ -25,6 +25,7 @@ urlpatterns = [
 	url(r'^backend/hotelservices', hello.views.services, name='services'), 
 	url(r'^backend/welcome', hello.views.home, name='home'), 
 	url(r'^backend/getuser', hello.views.getuser, name='getuser'), 
+	url(r'^backend/getemployee', hello.views.getemployee, name='getemployee'), 
 	url(r'^backend/addemployee', hello.views.addemployee, name='addemployee'), 
 	url(r'^backend/logoutadmin', hello.views.logoutadmin, name='logoutadmin'), 
 	url(r'^updateuserrecord', hello.views.updateuserrecord, name='updateuserrecord'),
