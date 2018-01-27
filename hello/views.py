@@ -280,6 +280,10 @@ def getemployee(request):
 	
 
 def deleteemployee(request):
+	if request.method='POST':
+		try:
+			delemp = request.POST.get('id')
+			return HttpResponse(delemp)
 	return HttpResponse("You're logged out.")
 	#Contact.objects.filter(id=userid).delete()
 	#return redirect(getdata)

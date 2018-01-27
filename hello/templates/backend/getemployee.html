@@ -86,6 +86,7 @@
                         </div>
                         <div class="modal-footer">
 						<form action="{% url 'deleteemployee'%}" method="post">
+						{% csrf_token %}
 						<div class="col-md-12" style="text-align: center;">
 						<input type="hidden" id="user_id" name="id">
 						<input type="submit" class="yes btn btn-primary" value="Yes">
