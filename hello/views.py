@@ -248,7 +248,7 @@ def addemployee(request):
 				employeename = request.POST.get('employeename')
 				username = request.POST.get('username')
 				email = request.POST.get('email')
-				contactnumber = request.POST.get('contactnumber')
+				contactnumber = request.POST.get('contact')
 				now = datetime.datetime.now()
 				#print(request.POST)
 				#return HttpResponse(employeename)
@@ -277,3 +277,8 @@ def getemployee(request):
 	getrecord1 =  adminsignup.objects.get(id=getsession)
 	getemployeedetails =  employeedetail.objects.all()
 	return render(request, 'backend/getemployee.html',{'getadta':getrecord1,'getemployeedetail':getemployeedetails}) 
+	
+
+def deleteemployee(request,userid):
+	Contact.objects.filter(id=userid).delete()
+	return redirect(getdata)

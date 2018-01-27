@@ -31,5 +31,6 @@ urlpatterns = [
 	url(r'^updateuserrecord', hello.views.updateuserrecord, name='updateuserrecord'),
 	url(r'^user_details/(?P<userid>\d+)/$', hello.views.user_details, name='user_details'),
 	url(r'^deleteuser/(?P<userid>\d+)/$', hello.views.deleteuser, name='deleteuser'),
+	url(r'^deleteemployee/(?P<userid>\d+)/$', hello.views.deleteemployee, name='deleteemployee'),
 	#url(r'^admin/', include(admin.site.urls)),
 ] 
