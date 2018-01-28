@@ -35,8 +35,10 @@
 							
 							<th>First Name<i class="fa fa-sort" aria-hidden="true"></i></th>
 							<th>Last Name<i class="fa fa-sort" aria-hidden="true"></i></th>
-							<th>Username<i class="fa fa-sort" aria-hidden="true"></i></th>
+							<th>User Name<i class="fa fa-sort" aria-hidden="true"></i></th>
+							<th>Phone Number<i class="fa fa-sort" aria-hidden="true"></i></th>
 							<th>Email<i class="fa fa-sort" aria-hidden="true"></i></th>
+							<th>Action</th>
 							
                             
                          </tr>
@@ -49,7 +51,9 @@
 							<td>{{data.firstname}}</td>	
 							<td>{{data.lastname}}</td>
 							<td>{{data.username}}</td>	
+							<td>{{data.contact}}</td>	
 							<td>{{data.email}}</td>	
+							<td><button type="button" class="iddd deleteuserd" data-id="{{data.id }}">Delete</button></td>	
 							
 							
 							</tr>
@@ -64,7 +68,36 @@
               </div>
               </div>
               </div>
-			 
+			  <!--------------------delete popup---------------------->
+			  <div class="confirm_popup modal bs-example-modal-sm" id="deletee" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+
+                        <div class="modal-header">
+                          <button type="button" class="popup_close close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span>
+                          </button>
+                          <h4 class="modal-title" id="myModalLabel2">Delete a user</h4>
+                        </div>
+                        <div class="modal-body">
+						<input type="hidden" value=""  id ="userid" name="userid">
+					
+                          <p style="text-align: center;">Are you sure to delete an employee</p>
+                        </div>
+                        <div class="modal-footer">
+						<form action="{% url 'deleteuser'%}" method="post">
+						{% csrf_token %}
+						<div class="col-md-12" style="text-align: center;">
+						<input type="hidden" id="user_id" name="userid">
+						<input type="submit" class="yes btn btn-primary" value="Yes">
+						</form>
+                          <button type="button" class="popup_close btn btn-default" data-dismiss="modal">No</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 				  
 			  <script>
 			  $(".iddd").click( function () {

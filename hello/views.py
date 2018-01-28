@@ -194,12 +194,12 @@ def adduser1(request):
 				lastname = request.POST.get('lastname')
 				username = request.POST.get('username')
 				email = request.POST.get('email')
-				#date = request.POST.get('date')
+				contact = request.POST.get('contact')
 				now = datetime.datetime.now()
 				#print(request.POST)
 				#return HttpResponse(now)
 				status = '0'
-				data = adduser(firstname=firstname,lastname=lastname,username=username,dateofjoin=now,status=status,email=email)
+				data = adduser(firstname=firstname,lastname=lastname,username=username,dateofjoin=now,status=status,contact=contact,email=email)
 				data.save()
 				error = "Service added successfully"
 				return render(request, 'backend/adduser1.html',{'getadta':getrecord,'success':error})
@@ -225,6 +225,20 @@ def getuser(request):
 	getdata1 =  adduser.objects.all()
 	return render(request, 'backend/getuser.html',{'getadta':getrecord1,'getrecord':getdata1}) 
 
+def deleteuser(request):
+	
+		try:
+			deluser = request.POST.get('userid')
+			
+			#return HttpResponse(delemp)
+			#delemp = request.POST.get(id)
+			adduser.objects.filter(id=deluser).delete()
+			messages.success(request, 'User  deleted successfully!')
+			return redirect(getemployee)
+		except KeyError:
+				#return HttpResponse(str(e))
+				error="Due to error user not deleted."
+				return render(request, 'backend/addnewemployee.html',{ 'getadta':getrecord,'success':error})
 
 def logoutadmin(request):
 	#return HttpResponse(request.session['id'])
