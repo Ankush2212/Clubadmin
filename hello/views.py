@@ -197,7 +197,7 @@ def adduser1(request):
 				contact1 = request.POST.get('contact')
 				now = datetime.datetime.now()
 				#print(request.POST)
-				return HttpResponse(contact1)
+			#	return HttpResponse(contact1)
 				status = '0'
 				data = adduser(firstname=firstname,lastname=lastname,username=username,dateofjoin=now,status=status,email=email,contact=contact1)
 				data.save()
