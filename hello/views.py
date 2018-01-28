@@ -194,12 +194,12 @@ def adduser1(request):
 				lastname = request.POST.get('lastname')
 				username = request.POST.get('username')
 				email = request.POST.get('email')
-				contact = request.POST.get('contact')
+				contact1 = request.POST.get('contact')
 				now = datetime.datetime.now()
 				#print(request.POST)
 				#return HttpResponse(now)
 				status = '0'
-				data = adduser(firstname=firstname,lastname=lastname,username=username,dateofjoin=now,status=status,contact=contact,email=email)
+				data = adduser(firstname=firstname,lastname=lastname,username=username,dateofjoin=now,status=status,contact=contact1,email=email)
 				data.save()
 				error = "Service added successfully"
 				return render(request, 'backend/adduser1.html',{'getadta':getrecord,'success':error})
