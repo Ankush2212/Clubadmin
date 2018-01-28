@@ -1,5 +1,6 @@
 import requests
 
+from django.contrib import messages
 
 from django.contrib.sessions.models import Session
 from django.shortcuts import render , redirect
@@ -287,11 +288,7 @@ def deleteemployee(request):
 			#return HttpResponse(delemp)
 			#delemp = request.POST.get(id)
 			employeedetail.objects.filter(id=delemp).delete()
-			getsession = request.session.get('adminid')
-			getrecord1 =  adminsignup.objects.get(id=getsession)
-			getemployeedetails =  employeedetail.objects.all()
-			successer="Employee deleted successfully."
-			#return render(request, 'backend/getemployee.html',{'getadta':getrecord1,'getemployeedetail':getemployeedetails,'success':successer})
+			messages.success(request, 'Employee deleted successfully!')
 			return redirect(getemployee)
 		except KeyError:
 				#return HttpResponse(str(e))
