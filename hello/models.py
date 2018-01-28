@@ -25,6 +25,7 @@ class adduser(models.Model):
 	lastname = models.CharField(max_length=250)
 	username = models.CharField(max_length=250)
 	dateofjoin = models.CharField(max_length=250)
+	contactnumber = models.CharField(max_length=250)
 	status = models.IntegerField()
 	email = models.EmailField(blank=True)
 class employeedetail(models.Model):
