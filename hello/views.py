@@ -206,12 +206,11 @@ def deleteuser(request):
 	
 		try:
 			deluser = request.POST.get('userid')
-			
 			#return HttpResponse(delemp)
 			#delemp = request.POST.get(id)
 			adduser.objects.filter(id=deluser).delete()
-			messages.success(request, 'User  deleted successfully!')
-			return redirect(getemployee)
+			messages.success(request, 'User deleted successfully!')
+			return redirect(getuser)
 		except KeyError:
 				#return HttpResponse(str(e))
 				error="Due to error user not deleted."
