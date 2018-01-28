@@ -20,30 +20,7 @@ def index(request):
 	# services = Hotelservice.objects.all()
 	 return render(request, 'index.html')
 
-def getdata(request):
-	 getdata =  Contact.objects.all()
-	# getdata =  Contact.objects.order_by('first_name')
-	 return render(request, 'getdata.html',{'getrecord':getdata})
 
-def user_details(request,userid):
-	 getparticularrecord =  Contact.objects.get(id=userid)
-	 #return HttpResponse(getparticularrecord.first_name)
-	 return render(request, 'getresponse.html',{'getresponse':getparticularrecord})
- 
-
-def updateuserrecord(request):
-	firstname = request.POST.get('firstname')
-	lastname = request.POST.get('lastname')
-	email = request.POST.get('email')
-	description = request.POST.get('description')
-	userid = request.POST.get('userid')
-	to_update = Contact.objects.filter(id=userid).update(first_name=firstname,last_name=lastname,email=email,description=description)
-	return redirect(getdata)
-
-def deleteuser(request,userid):
-	Contact.objects.filter(id=userid).delete()
-	return redirect(getdata)
-	
 def login1(request):
 	username = 'not logged in'
 	first_name = ''

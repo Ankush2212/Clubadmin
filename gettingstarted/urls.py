@@ -30,7 +30,7 @@ urlpatterns = [
 	url(r'^backend/logoutadmin', hello.views.logoutadmin, name='logoutadmin'), 
 	url(r'^updateuserrecord', hello.views.updateuserrecord, name='updateuserrecord'),
 	url(r'^user_details/(?P<userid>\d+)/$', hello.views.user_details, name='user_details'),
-	url(r'^deleteuser/(?P<userid>\d+)/$', hello.views.deleteuser, name='deleteuser'),
+	url(r'^deleteuser', hello.views.deleteuser, name='deleteuser'),
 	url(r'^deleteemployee', hello.views.deleteemployee, name='deleteemployee'),
 	#url(r'^admin/', include(admin.site.urls)),
 ] 
