@@ -199,7 +199,7 @@ def adduser1(request):
 				#print(request.POST)
 			#	return HttpResponse(contact1)
 				status = '0'
-				data = adduser(firstname=firstname,lastname=lastname,username=username,contactnumber=contact1,dateofjoin=now,status=status,email=email)
+				data = adduser(firstname=firstname,lastname=lastname,username=username,contactnumber='3213232',dateofjoin=now,status=status,email=email)
 				data.save()
 				error = "Service added successfully"
 				return render(request, 'backend/adduser1.html',{'getadta':getrecord,'success':error})
