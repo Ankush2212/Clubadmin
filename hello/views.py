@@ -215,7 +215,7 @@ def deleteuser(request):
 		except KeyError:
 				#return HttpResponse(str(e))
 				error="Due to error user not deleted."
-				return render(request, 'backend/addnewemployee.html',{ 'getadta':getrecord,'success':error})
+				return render(request, 'backend/getuser.html',{ 'getadta':getrecord,'success':error})
 
 def logoutadmin(request):
 	#return HttpResponse(request.session['id'])
