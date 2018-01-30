@@ -118,7 +118,7 @@ $(document).ready(function(){
 				<li>Kamers netjes </li> 
 				<li>Afval gescheiden</li>  
 			 </ul>
-			 <div class="full-button"><input type="button" value="Selecteer" class="iddd choose_button"></div>
+			 <div class="full-button"><input type="button"  onclick="return mypopup('55');" value="Selecteer" class="iddd choose_button"></div>
 			</div>
 			<div class="service_box pull-right service_box_second">
 			     <h3>All-in Service</h3>
@@ -139,7 +139,7 @@ $(document).ready(function(){
 				<li>Boodschappen</li>  
 				<li>Afval gescheiden </li> 
 			</ul>			
-			<div class="full-button"><input type="button" value="Selecteer" class="iddd1 choose_button"></div>
+			<div class="full-button"><input type="button" onclick="return mypopup('70');" value="Selecteer" class="iddd choose_button"></div>
 
 				  </div>
 				</div> 
@@ -478,15 +478,13 @@ zijn gesteld.
 								  <form action="">
 									<div class="form-group">
 									  <label for="email">Email:</label>
-									  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+									  <input type="email"  id="email" placeholder="Enter email" name="email">
 									</div>
 									<div class="form-group">
 									  <label for="pwd">Password:</label>
-									  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+									  <input type="password"  id="pwd" placeholder="Enter password" name="pwd">
 									</div>
-									<div class="checkbox">
-									  <label><input type="checkbox" name="remember"> Remember me</label>
-									</div>
+									
 									<button type="submit" class="btn btn-default">Submit</button>
 								  </form>
 							</div>
@@ -543,17 +541,19 @@ zijn gesteld.
 			
 				  
 			  <script>
-			  $(".iddd").click( function () {
-				
-				  $('.confirm_popup').show();
-				  
-			  });
+			function  mypopup(a)
+			{
+				alert(a);
+				$('.confirm_popup').show();
+			
+			}
+			
 			  $(".popup_close").click( function () {
 				  $('.confirm_popup').hide();
 				  
 			  });
 			  
-			  
+			 
 			  $(".iddd1").click( function () {
 				
 				  $('.confirm_popup1').show();
