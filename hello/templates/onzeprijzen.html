@@ -16,7 +16,7 @@
 	<script src="{% static 'js/jquery.min.js'%}"></script>
 	<script src="{% static 'js/bootstrap.min.js'%}"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	
+
 	  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 	<script>
 $(document).ready(function(){
@@ -109,20 +109,27 @@ $(document).ready(function(){
 				<h3>De Basics</h3>
 				<div><p class="price">"De basis voor een fris en schoon huis."
 			<br><span>Wekelijks / 2.5 uur</span></p></div>
-					<div class="textbox"><div class="t_left">&euro;55/week </div><div class="t_right"><span>Maandelijks gefactureerd</span></div></div>
+					<div class="textbox">
+						<div class="t_left">&euro;55/week </div>
+						<div class="t_right"><span>Maandelijks gefactureerd</span></div>
+					</div>
 			<ul>
 				<li>Housekeeping service</li>
 				<li>Kamers netjes </li> 
 				<li>Afval gescheiden</li>  
 			 </ul>
-			 <div class="full-button"><input type="button" value="Selecteer" class="choose_button"></div>
+			 <div class="full-button"><input type="button" value="Selecteer" class="iddd choose_button"></div>
 			</div>
 			<div class="service_box pull-right service_box_second">
 			     <h3>All-in Service</h3>
 				 <p class="price">"Maakt balans tussen werk en prive makkelijker."
 				<span>Wekelijks / 3.5 uur </span>
 			</p>
-				<div class="textbox"><div class="t_left">&euro;70/week </div><div class="t_right"><span>Maandelijks gefactureerd</span></div></div>		
+				<div class="textbox">
+					<div class="t_left">&euro;70/week </div>
+					<div class="t_right"><span>Maandelijks gefactureerd</span>
+					</div>
+				</div>		
 			</p>
 			<ul>
 				<li>Housekeeping service</li>   
@@ -132,7 +139,7 @@ $(document).ready(function(){
 				<li>Boodschappen</li>  
 				<li>Afval gescheiden </li> 
 			</ul>			
-			<div class="full-button"><input type="button" value="Selecteer" class="iddd choose_button"></div>
+			<div class="full-button"><input type="button" value="Selecteer" class="iddd1 choose_button"></div>
 
 				  </div>
 				</div> 
@@ -466,19 +473,73 @@ zijn gesteld.
                           <p style="text-align: center;">Are you sure to delete an employee</p>
                         </div>
                         <div class="modal-footer">
-						<form action="#" method="post">
-						{% csrf_token %}
-						<div class="col-md-12" style="text-align: center;">
-						<input type="hidden" id="user_id" name="userid">
-						<input type="submit" class="yes btn btn-primary" value="Yes">
-						</form>
+						<div class="container">
+								  <h2>Vertical (basic) form</h2>
+								  <form action="/action_page.php">
+									<div class="form-group">
+									  <label for="email">Email:</label>
+									  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+									</div>
+									<div class="form-group">
+									  <label for="pwd">Password:</label>
+									  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+									</div>
+									<div class="checkbox">
+									  <label><input type="checkbox" name="remember"> Remember me</label>
+									</div>
+									<button type="submit" class="btn btn-default">Submit</button>
+								  </form>
+							</div>
                           <button type="button" class="popup_close btn btn-default" data-dismiss="modal">No</button>
                           </div>
                         </div>
 
                       </div>
                     </div>
-                  </div>
+</div>
+
+
+
+<div class="confirm_popup1 modal bs-example-modal-sm" id="deletee" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+
+                        <div class="modal-header">
+                          <button type="button" class="popup_close1 close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span>
+                          </button>
+                          <h4 class="modal-title" id="myModalLabel2">Delete a user</h4>
+                        </div>
+                        <div class="modal-body">
+						<input type="hidden" value=""  id ="userid" name="userid">
+					
+                          <p style="text-align: center;">Are you sure to delete an employee</p>
+                        </div>
+                        <div class="modal-footer">
+						<div class="container">
+								  <h2>Vertical (basic) form</h2>
+								  <form action="/action_page.php">
+									<div class="form-group">
+									  <label for="email">Email:</label>
+									  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+									</div>
+									<div class="form-group">
+									  <label for="pwd">Password:</label>
+									  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+									</div>
+									<div class="checkbox">
+									  <label><input type="checkbox" name="remember"> Remember me</label>
+									</div>
+									<button type="submit" class="btn btn-default">Submit</button>
+								  </form>
+							</div>
+
+                          <button type="button" class="popup_close btn btn-default" data-dismiss="modal">No</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+</div>
 			
 				  
 			  <script>
@@ -489,6 +550,17 @@ zijn gesteld.
 			  });
 			  $(".popup_close").click( function () {
 				  $('.confirm_popup').hide();
+				  
+			  });
+			  
+			  
+			  $(".iddd1").click( function () {
+				
+				  $('.confirm_popup1').show();
+				  
+			  });
+			  $(".popup_close1").click( function () {
+				  $('.confirm_popup1').hide();
 				  
 			  });
 $(document).ready(function () {
