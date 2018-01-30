@@ -20,6 +20,7 @@ urlpatterns = [
 	url(r'^logout1', hello.views.logout1, name='logout1'),
 	url(r'^login1', hello.views.login1, name='login1'),
 	url(r'^welcome', hello.views.welcome, name='welcome'),
+	url(r'^Onze_prijzen', hello.views.Onze_prijzen, name='Onze_prijzen'),
 	url(r'^backend/admin', hello.views.admin, name='admin'), 
 	url(r'^backend/adduser1', hello.views.adduser1, name='adduser1'), 
 	url(r'^backend/hotelservices', hello.views.services, name='services'), 

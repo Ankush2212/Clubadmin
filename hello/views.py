@@ -19,6 +19,10 @@ def index(request):
     #return HttpResponse('Hefdd gfdgdf llo fddcccx xczfddvd x dddrom Python!')
 	# services = Hotelservice.objects.all()
 	 return render(request, 'index.html')
+	 
+##############Onze-prijzen//////////////////////////	 
+def Onze_prijzen(request):
+    return render(request, 'Onze-prijzen.html')
 
 
 def login1(request):
