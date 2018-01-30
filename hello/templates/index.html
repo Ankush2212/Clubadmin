@@ -245,7 +245,7 @@ function change() {
 					  
 					</div>	
 					<div class="recon_right">
-					  <img src="images/right-side.jpg">
+					  <img src="{% static 'images/right-side.jpg'%}">
 					</div>	
 					<div class="book">
 					<button class="button" type="button" ><a href="Onze-prijzen.html" style="text-transform: uppercase;">Bekijk prijzen</a></span>
@@ -497,11 +497,12 @@ $(document).ready(function () {
     $(".dropdown").click(function () {
      
 	  var path=$(this).find('#updown').attr('src');
-	if(path == "images/arror.png"){
-	var chec=$(this).find('#updown').attr('src','images/up.png');
+	  
+	if(path == "/static/images/arror.png"){
+	var chec=$(this).find('#updown').attr('src','/static/images/up.png');
 	}else
 	{
-	var chec=$(this).find('#updown').attr('src','images/arror.png');
+	var chec=$(this).find('#updown').attr('src','/static/images/arror.png');
 	}
     });
 });
