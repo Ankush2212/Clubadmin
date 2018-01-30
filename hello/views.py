@@ -1,10 +1,3 @@
-try:
-    # Fix UTF8 output issues on Windows console.
-    # Does nothing if package is not installed
-    from win_unicode_console import enable
-    enable()
-except ImportError:
-    pass
 import requests
 
 from django.contrib import messages
