@@ -132,7 +132,7 @@ $(document).ready(function(){
 				<li>Boodschappen</li>  
 				<li>Afval gescheiden </li> 
 			</ul>			
-			<div class="full-button"><input type="button" value="Selecteer" class="choose_button"></div>
+			<div class="full-button"><input type="button" value="Selecteer" class="iddd choose_button"></div>
 
 				  </div>
 				</div> 
@@ -177,7 +177,7 @@ $(document).ready(function(){
 													 </div>
 											 </div>
 											 </div>
-						 <div class="div_vis"><input type="button" value="Aanvragen" class="book_visit"></div>
+						 <div class="div_vis"><input type="button" value="Aanvragen" class=" iddd book_visit"></div>
 					 
 				   
 				   </div>
@@ -450,7 +450,47 @@ zijn gesteld.
 			</div>
 		
 	
-<script>
+
+<div class="confirm_popup modal bs-example-modal-sm" id="deletee" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+
+                        <div class="modal-header">
+                          <button type="button" class="popup_close close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span>
+                          </button>
+                          <h4 class="modal-title" id="myModalLabel2">Delete a user</h4>
+                        </div>
+                        <div class="modal-body">
+						<input type="hidden" value=""  id ="userid" name="userid">
+					
+                          <p style="text-align: center;">Are you sure to delete an employee</p>
+                        </div>
+                        <div class="modal-footer">
+						<form action="#" method="post">
+						{% csrf_token %}
+						<div class="col-md-12" style="text-align: center;">
+						<input type="hidden" id="user_id" name="userid">
+						<input type="submit" class="yes btn btn-primary" value="Yes">
+						</form>
+                          <button type="button" class="popup_close btn btn-default" data-dismiss="modal">No</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+			
+				  
+			  <script>
+			  $(".iddd").click( function () {
+				
+				  $('.confirm_popup').show();
+				  
+			  });
+			  $(".popup_close").click( function () {
+				  $('.confirm_popup').hide();
+				  
+			  });
 $(document).ready(function () {
     $(".dropdown").click(function () {
      
