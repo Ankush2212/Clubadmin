@@ -87,7 +87,7 @@ function change() {
 					<div class="col-md-9 col-sm-9 col-xs-12 text-right">
 					   <div class="top_button">
 					     <ul>
-							  <li class="club"><a href="{% url 'Onze_prijzen' %}"><span class="club_s">Join the club</span></a></li>
+							  <li class="club"><a href="{% url 'onzeprijzen' %}"><span class="club_s">Join the club</span></a></li>
 							  <li class="eng_list"><a href="http://www.clubfred.nl/en/"><span class="eng">ENG</span>/</a><a href="http://www.clubfred.nl/"><span class="nll underline">NL</span></a></li>
 						 </ul>	  
 					   </div>
@@ -247,7 +247,7 @@ function change() {
 					  <img src="{% static 'images/right-side.jpg'%}">
 					</div>	
 					<div class="book">
-					<button class="button" type="button" ><a href="Onze-prijzen.html" style="text-transform: uppercase;">Bekijk prijzen</a></span>
+					<button class="button" type="button" ><a href="{% url 'onzeprijzen' %}" style="text-transform: uppercase;">Bekijk prijzen</a></span>
 					</button>
 					</div>				
 			   </div>
@@ -344,7 +344,7 @@ function change() {
 						<h2>enkele andere dienst</h2>
 						<h2>doet het op deze manier.”</h2>						
 					  </div>
-					  <div class="book" id="book"><button type="button"><a href="Onze-prijzen.html">Bekijk prijzen</a></button></div>	
+					  <div class="book" id="book"><button type="button"><a href="{% url 'onzeprijzen' %}">Bekijk prijzen</a></button></div>	
 					</div>	
 					<div class="recon_right">
 					  <img src="{% static 'images/right-side2.jpg'%}">
@@ -402,7 +402,7 @@ function change() {
 				     <ul class="hot">
 					   <li> <span class="call"> Bel ons  </span> 24/7 020 341 38 14</li>
 					   <li>hello@clubfred.nl</li>
-					    <li class="get"><a href="Onze-prijzen.html">Get started with Fred.</a></li>
+					    <li class="get"><a href="{% url 'onzeprijzen' %}">Get started with Fred.</a></li>
 					  
 				     </ul>
 					
@@ -452,7 +452,7 @@ function change() {
 									   <li><a href="#">Testimonials |</a></li>
 									   <li><a href="#">Vacatures |</a></li>
 									   <li><a href="#">Fred Academy</a></li-->	
-									   <li><a href="Onze-prijzen.html">Onze prijzen |</a></li>
+									   <li><a href="{% url 'onzeprijzen' %}">Onze prijzen |</a></li>
 									   <li><a href="woning-verhuur.html">Woning verhuur |</a></li>									  
 									   <li><a href="http://www.clubfred.nl/en/hotel.html"> Hotels |</a></li>
 									   <li><a href="https://clubfred.recruitee.com/" target="_blank">Vacatures </a></li>									   

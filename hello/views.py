@@ -21,8 +21,8 @@ def index(request):
 	 return render(request, 'index.html')
 	 
 ##############Onze-prijzen//////////////////////////	 
-def Onze_prijzen(request):
-    return render(request, 'Onze-prijzen.html')
+def onzeprijzen(request):
+    return render(request, 'onzeprijzen.html')
 
 
 def login1(request):
