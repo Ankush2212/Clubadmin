@@ -32,6 +32,7 @@ urlpatterns = [
 	#url(r'^updateuserrecord', hello.views.updateuserrecord, name='updateuserrecord'),
 	#url(r'^user_details/(?P<userid>\d+)/$', hello.views.user_details, name='user_details'),
 	url(r'^deleteuser', hello.views.deleteuser, name='deleteuser'),
+	url(r'^priceperweek', hello.views.priceperweek, name='priceperweek'),
 	url(r'^deleteemployee', hello.views.deleteemployee, name='deleteemployee'),
 	#url(r'^admin/', include(admin.site.urls)),
 ] 
