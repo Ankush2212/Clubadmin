@@ -18,6 +18,7 @@ urlpatterns = [
 	#url(r'^getdata', hello.views.getdata, name='getdata'),
 	#url(r'^contact', hello.views.contact, name='contact'),
 	url(r'^logout1', hello.views.logout1, name='logout1'),
+	url(r'^abc', hello.views.abc, name='abc'),
 	url(r'^login1', hello.views.login1, name='login1'),
 	url(r'^welcome', hello.views.welcome, name='welcome'),
 	url(r'^onzeprijzen', hello.views.onzeprijzen, name='onzeprijzen'),

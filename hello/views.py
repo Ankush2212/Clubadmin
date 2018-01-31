@@ -1,7 +1,7 @@
 import requests
 from django.core.mail import send_mail
 from django.contrib import messages
-
+import smtplib
 from django.contrib.sessions.models import Session
 from django.shortcuts import render , redirect
 from django.http import HttpResponse
@@ -300,7 +300,9 @@ def deleteemployee(request):
 	
 	
 ##########################frontend integrationnnnnnnnnnn#######################
-
+def abc(request):
+	res = send_mail('subject', 'body of the message', 'kalpana@codenomad.net', ['kalpana@codenomad.net'])
+	return HttpResponse('suceddd') 
 ##pricing page form per week55/70###
 
 def priceperweek(request):
@@ -318,8 +320,7 @@ def priceperweek(request):
 					verify = '0'
 					#print(request.POST)
 					#return HttpResponse(firstname)
-					res = send_mail('subject', 'body of the message', 'noreply@parsifal.co', ['kalpana@codenomad.net'])
-					return HttpResponse('suceddd') 
+					
 					data = pricingplan(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,amount=amount,verify=verify) 
 					data.save()
 					messages.success(request, 'Price data is added successfully!')
