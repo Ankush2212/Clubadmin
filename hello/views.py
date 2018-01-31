@@ -334,7 +334,7 @@ def hotelservices(request):
 					services = request.POST.get('services')
 					now1 = datetime.datetime.now()
 					
-					return HttpResponse(now1)
+					return HttpResponse('hello')
 					data = hotelservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now1) 
 					data.save()
 					# mail_subject = 'Activate your blog account.'
