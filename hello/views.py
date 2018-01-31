@@ -321,6 +321,7 @@ def hotel(request):
 	
 	
 def hotelservices1(request):
+		return HttpResponse('hiii')
 		if request.method=='POST':
 			return HttpResponse('hiii')
 			try:
