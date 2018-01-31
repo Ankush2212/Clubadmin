@@ -202,7 +202,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_PASSWORD = 'codenomad@8804'
 EMAIL_HOST_USER = 'developerweb6@gmail.com'
 EMAIL_PORT = 465
-EMAIL_USE_TLS = False
+EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 #smtp changes
 EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
