@@ -1,5 +1,6 @@
 import requests
-from django.core.mail import send_mail , EmailMessage
+from django.conf import settings
+from django.core.mail import send_mail
 from django.contrib import messages
 import smtplib
 from django.contrib.sessions.models import Session
@@ -305,14 +306,24 @@ def deleteemployee(request):
 	
 ##########################frontend integrationnnnnnnnnnn#######################
 def abc(request):
-	name="kalpana"
+	# name="kalpana"
+	# sender="kalpana@codenomad.net"
+	# subject="testing"
+	# #to="test@gmail.com"
+	# message="<a href='#'>click here</a>"
+	# msg = EmailMessage(subject, message, sender)
+	# msg.content_subtype = "html"  # Main content is now text/html
+	# return msg.send()
 	sender="kalpana@codenomad.net"
-	subject="testing"
-	#to="test@gmail.com"
-	message="<a href='#'>click here</a>"
-	msg = EmailMessage(subject, message, sender)
-	msg.content_subtype = "html"  # Main content is now text/html
-	return msg.send()
+	subject = 'Some subject'
+	from_email = sender
+	message = 'This is my test message'
+	recipient_list = ['kalpana@codenomad.net', 'kalpana@codenomad.net']
+	html_message = '<h1>This is my HTML test</h1>'
+
+
+	send_mail(subject, message, from_email, recipient_list, fail_silently=False, html_message=html_message)
+	return  HttpResponse('firstname')
 ##pricing page form per week55/70###
 
 def priceperweek(request):
