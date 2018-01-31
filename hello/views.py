@@ -356,6 +356,7 @@ def hotelservices(request):
 					
 					return redirect(hotel)
 		else:
+			return HttpResponse('hello')
 			messages.success(request, 'service data is nott added successfully!')
 			return redirect(hotel)
 
