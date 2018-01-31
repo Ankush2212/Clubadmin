@@ -15,6 +15,7 @@ from .models import adminsignup
 from .models import employeedetail 
 from .models import pricingplan 
 import datetime
+from time import strftime
 from django.conf.urls import include, url
 
 
@@ -351,8 +352,8 @@ def priceperweek(request):
 			return redirect(onzeprijzen)
 
 def abc(request):
-	#now = datetime.datetime.now()
-	now = datetime.datetime.now().strftime('%y-%m-%d %H:%M')
+	#now = datetime.datetime.now()("%Y-%m-%d %H:%M")
+	now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
 	now_plus_10 = now + datetime.timedelta(minutes = 10)	
 	abcd = now "hii" now_plus_10
 	return HttpResponse(abcd)
