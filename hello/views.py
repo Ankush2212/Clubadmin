@@ -311,21 +311,8 @@ def deleteemployee(request):
     # return msg.send()
 	
 ##########################frontend integrationnnnnnnnnnn#######################
-def abc(request):
-	# name="kalpana"
-	# sender="kalpana@codenomad.net"
-	# subject="testing"
-	# #to="test@gmail.com"
-	# message="<a href='#'>click here</a>"
-	# msg = EmailMessage(subject, message, sender)
-	# msg.content_subtype = "html"  # Main content is now text/html
-	# return msg.send()
-	sender="kalpana@codenomad.net"
-	subject = 'Some subject'
-	from_email = sender
-	message = 'This is my test message'
-	recipient_list = [sender]
-	html_message = '<a href="https://www.programcreek.com/">This is my HTML test</a>'
+
+
 
 
 	send_mail(subject, message, from_email, recipient_list, fail_silently=False, html_message=html_message)
@@ -344,27 +331,9 @@ def priceperweek(request):
 					unit = request.POST.get('unit')
 					date = request.POST.get('date')
 					amount = request.POST.get('amount')
+					now = datetime.datetime.now().strftime('%H:%M')
 					verify = '0'
-					#print(request.POST)
-					#return HttpResponse(firstname)
-					#sender="kalpana@codenomad.net"
-					# subject = 'Please verify you booking'
-					# from_email = email
-					# message = 'Here is a activitation link please click on that and verify your booking.'
-					# recipient_list = [email]
-					# html_message = '<a href="{% url 'verify' email %}">Verify your booking</a>'
-
-
-					# send_mail(subject, message, from_email , recipient_list, fail_silently=False, html_message=html_message)
-					
-					
-					#return HttpResponse('Please confirm your email address to complete the registration')
-					
-					
-					
-					
-					
-					data = pricingplan(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,amount=amount,verify=verify) 
+					data = pricingplan(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,amount=amount,verify=verify,currenttime=now) 
 					data.save()
 					mail_subject = 'Activate your blog account.'
 					
@@ -387,11 +356,21 @@ def priceperweek(request):
 		else:
 			messages.success(request, 'Price data is nott added successfully!')
 			return redirect(onzeprijzen)
-	
+
+def abc(request):
+	now = datetime.datetime.now()
+	now_plus_10 = now + datetime.timedelta(minutes = 10)	
+	return HttpResponse(now_plus_10)
+
+			
 def activate(request, uidb64):
 	try:
 		uid = uidb64
 		user = pricingplan.objects.get(pk=uid)
+		getdatetime = user.datetimee
+		gettime = getdatetime.split(' ')
+		
+		return HttpResponse(gettime[0])
 		user.verify = 1
 		user.save()
 		return HttpResponse('Thank you for your  confirmation.')
