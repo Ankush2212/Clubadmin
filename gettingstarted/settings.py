@@ -199,7 +199,7 @@ MEDIA_URL = '/media/'
 
 # EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
 # MAILER_EMAIL_BACKEND = EMAIL_BACKEND
-EMAIL_HOST = 'secure.serverfoo.com'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_PASSWORD = 'codenomad@8804'
 EMAIL_HOST_USER = 'developerweb6@gmail.com'
 EMAIL_PORT = 587
