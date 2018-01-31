@@ -402,3 +402,9 @@ def activate(request, uidb64):
 			#login(request, user)
 			# return redirect('home')
 			return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
+			
+def pricingplans(request):
+		getsession = request.session.get('adminid')
+		getrecord1 =  adminsignup.objects.get(id=getsession)
+		getpricing =  employeedetail.objects.all(verify=1)
+		return render(request, 'backend/pricingplan.html',{'getadta':getrecord1,'getpricingdetail':getpricing}) 
