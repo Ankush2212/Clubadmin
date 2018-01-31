@@ -316,8 +316,8 @@ def priceperweek(request):
 				amount = request.POST.get('amount')
 				#print(request.POST)
 				return HttpResponse(firstname)
-			messages.success(request, 'Price data is added successfully!')
-			return redirect(onzeprijzen)
+				messages.success(request, 'Price data is added successfully!')
+				return redirect(onzeprijzen)
 			except KeyError:
 				#return HttpResponse(str(e))
 				messages.success(request, 'Price data is not  added successfully!')
