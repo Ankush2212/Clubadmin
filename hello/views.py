@@ -392,7 +392,7 @@ def activate(request, uidb64):
 	try:
 		uid = uidb64
 		user = pricingplan.objects.get(pk=uid)
-	except(TypeError, ValueError, OverflowError, User.DoesNotExist):
+	except(TypeError, ValueError, OverflowError, pricingplan.DoesNotExist):
 		user = None
 		if user is not None:
 			user.verify = 1
