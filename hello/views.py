@@ -312,13 +312,6 @@ def deleteemployee(request):
 	
 ##########################frontend integrationnnnnnnnnnn#######################
 
-
-
-
-	send_mail(subject, message, from_email, recipient_list, fail_silently=False, html_message=html_message)
-	return  HttpResponse('firstname')
-##pricing page form per week55/70###
-
 def priceperweek(request):
 		if request.method== 'POST':
 				try:
