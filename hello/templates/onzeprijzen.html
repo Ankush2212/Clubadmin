@@ -481,7 +481,7 @@ zijn gesteld.
                         <div class="modal-footer">
 						<div class="">
 								  <h2>Vertical (basic) form</h2>
-								  <form action="{% url 'priceperweek'%}">
+								  <form action="{% url 'priceperweek'%}" method ="post">
 								  {% csrf_token %}
 									<input type="text" required id=""  name="firstanem">
 									<input type="text"  id="" name="lastname">
