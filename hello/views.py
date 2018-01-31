@@ -392,6 +392,9 @@ def activate(request, uidb64):
 	try:
 		uid = uidb64
 		user = pricingplan.objects.get(pk=uid)
+		user.verify = 1
+		user.save()
+		return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
 	except(TypeError, ValueError, OverflowError, pricingplan.DoesNotExist):
 			user = None
 			user.verify = 1
