@@ -352,8 +352,8 @@ def priceperweek(request):
 			return redirect(onzeprijzen)
 
 def abc(request):
-	past  = datetime.now()
-	present  = datetime.now()
+	past  = datetime.datetime.now()
+	present  = datetime.datetime.now()
 	#present.strftime('%Y-%m-%d %H:%M:%S') == past.strftime('%Y-%m-%d %H:%M:%S')
 	#False
 	present.strftime('%Y-%m-%d %H:%M') == past.strftime('%Y-%m-%d %H:%M')
