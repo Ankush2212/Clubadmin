@@ -201,7 +201,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'support@deplerai.com'
 EMAIL_HOST_PASSWORD = 'Support2017'
-EMAIL_PORT = 465
+EMAIL_PORT = 3535
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 #smtp changes
 EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
