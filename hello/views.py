@@ -356,8 +356,12 @@ def abc(request):
 	present  = datetime.datetime.now()
 	#present.strftime('%Y-%m-%d %H:%M:%S') == past.strftime('%Y-%m-%d %H:%M:%S')
 	#False
-	present.strftime('%Y-%m-%d %H:%M') == past.strftime('%Y-%m-%d %H:%M')
-	return HttpResponse('ddsdasdas')
+	if present.strftime('%Y-%m-%d %H:%M') == past.strftime('%Y-%m-%d %H:%M'):
+		return HttpResponse('ddsdasdas')
+	else:
+		return HttpResponse('hello')
+	
+	
 	
 
 			
