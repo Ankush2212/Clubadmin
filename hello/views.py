@@ -298,10 +298,10 @@ def deleteemployee(request):
 	#return HttpResponse("You're logged out.")
 	#Contact.objects.filter(id=userid).delete()
 	#return redirect(getdata)
-	def send_email(to_list, subject, message, sender="Aircourts <noreply@aircourts.com>"):
-    msg = EmailMessage(subject, message, sender, to_list)
-    msg.content_subtype = "html"  # Main content is now text/html
-    return msg.send()
+	# def send_email(to_list, subject, message, sender="Aircourts <noreply@aircourts.com>"):
+    # msg = EmailMessage(subject, message, sender, to_list)
+    # msg.content_subtype = "html"  # Main content is now text/html
+    # return msg.send()
 	
 ##########################frontend integrationnnnnnnnnnn#######################
 def abc(request):
