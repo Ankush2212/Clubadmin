@@ -343,13 +343,13 @@ def priceperweek(request):
 					#return HttpResponse(firstname)
 					#sender="kalpana@codenomad.net"
 					subject = 'Please verify you booking'
-					#from_email = sender
+					from_email = email
 					message = 'Here is a activitation link please click on that and verify your booking.'
 					recipient_list = [email]
 					html_message = '<a href="{% url '"verify"' email %}">Verify your booking</a>'
 
 
-					send_mail(subject, message, recipient_list, fail_silently=False, html_message=html_message)
+					send_mail(subject, message, from_email , recipient_list, fail_silently=False, html_message=html_message)
 					data = pricingplan(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,amount=amount,verify=verify) 
 					data.save()
 					messages.success(request, 'Price data is added successfully!')
