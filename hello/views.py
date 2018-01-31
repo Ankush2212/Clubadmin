@@ -393,7 +393,7 @@ def activate(request, uidb64):
 		uid = uidb64
 		user = pricingplan.objects.get(pk=uid)
 	except(TypeError, ValueError, OverflowError, pricingplan.DoesNotExist):
-		user = None
+			user = None
 			user.verify = 1
 			user.save()
 			#login(request, user)
