@@ -1,5 +1,5 @@
 import requests
-from django.core.mail import send_mail
+from django.core.mail import send_mail , EmailMessage
 from django.contrib import messages
 import smtplib
 from django.contrib.sessions.models import Session
@@ -7,6 +7,7 @@ from django.shortcuts import render , redirect
 from django.http import HttpResponse
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
+from django.template.loader import render_to_string
 
 from .models import adduser 
 from .models import adminsignup 
@@ -297,12 +298,21 @@ def deleteemployee(request):
 	#return HttpResponse("You're logged out.")
 	#Contact.objects.filter(id=userid).delete()
 	#return redirect(getdata)
-	
+	def send_email(to_list, subject, message, sender="Aircourts <noreply@aircourts.com>"):
+    msg = EmailMessage(subject, message, sender, to_list)
+    msg.content_subtype = "html"  # Main content is now text/html
+    return msg.send()
 	
 ##########################frontend integrationnnnnnnnnnn#######################
 def abc(request):
-	res = send_mail('subject', 'body of the message', 'kalpana@codenomad.net', ['kalpana@codenomad.net'])
-	return HttpResponse('suceddd') 
+	name="kalpana"
+	sender="kalpana@codenomad.net"
+	subject="testing"
+	to_list="test@gmail.com"
+	message="<a href='#'>click here</a>"
+	msg = EmailMessage(subject, message, sender, to_list)
+	msg.content_subtype = "html"  # Main content is now text/html
+    return msg.send()
 ##pricing page form per week55/70###
 
 def priceperweek(request):
