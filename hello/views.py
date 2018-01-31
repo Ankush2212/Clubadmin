@@ -314,6 +314,13 @@ def deleteemployee(request):
 	
 ##########################frontend integrationnnnnnnnnnn#######################
 
+##################################hotel.html integration######################################
+def hotel(request):
+	return render(request, 'en/hotel.html')
+
+
+##################################prize.html integration######################################
+
 def priceperweek(request):
 		if request.method== 'POST':
 				try:
@@ -370,16 +377,12 @@ def abc(request):
 	return HttpResponse(cc)
 	
 	
-
+############activate confirmation#####################
 			
 def activate(request, uidb64):
 	try:
 		uid = uidb64
 		user = pricingplan.objects.get(pk=uid)
-		getdatetime = user.datetimee
-		gettime = getdatetime.split(' ')
-		
-		return HttpResponse(gettime[0])
 		user.verify = 1
 		user.save()
 		return HttpResponse('Thank you for your  confirmation.')
@@ -396,3 +399,6 @@ def pricingplans(request):
 		getrecord1 =  adminsignup.objects.get(id=getsession)
 		getpricing =  pricingplan.objects.filter(verify=1)
 		return render(request, 'backend/pricingplan.html',{'getadta':getrecord1,'getpricingdetail':getpricing}) 
+		
+
+	

@@ -1,3 +1,4 @@
+{% load staticfiles %} 
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,13 +6,13 @@
 	<meta charset="ISO-8859-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-		<link rel="stylesheet" href="../css/style.css"/>
-	<link rel="stylesheet" href="../css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="../css/responsive.css"/>
+		<link rel="stylesheet" href="{% static 'css/style.css'%}"/>
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}"/>
+	<link rel="stylesheet" href="{% static 'css/responsive.css'%}"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/youngserif" type="text/css"/>
-	<script src="../js/jquery.min.js"></script>
-	<script src="../ js/bootstrap.min.js"></script>
+	<script src="{% static 'js/jquery.min.js'%}"></script>
+	<script src="{% static ' js/bootstrap.min.js'%}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -31,14 +32,14 @@ $(document).ready(function(){
 		
 		   <div class="header">
 			 <div class="col-md-2 col-sm-2 col-xs-12 hed_left">
-				<div class="logo-out"><a href="http://www.clubfred.nl/en/"><img src="../images/logo.png"></a></div>
+				<div class="logo-out"><a href="http://www.clubfred.nl/en/"><img src="{% static 'images/logo.png'%}"></a></div>
 			 </div>
 			 <div class="col-md-10 col-sm-10 col-xs-12 hed_right">
 			    <div class="top_right">
 				    <div class="col-md-3 col-sm-3 col-xs-12 text-left">
 					   <div class="contact_no">
 					      <ul>
-							  <li><img class="phone" src="../images/phone.png"><a href=""><span class="num">24/7</span> 020 341 38 14</a></li>
+							  <li><img class="phone" src="{% static 'images/logo.png'%}"><a href=""><span class="num">24/7</span> 020 341 38 14</a></li>
 							</ul>
 					   </div>
 					</div>
@@ -62,7 +63,7 @@ $(document).ready(function(){
 						<ul class="nav navbar-nav">
 						  <li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">HOUSEKEEPING
-							<!--i class="fa fa-angle-down" aria-hidden="true"></i--><img id="updown" src="../images/arror.png"></a>
+							<!--i class="fa fa-angle-down" aria-hidden="true"></i--><img id="updown" src="{% static 'images/arror.png'%}"></a>
 							<ul class="dropdown-menu personnal">
 							  <li><p>Your personnal manager has just arrived</p></li>
 							  <li class="more"><a href="#">More Info</a></li>
@@ -70,7 +71,8 @@ $(document).ready(function(){
 						  </li>	
                            <li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">ROOM SERVICE
-							<!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --><img id="updown" src="../images/arror.png"></a>
+							<!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --><img id="updown" src="
+{% static 'images/arror.png'%}"></a>
 							<ul class="dropdown-menu personnal_one">
 							  <li><p>Like your favorite </br>hotel, only this</br> time at home !</p></li>
 							  <li class="more"><a href="#">More Info</a></li>
@@ -98,7 +100,7 @@ hotel experience</h4><br>
 			  </div>
 			  </div>
 			  <div class="col-md-6 col-sm-6 col-xs-12 bannerview">
-			   <img src="../images/HolidayRental_04.png">
+			   <img src="{% static 'images/HolidayRental_04.png'%}">
 			  </div>
 			  </div>
 			  <!--Banner Sections End--->
@@ -130,11 +132,11 @@ hotel experience</h4><br>
 				      <div id="a">
 					     <h2>A fresh home every week</h2>
 					     <ul class="week1">
-						    <li><img class="abc" src="../images/Websiteicons15.png"><a>The best of our housekeeping service
+						    <li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>The best of our housekeeping service
 </a></li>
-							<li><img class="abc" src="../images/Websiteicons15.png"><a>Your weekly to-do list done</a></li>
-							<li><img class="abc" src="../images/Websiteicons15.png"><a>A personalized visit</a></li>
-							<li><img class="abc" src="../images/Websiteicons15.png"><a>Your weekly to-do list done</a></li>
+							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Your weekly to-do list done</a></li>
+							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>A personalized visit</a></li>
+							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Your weekly to-do list done</a></li>
 							<!--<li><img src="../images/Websiteicons15.png"><a>Hotel housekeeping service</a></li>
 							<li><img src="../images/Websiteicons15.png"><a>Special requests on demand</a></li>
 							--->
@@ -159,16 +161,16 @@ hotel experience</h4><br>
 					    </div>
 						<div class="week_right2">
 					       <ul class="week1">
-						    <li><img class="abc" src="../images/hotelicon4.png"><a>Laundry and ironing</a></li>
-							<li><img class="abc" src="../images/hotelicon5.png"><a>Home cleaning</a></li>
-							<li><img class="abc" src="../images/hotelicon7.png"><a>Waste sorting</a></li>
+						    <li><img class="abc" src="{% static 'images/hotelicon1.png'%}"><a>Laundry and ironing</a></li>
+							<li><img class="abc" src="{% static 'images/hotelicon5.png'%}"><a>Home cleaning</a></li>
+							<li><img class="abc" src="{% static 'images/hotelicon7.png'%}"><a>Waste sorting</a></li>
 						 </ul>
 					    </div>
 				      </div>
 					  
 					</div>	
 					<div class="recon_right1">
-					  <img src="../images/hotel.png">
+					  <img src="{% static 'images/hotel1.png'%}">
 					</div>	
 					<div class="book">
 					<button class="button" type="button" ><a href="pricing.html">GET STARTED</a></span>
@@ -195,23 +197,23 @@ hotel experience</h4><br>
 						    <li><img src="../images/Websiteicons15.png"><a>From clothing to product requests, we got your back.</a></li></div>--->
 							
 					  
-					 <div class="imghotel"> <img  src="../images/Websiteicons15.png" ></div>
+					 <div class="imghotel"> <img  src="{% static 'images/Websiteicons15.png'%}" ></div>
 					 <div class="fivehotel2">
 					  
 					
 					  <p id="b">      Class aptent taciti sociosqu ad litora torquent <br>per conubia nostra, per inceptos himenaeos. </p>
-					  <div > <img   src="../images/Websiteicons15.png"class="imghotel4" ></div>
+					  <div > <img   src="{% static 'images/Websiteicons15.png'%}"class="imghotel4" ></div>
 					  
 					  
 					  <p id="b" >Nam vestibulum, velit in dignissim.</p>
-					  <div > <img class="imghotel3"  src="../images/Websiteicons15.png" ></div>
+					  <div > <img class="imghotel3"  src="{% static 'images/Websiteicons15.png'%}" ></div>
 					  <br>
 					   <p id="b" >Condimentum, arcu diam mollis leo, non <br>viverra neque sapien eu felis. </p>
 					  </div>
 					  
 					</div>	
 					<div class="recon_right1">
-					  <img src="../images/Hotelbooking.png">
+					  <img src="{% static 'images/Hotelbooking.png'%}">
 					</div>	
 					<div class="book">
 					<button class="button" type="button" ><a href="pricing.html">GET STARTED</a></span>
@@ -230,38 +232,38 @@ hotel experience</h4><br>
 				   <div class="col-md-12 col-sm-12 col-xs-12 agent">
 				<div class="icon_out">
 				     <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-					    <div class="icon"><img src="../images/1st.png"></div>
+					    <div class="icon"><img src="{% static 'images/1st.png'%}"></div>
 						<div class="hed"><h2>Buffing/polishing</h2>
 						   <h4>Providing interior design </br>and maintenance </br>
                                 to boost performance</h4>
 						 </div>
 					 </div>
 					 <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-					     <div class="icon"><img src="../images/2.png"></div>
+					     <div class="icon"><img src="{% static 'images/2.png'%}"></div>
 						 <div class="hed"><h2>Vacuuming</h2>
 						   <h4>We increase your earnings </br> up to 50%</h4>
 						 </div>
 					 </div>
 					 <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-					     <div class="icon"><img src="../images/3.png"></div>
+					     <div class="icon"><img src="{% static 'images/3.png'%}"></div>
 						 <div class="hed"><h2>Spot cleaning</h2>
 						   <h4>With your set of rules we </br> invite the right guests</h4>
 						 </div>
 					 </div> 
 					 <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-					    <div class="icon"><img src="../images/4.png"></div>
+					    <div class="icon"><img src="{% static 'images/4.png'%}"></div>
 						<div class="hed"><h2>Green cleaning</h2>
 						   <h4>A warm welcome </br>for any guest</h4>
 						 </div>
 					 </div>
 					 <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-					     <div class="icon"><img src="../images/5.png"></div>
+					     <div class="icon"><img src="{% static 'images/5.png'%}"></div>
 						 <div class="hed"><h2>Waxing/sealing</h2>
 						   <h4>Always up to date when </br> guest check in and out</h4>
 						 </div>
 					 </div>
 					 <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-					     <div class="icon"><img src="../images/6.png"></div>
+					     <div class="icon"><img src="{% static 'images/6.png'%}"></div>
 						 <div class="hed"><h2>Perimeter cleaning</h2>
 						   <h4>For questions, concerns </br>and repairs</h4>
 						 </div>
@@ -287,7 +289,8 @@ hotel experience</h4><br>
 	<div class="row">
 	<div class="col-md-2 col-sm-12">
 	<div class="our_story">
-	<div><img src="../images/our_03.png"></div>
+	
+	<div><img src="{% static 'images/our_03.png'%}"></div>
      </div> 
 	 </div>
 		<div class="col-md-10 col-sm-12  our_story1">
@@ -307,13 +310,13 @@ In quis lorem accumsan, ullamcorper elit sit amet, commodo massa. Donec vitae au
 		
 	<div class="col-md-12 col-sm-12 col-xs-12 bannerview">	
 	<div class="col-md-4 col-sm-4 hotelimg ">
-	<img src="../images/hotel1.png">
+	<img src="{% static 'images/hotel1.png'%}">
 	</div>
 	<div class="col-md-4 col-sm-4 hotelimg ">
-	<img src="../images/hotel2.png">
+	<img src="{% static 'images/hotel2.png'%}">
 	</div>
 	<div class="col-md-4 col-sm-4 hotelimg ">
-	<img src="../images/hotel3.png">
+	<img src="{% static 'images/hotel3.png'%}">
 	</div>
 		</div>
 
@@ -398,14 +401,19 @@ In quis lorem accumsan, ullamcorper elit sit amet, commodo massa. Donec vitae au
 			  </div>
 			  <div class="col-md-6 col-sm-6 col-xs-12 footer_right">
 			        <div class="f_right" id="f_right">				 
-					  <h1>Follow Us</h1>
-						 <ul class="soc">
-							   <li><a href="https://www.facebook.com/hulpje"><img src="../images/facebook.png"></a></li>
-							   <li><a href="https://twitter.com/hulpje"><img src="../images/twitter.png"></a></li>
-							   <li><a href ="https://www.instagram.com/clubfred_/"><img src="../images/instagram.png"></a></li>
-							   <li><a href ="https://in.pinterest.com/clubfredNL/"><img src="../images/pintrest.png"></a></li>
-							   <li><a href ="https://www.linkedin.com/clubfred"><img src="../images/linkdin.png"></a></li>						   
-						 </ul>					 						 
+					  <ul class="soc">
+
+  <li><a href="https://www.facebook.com/CIubfred" target="_blank">
+  <img src="{% static 'images/facebook.png'%}"></a></li>
+  <li><a href="https://twitter.com/CIubfred" target="_blank">
+  <img src="{% static 'images/twitter.png'%}"></a></li>
+  <li><a href ="https://www.instagram.com/clubfred_/" target="_blank">
+  <img src="{% static 'images/instagram.png'%}"></a></li>
+  <li><a href ="https://in.pinterest.com/clubfredNL/" target="_blank">
+  <img src="{% static 'images/pintrest.png'%}"></a></li>
+  <li><a href ="https://www.linkedin.com/company/CIubfred/" target="_blank">
+  <img src="{% static 'images/linkdin.png'%}"></a></li>	  
+</ul>					 						 
 						 
 						 
 					</div>
@@ -420,7 +428,7 @@ In quis lorem accumsan, ullamcorper elit sit amet, commodo massa. Donec vitae au
 			  
 			   <div class="col-md-12 col-sm-12 col-xs-12 bootom_footer12">
 				   <div class="footer_left pull-left">
-				   <h5 class="fred">© 2018 Clubfred.</h5>
+				   <h5 class="fred">&copy; 2018 Clubfred.</h5>
 				   </div>
 				   <div class="footer_right pull-right">
 					  <div class="how">
@@ -434,7 +442,7 @@ In quis lorem accumsan, ullamcorper elit sit amet, commodo massa. Donec vitae au
 									   <li><a href="#">Fred Academy</a></li-->	
 									   <li><a href="pricing.html">Our Plans |</a></li>
 									   <li><a href="holiday.html">Airbnb |</a></li>
-									   <li><a href="hotel.html"> Hotels |</a></li>
+									   <li><a href="{% url 'hotel'%}"> Hotels |</a></li>
 									   <li><a href="https://clubfred.recruitee.com/" target="_blank">Jobs</a></li>
 								 </ul>
 							 </div>
