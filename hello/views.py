@@ -321,7 +321,6 @@ def hotel(request):
 	
 	
 def hotelservices1(request):
-		return HttpResponse('hiii')
 		if request.method=='POST':
 			return HttpResponse('hiii')
 			try:
@@ -355,6 +354,7 @@ def hotelservices1(request):
 	##################################prize.html integration######################################
 
 def priceperweek(request):
+		return HttpResponse('hello')
 		if request.method== 'POST':
 				try:
 					firstname = request.POST.get('firstname')
