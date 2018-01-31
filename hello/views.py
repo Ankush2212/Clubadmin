@@ -321,40 +321,40 @@ def hotel(request):
 	
 	
 def hotelservices1(request):
-		if request.method=='POST':
-			return HttpResponse('hiii')
-			try:
-					firstname = request.POST.get('firstname')
-					lastname = request.POST.get('lastname')
-					email = request.POST.get('email')
-					zipcode = request.POST.get('zipcode')
-					address = request.POST.get('address')
-					mobilenumber = request.POST.get('mobilenumber')
-					unit = request.POST.get('unit')
-					date = request.POST.get('date')
-					services = request.POST.get('services')
-					now1 = datetime.datetime.now()
-					return HttpResponse('hello12')
+		return HttpResponse('hello')
+		# if request.method=='POST':
+			# return HttpResponse('hiii')
+			# try:
+					# firstname = request.POST.get('firstname')
+					# lastname = request.POST.get('lastname')
+					# email = request.POST.get('email')
+					# zipcode = request.POST.get('zipcode')
+					# address = request.POST.get('address')
+					# mobilenumber = request.POST.get('mobilenumber')
+					# unit = request.POST.get('unit')
+					# date = request.POST.get('date')
+					# services = request.POST.get('services')
+					# now1 = datetime.datetime.now()
+					# return HttpResponse('hello12')
 			 
-					data = hotelservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now1) 
-					data.save()
+					# data = hotelservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now1) 
+					# data.save()
 					
 					
 					
-			except KeyError:
-					return HttpResponse("You're logged out.")
+			# except KeyError:
+					# return HttpResponse("You're logged out.")
 					
 					
 					
-		else:
-			return HttpResponse('hello')
+		# else:
+			# return HttpResponse('hello')
 			
 			
 
 	##################################prize.html integration######################################
 
 def priceperweek(request):
-		return HttpResponse('hello')
 		if request.method== 'POST':
 				try:
 					firstname = request.POST.get('firstname')
