@@ -355,7 +355,7 @@ def priceperweek(request):
 					
 					message = render_to_string('acc_active_email.html', {
 					'user': firstname,
-					'domain': current_site.domain,
+					'domain': 'https://clubfred.herokuapp.com/',
 					'uid':urlsafe_base64_encode(firstname),
 					})
 					to_email = email
