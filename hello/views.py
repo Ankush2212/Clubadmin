@@ -362,7 +362,7 @@ def priceperweek(request):
 					message = render_to_string('acc_active_email.html', {
 					'user': firstname,
 					'domain': 'https://clubfred.herokuapp.com/',
-					'uid':urlsafe_base64_encode(str(firstname)),
+					'uid':123,
 					})
 					to_email = email
 					emails = EmailMessage(
@@ -389,7 +389,7 @@ def priceperweek(request):
 	
 def activate(request, uidb64):
 	try:
-		uid = force_text(urlsafe_base64_decode(uidb64))
+		uid = uidb64
 		return HttpResponse(str(uid))
 	except(TypeError, ValueError, OverflowError, User.DoesNotExist):
 		user = None
