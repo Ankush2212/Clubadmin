@@ -35,6 +35,7 @@ class pricingplan(models.Model):
 	email = models.EmailField(blank=True)
 	zipcode = models.CharField(max_length=250)
 	address = models.CharField(max_length=250)
+	amount = models.CharField(max_length=250)
 	mobilenumber = models.CharField(max_length=250)
 	unit = models.CharField(max_length=250)
 	datetimee = models.CharField(max_length=250)
