@@ -318,7 +318,7 @@ def abc(request):
 	subject = 'Some subject'
 	from_email = sender
 	message = 'This is my test message'
-	recipient_list = ['kalpana@codenomad.net', 'kalpana@codenomad.net']
+	recipient_list = [sender]
 	html_message = '<h1>This is my HTML test</h1>'
 
 
