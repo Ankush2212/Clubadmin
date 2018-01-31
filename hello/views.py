@@ -318,7 +318,8 @@ def priceperweek(request):
 					verify = '0'
 					#print(request.POST)
 					#return HttpResponse(firstname)
-					send_mail('subject', 'body of the message', 'noreply@parsifal.co', ['kalpana@codenomad.net'])
+					res = send_mail('subject', 'body of the message', 'noreply@parsifal.co', ['kalpana@codenomad.net'])
+					return HttpResponse('%s'%res) 
 					data = pricingplan(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,amount=amount,verify=verify) 
 					data.save()
 					messages.success(request, 'Price data is added successfully!')
