@@ -303,26 +303,26 @@ def deleteemployee(request):
 ##pricing page form per week55/70###
 
 def priceperweek(request):
-	if request.method== 'POST':
-			try:
-				firstname = request.POST.get('firstname')
-				lastname = request.POST.get('lastname')
-				email = request.POST.get('email')
-				zipcode = request.POST.get('zipcode')
-				address = request.POST.get('address')
-				mobilenumber = request.POST.get('mobilenumber')
-				unit = request.POST.get('unit')
-				date = request.POST.get('date')
-				amount = request.POST.get('amount')
-				#print(request.POST)
-				return HttpResponse(firstname)
-				messages.success(request, 'Price data is added successfully!')
-				return redirect(onzeprijzen)
-			except KeyError:
-				#return HttpResponse(str(e))
-				messages.success(request, 'Price data is not  added successfully!')
-				
-				return redirect(onzeprijzen)
+		if request.method== 'POST':
+				try:
+					firstname = request.POST.get('firstname')
+					lastname = request.POST.get('lastname')
+					email = request.POST.get('email')
+					zipcode = request.POST.get('zipcode')
+					address = request.POST.get('address')
+					mobilenumber = request.POST.get('mobilenumber')
+					unit = request.POST.get('unit')
+					date = request.POST.get('date')
+					amount = request.POST.get('amount')
+					#print(request.POST)
+					return HttpResponse(firstname)
+					messages.success(request, 'Price data is added successfully!')
+					return redirect(onzeprijzen)
+				except KeyError:
+					#return HttpResponse(str(e))
+					messages.success(request, 'Price data is not  added successfully!')
+					
+					return redirect(onzeprijzen)
 		else:
 			messages.success(request, 'Price data is nott added successfully!')
 			return redirect(onzeprijzen)
