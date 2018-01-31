@@ -24,6 +24,7 @@ urlpatterns = [
 	url(r'^login1', hello.views.login1, name='login1'),
 	url(r'^welcome', hello.views.welcome, name='welcome'),
 	url(r'^hotel', hello.views.hotel, name='hotel'),
+	url(r'^hotelservices', hello.views.hotelservices, name='hotelservices'),
 	url(r'^backend/pricingplans', hello.views.pricingplans, name='pricingplans'),
 	url(r'^onzeprijzen', hello.views.onzeprijzen, name='onzeprijzen'),
 	url(r'^backend/admin', hello.views.admin, name='admin'), 
