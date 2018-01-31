@@ -349,16 +349,16 @@ def hotelservices(request):
 					# mail_subject, message, to=[to_email] )
 					# emails.send()
 					messages.success(request, 'service data is added successfully!')
-					return redirect(hotel)
+					#return redirect(hotel)
 			except KeyError:
 					return HttpResponse("You're logged out.")
 					messages.success(request, 'service data is not  added successfully!')
 					
-					return redirect(hotel)
+					#return redirect(hotel)
 		else:
 			return HttpResponse('hello')
 			messages.success(request, 'service data is nott added successfully!')
-			return redirect(hotel)
+			#return redirect(hotel)
 
 ##################################prize.html integration######################################
 
