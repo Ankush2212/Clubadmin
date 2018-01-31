@@ -362,7 +362,7 @@ def abc(request):
 	# else:
 		# return HttpResponse('hello')
 	now = datetime.now()
-	return HttpResponse(now)
+	#now = '2018-01-31 05:41:36.995880'
 	then = self.created_date
 	tdelta = now - then
 	minutes = tdelta.seconds/60
