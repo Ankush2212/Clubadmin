@@ -349,7 +349,7 @@ def hotelservices(request):
 					messages.success(request, 'service data is added successfully!')
 					return redirect(hotel)
 			except KeyError:
-					#return HttpResponse(str(e))
+					return HttpResponse("You're logged out.")
 					messages.success(request, 'service data is not  added successfully!')
 					
 					return redirect(hotel)
