@@ -346,7 +346,7 @@ def priceperweek(request):
 					#from_email = sender
 					message = 'Here is a activitation link please click on that and verify your booking.'
 					recipient_list = [email]
-					html_message = '<a href="'{% url 'verify' email %}'">Verify your booking</a>'
+					html_message = '<a href="{% url '"verify"' email %}">Verify your booking</a>'
 
 
 					send_mail(subject, message, recipient_list, fail_silently=False, html_message=html_message)
