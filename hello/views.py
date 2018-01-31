@@ -11,6 +11,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.template.loader import render_to_string
 
 from .models import adduser 
+from .models import hotelservice 
 from .models import adminsignup 
 from .models import employeedetail 
 from .models import pricingplan 
@@ -317,7 +318,44 @@ def deleteemployee(request):
 ##################################hotel.html integration######################################
 def hotel(request):
 	return render(request, 'en/hotel.html')
-
+	
+	
+def hotelservices(request):
+		if request.method== 'POST':
+			try:
+					firstname = request.POST.get('firstname')
+					lastname = request.POST.get('lastname')
+					email = request.POST.get('email')
+					zipcode = request.POST.get('zipcode')
+					address = request.POST.get('address')
+					mobilenumber = request.POST.get('mobilenumber')
+					unit = request.POST.get('unit')
+					date = request.POST.get('date')
+					services = request.POST.get('services')
+					now1 = datetime.datetime.now()
+					data = hotelservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now1) 
+					data.save()
+					# mail_subject = 'Activate your blog account.'
+					
+					# message = render_to_string('acc_active_email.html', {
+					# 'user': firstname,
+					# 'domain': 'https://clubfred.herokuapp.com/',
+					# 'uid':data.pk,
+					# })
+					# to_email = email
+					# emails = EmailMessage(
+					# mail_subject, message, to=[to_email] )
+					# emails.send()
+					messages.success(request, 'service data is added successfully!')
+					return redirect(hotel)
+			except KeyError:
+					#return HttpResponse(str(e))
+					messages.success(request, 'service data is not  added successfully!')
+					
+					return redirect(hotel)
+		else:
+			messages.success(request, 'service data is nott added successfully!')
+			return redirect(hotel)
 
 ##################################prize.html integration######################################
 

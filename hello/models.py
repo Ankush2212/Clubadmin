@@ -40,6 +40,19 @@ class pricingplan(models.Model):
 	unit = models.CharField(max_length=250)
 	datetimee = models.CharField(max_length=250)
 	verify = models.IntegerField()
+
+class hotelservice(models.Model):
+	firstname = models.CharField(max_length=250)
+	lastname = models.CharField(max_length=250)
+	email = models.EmailField(blank=True)
+	zipcode = models.CharField(max_length=250)
+	address = models.CharField(max_length=250)
+	services = models.CharField(max_length=250)
+	currentdate = models.CharField(max_length=250)
+	mobilenumber = models.CharField(max_length=250)
+	unit = models.CharField(max_length=250)
+	datetimee = models.CharField(max_length=250)
+	verify = models.IntegerField()
 	
 	
 	

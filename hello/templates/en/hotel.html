@@ -14,8 +14,20 @@
 	<script src="{% static 'js/jquery.min.js'%}"></script>
 	<script src="{% static ' js/bootstrap.min.js'%}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+ <!------------------------------------popup libraray---------------------------->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>	
+  <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script-->
+  
+  
+  
+  
 	<script>
 $(document).ready(function(){
     $(".mobile_icon i").click(function(){
@@ -23,6 +35,108 @@ $(document).ready(function(){
     });
 });
 </script>
+<style>
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+form#login-nav .form-group {
+    margin-bottom:40px;
+}
+
+form#login-nav label {
+    width: 100%;
+    float: left;
+    text-align: left;
+    color: #f6735d;
+    font-size: 17px;
+    font-weight: normal;
+}
+#login-nav .form-control {
+    border: none;
+    border-bottom: 1px solid #000;
+    box-shadow: none;
+    border-radius: 0px;
+	    padding-bottom: 20px;
+	padding-left: 0px;
+}
+.pricing_form .checkbox label {
+    color: #f6735d;
+	    font-weight: 600 !important;
+}
+button.btn.btn-primary.submit_pricing {
+    background: #f6735d;
+    padding: 20px 34px;
+    border: none;
+    border-radius: 0 !important;
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 58%;
+    letter-spacing: 2px;
+}
+
+h4#myModalLabel2 {
+    text-align: center;
+    color: #f6735d;
+    font-size: 20px;
+}
+.pricing_form {
+    margin-top: 32px;
+    float: left;
+    width: 100%;
+}
+div#datetimepicker5 input {
+    border: 1px solid #efefef !important;
+    padding-top: 13px;
+    padding-left: 10px !important;
+}
+</style>
   </head>
   <body>
 <div class="main">    
@@ -175,7 +289,7 @@ hotel experience</h4><br>
 					  <img src="{% static 'images/hotel1.png'%}">
 					</div>	
 					<div class="book">
-					<button class="button" type="button" ><a href="pricing.html">GET STARTED</a></span>
+					<button class="iddd button" onclick="return hotelservice('housekeeping')" type="button" >GET STARTED</span>
 					</button>
 					</div>				
 			   </div>
@@ -218,7 +332,7 @@ hotel experience</h4><br>
 					  <img src="{% static 'images/hotel.png'%}">
 					</div>	
 					<div class="book">
-					<button class="button" type="button" ><a href="pricing.html">GET STARTED</a></span>
+					<button class="iddd button" onclick="return hotelservice('hotelbooking')" type="button" >GET STARTED</span>
 					</button>
 					</div>				
 			   </div>
@@ -271,7 +385,7 @@ hotel experience</h4><br>
 						 </div>
 					 </div>
   					 
-					<div class="g_start"><button type="button"><a href="pricing.html">GET STARTED</a></button></div> 
+					<div class="g_start"><button class="iddd" type="button" onclick="return hotelservice('hotelservice')">GET STARTED</button></div> 
 				</div>
 			</div>					
 			   </div>
@@ -454,6 +568,83 @@ In quis lorem accumsan, ullamcorper elit sit amet, commodo massa. Donec vitae au
 	</div>	   
 		   
 </div>
-</div>				
+</div>
+
+
+
+<!-----------------------housekeeping----------------------------------->	
+<div class="confirm_popup modal bs-example-modal-sm" id="deletee" tabindex="-1" role="dialog" aria-hidden="true">
+                   <div class="modal-dialog modal-md">
+                     <div class="modal-content">
+
+                       <div class="modal-header">
+                         <button type="button" class="popup_close close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span>
+                         </button>
+                         <h4 class="modal-title" id="myModalLabel2">Pricing plan Form</h4>
+                       </div>
+                     
+                       <div class="modal-footer">
+					<div class="pricing_form">
+		
+						<form action="{% url 'hotelservices'%}" method ="post">
+									 {% csrf_token %}
+									<div class="col-md-6 col-sm-6">
+									<div class="form-group">
+											 <input type="text"  class="form-control" id="firstname" placeholder="Enter Firstname" name="firstname">
+										</div>
+										<div class="form-group">
+											 <input type="email"  class="form-control" id="email" placeholder="Enter email" name="email">
+										</div>
+										<div class="form-group">
+											 <input type="text"  class="form-control" id="address" placeholder="Enter Address" name="address">
+										</div>
+											<div class="form-group">
+											 <input style="width:100px;" type="text"  class="form-control" id="zip" placeholder="Enter Zip" name="zipcode">
+										</div>
+		</div>
+		<div class="col-md-6 col-sm-6">
+		<div class="form-group">
+											 <input type="text"  class="form-control" id="lastname" placeholder="Enter Lastname" name="lastname">
+										</div>
+										<div class="form-group">
+											 <input type="text"  class="form-control" id="Number" placeholder="Enter Number" name="mobilenumber">
+											 <input type="hidden" id="amount" name="services">
+										</div>
+										<div class="form-group">
+											 <input type="text"  class="form-control" id="unit" placeholder="Enter Unit" name="unit">
+										</div>
+									
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker5'>
+                    <input placeholder="Select Date/time" name="date" type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+
+				
   </body>
 </html>  
+<script>
+$(document).ready(function(){
+    $(".iddd").click(function(){
+      $('.confirm_popup').show();
+    });
+  $(".popup_close").click( function () {
+ $('.confirm_popup').hide();
+    });
+});
+
+function  hotelservice(a)
+	{
+		$('#services').val(a);
+		$('.confirm_popup').show();
+	
+	}
+	
+	  $(".popup_close").click( function () {
+		  $('.confirm_popup').hide();
+		  
+	  });
+</script>
