@@ -383,7 +383,7 @@ def priceperweek(request):
 	
 def activate(request, uidb64):
     try:
-        uid = force_text(urlsafe_base64_decode(uidb64))
+		uid = force_text(urlsafe_base64_decode(uidb64))
 		return HttpResponse(str(uid))
         #user = User.objects.get(pk=uid)
     except(TypeError, ValueError, OverflowError, User.DoesNotExist):
