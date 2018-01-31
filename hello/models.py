@@ -39,7 +39,7 @@ class pricingplan(models.Model):
 	mobilenumber = models.CharField(max_length=250)
 	unit = models.CharField(max_length=250)
 	datetimee = models.CharField(max_length=250)
-	
+	verify = models.IntegerField()
 	
 	
 	

@@ -315,9 +315,10 @@ def priceperweek(request):
 					unit = request.POST.get('unit')
 					date = request.POST.get('date')
 					amount = request.POST.get('amount')
+					verify = '0'
 					#print(request.POST)
 					#return HttpResponse(firstname)
-					data = pricingplan(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,amount=amount)
+					data = pricingplan(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,amount=amount,verify=verify)
 					data.save()
 					messages.success(request, 'Price data is added successfully!')
 					return redirect(onzeprijzen)
