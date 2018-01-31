@@ -382,17 +382,16 @@ def priceperweek(request):
 			return redirect(onzeprijzen)
 	
 def activate(request, uidb64):
-    try:
+	try:
 		uid = force_text(urlsafe_base64_decode(uidb64))
 		return HttpResponse(str(uid))
-        #user = User.objects.get(pk=uid)
-    except(TypeError, ValueError, OverflowError, User.DoesNotExist):
-        user = None
-    if user is not None and account_activation_token.check_token(user):
-        user.is_active = True
-        user.save()
-        login(request, user)
-        # return redirect('home')
-        return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
-    else:
-        return HttpResponse('Activation link is invalid!')
+	except(TypeError, ValueError, OverflowError, User.DoesNotExist):
+		user = None
+		if user is not None and account_activation_token.check_token(user):
+			user.is_active = True
+			user.save()
+			login(request, user)
+			# return redirect('home')
+			return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
+		else:
+			return HttpResponse('Activation link is invalid!')
