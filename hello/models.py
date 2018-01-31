@@ -28,6 +28,21 @@ class adduser(models.Model):
 	contactnumber = models.CharField(max_length=250)
 	status = models.IntegerField()
 	email = models.EmailField(blank=True)
+
+class pricingplan(models.Model):
+	firstname = models.CharField(max_length=250)
+	lastname = models.CharField(max_length=250)
+	email = models.EmailField(blank=True)
+	zipcode = models.CharField(max_length=250)
+	address = models.CharField(max_length=250)
+	mobilenumber = models.CharField(max_length=250)
+	unit = models.CharField(max_length=250)
+	date = models.CharField(max_length=250)
+	
+	
+	
+	
+	
 class employeedetail(models.Model):
 	employeename = models.CharField(max_length=250)
 	username = models.CharField(max_length=250)
