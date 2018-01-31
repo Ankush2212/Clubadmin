@@ -15,7 +15,7 @@ from .models import adminsignup
 from .models import employeedetail 
 from .models import pricingplan 
 import datetime
-
+from django.conf.urls import include, url
 
 # Create your views here.
 def index(request):
@@ -342,14 +342,32 @@ def priceperweek(request):
 					#print(request.POST)
 					#return HttpResponse(firstname)
 					#sender="kalpana@codenomad.net"
-					subject = 'Please verify you booking'
-					from_email = email
-					message = 'Here is a activitation link please click on that and verify your booking.'
-					recipient_list = [email]
-					html_message = '<a href="{% url '"verify"' email %}">Verify your booking</a>'
+					# subject = 'Please verify you booking'
+					# from_email = email
+					# message = 'Here is a activitation link please click on that and verify your booking.'
+					# recipient_list = [email]
+					# html_message = '<a href="{% url 'verify' email %}">Verify your booking</a>'
 
 
-					send_mail(subject, message, from_email , recipient_list, fail_silently=False, html_message=html_message)
+					# send_mail(subject, message, from_email , recipient_list, fail_silently=False, html_message=html_message)
+					
+					mail_subject = 'Activate your blog account.'
+					
+					message = render_to_string('acc_active_email.html', {
+					'user': firstname,
+					'domain': current_site.domain,
+					'uid':urlsafe_base64_encode(firstname),
+					})
+					to_email = email
+					emails = EmailMessage(
+					mail_subject, message, to=[to_email] )
+					emails.send()
+					#return HttpResponse('Please confirm your email address to complete the registration')
+					
+					
+					
+					
+					
 					data = pricingplan(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,amount=amount,verify=verify) 
 					data.save()
 					messages.success(request, 'Price data is added successfully!')
@@ -363,5 +381,18 @@ def priceperweek(request):
 			messages.success(request, 'Price data is nott added successfully!')
 			return redirect(onzeprijzen)
 	
-def verify(request,email):
-	return HttpResponse(email)
+def activate(request, uidb64):
+    try:
+        uid = force_text(urlsafe_base64_decode(uidb64))
+		return HttpResponse(str(uid))
+        #user = User.objects.get(pk=uid)
+    except(TypeError, ValueError, OverflowError, User.DoesNotExist):
+        user = None
+    if user is not None and account_activation_token.check_token(user):
+        user.is_active = True
+        user.save()
+        login(request, user)
+        # return redirect('home')
+        return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
+    else:
+        return HttpResponse('Activation link is invalid!')
