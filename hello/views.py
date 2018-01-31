@@ -322,6 +322,7 @@ def hotel(request):
 	
 def hotelservices(request):
 		if request.method=='POST':
+			return HttpResponse('hiii')
 			try:
 					firstname = request.POST.get('firstname')
 					lastname = request.POST.get('lastname')
@@ -337,30 +338,20 @@ def hotelservices(request):
 			 
 					data = hotelservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now1) 
 					data.save()
-					# mail_subject = 'Activate your blog account.'
 					
-					# message = render_to_string('acc_active_email.html', {
-					# 'user': firstname,
-					# 'domain': 'https://clubfred.herokuapp.com/',
-					# 'uid':data.pk,
-					# })
-					# to_email = email
-					# emails = EmailMessage(
-					# mail_subject, message, to=[to_email] )
-					# emails.send()
-					messages.success(request, 'service data is added successfully!')
-					#return redirect(hotel)
+					
+					
 			except KeyError:
 					return HttpResponse("You're logged out.")
-					messages.success(request, 'service data is not  added successfully!')
 					
-					#return redirect(hotel)
+					
+					
 		else:
 			return HttpResponse('hello')
-			messages.success(request, 'service data is nott added successfully!')
-			#return redirect(hotel)
+			
+			
 
-##################################prize.html integration######################################
+	##################################prize.html integration######################################
 
 def priceperweek(request):
 		if request.method== 'POST':
