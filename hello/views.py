@@ -352,14 +352,20 @@ def priceperweek(request):
 			return redirect(onzeprijzen)
 
 def abc(request):
-	past  = datetime.datetime.now()
-	present  = datetime.datetime.now()
-	#present.strftime('%Y-%m-%d %H:%M:%S') == past.strftime('%Y-%m-%d %H:%M:%S')
-	#False
-	if present.strftime('%Y-%m-%d %H:%M') == past.strftime('%Y-%m-%d %H:%M'):
-		return HttpResponse('ddsdasdas')
-	else:
-		return HttpResponse('hello')
+	# past  = datetime.datetime.now()
+	# present  = datetime.datetime.now()
+	# #present.strftime('%Y-%m-%d %H:%M:%S') == past.strftime('%Y-%m-%d %H:%M:%S')
+	# #False
+	# if present.strftime('%Y-%m-%d %H:%M') == past.strftime('%Y-%m-%d %H:%M'):
+		# return HttpResponse('ddsdasdas')
+	# else:
+		# return HttpResponse('hello')
+	now = datetime.now()
+	return HttpResponse(now)
+	then = self.created_date
+	tdelta = now - then
+	minutes = tdelta.seconds/60
+	return minutes
 	
 	
 	
