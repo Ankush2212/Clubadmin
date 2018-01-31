@@ -223,7 +223,13 @@ hotel experience</h4><br>
 			
 		
 
-  
+   {% if messages %}
+				  <ul class="messages">
+					{% for message in messages %}
+					  <li class="{{ message.tags }}" style="text-align:center">{{ message }}</li>
+					{% endfor %}
+				  </ul>
+				{% endif %}
 
 			
 			<div class="col-md-12 col-sm-12 col-xs-12 Five">
