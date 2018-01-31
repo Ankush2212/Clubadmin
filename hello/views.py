@@ -351,9 +351,11 @@ def priceperweek(request):
 			return redirect(onzeprijzen)
 
 def abc(request):
-	now = datetime.datetime.now()
+	#now = datetime.datetime.now()
+	now = datetime.datetime.now().strftime('%y-%m-%d %H:%M')
 	now_plus_10 = now + datetime.timedelta(minutes = 10)	
-	return HttpResponse(now_plus_10)
+	abcd = now "hii" now_plus_10
+	return HttpResponse(abcd)
 
 			
 def activate(request, uidb64):
