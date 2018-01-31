@@ -308,9 +308,9 @@ def abc(request):
 	name="kalpana"
 	sender="kalpana@codenomad.net"
 	subject="testing"
-	to_list="test@gmail.com"
+	#to="test@gmail.com"
 	message="<a href='#'>click here</a>"
-	msg = EmailMessage(subject, message, sender, to_list)
+	msg = EmailMessage(subject, message, sender)
 	msg.content_subtype = "html"  # Main content is now text/html
 	return msg.send()
 ##pricing page form per week55/70###
