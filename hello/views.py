@@ -357,17 +357,7 @@ def priceperweek(request):
 
 					# send_mail(subject, message, from_email , recipient_list, fail_silently=False, html_message=html_message)
 					
-					mail_subject = 'Activate your blog account.'
 					
-					message = render_to_string('acc_active_email.html', {
-					'user': firstname,
-					'domain': 'https://clubfred.herokuapp.com/',
-					'uid':firstname,
-					})
-					to_email = email
-					emails = EmailMessage(
-					mail_subject, message, to=[to_email] )
-					emails.send()
 					#return HttpResponse('Please confirm your email address to complete the registration')
 					
 					
@@ -376,6 +366,17 @@ def priceperweek(request):
 					
 					data = pricingplan(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,amount=amount,verify=verify) 
 					data.save()
+					mail_subject = 'Activate your blog account.'
+					
+					message = render_to_string('acc_active_email.html', {
+					'user': firstname,
+					'domain': 'https://clubfred.herokuapp.com/',
+					'uid':data.pk,
+					})
+					to_email = email
+					emails = EmailMessage(
+					mail_subject, message, to=[to_email] )
+					emails.send()
 					messages.success(request, 'Price data is added successfully!')
 					return redirect(onzeprijzen)
 				except KeyError:
@@ -390,13 +391,13 @@ def priceperweek(request):
 def activate(request, uidb64):
 	try:
 		uid = uidb64
-		return HttpResponse(str(uid))
+		user = pricingplan.objects.get(pk=uid)
 	except(TypeError, ValueError, OverflowError, User.DoesNotExist):
 		user = None
-		if user is not None and account_activation_token.check_token(user):
-			user.is_active = True
+		if user is not None:
+			user.verify = 1
 			user.save()
-			login(request, user)
+			#login(request, user)
 			# return redirect('home')
 			return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
 		else:
