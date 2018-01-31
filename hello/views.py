@@ -1,6 +1,6 @@
 import requests
 from django.conf import settings
-from django.core.mail import send_mail
+#from django.core.mail import send_mail
 from django.contrib import messages
 import smtplib
 from django.contrib.sessions.models import Session
@@ -17,6 +17,12 @@ from .models import pricingplan
 import datetime
 from django.conf.urls import include, url
 
+
+from django.utils.encoding import force_bytes, force_text
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.template.loader import render_to_string
+
+from django.core.mail import EmailMessage
 # Create your views here.
 def index(request):
     #return HttpResponse('Hefdd gfdgdf llo fddcccx xczfddvd x dddrom Python!')
