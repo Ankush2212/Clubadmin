@@ -319,7 +319,7 @@ def abc(request):
 	from_email = sender
 	message = 'This is my test message'
 	recipient_list = [sender]
-	html_message = '<h1>This is my HTML test</h1>'
+	html_message = '<a href="https://www.programcreek.com/">This is my HTML test</a>'
 
 
 	send_mail(subject, message, from_email, recipient_list, fail_silently=False, html_message=html_message)
