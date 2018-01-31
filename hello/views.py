@@ -320,7 +320,7 @@ def hotel(request):
 	return render(request, 'en/hotel.html')
 	
 	
-def hotelservices1(request):
+def help(request):
 		return HttpResponse('hello')
 		# if request.method=='POST':
 			# return HttpResponse('hiii')
