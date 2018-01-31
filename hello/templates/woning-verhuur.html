@@ -1,17 +1,17 @@
-
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
   <head>
     <title>Clubfred</title>
-<SET NAMES 'utf8';> 
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/style-holiday.css"/>
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/responsive.css"/>
+	<link rel="stylesheet" href="{% static 'css/style-holiday.css'%}"/>
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}"/>
+	<link rel="stylesheet" href="{% static 'css/responsive.css'%}"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/youngserif" type="text/css"/>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="{% static 'js/jquery.min.js'%}"></script>
+	<script src="{% static 'js/bootstrap.min.js'%}"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
 $(document).ready(function(){
@@ -29,21 +29,21 @@ $(document).ready(function(){
 		
 		  	<div class="header">
 			 <div class="col-md-2 col-sm-2 col-xs-12 hed_left">
-				<div class="logo-out"><a href="http://www.clubfred.nl"><img src="images/logo.png"></a></div>
+				<div class="logo-out"><a href="http://www.clubfred.nl"><img src="{% static 'images/logo.png'%}"></a></div>
 			 </div>
 			 <div class="col-md-10 col-sm-10 col-xs-12 hed_right">
 			    <div class="top_right">
 				    <div class="col-md-3 col-sm-3 col-xs-12 text-left">
 					   <div class="contact_no">
 					      <ul>
-							  <li><img class="phone" src="images/phone.png"><a href=""><span class="num">24/7</span> 020 341 38 14</a></li>
+							  <li><img class="phone" src="{% static 'images/phone.png'%}"><a href=""><span class="num">24/7</span> 020 341 38 14</a></li>
 							</ul>
 					   </div>
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-12 text-right">
 					   <div class="top_button">
 					     <ul>
-							  <li class="club"><a href="Onze-prijzen.html"><span class="club_s">Join the club</span></a></li>
+							  <li class="club"><a href="{% url 'onzeprijzen' %}"><span class="club_s">Join the club</span></a></li>
 							  <li class="eng_list"><a href="http://www.clubfred.nl/en"><span class="eng">ENG</span>/</a><a href="woning-verhuur.html"> <span class="nll underline">NL</span></a></li>
 						 </ul>	  
 					   </div>
@@ -60,7 +60,7 @@ $(document).ready(function(){
 						<ul class="nav navbar-nav">
 						  <li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">HOUSEKEEPING
-							<!--i class="fa fa-angle-down" aria-hidden="true"></i--><img id="updown"src="images/arror.png"></a>
+							<!--i class="fa fa-angle-down" aria-hidden="true"></i--><img id="updown"src="{% static 'images/arror.png'%}"></a>
 							<ul class="dropdown-menu personnal">
 							  <li><p>Uw eigen home manager voor het huishouden.</p></li>
 							  <li class="more Meer"><a href="#">Meer over housekeeping</a></li>
@@ -68,7 +68,7 @@ $(document).ready(function(){
 						  </li>	
                            <li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">FRED KOOKT
-							<!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --><img id="updown"src="images/arror.png"></a>
+							<!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --><img id="updown"src="{% static 'images/arror.png'%}"></a>
 							<ul class="dropdown-menu personnal_one">
 							  <li><p>Koken wordt leuker</br>als Fred het</br> voor u doet.!</p></li>
 							  <li class="more"><a href="#">Meer over koken</a></li>
@@ -76,7 +76,7 @@ $(document).ready(function(){
 							</ul>
 						  </li> 
 						  <li><a href="woning-verhuur.html">WONING VERHUUR</a></li>
-						  <li><a href="en/hotel.html">HOTELS</a></li>
+						  <li><a href="{% url 'hotel' %}">HOTELS</a></li>
 						</ul>
 						</div>
 					  </div>
@@ -126,7 +126,7 @@ terwijl u weg bent </span></h5>
 			  </div>
 			  </div>
 			  <div class="col-md-6 col-sm-16 col-xs-12 bannerview">
-			   <img src="images/HolidayRental_04.png">
+			   <img src="{% static 'HolidayRental_04.png'%}">
 			  </div>
 			  </div>
 			  <!--Banner Sections End--->
@@ -167,7 +167,7 @@ zijn uw woning en gasten altijd in goede handen.</h5>
 				 <div class="full_right">
 				 <h3>LITE SEVICES </h3>
 				    <div class="Rentals">
-						 <h4>“Met een beetje hulp </br> van Fred, ervaren uw <br>gasten al een beter verblijf ”</h4>
+						 <h4>"Met een beetje hulp </br> van Fred, ervaren uw <br>gasten al een beter verblijf "</h4>
 						</div>
 						<div class="included">
 							<h5> Wat is inbegrepen: </h5>
@@ -195,37 +195,37 @@ zijn uw woning en gasten altijd in goede handen.</h5>
 			     </div>
 				<div class="icon_out">
 				     <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-					    <div class="icon"><img src="images/home.png"></div>
+					    <div class="icon"><img src="{% static 'images/home.png'%}"></div>
 						<div class="hed"><h2>Home interior.</h2>
 						   <h4>Advies voor uw <br>interieur en onderhoud</h4>
 						 </div>
 					 </div>
 					 <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-					     <div class="icon"><img src="images/2nd.png"></div>
+					     <div class="icon"><img src="{% static 'images/2nd.png'%}"></div>
 						 <div class="hed"><h2>Pricing.</h2>
 						   <h4>Wij verhogen uw inkomsten <br>tot wel 50%</h4>
 						 </div>
 					 </div>
 					 <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-					     <div class="icon"><img src="images/3rd.png"></div>
+					     <div class="icon"><img src="{% static 'images/3rd.png'%}"></div>
 						 <div class="hed"><h2>Screening.</h2>
 						   <h4>Met uw regels nodigen wij de juiste gasten uit</h4>
 						 </div>
 					 </div> 
 					 <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-					    <div class="icon"><img src="images/4th.png"></div>
+					    <div class="icon"><img src="{% static 'images/4th.png'%}"></div>
 						<div class="hed"><h2>Personal check-in.</h2>
 						   <h4>Een warm welkom<br>voor iedere gast</h4>
 						 </div>
 					 </div>
 					 <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-					     <div class="icon"><img src="images/5th.png"></div>
+					     <div class="icon"><img src="{% static 'images/5th.png'%}"></div>
 						 <div class="hed"><h2>Calendar management.</h2>
 						   <h4>Altijd op de hoogte als een gast in en uit checked</h4>
 						 </div>
 					 </div>
 					 <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-					     <div class="icon icon_onee"><img src="images/6th.png"></div>
+					     <div class="icon icon_onee"><img src="{% static 'images/6th.png'%}"></div>
 						 <div class="hed"><h2>Guest support 24/7.</h2>
 						   <h4>Voor al uw vragen, zorgen en reparaties</h4>
 						 </div>
@@ -246,10 +246,10 @@ zijn uw woning en gasten altijd in goede handen.</h5>
 			    </div>
 				<div class="footer_logo">
 				     <ul class="foot_logo" style="padding-left: 0px;">
-									  <li><img src="images/3rd_logo.jpg"></li>
-									  <li><img src="images/2nd-logo.jpg"></li>
-									  <li><img src="images/1st_logo.jpg"></li>
-									  <li><img src="images/5th_logo.jpg"></li>
+									  <li><img src="{% static 'images/3rd_logo.jpg'%}"></li>
+									  <li><img src="{% static 'images/2nd-logo.jpg'%}"></li>
+									  <li><img src="{% static 'images/1st_logo.jpg'%}"></li>
+									  <li><img src="{% static 'images/5th_logo.jpg'%}"></li>
 					  </ul>
 				</div>
 			</div>
@@ -300,7 +300,7 @@ zijn uw woning en gasten altijd in goede handen.</h5>
 				     <ul class="hot">
 					   <li> <span class="call"> Bel ons  </span> 24/7 020 341 38 14</li>
 					   <li>hello@clubfred.nl</li>
-					   <li class="get"><a href="Onze-prijzen.html">Get started with Fred.</a></li>
+					   <li class="get"><a href="{% url 'onzeprijzen' %}">Get started with Fred.</a></li>
 					   
 				     </ul>
 
@@ -310,11 +310,11 @@ zijn uw woning en gasten altijd in goede handen.</h5>
 			        <div class="f_right" id="f_right">				 
 					  <h1>Volg ons</h1>
 						 <ul class="soc">
-							   <li><a href="https://www.facebook.com/CIubfred" target="_blank"><img src="images/facebook.png"></a></li>
-							   <li><a href="https://twitter.com/CIubfred" target="_blank"><img src="images/twitter.png"></a></li>
-							   <li><a href ="https://www.instagram.com/clubfred_/" target="_blank"><img src="images/instagram.png"></a></li>
-							   <li><a href ="https://in.pinterest.com/clubfredNL/" target="_blank"><img src="images/pintrest.png"></a></li>
-							   <li><a href ="https://www.linkedin.com/company/CIubfred/" target="_blank"><img src="images/linkdin.png"></a></li>							   
+							   <li><a href="https://www.facebook.com/CIubfred" target="_blank"><img src="{% static 'images/facebook.png'%}"></a></li>
+							   <li><a href="https://twitter.com/CIubfred" target="_blank"><img src="{% static 'images/twitter.png'%}"></a></li>
+							   <li><a href ="https://www.instagram.com/clubfred_/" target="_blank"><img src="{% static 'images/instagram.png'%}"></a></li>
+							   <li><a href ="https://in.pinterest.com/clubfredNL/" target="_blank"><img src="{% static 'images/pintrest.png'%}"></a></li>
+							   <li><a href ="https://www.linkedin.com/company/CIubfred/" target="_blank"><img src="{% static 'images/linkdin.png'%}"></a></li>							   
 						 </ul>					 						 
 						 
 						 
@@ -325,7 +325,7 @@ zijn uw woning en gasten altijd in goede handen.</h5>
 			  </div>
 			  <div class="col-md-12 col-sm-12 col-xs-12 bootom_footer12">
 				   <div class="footer_left pull-left">
-				   <h5 class="fred">© 2018 Clubfred.</h5>
+				   <h5 class="fred">&copy; 2018 Clubfred.</h5>
 				   </div>
 				   <div class="footer_right pull-right">
 					  <div class="how">
@@ -337,9 +337,9 @@ zijn uw woning en gasten altijd in goede handen.</h5>
 									   <li><a href="testimonail.html">Testimonials |</a></li>
 									   <li><a href="#">Vacatures |</a></li>
 									   <li><a href="#">Fred Academy</a></li-->	
-									   <li><a href="Onze-prijzen.html">Onze prijzen |</a></li>
-									   <li><a href="woning-verhuur.html">Woning verhuur |</a></li>									  
-									   <li><a href="http://www.clubfred.nl/en/hotel.html"> Hotels |</a></li>
+									   <li><a href="{% url 'onzeprijzen' %}">Onze prijzen |</a></li>
+									   <li><a href="{% url 'woningverhuur' %}">Woning verhuur |</a></li>									  
+									   <li><a href="{% url 'hotel' %}"> Hotels |</a></li>
 									   <li><a href="https://clubfred.recruitee.com/" target="_blank">Vacatures </a></li>												   
 								 </ul>
 							 </div>
@@ -374,16 +374,16 @@ $(document).ready(function () {
     $(".dropdown").click(function () {
      
 	  var path=$(this).find('#updown').attr('src');
-	if(path == "images/arror.png"){
-	var chec=$(this).find('#updown').attr('src','images/up.png');
+	if(path == "/static/images/arror.png"){
+	var chec=$(this).find('#updown').attr('src','/static/images/up.png');
 	}else
 	{
-	var chec=$(this).find('#updown').attr('src','images/arror.png');
+	var chec=$(this).find('#updown').attr('src','/static/images/arror.png');
 	}
     });
 });
     $("#testimh").click(function () {
-	alert("Thank you, we’ll handle your email with care");
+	alert("Thank you, we'll handle your email with care");
 	
 	});
 </script>  
