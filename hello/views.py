@@ -333,7 +333,7 @@ def hotelservices(request):
 					date = request.POST.get('date')
 					services = request.POST.get('services')
 					now1 = datetime.datetime.now()
-					return HttpResponse('hello1')
+					return HttpResponse('hello12')
 			 
 					data = hotelservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now1) 
 					data.save()
