@@ -193,3 +193,9 @@ LOGGING = {
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
 
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'ssl://smtp.googlemail.com'
+EMAIL_HOST_USER = 'developerweb6@gmail.com'
+EMAIL_HOST_PASSWORD = 'codenomad@8804'
+EMAIL_PORT = 465
