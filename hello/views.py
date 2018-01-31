@@ -220,6 +220,9 @@ def deleteuser(request):
 				error="Due to error user not deleted."
 				return render(request, 'backend/getuser.html',{ 'getadta':getrecord,'success':error})
 
+				
+				
+
 def logoutadmin(request):
 	#return HttpResponse(request.session['id'])
 	try:
@@ -293,3 +296,35 @@ def deleteemployee(request):
 	#return HttpResponse("You're logged out.")
 	#Contact.objects.filter(id=userid).delete()
 	#return redirect(getdata)
+	
+	
+##########################frontend integrationnnnnnnnnnn#######################
+
+##pricing page form per week55/70###
+
+def priceperweek(request):
+	if request.method== 'POST':
+			try:
+				firstname = request.POST.get('firstname')
+				lastname = request.POST.get('lastname')
+				email = request.POST.get('email')
+				zipcode = request.POST.get('zipcode')
+				address = request.POST.get('address')
+				mobilenumber = request.POST.get('mobilenumber')
+				unit = request.POST.get('unit')
+				date = request.POST.get('date')
+				amount = request.POST.get('amount')
+				#print(request.POST)
+				return HttpResponse(firstname)
+			messages.success(request, 'Price data is added successfully!')
+			return redirect(onzeprijzen)
+			except KeyError:
+				#return HttpResponse(str(e))
+				messages.success(request, 'Price data is not  added successfully!')
+				
+				return redirect(onzeprijzen)
+		else:
+			messages.success(request, 'Price data is nott added successfully!')
+			return redirect(onzeprijzen)
+	
+	
