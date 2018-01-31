@@ -312,7 +312,7 @@ def abc(request):
 	message="<a href='#'>click here</a>"
 	msg = EmailMessage(subject, message, sender, to_list)
 	msg.content_subtype = "html"  # Main content is now text/html
-    return msg.send()
+	return msg.send()
 ##pricing page form per week55/70###
 
 def priceperweek(request):
