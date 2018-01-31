@@ -326,7 +326,7 @@ def priceperweek(request):
 					unit = request.POST.get('unit')
 					date = request.POST.get('date')
 					amount = request.POST.get('amount')
-					now = datetime.datetime.now().strftime('%H:%M')
+					#now = datetime.datetime.now().strftime('%H:%M')
 					verify = '0'
 					data = pricingplan(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,amount=amount,verify=verify,currenttime=now) 
 					data.save()
