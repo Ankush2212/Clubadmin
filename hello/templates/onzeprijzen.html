@@ -144,7 +144,7 @@ div#datetimepicker5 input {
 		 <!-- header Sectissons -->
 		<div class="header">
 			 <div class="col-md-2 col-sm-2 col-xs-12 hed_left">
-				<div class="logo-out"><a href="http://www.clubfred.nl"><img src="{% static 'images/logo.png'%}"></a></div>
+				<div class="logo-out"><a href="https://clubfred.herokuapp.com/"><img src="{% static 'images/logo.png'%}"></a></div>
 			 </div>
 			 <div class="col-md-10 col-sm-10 col-xs-12 hed_right">
 			    <div class="top_right">
@@ -158,8 +158,8 @@ div#datetimepicker5 input {
 					<div class="col-md-9 col-sm-9 col-xs-12 text-right">
 					   <div class="top_button">
 					     <ul>
-							  <li class="club"><a href=""><span class="club_s">Join the club</span></a></li>
-							  <li class="eng_list"><a href="http://www.clubfred.nl/en/pricing.html"><span class="eng">ENG</span>/</a><a href="{% url 'onzeprijzen'%}"><span class="nll underline">NL</span></a></li>
+							  <li class="club"><a href="{% url 'onzeprijzen'%}"><span class="club_s">Join the club</span></a></li>
+							  <li class="eng_list"><a href="{% url 'pricing'%}"><span class="eng">ENG</span>/</a><a href="{% url 'onzeprijzen'%}"><span class="nll underline">NL</span></a></li>
 						 </ul>	  
 					   </div>
 					</div>
@@ -190,8 +190,8 @@ div#datetimepicker5 input {
 							
 							</ul>
 						  </li> 
-						  <li><a href="woning-verhuur.html">WONING VERHUUR</a></li>
-						  <li><a href="en/hotel.html">HOTELS</a></li>
+						  <li><a href="{% url 'woningverhuur'%}">WONING VERHUUR</a></li>
+						  <li><a href="{% url 'hotel'%}">HOTELS</a></li>
 						</ul>
 						</div>
 					  </div>
