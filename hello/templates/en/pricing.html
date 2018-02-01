@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 {% load staticfiles %} 
 <html>
+
+
   <head>
     <title>Clubfred</title>
-	<meta charset="iso-8859-1"> 
+	 <meta charset="iso-8859-1"> 
+	 <meta charset="utf-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="{% static 'css/style.css'%}"/>
-	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}"/>
-	<link rel="stylesheet" href="{% static 'css/responsive.css'%}"/>
+	<link rel="stylesheet" href="{% static '/css/style.css'%}"/>
+	<link rel="stylesheet" href="{% static '/css/bootstrap.min.css'%}"/>
+	<link rel="stylesheet" href="{% static '/css/responsive.css'%}"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/youngserif" type="text/css"/>
-	<script src="{% static '/js/jquery.min.js'%}"></script>
-	<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	
-	<!------------------------------------popup libraray---------------------------->
-  
-  	 
+	<script src="{% static '/js/bootstrap.min.js'%}"></script>
 
-    <script src="{% static '/js/bootstrap.min.js'%}"></script>
-	 <link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
-	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+
+	
+	
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
     <script src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>	
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+
+	
 	
 	
 	<script>
-	$(function () {
-		 $('#datetimepicker5').datetimepicker({
-                    defaultDate: "11/1/2013",
-                    disabledDates: [
-                        moment("12/25/2013"),
-                        new Date(2013, 11 - 1, 21),
-							"11/22/2013 00:53"
-		]
-     });
-	});
+	
 $(document).ready(function(){
  
 
@@ -559,8 +556,7 @@ hours before a visit.
 			</div>
 			</div>
 		
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>		
+ 	
 <script>
 $(document).ready(function() {
 
@@ -591,8 +587,6 @@ $(document).ready(function() {
 
 
 </script>	 
-
-
 
 
 <!-----------------------55/week----------------------------------->	
@@ -646,7 +640,18 @@ $(document).ready(function() {
                 </div>
             </div>
        
-        
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker5').datetimepicker({
+                    defaultDate: "11/1/2013",
+                    disabledDates: [
+                        moment("12/25/2013"),
+                        new Date(2013, 11 - 1, 21),
+                        "11/22/2013 00:53"
+                    ]
+                });
+            });
+        </script>
 		</div>
 		<div class="col-md-12">
 										<div class="form-group" style="text-align:center;">
@@ -662,9 +667,9 @@ $(document).ready(function() {
 
                      </div>
                    </div>
-				   
-				   
-				   
+
+
+			
 <!-----------------------singleservicek----------------------------------->	
 <div class=" single  modal bs-example-modal-sm" id="deletee" tabindex="-1" role="dialog" aria-hidden="true">
                    <div class="modal-dialog modal-md">
@@ -709,22 +714,10 @@ $(document).ready(function() {
                      </div>
                    </div>
 
-  </body>
-</html>  
- <script>
-			function  mypopup(a)
-			{
-				
-				$('#amount').val(a);
-				$('.confirm_popup').show();
-			
-			}
-			
-			  $(".popup_close").click( function () {
-				  $('.confirm_popup').hide();
-				  
-			  });
-			  function  singleservice1()
+
+				   
+			  <script>
+			   function  singleservice()
 			{
 				
 				$('.single').show();
@@ -735,4 +728,20 @@ $(document).ready(function() {
 				  $('.single').hide();
 				  
 			  });
-	 </script>
+			function  mypopup(a)
+			{
+				$('#amount').val(a);
+				$('.confirm_popup').show();
+			
+			}
+			
+			  $(".popup_close").click( function () {
+				  $('.confirm_popup').hide();
+				  
+			  });
+			  
+			 
+  </body>
+</html>  
+ <script>
+			
