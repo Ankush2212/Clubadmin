@@ -548,10 +548,10 @@ def abc(request):
 	date_time_newer = datetime.datetime.now()
 	user = pricingplan.objects.get(id=31)
 	cureentdatetime = datetime.datetime.strptime(user.currenttime,'%Y-%m-%d %H:%M:%S.%f')
-
-	user.currenttime 
+	#2018-02-01 09:14:38.639908
+	#user.currenttime 
 	#date_time_newer = '2018-02-01 06:50:18.754533'
-	return HttpResponse(cureentdatetime)
+	return HttpResponse(date_time_newer)
 	#date_time_older  = datetime.datetime.now()
 	date_time_difference = (date_time_newer-cureentdatetime).total_seconds()/60
 	return HttpResponse(date_time_difference)
