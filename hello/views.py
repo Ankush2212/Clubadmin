@@ -580,5 +580,15 @@ def pricingplans(request):
 		getpricing =  pricingplan.objects.filter(verify=1)
 		return render(request, 'backend/pricingplan.html',{'getadta':getrecord1,'getpricingdetail':getpricing}) 
 		
+def airbnb(request):
+	getsession = request.session.get('adminid')
+	getrecord1 =  adminsignup.objects.get(id=getsession)
+	getdata1 =  fulliteservice.objects.all()
+	return render(request, 'backend/airbnb.html',{'getadta':getrecord1,'getrecord':getdata1}) 
 
+def hotels(request):
+	getsession = request.session.get('adminid')
+	getrecord1 =  adminsignup.objects.get(id=getsession)
+	getdata1 =  hotelservice.objects.all()
+	return render(request, 'backend/hotelservice.html',{'getadta':getrecord1,'getrecord':getdata1}) 
 	
