@@ -10,6 +10,8 @@ from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
 from django.template.loader import render_to_string
 import datetime
+from datetime import timedelta
+
 from .models import singleservice 
 from .models import adduser 
 from .models import fulliteservice 
@@ -540,21 +542,13 @@ def priceperweekenglish(request):
 			return redirect(pricing)
 
 def abc(request):
-	# past  = datetime.datetime.now()
-	# present  = datetime.datetime.now()
-	# #present.strftime('%Y-%m-%d %H:%M:%S') == past.strftime('%Y-%m-%d %H:%M:%S')
-	# #False
-	# if present.strftime('%Y-%m-%d %H:%M') == past.strftime('%Y-%m-%d %H:%M'):
-		# return HttpResponse('ddsdasdas')
-	# else:
-		# return HttpResponse('hello')
-	now = datetime.now()
-	now1 = '2018-01-31 05:41:36.995880'
-	# then = self.created_date
-	# tdelta = now - then
-	# minutes = tdelta.seconds/60
-	cc =  diff_in_time(now,now1)
-	return HttpResponse(cc)
+
+	#cc =  diff_in_time(now,now1)
+	a = datetime.datetime.now()
+	b = datetime.datetime.now()
+	time_difference = a - b
+	time_difference_in_minutes = time_difference / timedelta(minutes=1)
+	return HttpResponse(time_difference_in_minutes)
 	
 	
 ############activate confirmation#####################
