@@ -388,7 +388,7 @@ def pricing(request):
 	
 
 #############singleservice from in pricing for english #####################e
-def singleservice(request):
+def singleservice1(request):
 	if request.method=='POST':
 			try:
 					name = request.POST.get('name')
