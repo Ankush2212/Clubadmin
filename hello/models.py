@@ -76,3 +76,8 @@ class employeedetail(models.Model):
 	contactnumber = models.CharField(max_length=250)
 	email = models.EmailField(blank=True)
 
+class singleservice(models.Model):
+	name = models.CharField(max_length=250)
+	phonenumber = models.CharField(max_length=250)
+	email = models.EmailField(blank=True)
+

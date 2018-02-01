@@ -10,6 +10,7 @@ from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
 from django.template.loader import render_to_string
 import datetime
+from .models import singleservice 
 from .models import adduser 
 from .models import fulliteservice 
 from .models import hotelservice 
@@ -320,6 +321,32 @@ def deleteemployee(request):
 def woningverhuur(request):
 	return render(request, 'woning-verhuur.html')
 
+def fullliteserviceenglish(request):
+	if request.method=='POST':
+			try:
+					firstname = request.POST.get('firstname')
+					lastname = request.POST.get('lastname')
+					email = request.POST.get('email')
+					zipcode = request.POST.get('zipcode')
+					address = request.POST.get('address')
+					mobilenumber = request.POST.get('mobilenumber')
+					unit = request.POST.get('unit')
+					date = request.POST.get('date')
+					services = request.POST.get('services')
+					#now1 = datetime.datetime.now()
+					now = datetime.datetime.now()
+					#return HttpResponse('hello12')
+			 
+					data = fulliteservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now) 
+					data.save()
+					return redirect(holiday)
+					
+					
+			except KeyError:
+					return redirect(holiday)
+	else:
+			 return redirect(holiday)
+
 def fullliteservice(request):
 	if request.method=='POST':
 			try:
@@ -354,6 +381,31 @@ def holiday(request):
 def hotel(request):
 	return render(request, 'en/hotel.html')
 	
+	##################################en/pricing.html integration######################################
+def pricing(request):
+	return render(request, 'en/pricing.html')
+	
+	
+
+#############singleservice from in pricing for english #####################e
+def singleservice(request):
+	if request.method=='POST':
+			try:
+					name = request.POST.get('name')
+					phonenumber = request.POST.get('phonenumber')
+					email = request.POST.get('email')
+					
+			 
+					data = singleservice(name=name,email=email,phonenumber=phonenumber) 
+					data.save()
+					return redirect(pricing)
+					
+					
+			except KeyError:
+					return redirect(pricing)
+	else:
+			 return redirect(pricing)
+	
 	
 def help(request):
 		
@@ -387,7 +439,7 @@ def help(request):
 			
 			
 
-	##################################prize.html integration######################################
+##################################prize.html integration######################################
 
 def priceperweek(request):
 		if request.method== 'POST':
@@ -426,6 +478,46 @@ def priceperweek(request):
 		else:
 			messages.success(request, 'Price data is nott added successfully!')
 			return redirect(onzeprijzen)
+			
+	##################################prize.html for englinshintegration######################################
+
+def priceperweekenglish(request):
+		if request.method== 'POST':
+				try:
+					firstname = request.POST.get('firstname')
+					lastname = request.POST.get('lastname')
+					email = request.POST.get('email')
+					zipcode = request.POST.get('zipcode')
+					address = request.POST.get('address')
+					mobilenumber = request.POST.get('mobilenumber')
+					unit = request.POST.get('unit')
+					date = request.POST.get('date')
+					amount = request.POST.get('amount')
+					#now = datetime.datetime.now().strftime('%H:%M')
+					verify = '0'
+					data = pricingplan(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,amount=amount,verify=verify) 
+					data.save()
+					mail_subject = 'Activate your blog account.'
+					
+					message = render_to_string('acc_active_email.html', {
+					'user': firstname,
+					'domain': 'https://clubfred.herokuapp.com/',
+					'uid':data.pk,
+					})
+					to_email = email
+					emails = EmailMessage(
+					mail_subject, message, to=[to_email] )
+					emails.send()
+					messages.success(request, 'Price data is added successfully!')
+					return redirect(pricing)
+				except KeyError:
+					#return HttpResponse(str(e))
+					messages.success(request, 'Price data is not  added successfully!')
+					
+					return redirect(pricing)
+		else:
+			messages.success(request, 'Price data is nott added successfully!')
+			return redirect(pricing)
 
 def abc(request):
 	# past  = datetime.datetime.now()
