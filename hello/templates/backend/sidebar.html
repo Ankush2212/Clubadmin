@@ -57,13 +57,14 @@
 				  <li><a><i class="fa fa-desktop"></i> Private clients <span class="fa fa-chevron-down">
 				  </span></a>
 				   <ul class="nav child_menu">
-                      <li><a href="" >Add Employee</a></li>
+                      <li><a href="{% url 'pricingplans' %}" >Sevice plans Data</a></li>
+                      <li><a href="{% url 'singleservice' %}" >Single Services</a></li>
                      
                       
 				 
 				 </ul>
                   </li>
-				  <li><a href="{% url 'pricingplans' %}" ><i class="fa fa-home"></i> Pricing request for rooms </a></li>
+				  <!--li><a href="{% url 'pricingplans' %}" ><i class="fa fa-home"></i> Pricing request for rooms </a></li-->
 				  
 				  <li><a href="{% url 'airbnb' %}" ><i class="fa fa-home"></i> Airbnb </a></li>
 				  <li><a href="{% url 'hotels' %}" ><i class="fa fa-home"></i> Hotels </a></li>
