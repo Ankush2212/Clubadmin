@@ -1,21 +1,28 @@
 <!DOCTYPE html>
+
+{% load staticfiles %} 
 <html>
   <head>
     <title>Clubfred</title>
     <meta charset="utf-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../css/style.css"/>
 	
-	<link rel="stylesheet" href=".../css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="../css/responsive.css"/>
+	<link rel="stylesheet" href="{% static 'css/style.css'%}"/>
+	
+	
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}"/>
+	<link rel="stylesheet" href="{% static 'css/responsive.css'%}"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/youngserif" type="text/css"/>
 	<link rel='stylesheet prefetch' href='http://daneden.github.io/animate.css/animate.min.css'>
    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css'>
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+   
+   
+  
+	<script src="{% static '/js/jquery.min.js'%}"></script>
+	<script src="{% static '/js/bootstrap.min.js'%}"></script>
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js'></script>
-    <script  src="../js/index.js"></script>
+    <script  src="{% static '/js/index.js'%}"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
 $(document).ready(function(){
@@ -75,22 +82,24 @@ function change() {
 		 <!-- header Sections -->
 		   <div class="header">
 			 <div class="col-md-2 col-sm-2 col-xs-12 hed_left">
-				<div class="logo-out"><a href="http://www.clubfred.nl/en/"><img src="../images/logo.png"></a></div>
+			 
+				<div class="logo-out"><a href="http://www.clubfred.nl/en/"><img src=" {% static '/images/logo.png'%}"></a></div>
 			 </div>
 			 <div class="col-md-10 col-sm-10 col-xs-12 hed_right">
 			    <div class="top_right">
 				    <div class="col-md-3 col-sm-3 col-xs-12 text-left">
 					   <div class="contact_no">
 					      <ul>
-							  <li><img class="phone" src="../images/phone.png"><a href=""><span class="num">24/7</span> 020 341 38 14</a></li>
+						  
+							  <li><img class="phone" src=" {% static '/images/phone.png'%}"><a href=""><span class="num">24/7</span> 020 341 38 14</a></li>
 							</ul>
 					   </div>
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-12 text-right">
 					   <div class="top_button">
 					     <ul>
-							  <li class="club"><a href="pricing.html"><span class="club_s">Join the club</span></a></li>
-							  <li class="eng_list"><a href="http://www.clubfred.nl/en/"><span class="eng underline">ENG</span>/</a><a href="http://www.clubfred.nl/"><span class="nll">NL</span></a></li>
+							  <li class="club"><a href="{% url 'pricing'%}"><span class="club_s">Join the club</span></a></li>
+							  <li class="eng_list"><a href="{% url 'en'%}"><span class="eng underline">ENG</span>/</a><a href="https://clubfred.herokuapp.com/"><span class="nll">NL</span></a></li>
 						 </ul>	  
 					   </div>
 					</div>
@@ -106,7 +115,8 @@ function change() {
 						<ul class="nav navbar-nav">
 						  <li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">HOUSEKEEPING
-							<!--i class="fa fa-angle-down" aria-hidden="true"></i--><img id="updown"src="../images/arror.png"></a>
+							
+							<!--i class="fa fa-angle-down" aria-hidden="true"></i--><img id="updown"src=" {% static 'images/arror.png'%}"></a>
 							<ul class="dropdown-menu personnal" id="js-scroll-nav3">
 							  <li><p>A fresh home every week</p></li>
 							  <li class="more"><a href="#Five_star">More about Housekeeping</a></li>
@@ -114,15 +124,16 @@ function change() {
 						  </li>	
                            <li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">ROOM SERVICE
-							<!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --><img id="updown"src="../images/arror.png"></a>
+							 
+							<!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --><img id="updown"src="{% static 'images/arror.png'%}"></a>
 							<ul class="dropdown-menu personnal_one" id="js-scroll-nav4">
 							  <li><p>Cooking becomes </br>fun when Fred</br>cooks for you.</p></li>
 							  <li class="more"><a href="#room_services">More about</a></li>
 							  <li class="more"><a href="#">Fred cuisine.</a></li>
 							</ul>
 						  </li> 
-						  <li><a href="holiday.html">AIRBNB</a></li>
-						  <li><a href="hotel.html">HOTELS</a></li>					  
+						  <li><a href="{% url 'holiday'%}">AIRBNB</a></li>
+						  <li><a href="{% url 'hotel'%}">HOTELS</a></li>					  
 						</ul>
 						</div>
 					  </div>
@@ -136,15 +147,17 @@ function change() {
 		 
 		 <!--Banner Sections--->
 		  <div class="col-md-12 col-sm-12 col-xs-12 banner_out">
-		    <div class="banner"><img src="../images/banner.jpg">
+		  
+		    <div class="banner"><img src="{% static 'images/banner.jpg'%}">
 			</div>
 			<div class="banner_text">
 			    <div class="banner_top"><h1>The luxury of a </br>hotel at home.</h1></div> 
-				<div class="bdr"><img src="../images/bdr.jpg"></div>    
+				
+				<div class="bdr"><img src="{% static 'images/bdr.jpg'%}"></div>    
 				<div class="banner_bottom"><h5><span class="Made">Perfect for</span></br><span id="changeText" class="COUPLES">COUPLES</span></h5></div>
                 
 					<div class="banner_arrow" id="desktop-arrow">
-					    <div class="circle_div" data-wow-duration="20s" data-wow-iteration="100" style="visibility: visible; animation-duration: 20s; animation-iteration-count: 100; animation-name: bounce;"><a href="#check-in"><!--i class="fa fa-angle-down" aria-hidden="true"></i--><img src="../images/arror.png"></a></div>
+					    <div class="circle_div" data-wow-duration="20s" data-wow-iteration="100" style="visibility: visible; animation-duration: 20s; animation-iteration-count: 100; animation-name: bounce;"><a href="#check-in"><!--i class="fa fa-angle-down" aria-hidden="true"></i--><img src="{% static 'images/arror.png'%}"></a></div>
 					</div>				
 			</div>
 		  </div>
@@ -152,7 +165,7 @@ function change() {
 		   <!--Banner Sections End--->
 		 <!--Banner Sections bottom--->
 		 <div class="banner_arrow" id="mobile-arrow">
-					    <div class="circle_div"><a href="#check-in"><!--i class="fa fa-angle-down" aria-hidden="true"></i--><img src="../images/arror.png"></a></div>
+					    <div class="circle_div"><a href="#check-in"><!--i class="fa fa-angle-down" aria-hidden="true"></i--><img src="{% static 'images/arror.png'%}"></a></div>
 					</div>	
 		  <div class="col-md-12 col-sm-12 col-xs-12 De_check">
 		       <div class="container">
@@ -210,9 +223,9 @@ function change() {
 					  <div id="b">
 					    <h2>Your reliable home manager</h2>
 					     <ul class="week">
-						    <li><img class="abc" src="../images/Websiteicons15.png"><a>Screened and hired by hotel principles</a></li>
-							<li><img class="abc" src="../images/Websiteicons15.png"><a>Your home handled with care</a></li>
-							<li><img class="abc" src="../images/Websiteicons15.png"><a>Key service on point</a></li>
+						    <li><img class="abc" src="{% static '/images/Websiteicons15.png'%}"><a>Screened and hired by hotel principles</a></li>
+							<li><img class="abc" src="{% static '/images/Websiteicons15.png'%}"><a>Your home handled with care</a></li>
+							<li><img class="abc" src="{% static '/images/Websiteicons15.png'%}"><a>Key service on point</a></li>
 						 </ul>
 					  </div>
 					  
@@ -226,23 +239,28 @@ function change() {
 					    <h2>Tailored to your home</h2>
 						<div class="week_left">
 					       <ul class="week">
-						    <li><img class="abc" src="../images/tidy.png"><a>Tidy up rooms</a></li>
-							<li><img class="abc" src="../images/dil.png"><a>Freshen up bedrooms</a></li>
-							<li><img class="abc" src="../images/flower.png"><a>Flower care</a></li>
+						   
+						   
+						   
+						   
+						  
+						    <li><img class="abc" src="{% static '/images/tidy.png'%}"><a>Tidy up rooms</a></li>
+							<li><img class="abc" src="{% static '/images/dil.png'%}"><a>Freshen up bedrooms</a></li>
+							<li><img class="abc" src="{% static '/images/flower.png'%}"><a>Flower care</a></li>
 						 </ul>
 					    </div>
 						<div class="week_right">
 					       <ul class="week">
-						    <li><img class="abc" src="../images/laundary.png"><a>Laundry and ironing</a></li>
-							<li><img class="abc" src="../images/home1.png"><a>Home cleaning</a></li>
-							<li><img class="abc" src="../images/wastage.png"><a>Waste sorting</a></li>
+						    <li><img class="abc" src="{% static '/images/laundary.png'%}"><a>Laundry and ironing</a></li>
+							<li><img class="abc" src="{% static '/images/home1.png'%}"><a>Home cleaning</a></li>
+							<li><img class="abc" src=" {% static '/images/wastage.png'%}"><a>Waste sorting</a></li>
 						 </ul>
 					    </div>
 				      </div>
 					  
 					</div>	
-					<div class="recon_right">
-					  <img src="../images/right-side.jpg">
+					<div class="recon_right"> 
+					  <img src="{% static '/images/right-side.jpg'%}">
 					</div>	
 					<div class="book">
 					<button class="button" type="button" ><a href="pricing.html">SEE PLANS</a></span>
@@ -261,7 +279,7 @@ function change() {
 				   <div class="room-bottom">
 				     <div class="out_four">
 					     <div class="col-md-6 col-sm-6 col-xs-12 fout_left tes11 text-center">
-						        <div class="icon"><img src="../images/four3-black.png"></div> 
+						        <div class="icon"><img src="{% static '/images/four3-black.png'%}"></div> 
 								 <div class="hed"><h2>Groceries delivered</h2>
 								   <h4>Your favorite <br> groceries delivered<br> into your fridge.
 									</h4>
@@ -269,7 +287,7 @@ function change() {
 
 						 </div>
 						 <div class="col-md-6 col-sm-6 col-xs-12 fout_left tes11 text-center">
-						         <div class="icon"><img src="../images/four2-black.png"></div>
+						         <div class="icon"><img src="{% static '/images/four2-black.png'%}"></div>
 								 <div class="hed"><h2>The menu.</h2>
 								   <h4>Choose the meal<br>you like or let us<br> surprise you.
 										 </h4>
@@ -277,16 +295,16 @@ function change() {
 
 						 </div>
 						 <div class="col-md-6 col-sm-6 col-xs-12 fout_right tes11 text-center">
-						        
-								<div class="icon"><img src="../images/four1-black.png"></div>
+						       
+								<div class="icon"><img src=" {% static '/images/four1-black.png'%}"></div>
 								 <div class="hed"><h2>Save money.</h2>
 								   <h4>While we cook ahead,<br>you easily save<br>more money.
 										</h4>
 								 </div>
 						 </div>
-						 
+						  
 						 <div class="col-md-6 col-sm-6 col-xs-12 fout_rightt tes11 text-center">
-						        <div class="icon"><img src="../images/four4-black.png"></div>
+						        <div class="icon"><img src="{% static '/images/four4-black.png'%}"></div>
 								 <div class="hed"><h2>Dinner served.</h2>
 								   <h4>Dinner will be <br> served when home<br> is calling you.
 										</h4>
@@ -298,17 +316,18 @@ function change() {
 
 						 <div class="footer_logo">
 								 <ul class="foot_logo">
-												  <li><img src="../images/3rd_logo.jpg"></li>
-												  <li><img src="../images/2nd-logo.jpg"></li>
-												  <li><img src="../images/1st_logo.jpg"></li>
-												  <li><img src="../images/5th_logo.jpg"></li>
+								 
+												  <li><img src="{% static '/images/3rd_logo.jpg'%}"></li>
+												  <li><img src="{% static '/images/2nd_logo.jpg'%}"></li>
+												  <li><img src="{% static '/images/1st_logo.jpg'%}"></li>
+												  <li><img src="{% static '/images/5th_logo.jpg'%}"></li>
 								  </ul>
 						 </div>
 					 </div>
 				   
 				   </div>
 				    <div class="recont_secright">
-					  <img src="../images/left-side.jpg">
+					  <img src="{% static '/images/left-side.jpg'%}">
 					</div>   
 				</div>
 		     
@@ -342,7 +361,7 @@ function change() {
 					  <div class="book" id="book"><button type="button"><a href="pricing.html">Start saving time</a></button></div>	
 					</div>	
 					<div class="recon_right">
-					  <img src="../images/right-side2.jpg">
+					  <img src="{% static '/right-side2.jpg'%}">
 					</div>				
 			   </div>
 		    
@@ -406,12 +425,16 @@ function change() {
 			  <div class="col-md-6 col-sm-6 col-xs-12 footer_right">
 			        <div class="f_right" id="f_right">				 
 					  <h1>Follow Us</h1>
+					  
+					  
+					  
+					 
 						 <ul class="soc">
-							   <li><a href="https://www.facebook.com/hulpje" target="_blank"><img src="../images/facebook.png"></a></li>
-							   <li><a href="https://twitter.com/hulpje" target="_blank"><img src="../images/twitter.png"></a></li>
-							   <li><a href ="https://www.instagram.com/clubfred_/" target="_blank"><img src="../images/instagram.png"></a></li>
-							   <li><a href ="https://in.pinterest.com/clubfredNL/" target="_blank"><img src="../images/pintrest.png"></a></li>
-							   <li><a href ="https://www.linkedin.com/clubfred" target="_blank"><img src="../images/linkdin.png"></a></li>						   
+							   <li><a href="https://www.facebook.com/hulpje" target="_blank"><img src="{% static '/images/facebook.png'%}"></a></li>
+							   <li><a href="https://twitter.com/hulpje" target="_blank"><img src="{% static '/images/twitter.png'%}"></a></li>
+							   <li><a href ="https://www.instagram.com/clubfred_/" target="_blank"><img src="{% static '/images/instagram.png'%}"></a></li>
+							   <li><a href ="https://in.pinterest.com/clubfredNL/" target="_blank"><img src="{% static '/images/pintrest.png'%}"></a></li>
+							   <li><a href ="https://www.linkedin.com/clubfred" target="_blank"><img src=" {% static '/images/linkdin.png'%}"></a></li>						   
 						 </ul>					 						 
 						 
 						 
@@ -427,7 +450,7 @@ function change() {
 			  
 			   <div class="col-md-12 col-sm-12 col-xs-12 bootom_footer12">
 				   <div class="footer_left pull-left">
-				   <h5 class="fred">© 2018 Clubfred.</h5>
+				   <h5 class="fred">&copy; 2018 Clubfred.</h5>
 				   </div>
 				   <div class="footer_right pull-right">
 					  <div class="how">
@@ -460,17 +483,17 @@ $(document).ready(function () {
     $(".dropdown").click(function () {
      
 	  var path=$(this).find('#updown').attr('src');
-	if(path == "../images/arror.png"){
-	var chec=$(this).find('#updown').attr('src','../images/up.png');
+	if(path == "/static/images/arror.png"){
+	var chec=$(this).find('#updown').attr('src','/static/images/up.png');
 	}else
 	{
-	var chec=$(this).find('#updown').attr('src','../images/arror.png');
+	var chec=$(this).find('#updown').attr('src','/static/images/arror.png');
 	}
     });
 });
 
     $("#testimh").click(function () {
-	alert("Thank you, we’ll handle your email with care");
+	alert("Thank you, we'll handle your email with care");
 	
 	});
 </script>

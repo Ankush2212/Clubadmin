@@ -375,6 +375,10 @@ def fullliteservice(request):
 ##################################holiday.html for english integration###################################
 def holiday(request):
 	return render(request, 'en/holiday.html')
+	
+##################################en.html for english integration###################################
+def en(request):
+	return render(request, 'en/index.html')
 
 
 ##################################hotel.html integration######################################
