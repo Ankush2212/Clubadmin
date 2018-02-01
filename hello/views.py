@@ -343,10 +343,7 @@ def fullliteservice(request):
 					
 			except KeyError:
 					return redirect(woningverhuur)
-					
-					
-					
-		else:
+	else:
 			 return redirect(woningverhuur)
 ##################################hotel.html integration######################################
 def hotel(request):
