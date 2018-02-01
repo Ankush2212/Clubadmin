@@ -517,7 +517,7 @@ def priceperweekenglish(request):
 					amount = request.POST.get('amount')
 					now = datetime.datetime.now()
 					verify = '0'
-					return HttpResponse(now)
+					#return HttpResponse(now)
 					data = pricingplan(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,amount=amount,verify=verify,currenttime=now) 
 					data.save()
 					mail_subject = 'Activate your blog account.'
