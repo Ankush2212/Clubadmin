@@ -545,6 +545,7 @@ def abc(request):
 
 	#cc =  diff_in_time(now,now1)
 	date_time_newer = datetime.datetime.now()
+	return HttpResponse(date_time_newer)
 	date_time_older  = datetime.datetime.now()
 	date_time_difference = round((date_time_newer-date_time_older).total_seconds()/60)
 	return HttpResponse(date_time_difference)
