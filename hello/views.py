@@ -545,11 +545,11 @@ def priceperweekenglish(request):
 def abc(request):
 
 	#cc =  diff_in_time(now,now1)
-	date_time_newer = str(datetime.datetime.now())
+	date_time_newer = datetime.datetime.now()
 	user = pricingplan.objects.get(id=31)
 	cureentdatetime = datetime.datetime.strptime(user.currenttime,'%Y-%m-%d %H:%M:%S.%f')
 
-	#user.currenttime 
+	user.currenttime 
 	#date_time_newer = '2018-02-01 06:50:18.754533'
 	#return HttpResponse(cureentdatetime)
 	#date_time_older  = datetime.datetime.now()
