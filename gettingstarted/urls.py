@@ -23,6 +23,7 @@ urlpatterns = [
 	url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/$', hello.views.activate, name='activate'),
 	url(r'^login1', hello.views.login1, name='login1'),
 	url(r'^welcome', hello.views.welcome, name='welcome'),
+	url(r'^holiday', hello.views.holiday, name='holiday'),
 	url(r'^hotel', hello.views.hotel, name='hotel'),
 	url(r'^help', hello.views.help, name='help'),
 	url(r'^fullliteservice', hello.views.fullliteservice, name='fullliteservice'),

@@ -345,6 +345,11 @@ def fullliteservice(request):
 					return redirect(woningverhuur)
 	else:
 			 return redirect(woningverhuur)
+##################################holiday.html for english integration###################################
+def holiday(request):
+	return render(request, 'en/holiday.html')
+
+
 ##################################hotel.html integration######################################
 def hotel(request):
 	return render(request, 'en/hotel.html')
