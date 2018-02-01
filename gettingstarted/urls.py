@@ -25,6 +25,7 @@ urlpatterns = [
 	url(r'^welcome', hello.views.welcome, name='welcome'),
 	url(r'^hotel', hello.views.hotel, name='hotel'),
 	url(r'^help', hello.views.help, name='help'),
+	url(r'^fullliteservice', hello.views.fullliteservice, name='fullliteservice'),
 	url(r'^woningverhuur', hello.views.woningverhuur, name='woningverhuur'),
 	url(r'^backend/pricingplans', hello.views.pricingplans, name='pricingplans'),
 	url(r'^onzeprijzen', hello.views.onzeprijzen, name='onzeprijzen'),

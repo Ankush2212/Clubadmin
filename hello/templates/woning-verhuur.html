@@ -13,6 +13,17 @@
 	<script src="{% static 'js/jquery.min.js'%}"></script>
 	<script src="{% static 'js/bootstrap.min.js'%}"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	
+	<!------------------------------------popup libraray---------------------------->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+	
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
 	<script>
 $(document).ready(function(){
     $(".mobile_icon i").click(function(){
@@ -20,7 +31,110 @@ $(document).ready(function(){
     });
 });
 </script>
+<style>
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+form#login-nav .form-group {
+    margin-bottom:40px;
+}
+
+form#login-nav label {
+    width: 100%;
+    float: left;
+    text-align: left;
+    color: #f6735d;
+    font-size: 17px;
+    font-weight: normal;
+}
+#login-nav .form-control {
+    border: none;
+    border-bottom: 1px solid #000;
+    box-shadow: none;
+    border-radius: 0px;
+	    padding-bottom: 20px;
+	padding-left: 0px;
+}
+.pricing_form .checkbox label {
+    color: #f6735d;
+	    font-weight: 600 !important;
+}
+button.btn.btn-primary.submit_pricing {
+    background: #f6735d;
+    padding: 20px 34px;
+    border: none;
+    border-radius: 0 !important;
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 58%;
+    letter-spacing: 2px;
+}
+
+h4#myModalLabel2 {
+    text-align: center;
+    color: #f6735d;
+    font-size: 20px;
+}
+.pricing_form {
+    margin-top: 32px;
+    float: left;
+    width: 100%;
+}
+div#datetimepicker5 input {
+    border: 1px solid #efefef !important;
+    padding-top: 13px;
+    padding-left: 10px !important;
+}
+</style>
   </head>
+  
   <body>
 <div class="main">    
   <div class="container">
@@ -44,7 +158,7 @@ $(document).ready(function(){
 					   <div class="top_button">
 					     <ul>
 							  <li class="club"><a href="{% url 'onzeprijzen' %}"><span class="club_s">Join the club</span></a></li>
-							  <li class="eng_list"><a href="http://www.clubfred.nl/en"><span class="eng">ENG</span>/</a><a href="woning-verhuur.html"> <span class="nll underline">NL</span></a></li>
+							  <li class="eng_list"><a href="http://www.clubfred.nl/en"><span class="eng">ENG</span>/</a><a href="{% url 'woningverhuur' %}"> <span class="nll underline">NL</span></a></li>
 						 </ul>	  
 					   </div>
 					</div>
@@ -75,7 +189,7 @@ $(document).ready(function(){
 							 
 							</ul>
 						  </li> 
-						  <li><a href="woning-verhuur.html">WONING VERHUUR</a></li>
+						  <li><a href="{% url 'woningverhuur' %}">WONING VERHUUR</a></li>
 						  <li><a href="{% url 'hotel' %}">HOTELS</a></li>
 						</ul>
 						</div>
@@ -126,7 +240,7 @@ terwijl u weg bent </span></h5>
 			  </div>
 			  </div>
 			  <div class="col-md-6 col-sm-16 col-xs-12 bannerview">
-			   <img src="{% static 'HolidayRental_04.png'%}">
+			   <img src="{% static 'images/HolidayRental_04.png'%}">
 			  </div>
 			  </div>
 			  <!--Banner Sections End--->
@@ -158,7 +272,7 @@ zijn uw woning en gasten altijd in goede handen.</h5>
 								</ul>
 						</div>
 						
-						<div class="book"><button type="button">Aanvragen</button></div>
+						<div class=" iddd book"><button type="button" onclick="return hotelservice('fullservice')">Aanvragen</button></div>
 				  </div>
 				  
 			</div>	 
@@ -179,8 +293,8 @@ zijn uw woning en gasten altijd in goede handen.</h5>
 								</ul>
 						</div>
 				 
+				 <div class=" iddd book" id="bok"><button type="button" onclick="return hotelservice('liteservice')">Aanvragen</button></div>
 				 
-				 <div class="book" id="bok"><button type="button">Aanvragen</button></div>
 				  </div>
 				  
 				  
@@ -366,7 +480,84 @@ li.meer
     margin-top: -17px;
     color: #f6735d;
 }
-</style>			
+</style>	
+<div class="confirm_popup modal bs-example-modal-sm" id="deletee" tabindex="-1" role="dialog" aria-hidden="true">
+                   <div class="modal-dialog modal-md">
+                     <div class="modal-content">
+
+                       <div class="modal-header">
+                         <button type="button" class="popup_close close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span>
+                         </button>
+                         <h4 class="modal-title" id="myModalLabel2">Let' see if Alfred is in your Building</h4>
+                       </div>
+                     
+                       <div class="modal-footer">
+ <div class="pricing_form">
+		
+		<form action="{% url 'fullliteservice'%}" method ="post">
+									 {% csrf_token %}
+									<div class="col-md-6 col-sm-6">
+									<div class="form-group">
+											 <input type="text"  class="form-control" id="firstname" placeholder="Enter Firstname" name="firstname">
+										</div>
+										<div class="form-group">
+											 <input type="email"  class="form-control" id="email" placeholder="Enter email" name="email">
+										</div>
+										<div class="form-group">
+											 <input type="text"  class="form-control" id="address" placeholder="Enter Address" name="address">
+										</div>
+											<div class="form-group">
+											 <input style="width:100px;" type="text"  class="form-control" id="zip" placeholder="Enter Zip" name="zipcode">
+										</div>
+		</div>
+		<div class="col-md-6 col-sm-6">
+		<div class="form-group">
+											 <input type="text"  class="form-control" id="lastname" placeholder="Enter Lastname" name="lastname">
+										</div>
+										<div class="form-group">
+											 <input type="text"  class="form-control" id="Number" placeholder="Enter Number" name="mobilenumber">
+											 <input type="hidden" id="amount" name="services">
+										</div>
+										<div class="form-group">
+											 <input type="text"  class="form-control" id="unit" placeholder="Enter Unit" name="unit">
+										</div>
+									
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker5'>
+                    <input placeholder="Select Date/time" name="date" type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+			
+	<script type="text/javascript">
+            $(function () {
+                $('#datetimepicker5').datetimepicker({
+                    defaultDate: "11/1/2013",
+                    disabledDates: [
+                        moment("12/25/2013"),
+                        new Date(2013, 11 - 1, 21),
+                        "11/22/2013 00:53"
+                    ]
+                });
+            });
+        </script>
+		</div>
+		<div class="col-md-12">
+										<div class="form-group" style="text-align:center;">
+											 <button type="submit" class="btn btn-primary submit_pricing">Signup</button>
+										</div>
+										</div>
+								 </form>
+		
+		
+		</div>
+                         </div>
+                       </div>
+
+                     </div>
+                   </div>		
   </body>
 </html>
 <script>
@@ -387,3 +578,25 @@ $(document).ready(function () {
 	
 	});
 </script>  
+<script>
+$(document).ready(function(){
+    $(".iddd").click(function(){
+      $('.confirm_popup').show();
+    });
+  $(".popup_close").click( function () {
+ $('.confirm_popup').hide();
+    });
+});
+
+function  hotelservice(a)
+	{
+		$('#amount').val(a);
+		$('.confirm_popup').show();
+	
+	}
+	
+	  $(".popup_close").click( function () {
+		  $('.confirm_popup').hide();
+		  
+	  });
+</script>

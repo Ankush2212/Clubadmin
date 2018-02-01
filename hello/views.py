@@ -11,6 +11,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.template.loader import render_to_string
 import datetime
 from .models import adduser 
+from .models import fulliteservice 
 from .models import hotelservice 
 from .models import adminsignup 
 from .models import employeedetail 
@@ -315,20 +316,46 @@ def deleteemployee(request):
 	
 ##########################frontend integrationnnnnnnnnnn#######################
 
-##################################hotel.html integration######################################
+##################################holoday page in dutch.html integration######################################
 def woningverhuur(request):
 	return render(request, 'woning-verhuur.html')
 
-
+def fullliteservice(request):
+	if request.method=='POST':
+			try:
+					firstname = request.POST.get('firstname')
+					lastname = request.POST.get('lastname')
+					email = request.POST.get('email')
+					zipcode = request.POST.get('zipcode')
+					address = request.POST.get('address')
+					mobilenumber = request.POST.get('mobilenumber')
+					unit = request.POST.get('unit')
+					date = request.POST.get('date')
+					services = request.POST.get('services')
+					#now1 = datetime.datetime.now()
+					now = datetime.datetime.now()
+					#return HttpResponse('hello12')
+			 
+					data = fulliteservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now) 
+					data.save()
+					return redirect(woningverhuur)
+					
+					
+			except KeyError:
+					return redirect(woningverhuur)
+					
+					
+					
+		else:
+			 return redirect(woningverhuur)
 ##################################hotel.html integration######################################
 def hotel(request):
 	return render(request, 'en/hotel.html')
 	
 	
 def help(request):
-		#return HttpResponse('hello')
+		
 		if request.method=='POST':
-			#return HttpResponse('hiii')
 			try:
 					firstname = request.POST.get('firstname')
 					lastname = request.POST.get('lastname')
