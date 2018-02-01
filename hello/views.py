@@ -412,8 +412,6 @@ def singleservicefordutch(request):
 					name = request.POST.get('name')
 					phonenumber = request.POST.get('phonenumber')
 					email = request.POST.get('email')
-					
-			 
 					data = singleservice(name=name,email=email,phonenumber=phonenumber) 
 					data.save()
 					return redirect(onzeprijzen)
