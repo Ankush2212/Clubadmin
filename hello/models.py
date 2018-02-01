@@ -38,7 +38,7 @@ class pricingplan(models.Model):
 	amount = models.CharField(max_length=250)
 	mobilenumber = models.CharField(max_length=250)
 	unit = models.CharField(max_length=250)
-	#datetimee = models.CharField(max_length=250)
+	datetimee = models.CharField(max_length=250)
 	verify = models.IntegerField()
 
 class hotelservice(models.Model):
