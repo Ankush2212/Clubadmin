@@ -592,7 +592,7 @@ def hotels(request):
 	getdata1 =  hotelservice.objects.all()
 	return render(request, 'backend/hotelservice.html',{'getadta':getrecord1,'getrecord':getdata1}) 
 
-def singleservices(request):
+def getsingleservices(request):
 	getsession = request.session.get('adminid')
 	getrecord1 =  adminsignup.objects.get(id=getsession)
 	getdata1 =  singleservice.objects.all()
