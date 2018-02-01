@@ -10,7 +10,7 @@ from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
 from django.template.loader import render_to_string
 import datetime
-from datetime import timedelta
+#from datetime import timedelta
 
 from .models import singleservice 
 from .models import adduser 
@@ -21,7 +21,7 @@ from .models import employeedetail
 from .models import pricingplan 
 
 #from datetime import datetime,timedelta
-from time import strftime
+#from time import strftime
 from django.conf.urls import include, url
 
 
