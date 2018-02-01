@@ -316,7 +316,7 @@ def deleteemployee(request):
 	
 ##########################frontend integrationnnnnnnnnnn#######################
 
-##################################holoday page in dutch.html integration######################################
+##################################holoday page in dutchh.html integration######################################
 def woningverhuur(request):
 	return render(request, 'woning-verhuur.html')
 
