@@ -169,8 +169,8 @@ $(document).ready(function(){
 					<div class="col-md-9 col-sm-9 col-xs-12 text-right">
 					   <div class="top_button">
 					     <ul>
-							  <li class="club"><a href="pricing.html"><span class="club_s">Join the club</span></a></li>
-							  <li class="eng_list"><a href="holiday.html"><span class="eng underline">ENG</span>/</a><a href="http://www.clubfred.nl/"><span class="nll">NL</span></a></li>
+							  <li class="club"><a href="{% url 'pricing'%}"><span class="club_s">Join the club</span></a></li>
+							  <li class="eng_list"><a href="{% url 'holiday'%}"><span class="eng underline">ENG</span>/</a><a href="http://www.clubfred.nl/"><span class="nll">NL</span></a></li>
 						 </ul>	  
 					   </div>
 					</div>
@@ -487,7 +487,7 @@ out. </span></h5>
 				     <ul class="hot">
 					   <li> <span class="call"> Call us </span> 24/7 020 341 38 14</li>
 					   <li>hello@clubfred.nl</li>
-					   <li class="get"><a href="pricing.html">Get started with Fred.</a></li>
+					   <li class="get"><a href="{% url 'pricing'%}">Get started with Fred.</a></li>
 					   
 				     </ul>
 
@@ -538,7 +538,7 @@ out. </span></h5>
 									   <li><a href="testimonials.html">Testimonials |</a></li>
 									   <li><a href="#">Jobs |</a></li>
 									   <li><a href="#">Fred Academy</a></li-->	
-									   <li><a href="pricing.html">Our Plans |</a></li>
+									   <li><a href="{% url 'pricing'%}">Our Plans |</a></li>
 									   <li><a href="{% url 'holiday' %}">Airbnb |</a></li>
 									   <li><a href="{% url 'hotel' %}"> Hotels |</a></li>
 									   <li><a href="https://clubfred.recruitee.com/" target="_blank">Jobs</a></li>

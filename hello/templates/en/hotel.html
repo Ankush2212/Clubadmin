@@ -160,8 +160,8 @@ div#datetimepicker5 input {
 					<div class="col-md-9 col-sm-9 col-xs-12 text-right">
 					   <div class="top_button">
 					     <ul>
-							  <li class="club"><a href="pricing.html"><span class="club_s">Join the club</span></a></li>
-							  <li class="eng_list"><a href="holiday.html"><span class="eng underline">ENG</span>/</a><a href="http://www.clubfred.nl/"><span class="nll">NL</span></a></li>
+							  <li class="club"><a href="{% url 'pricing'%}"><span class="club_s">Join the club</span></a></li>
+							  <li class="eng_list"><a href="{% url 'hotel'%}"><span class="eng underline">ENG</span>/</a><a href="https://clubfred.herokuapp.com/"><span class="nll">NL</span></a></li>
 						 </ul>	  
 					   </div>
 					</div>
@@ -193,8 +193,8 @@ div#datetimepicker5 input {
 							  <li class="more"><a href="#">See Our Prices</a></li>
 							</ul>
 						  </li> 
-						  <li><a href="holiday.html">AIRBNB</a></li>
-						  <li><a href="hotel.html">HOTELS</a></li>					  
+						  <li><a href="{% url 'holiday'%}">AIRBNB</a></li>
+						  <li><a href="{% url 'hotel'%}">HOTELS</a></li>					  
 						</ul>
 						</div>
 					  </div>
@@ -515,7 +515,7 @@ In quis lorem accumsan, ullamcorper elit sit amet, commodo massa. Donec vitae au
 				     <ul class="hot">
 					   <li> <span class="call"> Call us </span> 24/7 020 341 38 14</li>
 					   <li>hello@clubfred.nl</li>
-					   <li class="get"><a href="pricing.html">Get started with Fred.</a></li>
+					   <li class="get"><a href="{% url 'pricing'%}">Get started with Fred.</a></li>
 					   
 				     </ul>
 
@@ -562,8 +562,8 @@ In quis lorem accumsan, ullamcorper elit sit amet, commodo massa. Donec vitae au
 									   <li><a href="testimonail.html">Testimonials |</a></li>
 									   <li><a href="#">Jobs |</a></li>
 									   <li><a href="#">Fred Academy</a></li-->	
-									   <li><a href="pricing.html">Our Plans |</a></li>
-									   <li><a href="holiday.html">Airbnb |</a></li>
+									   <li><a href="{% url 'pricing'%}">Our Plans |</a></li>
+									   <li><a href="{% url 'holiday'%}">Airbnb |</a></li>
 									   <li><a href="{% url 'hotel'%}"> Hotels |</a></li>
 									   <li><a href="https://clubfred.recruitee.com/" target="_blank">Jobs</a></li>
 								 </ul>

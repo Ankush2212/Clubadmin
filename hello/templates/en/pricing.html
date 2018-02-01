@@ -163,8 +163,8 @@ div#datetimepicker5 input {
 					<div class="col-md-9 col-sm-9 col-xs-12 text-right">
 					   <div class="top_button">
 					     <ul>
-							  <li class="club"><a href="pricing.html"><span class="club_s">Join the club</span></a></li>
-							  <li class="eng_list"><a href="pricing.html"><span class="eng underline">ENG</span>/</a><a href="http://www.clubfred.nl/Onze-prijzen.html"><span class="nll">NL</span></a></li>
+							  <li class="club"><a href="{% url 'pricing'%}"><span class="club_s">Join the club</span></a></li>
+							  <li class="eng_list"><a href="{% url 'pricing'%}"><span class="eng underline">ENG</span>/</a><a href="http://www.clubfred.nl/Onze-prijzen.html"><span class="nll">NL</span></a></li>
 						 </ul>	  
 					   </div>
 					</div>
@@ -544,9 +544,9 @@ hours before a visit.
 									   <li><a href="testimonail.html">Testimonials |</a></li>
 									   <li><a href="#">Jobs |</a></li>
 									   <li><a href="#">Fred Academy</a></li-->	
-									   <li><a href="pricing.html">Our Plans |</a></li>
-									   <li><a href="holiday.html">Airbnb |</a></li>
-									   <li><a href="hotel.html"> Hotels |</a></li>
+									   <li><a href="{% url 'pricing'%}">Our Plans |</a></li>
+									   <li><a href="{% url 'holiday'%}">Airbnb |</a></li>
+									   <li><a href="{% url 'hotel'%}"> Hotels |</a></li>
 									   <li><a href="https://clubfred.recruitee.com/" target="_blank">Jobs</a></li>
 								 </ul>
 							 </div>
