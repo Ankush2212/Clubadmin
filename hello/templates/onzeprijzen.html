@@ -647,8 +647,61 @@ zijn gesteld.
 
 
 			
-				  
+<!-----------------------singleservicek----------------------------------->	
+<div class=" single  modal bs-example-modal-sm" id="deletee" tabindex="-1" role="dialog" aria-hidden="true">
+                   <div class="modal-dialog modal-md">
+                     <div class="modal-content">
+
+                       <div class="modal-header">
+                         <button type="button" class="popup_close close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span>
+                         </button>
+                         <h4 class="modal-title" id="myModalLabel2">Pricing plan Form</h4>
+                       </div>
+                     
+                       <div class="modal-footer">
+ <div class="pricing_form">
+		
+		<form action="{% url 'singleservice'%}" method ="post">
+		 {% csrf_token %}
+		<div class="col-md-12 col-sm-12">
+		<div class="form-group">
+											 <input type="text"  class="form-control" id="firstname" placeholder="Enter Name" name="name">
+										</div>
+										<div class="form-group">
+											 <input type="email"  class="form-control" id="email" placeholder="Enter email" name="email">
+										</div>
+										<div class="form-group">
+											 <input type="text"  class="form-control" id="address" placeholder="Enter phone number" name="phonenumber">
+										</div>
+											
+		</div>
+		
+		<div class="col-md-12">
+										<div class="form-group" style="text-align:center;">
+											 <button type="submit" class="btn btn-primary submit_pricing">Signup</button>
+										</div>
+										</div>
+								 </form>
+		
+		
+		</div>
+                         </div>
+                       </div>
+
+                     </div>
+                   </div>				  
 			  <script>
+			   function  popp()
+			{
+				
+				$('.single').show();
+			
+			}
+			
+			  $(".popup_close").click( function () {
+				  $('.single').hide();
+				  
+			  });
 			function  mypopup(a)
 			{
 				$('#amount').val(a);
