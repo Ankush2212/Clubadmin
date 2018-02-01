@@ -405,6 +405,24 @@ def singleservice(request):
 					return redirect(pricing)
 	else:
 			 return redirect(pricing)
+#############singleservice from in pricing for ductchh #####################e
+def singleservicefordutch(request):
+	if request.method=='POST':
+			try:
+					name = request.POST.get('name')
+					phonenumber = request.POST.get('phonenumber')
+					email = request.POST.get('email')
+					
+			 
+					data = singleservice(name=name,email=email,phonenumber=phonenumber) 
+					data.save()
+					return redirect(onzeprijzen)
+					
+					
+			except KeyError:
+					return redirect(onzeprijzen)
+	else:
+			 return redirect(onzeprijzen)
 	
 	
 def help(request):

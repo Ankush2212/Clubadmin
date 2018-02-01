@@ -31,6 +31,7 @@ urlpatterns = [
 	url(r'^fullliteservice', hello.views.fullliteservice, name='fullliteservice'),
 	url(r'^priceperweekenglish', hello.views.priceperweekenglish, name='priceperweekenglish'),
 	url(r'^fullliteserviceenglish', hello.views.fullliteserviceenglish, name='fullliteserviceenglish'),
+	url(r'^singleservicefordutch', hello.views.singleservicefordutch, name='singleservicefordutch'),
 	url(r'^woningverhuur', hello.views.woningverhuur, name='woningverhuur'),
 	url(r'^backend/pricingplans', hello.views.pricingplans, name='pricingplans'),
 	url(r'^onzeprijzen', hello.views.onzeprijzen, name='onzeprijzen'),
