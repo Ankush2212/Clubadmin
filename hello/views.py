@@ -551,8 +551,11 @@ def abc(request):
 	#date_time_newer = '2018-02-01 06:50:18.754533'
 	#return HttpResponse(cureentdatetime)
 	#date_time_older  = datetime.datetime.now()
+	diff = date_time_newer-cureentdatetime
+	minutes = (diff.seconds) / 60
+	print (str(minutes) + ' Minutes')
 	date_time_difference = (date_time_newer-cureentdatetime).total_seconds()/60
-	return HttpResponse(date_time_difference)
+	#return HttpResponse(date_time_difference)
 	
 	
 ############activate confirmation#####################
