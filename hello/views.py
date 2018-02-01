@@ -9,14 +9,14 @@ from django.http import HttpResponse
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
 from django.template.loader import render_to_string
-#import datetime
+import datetime
 from .models import adduser 
 from .models import hotelservice 
 from .models import adminsignup 
 from .models import employeedetail 
 from .models import pricingplan 
 
-from datetime import datetime,timedelta
+#from datetime import datetime,timedelta
 from time import strftime
 from django.conf.urls import include, url
 
