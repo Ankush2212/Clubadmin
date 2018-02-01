@@ -544,10 +544,10 @@ def priceperweekenglish(request):
 def abc(request):
 
 	#cc =  diff_in_time(now,now1)
-	before = datetime.datetime.now()
-	after  = datetime.datetime.now()
-	hours  = math.floor(((after - before).seconds) / 3600)
-	return HttpResponse(hours)
+	date_time_newer = datetime.datetime.now()
+	date_time_older  = datetime.datetime.now()
+	date_time_difference = round((date_time_newer-date_time_older).total_seconds()/60)
+	return HttpResponse(date_time_difference)
 	
 	
 ############activate confirmation#####################
