@@ -209,8 +209,8 @@ div#datetimepicker5 input {
 			 <div class="col-md-6 col-sm-6 col-xs-12 textholiday bannerview hotel_text">
 			 <div class="textbox2 hotel_textbox2">
 			 <h4>Reinventing the
-hotel experience</h4><br>
- <p>The only thing we don't offer is<br> off-the-shelf solutions.</p>
+			hotel experience</h4><br>
+			 <p>The only thing we don't offer is<br> off-the-shelf solutions.</p>
 			  </div>
 			  </div>
 			  <div class="col-md-6 col-sm-6 col-xs-12 bannerview">
@@ -223,12 +223,12 @@ hotel experience</h4><br>
 			
 		
 
-   {% if messages %}
-				  <ul class="messages">
+		{% if messages %}
+				  <div class="messages">
 					{% for message in messages %}
-					  <li class="{{ message.tags }}" style="text-align:center">{{ message }}</li>
+					  <h1 class="{{ message.tags }}" style="text-align:center">{{ message }}</h1>
 					{% endfor %}
-				  </ul>
+				  </div>
 				{% endif %}
 
 			

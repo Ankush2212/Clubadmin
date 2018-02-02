@@ -333,6 +333,7 @@ def fullliteserviceenglish(request):
 			 
 					data = fulliteservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now) 
 					data.save()
+					messages.success(request, 'Thanks to select your service.')
 					return redirect(holiday)
 					
 					
@@ -359,6 +360,7 @@ def fullliteservice(request):
 			 
 					data = fulliteservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now) 
 					data.save()
+					messages.success(request, 'Thanks to select your service.')
 					return redirect(woningverhuur)
 					
 					
@@ -396,6 +398,7 @@ def singleservice1(request):
 			 
 					data = singleservice(name=name,email=email,phonenumber=phonenumber) 
 					data.save()
+					messages.success(request, 'Thanks to select your service.')
 					return redirect(pricing)
 					
 					
@@ -412,6 +415,7 @@ def singleservicefordutch(request):
 					email = request.POST.get('email')
 					data = singleservice(name=name,email=email,phonenumber=phonenumber) 
 					data.save()
+					messages.success(request, 'Thanks to select your service.')
 					return redirect(onzeprijzen)
 					
 					
@@ -440,6 +444,7 @@ def help(request):
 			 
 					data = hotelservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now) 
 					data.save()
+					messages.success(request, 'Thanks to select your service.')
 					return redirect(hotel)
 					
 					
@@ -482,11 +487,11 @@ def priceperweek(request):
 					emails = EmailMessage(
 					mail_subject, message, to=[to_email] )
 					emails.send()
-					messages.success(request, 'Price data is added successfully!')
+					messages.success(request, 'Thanks to select your service.Please check your mail and confirm your booking!')
 					return redirect(onzeprijzen)
 				except KeyError:
 					#return HttpResponse(str(e))
-					messages.success(request, 'Price data is not  added successfully!')
+					messages.success(request, 'There is some error due to select your plan.')
 					
 					return redirect(onzeprijzen)
 		else:
@@ -523,11 +528,11 @@ def priceperweekenglish(request):
 					emails = EmailMessage(
 					mail_subject, message, to=[to_email] )
 					emails.send()
-					messages.success(request, 'Price data is added successfully!')
+					messages.success(request, 'Thanks to select your service.Please check your mail and confirm your booking!')
 					return redirect(pricing)
 				except KeyError:
 					#return HttpResponse(str(e))
-					messages.success(request, 'Price data is not  added successfully!')
+					messages.success(request, 'There is some error due to select your plan.')
 					
 					return redirect(pricing)
 		else:
