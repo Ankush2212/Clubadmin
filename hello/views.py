@@ -572,12 +572,12 @@ def activate(request, uidb64):
 		# user.save()
 		# return HttpResponse('Thank you for your  confirmation.')
 	except(TypeError, ValueError, OverflowError, pricingplan.DoesNotExist):
-			user = None
-			user.verify = 1
-			user.save()
+			# user = None
+			# user.verify = 1
+			# user.save()
 			#login(request, user)
 			# return redirect('home')
-			return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
+			return HttpResponse('Due to some error not working')
 			
 def pricingplans(request):
 		getsession = request.session.get('adminid')
