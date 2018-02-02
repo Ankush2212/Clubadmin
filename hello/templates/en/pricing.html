@@ -140,10 +140,34 @@ div#datetimepicker5 input {
     padding-top: 13px;
     padding-left: 10px !important;
 }
+h1.success {
+    width: 84%;
+    display: table-cell;
+    font-size: 22px;
+    font-family: poppinssemibold;
+    vertical-align: middle;
+}
+.messages {
+    width: 36%;
+    margin: 0px auto;
+    display: table;
+    left: 0;
+    top: 136px;
+    bottom: 0;
+    height: auto !important;
+    padding: 14px 0;
+    color: #f6735d;
+    background-color: #fbf5f3;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 99999999999 !important;
+    box-shadow: 6px 3px 13px -1px #888888;
+    right: 0;
+}
 </style>
   </head>
   <body>
-  {% if messages %}
+ 	 {% if messages %}
 				  <div class="messages">
 					{% for message in messages %}
 					  <h1 class="{{ message.tags }}" style="text-align:center">{{ message }}</h1>
@@ -247,6 +271,7 @@ div#datetimepicker5 input {
 			 </ul>
 			 <div class="full-button"><input type="button" value="Choose" onclick="return mypopup('55');" class="iddd choose_button"></div>
 			</div>
+		
 			<div class="service_box pull-right service_box_second">
 			     <h3>All-in Service</h3>
 				 <p class="price">"Work/life balance becomes easy
@@ -747,6 +772,9 @@ $(document).ready(function() {
 				  $('.confirm_popup').hide();
 				  
 			  });
+			  setTimeout(function() {
+					$("#messages").hide()
+				}, 4000);
 			  
 			 </script> 
   </body>
