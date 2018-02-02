@@ -550,7 +550,7 @@ def activate(request, uidb64):
 		uid = uidb64
 		user = pricingplan.objects.get(pk=uid)
 		date_time_newer = datetime.datetime.now()
-		user = pricingplan.objects.get(id=31)
+		#user = pricingplan.objects.get(id=31)
 		cureentdatetime = datetime.datetime.strptime(user.currenttime,'%Y-%m-%d %H:%M:%S.%f')
 		date_time_difference = (date_time_newer-cureentdatetime).total_seconds()/60
 		return HttpResponse(date_time_difference)
