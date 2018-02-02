@@ -547,6 +547,7 @@ def abc(request):
 			
 def activate(request, uidb64):
 	try:
+		error=''
 		uid = uidb64
 		user = pricingplan.objects.get(pk=uid)
 		date_time_newer = datetime.datetime.now()
@@ -556,9 +557,12 @@ def activate(request, uidb64):
 		if date_time_difference < 30:
 			user.verify = 1
 			user.save()
-			return HttpResponse('Thank you for your  confirmation.')
+			error=1
+			return render(request, 'activate.html',{'success':error})
+			#return HttpResponse('Thank you for your  confirmation.')
 		else:
-			return HttpResponse('Your time is out')
+			return render(request, 'activate.html',{'success':error})
+			#return HttpResponse('Your time is out')
 		#return HttpResponse(date_time_difference)
 		# user.verify = 1
 		# user.save()
