@@ -39,7 +39,15 @@ $(document).ready(function(){
     });
 });
 </script>
-
+<style>
+h1.thanks_heading {
+    background: #ffffff8c;
+    padding: 49px 10px;
+    font-size: 30px;
+    text-align: center;
+    color: #f6735d;
+}
+</style>
   </head>
   <body>
 <div class="main pixel">    
@@ -108,10 +116,10 @@ $(document).ready(function(){
 		 <!--end Header Sections--->
 		
 		{% if success == 1 %}
-			<h1>Thanks for confirm your booking.</h1>
+			<div class="jumbotron"><h1 class="thanks_heading">Thanks for confirm your booking.</h1></div>
              <!-- path 1 -->
 		{% else %}
-			<h1>Timeout.</h1>
+			<div class="jumbotron"><h1 class="thanks_heading">Timeout.</h1></div>
 			
 		{% endif %}
 		 
