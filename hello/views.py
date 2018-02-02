@@ -553,10 +553,16 @@ def activate(request, uidb64):
 		#user = pricingplan.objects.get(id=31)
 		cureentdatetime = datetime.datetime.strptime(user.currenttime,'%Y-%m-%d %H:%M:%S.%f')
 		date_time_difference = (date_time_newer-cureentdatetime).total_seconds()/60
-		return HttpResponse(date_time_difference)
-		user.verify = 1
-		user.save()
-		return HttpResponse('Thank you for your  confirmation.')
+		if date_time_difference < 30:
+			user.verify = 1
+			user.save()
+			return HttpResponse('Thank you for your  confirmation.')
+		else:
+			return HttpResponse('Your time is out')
+		#return HttpResponse(date_time_difference)
+		# user.verify = 1
+		# user.save()
+		# return HttpResponse('Thank you for your  confirmation.')
 	except(TypeError, ValueError, OverflowError, pricingplan.DoesNotExist):
 			user = None
 			user.verify = 1
