@@ -219,7 +219,7 @@ def adduser1(request):
 def getuser(request):
 	getsession = request.session.get('adminid')
 	getrecord1 =  adminsignup.objects.get(id=getsession)
-	getdata1 =  adduser.objects.all()
+	getdata1 =  adduser.objects.all().order_by('id')[::-1]
 	return render(request, 'backend/getuser.html',{'getadta':getrecord1,'getrecord':getdata1}) 
 
 def deleteuser(request):
@@ -289,7 +289,7 @@ def addemployee(request):
 def getemployee(request):
 	getsession = request.session.get('adminid')
 	getrecord1 =  adminsignup.objects.get(id=getsession)
-	getemployeedetails =  employeedetail.objects.all()
+	getemployeedetails =  employeedetail.objects.all().order_by('id')[::-1]
 	return render(request, 'backend/getemployee.html',{'getadta':getrecord1,'getemployeedetail':getemployeedetails}) 
 	
 
@@ -595,12 +595,12 @@ def airbnb(request):
 def hotels(request):
 	getsession = request.session.get('adminid')
 	getrecord1 =  adminsignup.objects.get(id=getsession)
-	getdata1 =  hotelservice.objects.all()
+	getdata1 =  hotelservice.objects.all().order_by('id')[::-1]
 	return render(request, 'backend/hotelservice.html',{'getadta':getrecord1,'getrecord':getdata1}) 
 
 def getsingleservices(request):
 	getsession = request.session.get('adminid')
 	getrecord1 =  adminsignup.objects.get(id=getsession)
-	getdata1 =  singleservice.objects.all()
+	getdata1 =  singleservice.objects.all().order_by('id')[::-1]
 	return render(request, 'backend/singleservice.html',{'getadta':getrecord1,'getrecord':getdata1}) 
 	
