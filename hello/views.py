@@ -582,7 +582,7 @@ def activate(request, uidb64):
 			
 def pricingplans(request):
 		getsession = request.session.get('adminid')
-		getrecord1 =  adminsignup.objects.get(id=getsession).order_by('id')
+		getrecord1 =  adminsignup.objects.get(id=getsession).order_by('-check_in')
 		getpricing =  pricingplan.objects.filter(verify=1)
 		return render(request, 'backend/pricingplan.html',{'getadta':getrecord1,'getpricingdetail':getpricing}) 
 		
