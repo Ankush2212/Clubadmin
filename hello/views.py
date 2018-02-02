@@ -582,8 +582,8 @@ def activate(request, uidb64):
 			
 def pricingplans(request):
 		getsession = request.session.get('adminid')
-		getrecord1 =  adminsignup.objects.get(id=getsession).order_by('-check_in')
-		getpricing =  pricingplan.objects.filter(verify=1)
+		getrecord1 =  adminsignup.objects.get(id=getsession)
+		getpricing =  pricingplan.objects.filter(verify=1).order_by('check_in')[::-1]
 		return render(request, 'backend/pricingplan.html',{'getadta':getrecord1,'getpricingdetail':getpricing}) 
 		
 def airbnb(request):
