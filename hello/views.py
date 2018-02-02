@@ -512,7 +512,7 @@ def priceperweekenglish(request):
 					#return HttpResponse(now)
 					data = pricingplan(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,amount=amount,verify=verify,currenttime=now) 
 					data.save()
-					mail_subject = 'Activate your blog account.'
+					mail_subject = 'Confirmation mail'
 					
 					message = render_to_string('acc_active_email.html', {
 					'user': firstname,

@@ -223,6 +223,13 @@ div#datetimepicker5 input {
 
 
 			<div class="service_box pull-left service_box_first">
+			{% if messages %}
+				  <div class="messages">
+					{% for message in messages %}
+					  <h1 class="{{ message.tags }}" style="text-align:center">{{ message }}</h1>
+					{% endfor %}
+				  </div>
+				{% endif %}
 				<h3>The Basics </h3>
 				<div><p class="price">"The basics of cleaning every home needs."</br>
 			<span>Weekly visit / 2.5 hours</span> </p></div>
