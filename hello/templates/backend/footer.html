@@ -63,14 +63,29 @@
     <!-- bootstrap-daterangepicker -->
     
 	 <script>
- $('#datatable').dataTable(); 
- 
- //$('#datatable3').dataTable({ });  
- $('#datatable12').dataTable({
-			 "aoColumnDefs": [
-				{ 'bSortable': false, 'aTargets': [ 4 ] }
-]
- }); 
+ //$('#datatable').dataTable(); 
+  $("#datatable").dataTable({
+     "bJQueryUI":true,
+      "bSort":false,
+      "bPaginate":true,
+      "sPaginationType":"full_numbers",
+       "iDisplayLength": 4
+}); 
+ $("#datatable12").dataTable({
+     "bJQueryUI":true,
+      "bSort":false,
+      "bPaginate":true,
+      "sPaginationType":"full_numbers",
+       "iDisplayLength": 4
+}); 
+$("#datatable1").dataTable({
+     "bJQueryUI":true,
+      "bSort":false,
+      "bPaginate":true,
+      "sPaginationType":"full_numbers",
+       "iDisplayLength": 4
+});
+
  $("#datatable3").dataTable({
      "bJQueryUI":true,
       "bSort":false,
@@ -78,8 +93,8 @@
       "sPaginationType":"full_numbers",
        "iDisplayLength": 4
 });
- $('#datatable1').dataTable();
-	 $('#addgames_table').dataTable();
+
+	 
  </script>
   </body>
 </html>
