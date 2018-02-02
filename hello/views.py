@@ -309,14 +309,6 @@ def deleteemployee(request):
 				return render(request, 'backend/addnewemployee.html',{ 'getadta':getrecord,'success':error})
 	
 		
-	#return HttpResponse("You're logged out.")
-	#Contact.objects.filter(id=userid).delete()
-	#return redirect(getdata)
-	# def send_email(to_list, subject, message, sender="Aircourts <noreply@aircourts.com>"):
-    # msg = EmailMessage(subject, message, sender, to_list)
-    # msg.content_subtype = "html"  # Main content is now text/html
-    # return msg.send()
-	
 ##########################frontend integrationnnnnnnnnnn#######################
 
 ##################################holoday page in dutchh.html integration######################################
@@ -544,16 +536,9 @@ def priceperweekenglish(request):
 
 def abc(request):
 
-	#cc =  diff_in_time(now,now1)
 	date_time_newer = datetime.datetime.now()
 	user = pricingplan.objects.get(id=31)
 	cureentdatetime = datetime.datetime.strptime(user.currenttime,'%Y-%m-%d %H:%M:%S.%f')
-	#2018-02-01 09:14:38.639908
-	#2018-02-01 10:20:59.496094
-	#user.currenttime 
-	#date_time_newer = '2018-02-01 06:50:18.754533'
-	#return HttpResponse(date_time_newer)
-	#date_time_older  = datetime.datetime.now()
 	date_time_difference = (date_time_newer-cureentdatetime).total_seconds()/60
 	return HttpResponse(date_time_difference)
 	
@@ -564,6 +549,11 @@ def activate(request, uidb64):
 	try:
 		uid = uidb64
 		user = pricingplan.objects.get(pk=uid)
+		date_time_newer = datetime.datetime.now()
+		user = pricingplan.objects.get(id=31)
+		cureentdatetime = datetime.datetime.strptime(user.currenttime,'%Y-%m-%d %H:%M:%S.%f')
+		date_time_difference = (date_time_newer-cureentdatetime).total_seconds()/60
+		return HttpResponse(date_time_difference)
 		user.verify = 1
 		user.save()
 		return HttpResponse('Thank you for your  confirmation.')
