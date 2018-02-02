@@ -589,7 +589,7 @@ def pricingplans(request):
 def airbnb(request):
 	getsession = request.session.get('adminid')
 	getrecord1 =  adminsignup.objects.get(id=getsession)
-	getdata1 =  fulliteservice.objects.all()
+	getdata1 =  fulliteservice.objects.all().order_by('id')[::-1]
 	return render(request, 'backend/airbnb.html',{'getadta':getrecord1,'getrecord':getdata1}) 
 
 def hotels(request):
