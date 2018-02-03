@@ -661,7 +661,7 @@ def priceperweekenglish(request):
 					msg.attach_alternative(html_content, "text/html")
 					msg.send()
 					##########for user##############
-					subject1, from_email1, to1 = 'New Private Client', 'from@example.com',email
+					subject1, from_email1, to1 = 'New Request', 'from@example.com',email
 					text_content1 = 'Thanks for interest'
 					
 					html_content1 = '<h2> Thank you for your interest in our services.</h2>'
