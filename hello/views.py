@@ -504,10 +504,26 @@ def priceperweek(request):
 					# emails = EmailMessage(
 					# mail_subject, message, to=[to_email] )
 					# emails.send()
-					message1 = ('Thank you for request','Thank you for your interest in our services', 'hello@clubfred.nl',[email])
-					message2 = ('New Request', 'Here is new request for basic/pro service.Please login adim and check the new request ','hello@clubfred.nl', ['hello@clubfred.nl'])
-					send_mass_mail((message1, message2), fail_silently=False)
-					messages.success(request, 'Thanks to select your service.Please check your mail and confirm your booking!')
+					subject, from_email, to = 'New Private Client', 'from@example.com','hello@clubfred.nl'
+					text_content = 'New Private Client'
+					html_content = ' Hi Fred,<br/>'
+					html_content += ' You just received a service request of<b> ['+firstname+']</b> with the following information:<br/><br/><br/>'
+					html_content += '<b> Name:'+firstname+'</b><br/>'
+					html_content += '<b> Address:'+address+'</b><br/>'
+					html_content += '<b> Phone number:'+mobilenumber+'</b><br/>'
+					html_content += '<b> Date of visit:'+date+'</b><br/>'
+					msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+					msg.attach_alternative(html_content, "text/html")
+					msg.send()
+					##########for user##############
+					subject1, from_email1, to1 = 'New Private Client', 'from@example.com',email
+					text_content1 = 'Thanks for interest'
+					
+					html_content1 = '<h2> Thank you for your interest in our services.</h2>'
+					
+					msg1 = EmailMultiAlternatives(subject1, text_content1, from_email1, [to1])
+					msg1.attach_alternative(html_content1, "text/html")
+					msg1.send()
 					return redirect(onzeprijzen)
 				except KeyError:
 					#return HttpResponse(str(e))
@@ -549,10 +565,10 @@ def priceperweekenglish(request):
 					# mail_subject, message, to=[to_email] )
 					# emails.send()
 					
-					subject, from_email, to = 'New Private Client', 'from@example.com', email
+					subject, from_email, to = 'New Private Client', 'from@example.com','hello@clubfred.nl'
 					text_content = 'New Private Client'
 					html_content = ' Hi Fred,<br/>'
-					html_content += ' You just received a service request of<b> ['+firstname+']</b> with the following information:<br/>'
+					html_content += ' You just received a service request of<b> ['+firstname+']</b> with the following information:<br/><br/><br/>'
 					html_content += '<b> Name:'+firstname+'</b><br/>'
 					html_content += '<b> Address:'+address+'</b><br/>'
 					html_content += '<b> Phone number:'+mobilenumber+'</b><br/>'
@@ -560,6 +576,15 @@ def priceperweekenglish(request):
 					msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
 					msg.attach_alternative(html_content, "text/html")
 					msg.send()
+					##########for user##############
+					subject1, from_email1, to1 = 'New Private Client', 'from@example.com',email
+					text_content1 = 'Thanks for interest'
+					
+					html_content1 = '<h2> Thank you for your interest in our services.</h2>'
+					
+					msg1 = EmailMultiAlternatives(subject1, text_content1, from_email1, [to1])
+					msg1.attach_alternative(html_content1, "text/html")
+					msg1.send()
 					return redirect(pricing)
 				except KeyError:
 					#return HttpResponse(str(e))
