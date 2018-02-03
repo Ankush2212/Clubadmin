@@ -578,9 +578,9 @@ def abc(request):
 	subject, from_email, to = 'New Private Client', 'from@example.com', 'kalpana@codenomad.net'
 	text_content = 'This is an important message.'
 	html_content = ' Hi Fred'
-	html_content .= ' You just received a service request of [NAME CLIENT] with the following information:'
-	html_content .= ' Name:kalpana'
-	html_content .= ' calss:send'
+	html_content += ' You just received a service request of [NAME CLIENT] with the following information:'
+	html_content += ' Name:kalpana'
+	html_content += ' calss:send'
 	msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
 	msg.attach_alternative(html_content, "text/html")
 	msg.send()
