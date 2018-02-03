@@ -511,6 +511,7 @@ def priceperweek(request):
 					html_content += '<b> Name:'+firstname+'</b><br/>'
 					html_content += '<b> Address:'+address+'</b><br/>'
 					html_content += '<b> Phone number:'+mobilenumber+'</b><br/>'
+					html_content += '<b> Price plan chosen:'+amount+'</b><br/>'
 					html_content += '<b> Date of visit:'+date+'</b><br/>'
 					msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
 					msg.attach_alternative(html_content, "text/html")
@@ -572,6 +573,7 @@ def priceperweekenglish(request):
 					html_content += '<b> Name:'+firstname+'</b><br/>'
 					html_content += '<b> Address:'+address+'</b><br/>'
 					html_content += '<b> Phone number:'+mobilenumber+'</b><br/>'
+					html_content += '<b> Price plan chosen:'+amount+'</b><br/>'
 					html_content += '<b> Date of visit:'+date+'</b><br/>'
 					msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
 					msg.attach_alternative(html_content, "text/html")
