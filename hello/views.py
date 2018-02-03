@@ -552,11 +552,11 @@ def priceperweekenglish(request):
 					subject, from_email, to = 'New Private Client', 'from@example.com', email
 					text_content = 'New Private Client'
 					html_content = ' Hi Fred,<br/>'
-					html_content += ' You just received a service request of<b> ['firstname']</b> with the following information:<br/>'
-					html_content += '<b> Name:'firstname'</b><br/>'
+					html_content += ' You just received a service request of<b> ['+firstname+']</b> with the following information:<br/>'
+					html_content += '<b> Name:'+firstname+'</b><br/>'
 					html_content += '<b> Address:'address'</b><br/>'
-					html_content += '<b> Phone number:'mobilenumber'</b><br/>'
-					html_content += '<b> Date of visit:'date'</b><br/>'
+					html_content += '<b> Phone number:'+mobilenumber+'</b><br/>'
+					html_content += '<b> Date of visit:'+date+'</b><br/>'
 					msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
 					msg.attach_alternative(html_content, "text/html")
 					msg.send()
