@@ -549,11 +549,15 @@ def priceperweekenglish(request):
 					# mail_subject, message, to=[to_email] )
 					# emails.send()
 					
-					message1 = ('Thank you for request','Thank you for your interest in our services.', 'hello@clubfred.nl',[email])
-					message2 = ('New Request', 'Here is new request for basic/pro service.Please login adim and check the new request ','hello@clubfred.nl', ['hello@clubfred.nl'])
-					send_mass_mail((message1, message2), fail_silently=False)
-					
-					messages.success(request, 'Thanks to select your service.Please check your mail and confirm your booking!')
+					subject, from_email, to = 'New Private Client', 'from@example.com', 'kalpana@codenomad.net'
+					text_content = 'This is an important message.'
+					html_content = ' Hi Fred,<br/>'
+					html_content += ' You just received a service request of<b> [NAME CLIENT]</b> with the following information:<br/>'
+					html_content += '<b> Name:kalpana</b><br/>'
+					html_content += '<b> calss:send</b><br/>'
+					msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+					msg.attach_alternative(html_content, "text/html")
+					msg.send()
 					return redirect(pricing)
 				except KeyError:
 					#return HttpResponse(str(e))
