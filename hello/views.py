@@ -338,9 +338,26 @@ def fullliteserviceenglish(request):
 			 
 					data = fulliteservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now) 
 					data.save()
-					message1 = ('Thank you for request','Thank you for your interest in our services', 'hello@clubfred.nl',[email])
-					message2 = ('New Request', 'Here is new request for holiday(woningverhuur) service.Please login adim and check the new request ','hello@clubfred.nl', ['hello@clubfred.nl'])
-					send_mass_mail((message1, message2), fail_silently=False)
+					subject, from_email, to = 'New Request', 'from@example.com','hello@clubfred.nl'
+					text_content = 'New Request'
+					html_content = ' Hi Fred,<br/>'
+					html_content += ' You just received a holiday service request of<b> ['+firstname+']</b> with the following information:<br/><br/><br/>'
+					html_content += '<b> Name:'+firstname+'</b><br/>'
+					html_content += '<b> Address:'+address+'</b><br/>'
+					html_content += '<b> Phone number:'+mobilenumber+'</b><br/>'
+					
+					msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+					msg.attach_alternative(html_content, "text/html")
+					msg.send()
+					##########for user##############
+					subject1, from_email1, to1 = 'New Request', 'hello@clubfred.nl',email
+					text_content1 = 'Thanks for interest'
+					
+					html_content1 = '<h2> Thank you for your interest in our services.</h2>'
+					
+					msg1 = EmailMultiAlternatives(subject1, text_content1, from_email1, [to1])
+					msg1.attach_alternative(html_content1, "text/html")
+					msg1.send()
 					messages.success(request, 'Thanks to select your service.')
 					return redirect(holiday)
 					
@@ -368,9 +385,26 @@ def fullliteservice(request):
 			 
 					data = fulliteservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now) 
 					data.save()
-					message1 = ('Thank you for request','Thank you for your interest in our services', 'hello@clubfred.nl',[email])
-					message2 = ('New Request', 'Here is new request for holiday(woningverhuur) service.Please login adim and check the new request ','hello@clubfred.nl', ['hello@clubfred.nl'])
-					send_mass_mail((message1, message2), fail_silently=False)
+					subject, from_email, to = 'New Request', 'from@example.com','hello@clubfred.nl'
+					text_content = 'New Request'
+					html_content = ' Hi Fred,<br/>'
+					html_content += ' You just received a holiday(woning-verhuur) service request of<b> ['+firstname+']</b> with the following information:<br/><br/><br/>'
+					html_content += '<b> Name:'+firstname+'</b><br/>'
+					html_content += '<b> Address:'+address+'</b><br/>'
+					html_content += '<b> Phone number:'+mobilenumber+'</b><br/>'
+					
+					msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+					msg.attach_alternative(html_content, "text/html")
+					msg.send()
+					##########for user##############
+					subject1, from_email1, to1 = 'New Rquest', 'hello@clubfred.nl',email
+					text_content1 = 'Thanks for interest'
+					
+					html_content1 = '<h2> Thank you for your interest in our services.</h2>'
+					
+					msg1 = EmailMultiAlternatives(subject1, text_content1, from_email1, [to1])
+					msg1.attach_alternative(html_content1, "text/html")
+					msg1.send()
 					messages.success(request, 'Thanks to select your service.')
 					return redirect(woningverhuur)
 					
@@ -407,9 +441,25 @@ def singleservice1(request):
 			 
 					data = singleservice(name=name,email=email,phonenumber=phonenumber) 
 					data.save()
-					message1 = ('Thank you for request','Thank you for your interest in our services', 'hello@clubfred.nl',[email])
-					message2 = ('New Request', 'Here is new request for single service.Please login adim and check the new request ','hello@clubfred.nl', ['hello@clubfred.nl'])
-					send_mass_mail((message1, message2), fail_silently=False)
+					subject, from_email, to = 'New Request', 'from@example.com','hello@clubfred.nl'
+					text_content = 'New Request'
+					html_content = ' Hi Fred,<br/>'
+					html_content += ' You just received a Single service request of<b> ['+name+']</b> with the following information:<br/><br/><br/>'
+					html_content += '<b> Name:'+name+'</b><br/>'
+					html_content += '<b> Phone number:'+phonenumber+'</b><br/>'
+					
+					msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+					msg.attach_alternative(html_content, "text/html")
+					msg.send()
+					##########for user##############
+					subject1, from_email1, to1 = 'New Request', 'hello@clubfred.nl',email
+					text_content1 = 'Thanks for interest'
+					
+					html_content1 = '<h2> Thank you for your interest in our services.</h2>'
+					
+					msg1 = EmailMultiAlternatives(subject1, text_content1, from_email1, [to1])
+					msg1.attach_alternative(html_content1, "text/html")
+					msg1.send()
 					messages.success(request, 'Thanks to select your service.')
 					return redirect(pricing)
 					
@@ -427,9 +477,25 @@ def singleservicefordutch(request):
 					email = request.POST.get('email')
 					data = singleservice(name=name,email=email,phonenumber=phonenumber) 
 					data.save()
-					message1 = ('Thank you for request','Thank you for your interest in our services', 'hello@clubfred.nl',[email])
-					message2 = ('New Request', 'Here is new request for Single service.Please login adim and check the new request ','hello@clubfred.nl', ['hello@clubfred.nl'])
-					send_mass_mail((message1, message2), fail_silently=False)
+					subject, from_email, to = 'New Request', 'from@example.com','hello@clubfred.nl'
+					text_content = 'New Request'
+					html_content = ' Hi Fred,<br/>'
+					html_content += ' You just received a Single service request of<b> ['+name+']</b> with the following information:<br/><br/><br/>'
+					html_content += '<b> Name:'+name+'</b><br/>'
+					html_content += '<b> Phone number:'+phonenumber+'</b><br/>'
+					
+					msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+					msg.attach_alternative(html_content, "text/html")
+					msg.send()
+					##########for user##############
+					subject1, from_email1, to1 = 'New Request', 'hello@clubfred.nl',email
+					text_content1 = 'Thanks for interest'
+					
+					html_content1 = '<h2> Thank you for your interest in our services.</h2>'
+					
+					msg1 = EmailMultiAlternatives(subject1, text_content1, from_email1, [to1])
+					msg1.attach_alternative(html_content1, "text/html")
+					msg1.send()
 					messages.success(request, 'Thanks to select your service.')
 					return redirect(onzeprijzen)
 					
@@ -459,10 +525,26 @@ def help(request):
 			 
 					data = hotelservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now) 
 					data.save()
-					message1 = ('Thank you for request','Thank you for your interest in our services', 'hello@clubfred.nl',[email])
-					message2 = ('New Request', 'Here is new request for hotel services.Please login adim and check the new request ','hello@clubfred.nl', ['hello@clubfred.nl'])
-					send_mass_mail((message1, message2), fail_silently=False)
-					messages.success(request, 'Thanks to select your service.')
+					subject, from_email, to = 'New Request', 'from@example.com','hello@clubfred.nl'
+					text_content = 'New Request'
+					html_content = ' Hi Fred,<br/>'
+					html_content += ' You just received a service request of<b> ['+firstname+']</b> with the following information:<br/><br/><br/>'
+					html_content += '<b> Name:'+firstname+'</b><br/>'
+					html_content += '<b> Address:'+address+'</b><br/>'
+					html_content += '<b> Phone number:'+mobilenumber+'</b><br/>'
+					
+					msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+					msg.attach_alternative(html_content, "text/html")
+					msg.send()
+					##########for user##############
+					subject1, from_email1, to1 = 'New Request', 'hello@clubfred.nl',email
+					text_content1 = 'Thanks for interest'
+					
+					html_content1 = '<h2> Thank you for your interest in our services.</h2>'
+					
+					msg1 = EmailMultiAlternatives(subject1, text_content1, from_email1, [to1])
+					msg1.attach_alternative(html_content1, "text/html")
+					msg1.send()
 					return redirect(hotel)
 					
 					
@@ -517,7 +599,7 @@ def priceperweek(request):
 					msg.attach_alternative(html_content, "text/html")
 					msg.send()
 					##########for user##############
-					subject1, from_email1, to1 = 'New Private Client', 'from@example.com',email
+					subject1, from_email1, to1 = 'New Request', 'from@example.com',email
 					text_content1 = 'Thanks for interest'
 					
 					html_content1 = '<h2> Thank you for your interest in our services.</h2>'
