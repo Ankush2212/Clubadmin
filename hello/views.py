@@ -540,13 +540,17 @@ def priceperweekenglish(request):
 
 def abc(request):
 
-	date_time_newer = datetime.datetime.now()
-	user = pricingplan.objects.get(id=31)
-	cureentdatetime = datetime.datetime.strptime(user.currenttime,'%Y-%m-%d %H:%M:%S.%f')
-	date_time_difference = (date_time_newer-cureentdatetime).total_seconds()/60
-	return HttpResponse(date_time_difference)
+	# date_time_newer = datetime.datetime.now()
+	# user = pricingplan.objects.get(id=31)
+	# cureentdatetime = datetime.datetime.strptime(user.currenttime,'%Y-%m-%d %H:%M:%S.%f')
+	# date_time_difference = (date_time_newer-cureentdatetime).total_seconds()/60
+	# return HttpResponse(date_time_difference)
+	message1 = ('clientmail', 'thanks is the message', 'clubfred',['kalpana@codenomad.net', 'other@example.com'])
+	message2 = ('admin mail', 'Here is another message','clubfred', ['ankush@codenomad.net'])
+
+	send_mass_mail((message1, message2), fail_silently=False)
 	
-	
+
 ############activate confirmation#####################
 			
 def activate(request, uidb64):
