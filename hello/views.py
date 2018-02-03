@@ -314,7 +314,11 @@ def deleteemployee(request):
 ##################################holoday page in dutchh.html integration######################################
 def woningverhuur(request):
 	return render(request, 'woning-verhuur.html')
-
+	
+##################################holiday.html for english integration###################################
+def holiday(request):
+	return render(request, 'en/holiday.html')
+	
 def fullliteserviceenglish(request):
 	if request.method=='POST':
 			try:
@@ -333,6 +337,9 @@ def fullliteserviceenglish(request):
 			 
 					data = fulliteservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now) 
 					data.save()
+					message1 = ('Thank you for request','Thank you for your interest in our services', 'hello@clubfred.nl',[email])
+					message2 = ('New Request', 'Here is new request for holiday(woningverhuur) service.Please login adim and check the new request ','hello@clubfred.nl', ['hello@clubfred.nl'])
+					send_mass_mail((message1, message2), fail_silently=False)
 					messages.success(request, 'Thanks to select your service.')
 					return redirect(holiday)
 					
@@ -360,6 +367,9 @@ def fullliteservice(request):
 			 
 					data = fulliteservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now) 
 					data.save()
+					message1 = ('Thank you for request','Thank you for your interest in our services', 'hello@clubfred.nl',[email])
+					message2 = ('New Request', 'Here is new request for holiday(woningverhuur) service.Please login adim and check the new request ','hello@clubfred.nl', ['hello@clubfred.nl'])
+					send_mass_mail((message1, message2), fail_silently=False)
 					messages.success(request, 'Thanks to select your service.')
 					return redirect(woningverhuur)
 					
@@ -368,9 +378,7 @@ def fullliteservice(request):
 					return redirect(woningverhuur)
 	else:
 			 return redirect(woningverhuur)
-##################################holiday.html for english integration###################################
-def holiday(request):
-	return render(request, 'en/holiday.html')
+
 	
 ##################################en.html for english integration###################################
 def en(request):
@@ -398,6 +406,9 @@ def singleservice1(request):
 			 
 					data = singleservice(name=name,email=email,phonenumber=phonenumber) 
 					data.save()
+					message1 = ('Thank you for request','Thank you for your interest in our services', 'hello@clubfred.nl',[email])
+					message2 = ('New Request', 'Here is new request for single service.Please login adim and check the new request ','hello@clubfred.nl', ['hello@clubfred.nl'])
+					send_mass_mail((message1, message2), fail_silently=False)
 					messages.success(request, 'Thanks to select your service.')
 					return redirect(pricing)
 					
@@ -415,6 +426,9 @@ def singleservicefordutch(request):
 					email = request.POST.get('email')
 					data = singleservice(name=name,email=email,phonenumber=phonenumber) 
 					data.save()
+					message1 = ('Thank you for request','Thank you for your interest in our services', 'hello@clubfred.nl',[email])
+					message2 = ('New Request', 'Here is new request for Single service.Please login adim and check the new request ','hello@clubfred.nl', ['hello@clubfred.nl'])
+					send_mass_mail((message1, message2), fail_silently=False)
 					messages.success(request, 'Thanks to select your service.')
 					return redirect(onzeprijzen)
 					
@@ -444,6 +458,9 @@ def help(request):
 			 
 					data = hotelservice(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,services=services,currentdate=now) 
 					data.save()
+					message1 = ('Thank you for request','Thank you for your interest in our services', 'hello@clubfred.nl',[email])
+					message2 = ('New Request', 'Here is new request for hotel services.Please login adim and check the new request ','hello@clubfred.nl', ['hello@clubfred.nl'])
+					send_mass_mail((message1, message2), fail_silently=False)
 					messages.success(request, 'Thanks to select your service.')
 					return redirect(hotel)
 					
@@ -476,16 +493,19 @@ def priceperweek(request):
 					verify = '0'
 					data = pricingplan(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,amount=amount,verify=verify) 
 					data.save()
-					mail_subject = 'Confirmation mail'
-					message = render_to_string('acc_active_email.html', {
-					'user': firstname,
-					'domain': 'https://clubfred.herokuapp.com/',
-					'uid':data.pk,
-					})
-					to_email = email
-					emails = EmailMessage(
-					mail_subject, message, to=[to_email] )
-					emails.send()
+					# mail_subject = 'Confirmation mail'
+					# message = render_to_string('acc_active_email.html', {
+					# 'user': firstname,
+					# 'domain': 'https://clubfred.herokuapp.com/',
+					# 'uid':data.pk,
+					# })
+					# to_email = email
+					# emails = EmailMessage(
+					# mail_subject, message, to=[to_email] )
+					# emails.send()
+					message1 = ('Thank you for request','Thank you for your interest in our services', 'hello@clubfred.nl',[email])
+					message2 = ('New Request', 'Here is new request for basic/pro service.Please login adim and check the new request ','hello@clubfred.nl', ['hello@clubfred.nl'])
+					send_mass_mail((message1, message2), fail_silently=False)
 					messages.success(request, 'Thanks to select your service.Please check your mail and confirm your booking!')
 					return redirect(onzeprijzen)
 				except KeyError:
@@ -516,17 +536,22 @@ def priceperweekenglish(request):
 					#return HttpResponse(now)
 					data = pricingplan(firstname=firstname,lastname=lastname,zipcode=zipcode,address=address,email=email,mobilenumber=mobilenumber,unit=unit,datetimee=date,amount=amount,verify=verify,currenttime=now) 
 					data.save()
-					mail_subject = 'Confirmation mail'
+					# mail_subject = 'Confirmation mail'
 					
-					message = render_to_string('acc_active_email.html', {
-					'user': firstname,
-					'domain': 'https://clubfred.herokuapp.com/',
-					'uid':data.pk,
-					})
-					to_email = email
-					emails = EmailMessage(
-					mail_subject, message, to=[to_email] )
-					emails.send()
+					# message = render_to_string('acc_active_email.html', {
+					# 'user': firstname,
+					# 'domain': 'https://clubfred.herokuapp.com/',
+					# 'uid':data.pk,
+					# })
+					# to_email = email
+					# emails = EmailMessage(
+					# mail_subject, message, to=[to_email] )
+					# emails.send()
+					
+					message1 = ('Thank you for request','Thank you for your interest in our services', 'hello@clubfred.nl',[email])
+					message2 = ('New Request', 'Here is new request for basic/pro service.Please login adim and check the new request ','hello@clubfred.nl', ['hello@clubfred.nl'])
+					send_mass_mail((message1, message2), fail_silently=False)
+					
 					messages.success(request, 'Thanks to select your service.Please check your mail and confirm your booking!')
 					return redirect(pricing)
 				except KeyError:
@@ -586,7 +611,8 @@ def activate(request, uidb64):
 def pricingplans(request):
 		getsession = request.session.get('adminid')
 		getrecord1 =  adminsignup.objects.get(id=getsession)
-		getpricing =  pricingplan.objects.filter(verify=1).order_by('id')[::-1]
+		#getpricing =  pricingplan.objects.filter(verify=1).order_by('id')[::-1]
+		getpricing =  pricingplan.objects.all().order_by('id')[::-1]
 		return render(request, 'backend/pricingplan.html',{'getadta':getrecord1,'getpricingdetail':getpricing}) 
 		
 def airbnb(request):
