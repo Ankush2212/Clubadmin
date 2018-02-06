@@ -227,8 +227,6 @@ def deleteuser(request):
 	
 		try:
 			deluser = request.POST.get('userid')
-			#return HttpResponse(delemp)
-			#delemp = request.POST.get(id)
 			adduser.objects.filter(id=deluser).delete()
 			messages.success(request, 'User deleted successfully!')
 			return redirect(getuser)
@@ -776,3 +774,8 @@ def updatesingleservice(request):
 	return redirect(getsingleservices)
 	
 	
+def deletesingleservice(request):
+	deluser = request.POST.get('userid')
+	singleservice.objects.filter(id=deluser).delete()
+	messages.success(request, 'Service deleted successfully!')
+	return redirect(getsingleservices)
