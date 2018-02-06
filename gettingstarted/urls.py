@@ -50,6 +50,7 @@ urlpatterns = [
 	#url(r'^updateuserrecord', hello.views.updateuserrecord, name='updateuserrecord'),
 	url(r'^backend/editsingleservice/(?P<userid>\d+)/$', hello.views.editsingleservice, name='editsingleservice'),
 	url(r'^updatesingleservice', hello.views.updatesingleservice, name='updatesingleservice'),
+	url(r'^deletesingleservice', hello.views.deletesingleservice, name='deletesingleservice'),
 	url(r'^deleteuser', hello.views.deleteuser, name='deleteuser'),
 	url(r'^priceperweek', hello.views.priceperweek, name='priceperweek'),
 	url(r'^deleteemployee', hello.views.deleteemployee, name='deleteemployee'),
