@@ -760,8 +760,10 @@ def getsingleservices(request):
 	
 	##########################edit single service page####################
 def editsingleservice(request,userid):
-	 getparticularrecord =  singleservice.objects.get(id=userid)
-	 return render(request, 'backend/getsingleservice.html',{'getsingleservice':getparticularrecord})
+	getsession = request.session.get('adminid')
+	getrecord1 =  adminsignup.objects.get(id=getsession)
+	getparticularrecord =  singleservice.objects.get(id=userid)
+	return render(request, 'backend/getsingleservice.html',{'getadta':getrecord1,'getsingleservice':getparticularrecord})
 	 
 def updatesingleservice(request):
 	name = request.POST.get('name')
