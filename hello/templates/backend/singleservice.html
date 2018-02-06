@@ -5,7 +5,13 @@
 
  <title> Home | Get single service </title>
        <div class="right_col" role="main">
-	 	  
+	 	   {% if messages %}
+				  <div class="success1">
+					{% for message in messages %}
+					  <h1 class="{{ message.tags }}" style="text-align:center">{{ message }}</h1>
+					{% endfor %}
+				  </div>
+				{% endif %}
 		<div class="">
             <div class="page-title">
               <div class="title_left">
@@ -55,5 +61,10 @@
               </div>
 			 
 {% include "backend/footer.html" %}   	
-
+<script>
+		 setTimeout(function() {
+					$(".success1").hide()
+				}, 3000);
+				
+		 </script>	
 		
