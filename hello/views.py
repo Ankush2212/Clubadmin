@@ -758,3 +758,18 @@ def getsingleservices(request):
 	getdata1 =  singleservice.objects.all().order_by('id')[::-1]
 	return render(request, 'backend/singleservice.html',{'getadta':getrecord1,'getrecord':getdata1}) 
 	
+	##########################edit single service page####################
+def editsingleservice(request,userid):
+	 getparticularrecord =  singleservice.objects.get(id=userid)
+	 return render(request, 'backend/getsingleservice.html',{'getsingleservice':getparticularrecord})
+	 
+def updatesingleservice(request):
+	name = request.POST.get('name')
+	email = request.POST.get('email')
+	phonenumber = request.POST.get('phonenumber')
+	userid = request.POST.get('userid')
+	to_update = singleservice.objects.filter(id=userid).update(name=name,email=email,phonenumber=phonenumber)
+	messages.success(request, 'Update single service request successfully.')
+	return redirect(getsingleservices)
+	
+	
