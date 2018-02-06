@@ -5,7 +5,13 @@
 
  <title> Home | Get single service </title>
        <div class="right_col" role="main">
-	 	  
+	 	  {% if messages %}
+				  <div class="success1">
+					{% for message in messages %}
+					  <h1 class="{{ message.tags }}" style="text-align:center">{{ message }}</h1>
+					{% endfor %}
+				  </div>
+				{% endif %}
 		<div class="">
             <div class="page-title">
               <div class="title_left">
@@ -29,10 +35,7 @@
 							<th>Phone Number</th>
 							<th>Action</th>
 							<th>Action</th>
-							
-							
-                            
-                         </tr>
+						</tr>
                       </thead>
 					  <tbody>
 					 
