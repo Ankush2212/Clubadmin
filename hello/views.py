@@ -776,7 +776,7 @@ def deletesingleservice(request):
 	return redirect(getsingleservices)
 	
 	
-#############################update particular pricing plan#####################
+#############################update and delete particular pricing plan#####################
 def pricingplans(request):
 		getsession = request.session.get('adminid')
 		getrecord1 =  adminsignup.objects.get(id=getsession)
@@ -804,4 +804,9 @@ def updateprice(request):
 	messages.success(request, 'Update Pricing plan request successfully.')
 	return redirect(pricingplans)
 
+def deletepriceservice(request):
+	deluser = request.POST.get('userid')
+	pricingplan.objects.filter(id=deluser).delete()
+	messages.success(request, 'Service deleted successfully!')
+	return redirect(pricingplans)
 	

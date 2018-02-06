@@ -55,6 +55,7 @@ urlpatterns = [
 	url(r'^updateprice', hello.views.updateprice, name='updateprice'),
 	url(r'^deleteuser', hello.views.deleteuser, name='deleteuser'),
 	url(r'^priceperweek', hello.views.priceperweek, name='priceperweek'),
+	url(r'^deletepriceservice', hello.views.deletepriceservice, name='deletepriceservice'),
 	url(r'^deleteemployee', hello.views.deleteemployee, name='deleteemployee'),
 	#url(r'^admin/', include(admin.site.urls)),
 ] 
