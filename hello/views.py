@@ -810,3 +810,32 @@ def deletepriceservice(request):
 	messages.success(request, 'Service deleted successfully!')
 	return redirect(pricingplans)
 	
+	
+	
+#######################edit and delete airbnb#############################
+def editairbnb(request,userid):
+	getsession = request.session.get('adminid')
+	getrecord1 =  adminsignup.objects.get(id=getsession)
+	getparticularrecord =  fulliteservice.objects.get(id=userid)
+	return render(request, 'backend/getairbnb.html',{'getadta':getrecord1,'getairbnb':getparticularrecord})
+
+def updateairbnb(request):
+	firstname = request.POST.get('firstname')
+	lastname = request.POST.get('lastname')
+	email = request.POST.get('email')
+	zipcode = request.POST.get('zipcode')
+	mobilenumber = request.POST.get('mobilenumber')
+	address = request.POST.get('address')
+	unit = request.POST.get('unit')
+	userid = request.POST.get('userid')
+	to_update = fulliteservice.objects.filter(id=userid).update(firstname=firstname,lastname=lastname,email=email,zipcode=zipcode,mobilenumber=mobilenumber,address=address,unit=unit)
+	messages.success(request, 'Update service request successfully.')
+	return redirect(airbnb)
+
+def deleteairbnb(request):
+	deluser = request.POST.get('userid')
+	fulliteservice.objects.filter(id=deluser).delete()
+	messages.success(request, 'Service deleted successfully!')
+	return redirect(airbnb)
+
+	
