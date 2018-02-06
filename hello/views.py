@@ -769,7 +769,7 @@ def updatesingleservice(request):
 	name = request.POST.get('name')
 	email = request.POST.get('email')
 	phonenumber = request.POST.get('phonenumber')
-	return HttpResponse(name + email + phonenumber)
+	#return HttpResponse(name + email + phonenumber)
 	userid = request.POST.get('userid')
 	to_update = singleservice.objects.filter(id=userid).update(name=name,email=email,phonenumber=phonenumber)
 	messages.success(request, 'Update single service request successfully.')
