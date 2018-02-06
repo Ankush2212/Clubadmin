@@ -5,7 +5,13 @@
 
  <title> Home | Get user details </title>
        <div class="right_col" role="main">
-	  	  
+	  	   {% if messages %}
+				  <div class="success1">
+					{% for message in messages %}
+					  <h1 class="{{ message.tags }}" style="text-align:center">{{ message }}</h1>
+					{% endfor %}
+				  </div>
+				else{% %}
 		<div class="">
             <div class="page-title">
               <div class="title_left">
@@ -33,6 +39,7 @@
 							<th>Contact No.</th>
 							<th>Unit</th>
 							<th>Datetime</th>
+							<th>Action</th>
 							
 							
 							
@@ -53,6 +60,10 @@
 							<td>{{data.mobilenumber}}</td>	
 							<td>{{data.unit}}</td>	
 							<td>{{data.datetimee}}</td>	
+							<td>
+								<a class="update" href="{% url 'editpricingplan' data.id  %}" >Edit</a>
+							</td>	
+							<td><button type="button" class="iddd deleteuserd" data-id="{{data.id }}">Delete</button></td>
 							
 							
 							

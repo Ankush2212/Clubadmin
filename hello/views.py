@@ -731,12 +731,7 @@ def activate(request, uidb64):
 			# return redirect('home')
 			return HttpResponse('Due to some error not working')
 			
-def pricingplans(request):
-		getsession = request.session.get('adminid')
-		getrecord1 =  adminsignup.objects.get(id=getsession)
-		#getpricing =  pricingplan.objects.filter(verify=1).order_by('id')[::-1]
-		getpricing =  pricingplan.objects.all().order_by('id')[::-1]
-		return render(request, 'backend/pricingplan.html',{'getadta':getrecord1,'getpricingdetail':getpricing}) 
+
 		
 def airbnb(request):
 	getsession = request.session.get('adminid')
@@ -756,7 +751,7 @@ def getsingleservices(request):
 	getdata1 =  singleservice.objects.all().order_by('id')[::-1]
 	return render(request, 'backend/singleservice.html',{'getadta':getrecord1,'getrecord':getdata1}) 
 	
-	##########################edit single service page####################
+	##########################edit and delete single service page####################
 def editsingleservice(request,userid):
 	getsession = request.session.get('adminid')
 	getrecord1 =  adminsignup.objects.get(id=getsession)
@@ -779,3 +774,34 @@ def deletesingleservice(request):
 	singleservice.objects.filter(id=deluser).delete()
 	messages.success(request, 'Service deleted successfully!')
 	return redirect(getsingleservices)
+	
+	
+#############################update particular pricing plan#####################
+def pricingplans(request):
+		getsession = request.session.get('adminid')
+		getrecord1 =  adminsignup.objects.get(id=getsession)
+		#getpricing =  pricingplan.objects.filter(verify=1).order_by('id')[::-1]
+		getpricing =  pricingplan.objects.all().order_by('id')[::-1]
+		return render(request, 'backend/pricingplan.html',{'getadta':getrecord1,'getpricingdetail':getpricing}) 
+		
+def editpricingplan(request,userid):
+	getsession = request.session.get('adminid')
+	getrecord1 =  adminsignup.objects.get(id=getsession)
+	getparticularrecord =  pricingplan.objects.get(id=userid)
+	return render(request, 'backend/getpricingplan.html',{'getadta':getrecord1,'getpricingservice':getparticularrecord})
+
+def updateprice(request):
+	firstname = request.POST.get('firstname')
+	lastname = request.POST.get('lastname')
+	email = request.POST.get('email')
+	zipcode = request.POST.get('zipcode')
+	mobilenumber = request.POST.get('mobilenumber')
+	address = request.POST.get('address')
+	unit = request.POST.get('unit')
+	#return HttpResponse(name + email + phonenumber)
+	userid = request.POST.get('userid')
+	to_update = pricingplan.objects.filter(id=userid).update(firstname=firstname,lastname=lastname,email=email,zipcode=zipcode,mobilenumber=mobilenumber,address=address,unit=unit)
+	messages.success(request, 'Update Pricing plan request successfully.')
+	return redirect(pricingplans)
+
+	
