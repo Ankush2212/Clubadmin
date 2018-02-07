@@ -784,7 +784,7 @@ def pricingplans(request):
 			#getpricing =  pricingplan.objects.filter(verify=1).order_by('id')[::-1]
 			getpricing =  pricingplan.objects.all().order_by('id')[::-1]
 			return render(request, 'backend/pricingplan.html',{'getadta':getrecord1,'getpricingdetail':getpricing}) 
-		else
+		else:
 			return redirect(admin)
 		
 def editpricingplan(request,userid):
