@@ -496,14 +496,14 @@ li.meer
                        <div class="modal-footer">
  <div class="pricing_form">
 		
-		<form action="{% url 'fullliteservice'%}" method ="post">
+		<form action="{% url 'fullliteservice'%}" data-parsley-validate method ="post">
 									 {% csrf_token %}
 									<div class="col-md-6 col-sm-6">
 									<div class="form-group">
-											 <input type="text"  class="form-control" id="firstname ifg" placeholder="Enter Firstname" name="firstname">
+											 <input type="text" required="required"  class="form-control" id="firstname ifg" placeholder="Enter Firstname" name="firstname">
 										</div>
 										<div class="form-group">
-											 <input type="email"  class="form-control" id="email" placeholder="Enter email" name="email">
+											 <input type="email" required="required" class="form-control" id="email" placeholder="Enter email" name="email">
 										</div>
 										<div class="form-group">
 											 <input type="text"  class="form-control" id="address" placeholder="Enter Address" name="address">
@@ -517,7 +517,7 @@ li.meer
 											 <input type="text"  class="form-control" id="lastname" placeholder="Enter Lastname" name="lastname">
 										</div>
 										<div class="form-group">
-											 <input type="text"  class="form-control" id="Number" placeholder="Enter Number" name="mobilenumber">
+											 <input type="text"  class="form-control" id="Number" placeholder="Enter Number" required="required" name="mobilenumber">
 											 <input type="hidden" id="amount" name="services">
 										</div>
 										<div class="form-group">
