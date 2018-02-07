@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="{% static 'css/style-holiday.css'%}"/>
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}"/>
 	<link rel="stylesheet" href="{% static 'css/responsive.css'%}"/>
+	 <script src="/static/assets/vendors/parsleyjs/dist/parsley.min.js"></script>
+	<script src="{% static 'assets/vendors/validator/validator.js'%}"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/youngserif" type="text/css"/>
 	<script src="{% static 'js/jquery.min.js'%}"></script>
@@ -494,11 +496,11 @@ li.meer
                        <div class="modal-footer">
  <div class="pricing_form">
 		
-		<form action="{% url 'fullliteservice'%}" method ="post">
+		<form action="{% url 'fullliteservice'%}" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method ="post">
 									 {% csrf_token %}
 									<div class="col-md-6 col-sm-6">
 									<div class="form-group">
-											 <input type="text"  class="form-control" id="firstname ifg" placeholder="Enter Firstname" name="firstname">
+											 <input type="text"  class="form-control" id="firstname ifg"required="required"  placeholder="Enter Firstname" name="firstname">
 										</div>
 										<div class="form-group">
 											 <input type="email"  class="form-control" id="email" placeholder="Enter email" name="email">
