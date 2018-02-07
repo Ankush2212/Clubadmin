@@ -889,4 +889,5 @@ def deletehotelservice(request):
 	messages.success(request, 'Service deleted successfully!')
 	return redirect(hotels)
 
-	
+def testing(request):
+	return render(request,'backend/test.html')

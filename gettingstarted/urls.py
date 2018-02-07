@@ -63,5 +63,6 @@ urlpatterns = [
 	url(r'^deleteairbnb', hello.views.deleteairbnb, name='deleteairbnb'),
 	url(r'^updateairbnb', hello.views.updateairbnb, name='updateairbnb'),
 	url(r'^deleteemployee', hello.views.deleteemployee, name='deleteemployee'),
+	url(r'^backend/testing', hello.views.testing, name='testing'),
 	#url(r'^admin/', include(admin.site.urls)),
 ] 
