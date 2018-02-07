@@ -735,28 +735,40 @@ def activate(request, uidb64):
 		
 def airbnb(request):
 	getsession = request.session.get('adminid')
-	getrecord1 =  adminsignup.objects.get(id=getsession)
-	getdata1 =  fulliteservice.objects.all().order_by('id')[::-1]
-	return render(request, 'backend/airbnb.html',{'getadta':getrecord1,'getrecord':getdata1}) 
+	if getsession:
+		getrecord1 =  adminsignup.objects.get(id=getsession)
+		getdata1 =  fulliteservice.objects.all().order_by('id')[::-1]
+		return render(request, 'backend/airbnb.html',{'getadta':getrecord1,'getrecord':getdata1})
+	else:
+			return render(request, 'backend/admin.html', {})
 
 def hotels(request):
 	getsession = request.session.get('adminid')
-	getrecord1 =  adminsignup.objects.get(id=getsession)
-	getdata1 =  hotelservice.objects.all().order_by('id')[::-1]
-	return render(request, 'backend/hotelservice.html',{'getadta':getrecord1,'getrecord':getdata1}) 
+	if getsession:
+		getrecord1 =  adminsignup.objects.get(id=getsession)
+		getdata1 =  hotelservice.objects.all().order_by('id')[::-1]
+		return render(request, 'backend/hotelservice.html',{'getadta':getrecord1,'getrecord':getdata1})
+	else:
+			return render(request, 'backend/admin.html', {})
 
 def getsingleservices(request):
 	getsession = request.session.get('adminid')
-	getrecord1 =  adminsignup.objects.get(id=getsession)
-	getdata1 =  singleservice.objects.all().order_by('id')[::-1]
-	return render(request, 'backend/singleservice.html',{'getadta':getrecord1,'getrecord':getdata1}) 
+	if getsession:
+		getrecord1 =  adminsignup.objects.get(id=getsession)
+		getdata1 =  singleservice.objects.all().order_by('id')[::-1]
+		return render(request, 'backend/singleservice.html',{'getadta':getrecord1,'getrecord':getdata1})
+	else:
+			return render(request, 'backend/admin.html', {})
 	
 	##########################edit and delete single service page####################
 def editsingleservice(request,userid):
 	getsession = request.session.get('adminid')
-	getrecord1 =  adminsignup.objects.get(id=getsession)
-	getparticularrecord =  singleservice.objects.get(id=userid)
-	return render(request, 'backend/getsingleservice.html',{'getadta':getrecord1,'getsingleservice':getparticularrecord})
+	if getsession:
+		getrecord1 =  adminsignup.objects.get(id=getsession)
+		getparticularrecord =  singleservice.objects.get(id=userid)
+		return render(request, 'backend/getsingleservice.html',{'getadta':getrecord1,'getsingleservice':getparticularrecord})
+	else:
+			return render(request, 'backend/admin.html', {})
 	 
 def updatesingleservice(request):
 	name = request.POST.get('name')
@@ -789,9 +801,12 @@ def pricingplans(request):
 		
 def editpricingplan(request,userid):
 	getsession = request.session.get('adminid')
-	getrecord1 =  adminsignup.objects.get(id=getsession)
-	getparticularrecord =  pricingplan.objects.get(id=userid)
-	return render(request, 'backend/getpricingplan.html',{'getadta':getrecord1,'getpricingservice':getparticularrecord})
+	if getsession:
+		getrecord1 =  adminsignup.objects.get(id=getsession)
+		getparticularrecord =  pricingplan.objects.get(id=userid)
+		return render(request, 'backend/getpricingplan.html',{'getadta':getrecord1,'getpricingservice':getparticularrecord})
+	else:
+			return render(request, 'backend/admin.html', {})
 
 def updateprice(request):
 	firstname = request.POST.get('firstname')
@@ -818,9 +833,13 @@ def deletepriceservice(request):
 #######################edit and delete airbnb#############################
 def editairbnb(request,userid):
 	getsession = request.session.get('adminid')
-	getrecord1 =  adminsignup.objects.get(id=getsession)
-	getparticularrecord =  fulliteservice.objects.get(id=userid)
-	return render(request, 'backend/getairbnb.html',{'getadta':getrecord1,'getairbnb':getparticularrecord})
+	if getsession:
+		
+		getrecord1 =  adminsignup.objects.get(id=getsession)
+		getparticularrecord =  fulliteservice.objects.get(id=userid)
+		return render(request, 'backend/getairbnb.html',{'getadta':getrecord1,'getairbnb':getparticularrecord})
+	else:
+			return render(request, 'backend/admin.html', {})
 
 def updateairbnb(request):
 	firstname = request.POST.get('firstname')
@@ -844,10 +863,12 @@ def deleteairbnb(request):
 #######################edit and delete hotel service#############################
 def edithotelservice(request,userid):
 	getsession = request.session.get('adminid')
-	
-	getrecord1 =  adminsignup.objects.get(id=getsession)
-	getparticularrecord =  hotelservice.objects.get(id=userid)
-	return render(request, 'backend/gethotelservice.html',{'getadta':getrecord1,'gethotelservice':getparticularrecord})
+	if getsession:
+		getrecord1 =  adminsignup.objects.get(id=getsession)
+		getparticularrecord =  hotelservice.objects.get(id=userid)
+		return render(request, 'backend/gethotelservice.html',{'getadta':getrecord1,'gethotelservice':getparticularrecord})
+	else:
+			return render(request, 'backend/admin.html', {})
 
 def updatehotelservice(request):
 	firstname = request.POST.get('firstname')
