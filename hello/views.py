@@ -779,7 +779,7 @@ def deletesingleservice(request):
 #############################update and delete particular pricing plan#####################
 def pricingplans(request):
 		getsession = request.session.get('adminid')
-		if(getsession)
+		if getsession:
 			getrecord1 =  adminsignup.objects.get(id=getsession)
 			#getpricing =  pricingplan.objects.filter(verify=1).order_by('id')[::-1]
 			getpricing =  pricingplan.objects.all().order_by('id')[::-1]
