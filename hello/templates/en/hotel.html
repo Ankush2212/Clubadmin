@@ -16,7 +16,9 @@
 <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script-->
   
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="/static/assets/vendors/parsleyjs/dist/parsley.min.js"></script>
+<script src="{% static 'assets/vendors/validator/validator.js'%}"></script>
  <!------------------------------------popup libraray---------------------------->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
   <link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
@@ -586,14 +588,14 @@ In quis lorem accumsan, ullamcorper elit sit amet, commodo massa. Donec vitae au
                        <div class="modal-footer">
 					<div class="pricing_form">
 		
-						<form action="{% url 'help'%}" method ="post">
+						<form data-parsley-validate action="{% url 'help'%}" method ="post">
 									 {% csrf_token %}
 									<div class="col-md-6 col-sm-6">
 									<div class="form-group">
-											 <input type="text"  class="form-control" id="firstname" placeholder="Enter Firstname" name="firstname">
+											 <input type="text" required="required" class="form-control" id="firstname" placeholder="Enter Firstname" name="firstname">
 										</div>
 										<div class="form-group">
-											 <input type="email"  class="form-control" id="email" placeholder="Enter email" name="email">
+											 <input type="email" required="required" class="form-control" id="email" placeholder="Enter email" name="email">
 										</div>
 										<div class="form-group">
 											 <input type="text"  class="form-control" id="address" placeholder="Enter Address" name="address">
@@ -607,7 +609,7 @@ In quis lorem accumsan, ullamcorper elit sit amet, commodo massa. Donec vitae au
 											 <input type="text"  class="form-control" id="lastname" placeholder="Enter Lastname" name="lastname">
 										</div>
 										<div class="form-group">
-											 <input type="text"  class="form-control" id="Number" placeholder="Enter Number" name="mobilenumber">
+											 <input type="text" required="required" class="form-control" id="Number" placeholder="Enter Number" name="mobilenumber">
 											 <input type="hidden" id="amount" name="services">
 										</div>
 										<div class="form-group">
