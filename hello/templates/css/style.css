@@ -2924,14 +2924,3 @@ span.club_s:hover:after
 	     border: 1px solid #f29e91 !important;
 		
 }
-a.update {
-    display: block;
-    width: 45px;
-    height: 25px;
-    background: darkgrey;
-    padding: 4px;
-    text-align: center;
-    border-radius: 1px;
-    color: white;
-    font-weight: bold;
-}
