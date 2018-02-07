@@ -779,10 +779,13 @@ def deletesingleservice(request):
 #############################update and delete particular pricing plan#####################
 def pricingplans(request):
 		getsession = request.session.get('adminid')
-		getrecord1 =  adminsignup.objects.get(id=getsession)
-		#getpricing =  pricingplan.objects.filter(verify=1).order_by('id')[::-1]
-		getpricing =  pricingplan.objects.all().order_by('id')[::-1]
-		return render(request, 'backend/pricingplan.html',{'getadta':getrecord1,'getpricingdetail':getpricing}) 
+		if(getsession)
+			getrecord1 =  adminsignup.objects.get(id=getsession)
+			#getpricing =  pricingplan.objects.filter(verify=1).order_by('id')[::-1]
+			getpricing =  pricingplan.objects.all().order_by('id')[::-1]
+			return render(request, 'backend/pricingplan.html',{'getadta':getrecord1,'getpricingdetail':getpricing}) 
+		else
+			return redirect(admin)
 		
 def editpricingplan(request,userid):
 	getsession = request.session.get('adminid')
@@ -841,6 +844,7 @@ def deleteairbnb(request):
 #######################edit and delete hotel service#############################
 def edithotelservice(request,userid):
 	getsession = request.session.get('adminid')
+	
 	getrecord1 =  adminsignup.objects.get(id=getsession)
 	getparticularrecord =  hotelservice.objects.get(id=userid)
 	return render(request, 'backend/gethotelservice.html',{'getadta':getrecord1,'gethotelservice':getparticularrecord})
