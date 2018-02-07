@@ -3,9 +3,16 @@
 {% include "backend/top-nav.html" %}    
    
 
- <title> Home | Get user details </title>
+ <title> Home | Get Hotel Servicedetails </title>
        <div class="right_col" role="main">
-	 	  
+	 	  	 {% if messages %}
+				  <div class="success1">
+					{% for message in messages %}
+					  <h1 class="{{ message.tags }}" style="text-align:center">{{ message }}</h1>
+					{% endfor %}
+				  </div>
+				{% endif %}	
+							
 		<div class="">
             <div class="page-title">
               <div class="title_left">
