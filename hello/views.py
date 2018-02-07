@@ -838,4 +838,30 @@ def deleteairbnb(request):
 	messages.success(request, 'Service deleted successfully!')
 	return redirect(airbnb)
 
+#######################edit and delete hotel service#############################
+def edithotelservice(request,userid):
+	getsession = request.session.get('adminid')
+	getrecord1 =  adminsignup.objects.get(id=getsession)
+	getparticularrecord =  hotelservice.objects.get(id=userid)
+	return render(request, 'backend/gethotelservice.html',{'getadta':getrecord1,'gethotelservice':getparticularrecord})
+
+def updatehotelservice(request):
+	firstname = request.POST.get('firstname')
+	lastname = request.POST.get('lastname')
+	email = request.POST.get('email')
+	zipcode = request.POST.get('zipcode')
+	mobilenumber = request.POST.get('mobilenumber')
+	address = request.POST.get('address')
+	unit = request.POST.get('unit')
+	userid = request.POST.get('userid')
+	to_update = hotelservice.objects.filter(id=userid).update(firstname=firstname,lastname=lastname,email=email,zipcode=zipcode,mobilenumber=mobilenumber,address=address,unit=unit)
+	messages.success(request, 'Service updated  request successfully.')
+	return redirect(hotels)
+
+def deletehotelservice(request):
+	deluser = request.POST.get('userid')
+	hotelservice.objects.filter(id=deluser).delete()
+	messages.success(request, 'Service deleted successfully!')
+	return redirect(hotels)
+
 	
