@@ -17,19 +17,11 @@
 	<script src="{% static 'js/jquery.min.js'%}"></script>
 	<script src="{% static 'js/bootstrap.min.js'%}"></script>
 	
-<script src="{% static 'js/jquery.3.2.1.min.js'%}"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
 
-
- <script src="{% sattic 'assets/vendors/parsleyjs/dist/parsley.min.js'"></script>
-<script src="{% static 'assets/vendors/validator/validator.js'%}"></script>
-
-	  <!--script src='https://code.jquery.com/jquery-2.2.4.min.js'></script-->
+	  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>   
 	  <link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
-	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>bootstrap-datetimepicker
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
     <script src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>	
 	  
 	<script>
@@ -582,14 +574,14 @@ zijn gesteld.
                        <div class="modal-footer">
  <div class="pricing_form">
 		
-		<form action="{% url 'priceperweek'%}" data-parsley-validate method ="post">
+		<form action="{% url 'priceperweek'%}" method ="post">
 		 {% csrf_token %}
 		<div class="col-md-6 col-sm-6">
 		<div class="form-group">
-											 <input type="text" required class="form-control" id="firstname" placeholder="Enter Firstname" name="firstname">
+											 <input type="text"  class="form-control" id="firstname" placeholder="Enter Firstname" name="firstname">
 										</div>
 										<div class="form-group">
-											 <input type="email" required class="form-control" id="email" placeholder="Enter email" name="email">
+											 <input type="email"  class="form-control" id="email" placeholder="Enter email" name="email">
 										</div>
 										<div class="form-group">
 											 <input type="text"  class="form-control" id="address" placeholder="Enter Address" name="address">
@@ -603,7 +595,7 @@ zijn gesteld.
 											 <input type="text"  class="form-control" id="lastname" placeholder="Enter Lastname" name="lastname">
 										</div>
 										<div class="form-group">
-											 <input type="text" required class="form-control" id="Number" placeholder="Enter Number" name="mobilenumber">
+											 <input type="text"  class="form-control" id="Number" placeholder="Enter Number" name="mobilenumber">
 											 <input type="hidden" id="amount" name="amount">
 										</div>
 										<div class="form-group">
@@ -663,14 +655,14 @@ zijn gesteld.
                        <div class="modal-footer">
  <div class="pricing_form">
 		
-		<form data-parsley-validate action="{% url 'singleservicefordutch'%}" method ="post">
+		<form action="{% url 'singleservicefordutch'%}" method ="post">
 		 {% csrf_token %}
 		<div class="col-md-12 col-sm-12">
 		<div class="form-group">
-											 <input type="text" required class="form-control" id="firstname" placeholder="Enter Name" name="name">
+											 <input type="text"  class="form-control" id="firstname" placeholder="Enter Name" name="name">
 										</div>
 										<div class="form-group">
-											 <input type="email" required class="form-control" id="email" placeholder="Enter email" name="email">
+											 <input type="email"  class="form-control" id="email" placeholder="Enter email" name="email">
 										</div>
 										<div class="form-group">
 											 <input type="text"  class="form-control" id="address" placeholder="Enter phone number" name="phonenumber">
