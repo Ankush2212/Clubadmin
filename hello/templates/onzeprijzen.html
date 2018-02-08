@@ -17,6 +17,9 @@
 	<script src="{% static 'js/jquery.min.js'%}"></script>
 	<script src="{% static 'js/bootstrap.min.js'%}"></script>
 	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="/static/assets/vendors/parsleyjs/dist/parsley.min.js"></script>
+<script src="{% static 'assets/vendors/validator/validator.js'%}"></script>
 
 	  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>   
@@ -574,14 +577,14 @@ zijn gesteld.
                        <div class="modal-footer">
  <div class="pricing_form">
 		
-		<form action="{% url 'priceperweek'%}" method ="post">
+		<form action="{% url 'priceperweek'%}" data-parsley-validate method ="post">
 		 {% csrf_token %}
 		<div class="col-md-6 col-sm-6">
 		<div class="form-group">
-											 <input type="text"  class="form-control" id="firstname" placeholder="Enter Firstname" name="firstname">
+											 <input type="text" required class="form-control" id="firstname" placeholder="Enter Firstname" name="firstname">
 										</div>
 										<div class="form-group">
-											 <input type="email"  class="form-control" id="email" placeholder="Enter email" name="email">
+											 <input type="email" required class="form-control" id="email" placeholder="Enter email" name="email">
 										</div>
 										<div class="form-group">
 											 <input type="text"  class="form-control" id="address" placeholder="Enter Address" name="address">
@@ -595,7 +598,7 @@ zijn gesteld.
 											 <input type="text"  class="form-control" id="lastname" placeholder="Enter Lastname" name="lastname">
 										</div>
 										<div class="form-group">
-											 <input type="text"  class="form-control" id="Number" placeholder="Enter Number" name="mobilenumber">
+											 <input type="text" required class="form-control" id="Number" placeholder="Enter Number" name="mobilenumber">
 											 <input type="hidden" id="amount" name="amount">
 										</div>
 										<div class="form-group">
@@ -655,14 +658,14 @@ zijn gesteld.
                        <div class="modal-footer">
  <div class="pricing_form">
 		
-		<form action="{% url 'singleservicefordutch'%}" method ="post">
+		<form action="{% url 'singleservicefordutch'%}" data-parsley-validate method ="post">
 		 {% csrf_token %}
 		<div class="col-md-12 col-sm-12">
 		<div class="form-group">
-											 <input type="text"  class="form-control" id="firstname" placeholder="Enter Name" name="name">
+											 <input type="text" required class="form-control" id="firstname" placeholder="Enter Name" name="name">
 										</div>
 										<div class="form-group">
-											 <input type="email"  class="form-control" id="email" placeholder="Enter email" name="email">
+											 <input type="email" required class="form-control" id="email" placeholder="Enter email" name="email">
 										</div>
 										<div class="form-group">
 											 <input type="text"  class="form-control" id="address" placeholder="Enter phone number" name="phonenumber">
