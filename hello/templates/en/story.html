@@ -41,7 +41,7 @@ $(document).ready(function(){
 		 <!-- header Sections -->
 		   <div class="header">
 			 <div class="col-md-2 col-sm-2 col-xs-12 hed_left">
-				<div class="logo-out"><a href="http://www.clubfred.nl/en/"><img src="../images/logo.png"></a></div>
+				<div class="logo-out"><a href="{{% url 'en' %}}"><img src="../images/logo.png"></a></div>
 			 </div>
 			 <div class="col-md-10 col-sm-10 col-xs-12 hed_right">
 			    <div class="top_right">
@@ -55,8 +55,8 @@ $(document).ready(function(){
 					<div class="col-md-9 col-sm-9 col-xs-12 text-right">
 					   <div class="top_button">
 					     <ul>
-							  <li class="club"><a href="pricing.html"><span class="club_s">Join the club</span></a></li>
-							  <li class="eng_list"><a href="story.html"><span class="eng underline">ENG</span>/</a><a href="http://www.clubfred.nl/"><span class="nll">NL</span></a></li>
+							  <li class="club"><a href="{% url 'pricing' %}"><span class="club_s">Join the club</span></a></li>
+							  <li class="eng_list"><a href="story.html"><span class="eng underline">ENG</span>/</a><a href="{% url 'index' %}"><span class="nll">NL</span></a></li>
 						 </ul>	  
 					   </div>
 					</div>
