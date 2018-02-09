@@ -1452,7 +1452,7 @@ text-align:center; padding:5px 20px; color:#fff; font-size:14px; border:none; ou
     color: rgb(51,51,51);
 } */
 div#pricing-single .hed {
-    width: 96%;
+    width: 100%;
     margin: 0 auto;
     min-height: 115px;
 }
@@ -1462,7 +1462,7 @@ div#pricing-single .hed {
     color: #333;
     letter-spacing: 1px;
     margin-top: 8px;
-    font-family: 'ralewaymedium';
+    /* font-family: 'ralewaymedium'; */
 	margin-left:1px;
 }
 .pricing_single_service span.req {
