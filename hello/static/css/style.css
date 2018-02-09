@@ -1330,9 +1330,9 @@ li.get a:hover {
 .pricing_single_service .recont_secright{width:42%;}
 .pricing_single_service .room-bottom{text-align:left;}
 
-.pricing_single_service .icon{ margin:35px 0px 0 5px; text-align:left;}
+.pricing_single_service .icon{ margin:35px 0px 0 0px; text-align:left;}
 .pricing_single_service .hed{margin:0px 0px 60px 0px;}
-.pricing_single_service .out_four h4 span {color: rgb(246,115,93);font-size: 26px;margin-bottom: 30px;font-family: 'ralewaybold';}
+.pricing_single_service .out_four h4 span {color: rgb(246,115,93);font-size: 26px;margin-bottom: 30px;/* font-family: 'ralewaybold' */;}
 .pricing_single_service .book_visit{ margin:25px auto; display:block;background-color: #f5735d;font-family: "poppinssemibold";
 text-align:center; padding:5px 20px; color:#fff; font-size:14px; border:none; outline:none; line-height:24px; letter-spacing: 2px; border-radius: 4px;}
 
@@ -1469,7 +1469,7 @@ div#pricing-single .hed {
     color: rgb(246,115,93);
     font-size: 16px !important;
     margin-bottom: 30px;
-    font-family: 'ralewaybold';
+/*     font-family: 'ralewaybold'; */
 }
 .div_vis {
     float: left;
