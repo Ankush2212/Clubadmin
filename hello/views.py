@@ -691,7 +691,7 @@ def abc(request):
 
 	res  = send_mass_mail((message1, message2), fail_silently=False)
 	if res:
-		return HttpResponse('hello')
+		return HttpResponse('hesssllo')
 	else:
 		return HttpResponse('nhhv')
 	# subject, from_email, to = 'New Private Client', 'from@example.com', 'kalpana@codenomad.net'
