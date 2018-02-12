@@ -12,6 +12,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.template.loader import render_to_string
 import datetime
 #from datetime import timedelta
+from django.test.utils import override_settings
 
 from .models import singleservice 
 from .models import adduser 
@@ -676,6 +677,7 @@ def priceperweekenglish(request):
 		else:
 			messages.success(request, 'Price data is nott added successfully!')
 			return redirect(pricing)
+@override_settings(EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend')
 
 def abc(request):
 
