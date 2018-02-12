@@ -677,7 +677,7 @@ def priceperweekenglish(request):
 		else:
 			messages.success(request, 'Price data is nott added successfully!')
 			return redirect(pricing)
-@override_settings(EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend')
+@override_settings(EMAIL_BACKEND='django.core.mail.backends.filebased.EmailBackend')
 
 def abc(request):
 
