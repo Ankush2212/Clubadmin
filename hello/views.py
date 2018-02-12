@@ -688,7 +688,10 @@ def abc(request):
 	message2 = ('admin mail', 'Here is another message','clubfred', ['ankush@codenomad.net'])
 
 	res  = send_mass_mail((message1, message2), fail_silently=False)
-	return HttpResponse('nhhv')
+	if res:
+		return HttpResponse('hello')
+	else:
+		return HttpResponse('nhhv')
 	# subject, from_email, to = 'New Private Client', 'from@example.com', 'kalpana@codenomad.net'
 	# text_content = 'This is an important message.'
 	# html_content = ' Hi Fred'
