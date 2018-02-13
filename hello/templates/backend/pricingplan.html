@@ -137,6 +137,11 @@
 				}, 4000);
 				function getSelectedChbox(){
 				alert('fdsdfd');
+				var favorite = [];
+            $.each($("input[name='price']:checked"), function(){            
+                favorite.push($(this).val());
+            });
+            alert("My favourite price are: " + favorite.join(", "));
 				}
 				
 			  </script>
