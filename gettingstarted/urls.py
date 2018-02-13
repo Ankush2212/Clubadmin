@@ -20,6 +20,7 @@ urlpatterns = [
 	url(r'^logout1', hello.views.logout1, name='logout1'),
 	url(r'^abc', hello.views.abc, name='abc'),
 	url(r'^abd', hello.views.abd, name='abd'),
+	url(r'^send_complex_message', hello.views.send_complex_message, name='send_complex_message'),
 	#url(r'^verify', hellao.views.verify, name='verify'),
 	url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/$', hello.views.activate, name='activate'),
 	url(r'^login1', hello.views.login1, name='login1'),
