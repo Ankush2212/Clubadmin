@@ -39,9 +39,9 @@ def send_simple_message(request):
         "https://api.mailgun.net/v3/sandbox8d00a0060a5c4befbd280ae759883df7.mailgun.org/messages",
         auth=("api", "key-72442c5f7222d9e4ee790c61b0da37ba"),
         data={"from": "Mailgun Sandbox <postmaster@sandbox8d00a0060a5c4befbd280ae759883df7.mailgun.org>",
-              "to": "kalpana <kalpana@codenomad.net>",
-              "subject": "Hello kalpana",
-              "text": "Congratulations kalpana, you just sent an email with Mailgun!  You are truly awesome!"})
+              "to": "aman <aman@codenomad.net>",
+              "subject": "Hello aman",
+              "text": "Congratulations aman, you just sent an email with Mailgun!  You are truly awesome!"})
 
 
 # Create your views here.
