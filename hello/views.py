@@ -38,7 +38,7 @@ def send_simple_message(request):
 
 	key = 'key-72442c5f7222d9e4ee790c61b0da37ba'
 	sandbox = 'https://api.mailgun.net/v3/sandbox8d00a0060a5c4befbd280ae759883df7.mailgun.org/messages'
-	recipient = 'ankush@codenomad.net'
+	recipient = 'aman@codenomad.net'
 
 	request_url = 'https://api.mailgun.net/v3/{0}/messages'.format(sandbox)
 	request = requests.post(request_url, auth=('api', key), data={
@@ -47,8 +47,10 @@ def send_simple_message(request):
 		'subject': 'Hello',
 		'text': 'Hello from Mailgun'
 		})
-
-	print 'Status: {0}'.format(request.status_code)
+	if request:
+		return HttpResponse('hello00')
+	else:
+		return HttpResponse('Hefdd gfdgdf llo fddcccx xczfddvd x dddrom Python!')
 
 
     # return requests.post(
