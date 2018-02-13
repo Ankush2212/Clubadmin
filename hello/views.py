@@ -43,7 +43,7 @@ def abd(request):
 	html_content += ' You just received a service request of [NAME CLIENT] with the following information:'
 	html_content += ' Name:aman'
 	html_content += ' calss:send'
-	msg = send_mail(subject, html_content, from_email, [to])
+	msg = send_mail(subject, text_content, from_email, [to])
 	#msg.attach_alternative(html_content, "text/html")
 	msg.send()
 
