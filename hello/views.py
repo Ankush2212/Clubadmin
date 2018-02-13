@@ -32,6 +32,18 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.template.loader import render_to_string
 
 from django.core.mail import EmailMessage
+
+
+def send_simple_message():
+    return requests.post(
+        "https://api.mailgun.net/v3/sandbox8d00a0060a5c4befbd280ae759883df7.mailgun.org/messages",
+        auth=("api", "key-72442c5f7222d9e4ee790c61b0da37ba"),
+        data={"from": "Mailgun Sandbox <postmaster@sandbox8d00a0060a5c4befbd280ae759883df7.mailgun.org>",
+              "to": "kalpana <kalpana@codenomad.net>",
+              "subject": "Hello kalpana",
+              "text": "Congratulations kalpana, you just sent an email with Mailgun!  You are truly awesome!"})
+
+
 # Create your views here.
 def index(request):
     #return HttpResponse('Hefdd gfdgdf llo fddcccx xczfddvd x dddrom Python!')
