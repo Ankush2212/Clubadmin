@@ -858,14 +858,11 @@ def updateprice(request):
 	return redirect(pricingplans)
 
 def deletepriceservice(request):
-	thumbnail_list = []
-	file_info = {}
-	file_info['userid'] = request.POST.get('userid')
-	thumbnail_list.append(file_info)
-	for file in thumbnail_list
-		return HttpResponse({{file.userid}})
-	#endfor
-	return HttpResponse(deluser)
+	
+	file_info[] = request.POST.get('userid')
+	#thumbnail_list.append(file_info)
+	
+	return HttpResponse(file_info)
 	# pricingplan.objects.filter(id=deluser).delete()
 	# messages.success(request, 'Service deleted successfully!')
 	# return redirect(pricingplans)
