@@ -67,7 +67,7 @@
 							<td>
 								<a class="update" href="{% url 'editpricingplan' data.id  %}" >Edit</a>
 							</td>	
-							<td><button type="button" class="iddd deleteuserd" data-id="{{data.id }}">Delete</button></td>
+							<!--td><button type="button" class="iddd deleteuserd" data-id="{{data.id }}">Delete</button></td-->
 							
 							
 							
@@ -142,9 +142,8 @@
                 favorite.push($(this).val());
             });
 			var totaldata = favorite.join(", ");
-			//alert(totaldata);
-		$('#user_id').val(totaldata);
-			 $('.confirm_popup').show();
+			alert(totaldata);
+		<!-- $('#user_id').val(totaldata);$('.confirm_popup').show(); -->
             //alert("My favourite price are: " + favorite.join(", "));
 				}
 				
