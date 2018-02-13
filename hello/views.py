@@ -1,6 +1,6 @@
 import requests
 from django.conf import settings
-from django.core.mail import send_simple_message
+from django.core.mail import send_mail
 from django.core.mail import send_mass_mail
 from django.core.mail import EmailMultiAlternatives
 from django.contrib import messages
@@ -43,7 +43,7 @@ def abd(request):
 	html_content += ' You just received a service request of [NAME CLIENT] with the following information:'
 	html_content += ' Name:kalpana'
 	html_content += ' calss:send'
-	msg = send_simple_message(subject, text_content, from_email, [to])
+	msg = send_mail(subject, text_content, from_email, [to])
 	msg.attach_alternative(html_content, "text/html")
 	msg.send()
 
