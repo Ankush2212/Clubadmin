@@ -864,13 +864,13 @@ def deletepriceservice(request):
 	file_info = request.POST.get('userid').split(',')
 	
 	for  i in file_info:
-		return HttpResponse(i)
+		pricingplan.objects.filter(id=i).delete()
+		messages.success(request, 'Service deleted successfully!')
+		return redirect(pricingplans)
 	#thumbnail_list.append(file_info)
 	
 	
-	# pricingplan.objects.filter(id=deluser).delete()
-	# messages.success(request, 'Service deleted successfully!')
-	# return redirect(pricingplans)
+	
 	
 	
 	
