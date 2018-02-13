@@ -49,7 +49,7 @@ def send_complex_message(request):
 def abd(request):
 
 	send_mail("It works!", "This will get sent through Mailgun",
-          "Anymail Sender <from@example.com>", ["aman@codenomad.net"])
+          "Anymail Sender <kalpana@codenomad.net>", ["aman@codenomad.net"])
 
 
     # return requests.post(
