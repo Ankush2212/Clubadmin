@@ -136,13 +136,15 @@
 					$(".success1").hide()
 				}, 4000);
 				function getSelectedChbox(){
-				alert('fdsdfd');
+				//alert('fdsdfd');
 				var favorite = [];
             $.each($("input[name='price']:checked"), function(){            
                 favorite.push($(this).val());
             });
 			var totaldata = favorite.join(", ");
-			alert(totaldata);
+			//alert(totaldata);
+		alert($('#user_id').val(totaldata));
+			 //$('.confirm_popup').show();
             //alert("My favourite price are: " + favorite.join(", "));
 				}
 				
