@@ -42,9 +42,10 @@ def send_complex_message(request):
 						"to": "kalpana@codenomad.net",
 						"subject": "Hello",
 						"text": "Testing some Mailgun awesomness!",
-					  "html": "<html>HTML version of the body</html>"
+					  "html": "HTML version of the body"
 						}
 					)
+					
 def abd(request):
 
 	send_mail("It works!", "This will get sent through Mailgun",
