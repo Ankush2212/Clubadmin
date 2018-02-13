@@ -859,9 +859,10 @@ def updateprice(request):
 
 def deletepriceservice(request):
 	deluser = request.POST.get('userid')
-	pricingplan.objects.filter(id=deluser).delete()
-	messages.success(request, 'Service deleted successfully!')
-	return redirect(pricingplans)
+	return HttpResponse(deluser)
+	# pricingplan.objects.filter(id=deluser).delete()
+	# messages.success(request, 'Service deleted successfully!')
+	# return redirect(pricingplans)
 	
 	
 	
