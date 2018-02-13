@@ -37,7 +37,7 @@ from django.core.mail import EmailMessage
 
 def abd(request):
 
-	subject, from_email, to = 'New Private Client', 'from@example.com', 'aman@codenomad.net'
+	subject, from_email, to = 'New Private Client', 'from@example.com', 'kalapana@codenomad.net'
 	text_content = 'This is an important message.'
 	html_content = ' Hi Fred'
 	html_content += ' You just received a service request of [NAME CLIENT] with the following information:'
