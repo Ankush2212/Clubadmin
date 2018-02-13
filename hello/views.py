@@ -39,7 +39,7 @@ def abd(request):
 
 	subject, from_email, to = 'New Private Client', 'from@example.com', 'aman@codenomad.net'
 	text_content = 'This is an important message.'
-	html_content = '<b> Hi Fred</b><br>'
+	html_content = ' Hi Fred'
 	html_content += ' You just received a service request of [NAME CLIENT] with the following information:'
 	html_content += ' Name:aman'
 	html_content += ' calss:send'
