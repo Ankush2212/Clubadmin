@@ -39,7 +39,7 @@ def send_simple_message(request):
         "https://api.mailgun.net/v3/sandbox8d00a0060a5c4befbd280ae759883df7.mailgun.org/messages",
         auth=("api", "key-72442c5f7222d9e4ee790c61b0da37ba"),
        data={"from": "Excited User <excited@samples.mailgun.org>",
-              "to": ["kalpana@codenomad.net"],
+              "to": ["aman@codenomad.net"],
               "subject": "Hello",
               "text": "Testing some Mailgun awesomeness!"})
 
