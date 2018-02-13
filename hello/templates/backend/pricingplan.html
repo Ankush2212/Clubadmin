@@ -26,6 +26,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
 				<div class="x_content">
+				<button type="button" class="pop " onclick="getSelectedChbox();">Delete</button>
                  <table id="datatable3" class="table table-striped table-bordered">
                       <thead>
                         <tr>
@@ -52,7 +53,7 @@
 					 
 				{% for data in getpricingdetail %}
 							<tr>
-							<td><input type="checkbox" name="abcds" data-id="{{data.id}}"></td>
+							<td><input type="checkbox" name="price[]" value="{{data.id}}" data-id="{{data.id}}"></td>
 							<td>{{data.firstname}}</td>	
 							<td>{{data.lastname}}</td>
 							<td>{{data.email}}</td>	
@@ -62,7 +63,7 @@
 							<td>{{data.mobilenumber}}</td>	
 							<td>{{data.unit}}</td>	
 							<td>{{data.datetimee}}</td>	
-							<td>Delete</td>	
+							
 							<td>
 								<a class="update" href="{% url 'editpricingplan' data.id  %}" >Edit</a>
 							</td>	
@@ -75,6 +76,7 @@
 				  
                       </tbody>
                     </table>
+					
 					  </div>
 					  
                 </div>
@@ -114,12 +116,15 @@
 				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 				  
 			  <script>
+			  
+			  
 			  $(".iddd").click( function () {
 				  var user_id = $(this).attr('data-id');
 				  $('#user_id').val(user_id);
 				  $('.confirm_popup').show();
 				  
-			  });
+			  }); 
+			
 			  $(".popup_close").click( function () {
 				  $('.confirm_popup').hide();
 				  
@@ -130,6 +135,10 @@
 				setTimeout(function() {
 					$(".success1").hide()
 				}, 4000);
+				function getSelectedChbox(){
+				alert('fdsdfd');
+				}
+				
 			  </script>
 {% include "backend/footer.html" %}   	
 
