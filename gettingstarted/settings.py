@@ -206,5 +206,7 @@ MEDIA_URL = '/media/'
 # #smtp changes
 # EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
 # MAILER_EMAIL_BACKEND = EMAIL_BACKEND
-
+EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
+MAILGUN_ACCESS_KEY = 'key-72442c5f7222d9e4ee790c61b0da37ba'
+MAILGUN_SERVER_NAME = 'sandbox8d00a0060a5c4befbd280ae759883df7.mailgun.org'
 

@@ -1,5 +1,6 @@
 import requests
 from django.conf import settings
+from django.core.mail import send_simple_message
 from django.core.mail import send_mass_mail
 from django.core.mail import EmailMultiAlternatives
 from django.contrib import messages
@@ -36,21 +37,15 @@ from django.core.mail import EmailMessage
 
 def send_simple_message(request):
 
-	key = 'key-72442c5f7222d9e4ee790c61b0da37ba'
-	sandbox = 'https://api.mailgun.net/v3/sandbox8d00a0060a5c4befbd280ae759883df7.mailgun.org/messages'
-	recipient = 'kalpana@codenomad.net'
-
-	request_url = 'https://api.mailgun.net/v3/{0}/messages'.format(sandbox)
-	request = requests.post(request_url, auth=('api', key), data={
-		'from': 'hello@example.com',
-		'to': recipient,
-		'subject': 'Hello',
-		'text': 'Hello from Mailgun'
-		})
-	if request:
-		return HttpResponse('hello00')
-	else:
-		return HttpResponse('Hefdd gfdgdf llo fddcccx xczfddvd x dddrom Python!')
+	subject, from_email, to = 'New Private Client', 'from@example.com', 'kalpana@codenomad.net'
+	text_content = 'This is an important message.'
+	html_content = ' Hi Fred'
+	html_content += ' You just received a service request of [NAME CLIENT] with the following information:'
+	html_content += ' Name:kalpana'
+	html_content += ' calss:send'
+	msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+	msg.attach_alternative(html_content, "text/html")
+	msg.send()
 
 
     # return requests.post(
