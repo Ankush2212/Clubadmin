@@ -38,7 +38,7 @@ from django.core.mail import EmailMessage
 def abd(request):
 
 	send_mail("It works!", "This will get sent through Mailgun",
-          "Anymail Sender <from@example.com>", ["kalpana@codenomad.net"])
+          "Anymail Sender <from@example.com>", ["diksha@codenomad.net"])
 
 
     # return requests.post(
