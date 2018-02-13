@@ -37,14 +37,14 @@ from django.core.mail import EmailMessage
 
 def abd(request):
 
-	subject, from_email, to = 'New Private Client', 'from@example.com', 'kalpana@codenomad.net'
+	subject, from_email, to = 'New Private Client', 'from@example.com', 'aman@codenomad.net'
 	text_content = 'This is an important message.'
-	html_content = ' Hi Fred'
+	html_content = '<b> Hi Fred</b><br>'
 	html_content += ' You just received a service request of [NAME CLIENT] with the following information:'
-	html_content += ' Name:kalpana'
+	html_content += ' Name:aman'
 	html_content += ' calss:send'
-	msg = send_mail(subject, text_content, from_email, [to])
-	msg.attach_alternative(html_content, "text/html")
+	msg = send_mail(subject, html_content, from_email, [to])
+	#msg.attach_alternative(html_content, "text/html")
 	msg.send()
 
 
