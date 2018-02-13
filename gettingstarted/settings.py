@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hello'
+    'hello',
+    'anymail'
 ]
 
 MIDDLEWARE = [
@@ -206,7 +207,14 @@ MEDIA_URL = '/media/'
 # #smtp changes
 # EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
 # MAILER_EMAIL_BACKEND = EMAIL_BACKEND
-EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
-MAILGUN_ACCESS_KEY = 'key-72442c5f7222d9e4ee790c61b0da37ba'
-MAILGUN_SERVER_NAME = 'sandbox8d00a0060a5c4befbd280ae759883df7.mailgun.org'
+# EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
+# MAILGUN_ACCESS_KEY = 'key-72442c5f7222d9e4ee790c61b0da37ba'
+# MAILGUN_SERVER_NAME = 'sandbox8d00a0060a5c4befbd280ae759883df7.mailgun.org'
 
+ANYMAIL = {
+    # (exact settings here depend on your ESP...)
+    "MAILGUN_API_KEY": 'key-72442c5f7222d9e4ee790c61b0da37ba',
+    "MAILGUN_SENDER_DOMAIN": ' sandbox8d00a0060a5c4befbd280ae759883df7.mailgun.org',  # your Mailgun domain, if needed
+}
+EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"  # or sendgrid.EmailBackend, or...
+DEFAULT_FROM_EMAIL = "kalpana@codenomad.net"  # if you don't already have this in settings
