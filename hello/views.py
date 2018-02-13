@@ -39,7 +39,7 @@ def send_complex_message(request):
 					"https://api.mailgun.net/v3/sandbox8d00a0060a5c4befbd280ae759883df7.mailgun.org",
 					auth=("api", "key-72442c5f7222d9e4ee790c61b0da37ba"),
 					data={"from": "Excited User <YOU@YOUR_DOMAIN_NAME>",
-						"to": "kd.kalpana13@gmail.com",
+						"to": "kalpana@codenomad.net",
 						"subject": "Hello",
 						"text": "Testing some Mailgun awesomness!",
 					  "html": "<html>HTML version of the body</html>"
