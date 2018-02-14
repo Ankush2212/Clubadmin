@@ -132,6 +132,12 @@
 					$(".success1").hide()
 				}, 4000);
 				function getSelectedChbox(){
+				  var checked = $(this).is(':checked');
+				   if (checked) {
+                alert('checked');
+            } else {
+				  alert('not checked');
+				  }
 				//alert('fdsdfd');
 				var favorite = [];
             $.each($("input[name='price']:checked"), function(){            
