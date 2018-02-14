@@ -8,7 +8,8 @@
 	  	   {% if messages %}
 				  <div class="success1">
 					{% for message in messages %}
-					  <h1 class="{{ message.tags }}" style="text-align:center">{{ message }}</h1>
+					
+					  <h1 class="{{ message.tags }}" style="text-align:center">{{ message[0] }}</h1>
 					{% endfor %}
 				  </div>
 				{% endif %}
