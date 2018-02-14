@@ -574,6 +574,7 @@ def help(request):
 					# msg1 = EmailMultiAlternatives(subject1, text_content1, from_email1, [to1])
 					# msg1.attach_alternative(html_content1, "text/html")
 					# msg1.send()
+					messages.success(request, 'Thanks to select your plan.')
 					return redirect(hotel)
 					
 					
