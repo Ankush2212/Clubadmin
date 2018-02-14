@@ -135,6 +135,23 @@ div#datetimepicker5 input {
     padding-top: 13px;
     padding-left: 10px !important;
 }
+.messages {
+    width: 36%;
+    margin: 0px auto;
+    display: table;
+    left: 0;
+    top: 136px;
+    bottom: 0;
+    height: auto !important;
+    padding: 14px 0;
+    color: #f6735d;
+    background-color: #fbf5f3;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 99999999999 !important;
+    box-shadow: 6px 3px 13px -1px #888888;
+    right: 0;
+}
 </style>
 
 
@@ -150,6 +167,13 @@ $(document).ready(function(){
 </script>
   </head>
   <body>
+   {% if messages %}
+				  <div class="messages">
+					{% for message in messages %}
+					  <h1 class="{{ message.tags }}" style="text-align:center">{{ message }}</h1>
+					{% endfor %}
+				  </div>
+				{% endif %}
 <div class="main">    
   <div class="container">
 	   <div class="most_outer">
