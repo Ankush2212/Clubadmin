@@ -817,8 +817,10 @@ def updatesingleservice(request):
 	
 	
 def deletesingleservice(request):
-	deluser = request.POST.get('userid')
-	singleservice.objects.filter(id=deluser).delete()
+
+	file_info = request.POST.get('userid').split(',')
+	for  i in file_info:
+		singleservice.objects.filter(id=i).delete()
 	messages.success(request, 'Service deleted successfully!')
 	return redirect(getsingleservices)
 	
