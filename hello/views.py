@@ -865,7 +865,8 @@ def deletepriceservice(request):
 	
 	for  i in file_info:
 		pricingplan.objects.filter(id=i).delete()
-		messages.success(request, 'Service deleted successfully!')
+
+	messages.success(request, 'Service deleted successfully!')
 	return redirect(pricingplans)
 		
 	#thumbnail_list.append(file_info)
