@@ -934,8 +934,9 @@ def updatehotelservice(request):
 	return redirect(hotels)
 
 def deletehotelservice(request):
-	deluser = request.POST.get('userid')
-	hotelservice.objects.filter(id=deluser).delete()
+	file_info = request.POST.get('userid').split(',')
+	for  i in file_info:
+		hotelservice.objects.filter(id=i).delete()
 	messages.success(request, 'Service deleted successfully!')
 	return redirect(hotels)
 
