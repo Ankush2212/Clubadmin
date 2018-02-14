@@ -131,21 +131,21 @@
 				setTimeout(function() {
 					$(".success1").hide()
 				}, 4000);
-				function getSelectedChbox(){
-				  if($('[type="checkbox"]').is(":checked")){
-           alert("checkbocx");
-        }else{
-              alert("not checkbocx");
-         }
-				//alert('fdsdfd');
-				var favorite = [];
-            $.each($("input[name='price']:checked"), function(){            
-                favorite.push($(this).val());
-            });
-			var totaldata = favorite.join(", ");
-			alert(totaldata);
-		<!-- $('#user_id').val(totaldata);$('.confirm_popup').show(); -->
-            //alert("My favourite price are: " + favorite.join(", "));
+				function getSelectedChbox()
+				{
+					  if($('[type="checkbox"]').is(":checked"))
+					  {
+						var favorite = [];
+						$.each($("input[name='price']:checked"), function(){            
+							favorite.push($(this).val());
+						});
+						var totaldata = favorite.join(", ");
+						$('#user_id').val(totaldata);
+						$('.confirm_popup').show();
+					 }
+					else{
+						  alert("Please select atleast one detail. ");
+					 }
 				}
 				
 			  </script>
