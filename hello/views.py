@@ -904,8 +904,9 @@ def updateairbnb(request):
 	return redirect(airbnb)
 
 def deleteairbnb(request):
-	deluser = request.POST.get('userid')
-	fulliteservice.objects.filter(id=deluser).delete()
+	file_info = request.POST.get('userid').split(',')
+	for  i in file_info:
+		fulliteservice.objects.filter(id=i).delete()
 	messages.success(request, 'Service deleted successfully!')
 	return redirect(airbnb)
 
