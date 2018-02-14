@@ -942,3 +942,6 @@ def deletehotelservice(request):
 
 def testing(request):
 	return render(request,'backend/test.html')
+	
+def ajaxdata(request):
+	return render(request,'testing.html')
