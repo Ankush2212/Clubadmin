@@ -444,7 +444,7 @@ def fullliteservice(request):
 
 	
 ##################################en.html for english integration###################################
-def en(request):
+def endata(request):
 	return render(request, 'en/index.html')
 
 
