@@ -5,7 +5,7 @@
   <head>
     <title>Clubfred</title>
     <meta charset="utf-8"> 
-	<meta name="viewport" contendatat="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<link rel="stylesheet" href="{% static 'css/style.css'%}"/>
 	
@@ -13,8 +13,8 @@
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}"/>
 	<link rel="stylesheet" href="{% static 'css/responsive.css'%}"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" media="screendata" href="https://fontlibrary.org/face/youngserif" type="text/css"/>
-	<link rel='stylesheet prefetch' href='http://danedendata.github.io/animate.css/animate.min.css'>
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/youngserif" type="text/css"/>
+	<link rel='stylesheet prefetch' href='http://daneden.github.io/animate.css/animate.min.css'>
    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css'>
    
    
@@ -25,21 +25,21 @@
     <script  src="{% static '/js/index.js'%}"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
-$(documendatat).ready(function(){
+$(document).ready(function(){
     $(".mobile_icon i").click(function(){
         $(".mobile_navigation").slideToggle();
     });
 });
 </script>
 <script>
-$(documendatat).ready(function(){
+$(document).ready(function(){
   // Add smooth scrolling to all links
-  $("a").on('click', function(evendatat) {
+  $("a").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
-      // Prevendatat default anchor click behavior
-      evendatat.prevendatatDefault();
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
       // Store hash
       var hash = this.hash;
@@ -50,24 +50,24 @@ $(documendatat).ready(function(){
         scrollTop: $(hash).offset().top
       }, 800, function(){
    
-        // Add hash (#) to URL whendata done scrolling (default click behavior)
+        // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
-    } // endatad if
+    } // End if
   });
 });
 </script>
 <script>
-$(documendatat).ready(function(){
+$(document).ready(function(){
 var text = ["KOPPELS", "EXPATS", "AIRBNB","PROFESSIONALS","HOTELS",];
 var counter = 0;
-var elem = documendatat.getElemendatatById("changeText");
+var elem = document.getElementById("changeText");
 setInterval(change, 800);
 
 function change() {
   elem.innerHTML = text[counter];
   counter++;
-  if (counter >= text.lendatagth) {
+  if (counter >= text.length) {
     counter = 0;
   }
 }
@@ -83,7 +83,7 @@ function change() {
 		   <div class="header">
 			 <div class="col-md-2 col-sm-2 col-xs-12 hed_left">
 			 
-				<div class="logo-out"><a href="{% url 'endatadata'%}"><img src=" {% static '/images/logo.png'%}"></a></div>
+				<div class="logo-out"><a href="{% url 'en'%}"><img src=" {% static '/images/logo.png'%}"></a></div>
 			 </div>
 			 <div class="col-md-10 col-sm-10 col-xs-12 hed_right">
 			    <div class="top_right">
@@ -99,25 +99,25 @@ function change() {
 					   <div class="top_button">
 					     <ul>
 							  <li class="club"><a href="{% url 'pricing'%}"><span class="club_s">Join the club</span></a></li>
-							  <li class="endatag_list"><a href="{% url 'endatadata'%}"><span class="endatag underline">endataG</span>/</a><a href="{% url 'index'%}"><span class="nll">NL</span></a></li>
+							  <li class="eng_list"><a href="{% url 'en'%}"><span class="eng underline">ENG</span>/</a><a href="{% url 'index'%}"><span class="nll">NL</span></a></li>
 						 </ul>	  
 					   </div>
 					</div>
 				</div>
 				<div class="bottom_right">
 				    <nav class="navbar">
-					<div class="mobile_icon"><i class="fa fa-bars" aria-hiddendata="true"></i></div>
+					<div class="mobile_icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
 					  <div class="container-fluid">
 						<!--div class="navbar-header">
-						  <a class="navbar-brand" href="#">WebSitendataame</a>
+						  <a class="navbar-brand" href="#">WebSiteName</a>
 						</div-->
 						<div class="mobile_navigation">
 						<ul class="nav navbar-nav">
 						  <li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">HOUSEKEEPING
 							
-							<!--i class="fa fa-angle-down" aria-hiddendata="true"></i--><img id="updown"src=" {% static 'images/arror.png'%}"></a>
-							<ul class="dropdown-mendatau personnal" id="js-scroll-nav3">
+							<!--i class="fa fa-angle-down" aria-hidden="true"></i--><img id="updown"src=" {% static 'images/arror.png'%}"></a>
+							<ul class="dropdown-menu personnal" id="js-scroll-nav3">
 							  <li><p>A fresh home every week</p></li>
 							  <li class="more"><a href="#Five_star">More about Housekeeping</a></li>
 							</ul>
@@ -125,9 +125,9 @@ function change() {
                            <li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">ROOM SERVICE
 							 
-							<!-- <i class="fa fa-angle-down" aria-hiddendata="true"></i> --><img id="updown"src="{% static 'images/arror.png'%}"></a>
-							<ul class="dropdown-mendatau personnal_one" id="js-scroll-nav4">
-							  <li><p>Cooking becomes </br>fun whendata Fred</br>cooks for you.</p></li>
+							<!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --><img id="updown"src="{% static 'images/arror.png'%}"></a>
+							<ul class="dropdown-menu personnal_one" id="js-scroll-nav4">
+							  <li><p>Cooking becomes </br>fun when Fred</br>cooks for you.</p></li>
 							  <li class="more"><a href="#room_services">More about</a></li>
 							  <li class="more"><a href="#">Fred cuisine.</a></li>
 							</ul>
@@ -142,7 +142,7 @@ function change() {
 			 </div>
 		   </div>
 		   <div class="clear" style="clear: both;"></div>		   
-		 <!--endatad Header Sections--->
+		 <!--end Header Sections--->
 		 
 		 
 		 <!--Banner Sections--->
@@ -157,20 +157,20 @@ function change() {
 				<div class="banner_bottom"><h5><span class="Made">Perfect for</span></br><span id="changeText" class="COUPLES">COUPLES</span></h5></div>
                 
 					<div class="banner_arrow" id="desktop-arrow">
-					    <div class="circle_div" data-wow-duration="20s" data-wow-iteration="100" style="visibility: visible; animation-duration: 20s; animation-iteration-count: 100; animation-name: bounce;"><a href="#check-in"><!--i class="fa fa-angle-down" aria-hiddendata="true"></i--><img src="{% static 'images/arror.png'%}"></a></div>
+					    <div class="circle_div" data-wow-duration="20s" data-wow-iteration="100" style="visibility: visible; animation-duration: 20s; animation-iteration-count: 100; animation-name: bounce;"><a href="#check-in"><!--i class="fa fa-angle-down" aria-hidden="true"></i--><img src="{% static 'images/arror.png'%}"></a></div>
 					</div>				
 			</div>
 		  </div>
 		   <div class="clear" style="clear: both;"></div>	
-		   <!--Banner Sections endatad--->
+		   <!--Banner Sections End--->
 		 <!--Banner Sections bottom--->
 		 <div class="banner_arrow" id="mobile-arrow">
-					    <div class="circle_div"><a href="#check-in"><!--i class="fa fa-angle-down" aria-hiddendata="true"></i--><img src="{% static 'images/arror.png'%}"></a></div>
+					    <div class="circle_div"><a href="#check-in"><!--i class="fa fa-angle-down" aria-hidden="true"></i--><img src="{% static 'images/arror.png'%}"></a></div>
 					</div>	
 		  <div class="col-md-12 col-sm-12 col-xs-12 De_check">
 		       <div class="container">
 			      <div class="check_text" id="check-in">
-				     <h1 style="text-align: cendatater;">   The check-in. </h1>
+				     <h1 style="text-align: center;">   The check-in. </h1>
 					 
 					
 				  </div>
@@ -189,7 +189,7 @@ function change() {
 						 </div>
 						 <div class="col-md-3 col-sm-6 col-xs-12 step_four">
 							<h4>03</h4>
-						   <h3>Home managemendatat.</h3>
+						   <h3>Home management.</h3>
 						   <p>Your home and key handled  with care.</p>
 						 </div>
 						 <div class="col-md-3 col-sm-6 col-xs-12 step_four">
@@ -201,18 +201,18 @@ function change() {
 				</div>  
 			</div>
 			<div class="clear" style="clear: both;"></div>	
-			<!--4 step endatad--->	
+			<!--4 step end--->	
 			<div class="col-md-12 col-sm-12 col-xs-12 Five_star" id="Five_star">
 			    <div class="re_cont">
 				   <div class="Five_text">
-				      <h1 style="text-align: cendatater;">A five star home</h1>
+				      <h1 style="text-align: center;">A five star home</h1>
 				   </div>
 				   <div class="Fivetext_bottom">
 				      <div id="a">
 					     <h2>A fresh home every week</h2>
 					     <ul class="week">
 						    <li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Hotel housekeeping service</a></li>
-							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Attendatation for detail</a></li>
+							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Attention for detail</a></li>
 							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Extra focus on objects at home</a></li>
 							<!--<li><img src="../images/Websiteicons15.png"><a>Hotel housekeeping service</a></li>
 							<li><img src="../images/Websiteicons15.png"><a>Special requests on demand</a></li>
@@ -223,7 +223,7 @@ function change() {
 					  <div id="b">
 					    <h2>Your reliable home manager</h2>
 					     <ul class="week">
-						    <li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Screendataed and hired by hotel principles</a></li>
+						    <li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Screened and hired by hotel principles</a></li>
 							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Your home handled with care</a></li>
 							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Key service on point</a></li>
 						 </ul>
@@ -245,7 +245,7 @@ function change() {
 						   
 						  
 						    <li><img class="abc" src="{% static 'images/tidy.png'%}"><a>Tidy up rooms</a></li>
-							<li><img class="abc" src="{% static 'images/dil.png'%}"><a>Freshendata up bedrooms</a></li>
+							<li><img class="abc" src="{% static 'images/dil.png'%}"><a>Freshen up bedrooms</a></li>
 							<li><img class="abc" src="{% static 'images/flower.png'%}"><a>Flower care</a></li>
 						 </ul>
 					    </div>
@@ -269,16 +269,16 @@ function change() {
 			   </div>
 		   </div>
 		     <div class="clear" style="clear: both;"></div>	
-		   <!--4 step endatad--->	
+		   <!--4 step end--->	
 		   
 		   <div class="col-md-12 col-sm-12 col-xs-12 room_services" id="room_services">
 		        <div class="recont_sec">
 				  <div class="Five_text">
-				      <h1 style="text-align: cendatater;">Your favorite meal</h1>
+				      <h1 style="text-align: center;">Your favorite meal</h1>
 				   </div>
 				   <div class="room-bottom">
 				     <div class="out_four">
-					     <div class="col-md-6 col-sm-6 col-xs-12 fout_left tes11 text-cendatater">
+					     <div class="col-md-6 col-sm-6 col-xs-12 fout_left tes11 text-center">
 						        <div class="icon"><img src="{% static 'images/four3-black.png'%}"></div> 
 								 <div class="hed"><h2>Groceries delivered</h2>
 								   <h4>Your favorite <br> groceries delivered<br> into your fridge.
@@ -286,15 +286,15 @@ function change() {
 								 </div>								 
 
 						 </div>
-						 <div class="col-md-6 col-sm-6 col-xs-12 fout_left tes11 text-cendatater">
+						 <div class="col-md-6 col-sm-6 col-xs-12 fout_left tes11 text-center">
 						         <div class="icon"><img src="{% static 'images/four2-black.png'%}"></div>
-								 <div class="hed"><h2>The mendatau.</h2>
+								 <div class="hed"><h2>The menu.</h2>
 								   <h4>Choose the meal<br>you like or let us<br> surprise you.
 										 </h4>
 								 </div>								 
 
 						 </div>
-						 <div class="col-md-6 col-sm-6 col-xs-12 fout_right tes11 text-cendatater">
+						 <div class="col-md-6 col-sm-6 col-xs-12 fout_right tes11 text-center">
 						       
 								<div class="icon"><img src=" {% static 'images/four1-black.png'%}"></div>
 								 <div class="hed"><h2>Save money.</h2>
@@ -303,10 +303,10 @@ function change() {
 								 </div>
 						 </div>
 						  
-						 <div class="col-md-6 col-sm-6 col-xs-12 fout_rightt tes11 text-cendatater">
+						 <div class="col-md-6 col-sm-6 col-xs-12 fout_rightt tes11 text-center">
 						        <div class="icon"><img src="{% static 'images/four4-black.png'%}"></div>
 								 <div class="hed"><h2>Dinner served.</h2>
-								   <h4>Dinner will be <br> served whendata home<br> is calling you.
+								   <h4>Dinner will be <br> served when home<br> is calling you.
 										</h4>
 								 </div>
 						 </div>
@@ -334,11 +334,11 @@ function change() {
 		   
 		   </div>
 		   <div class="clear" style="clear: both;"></div>	
-		    <!--room Services endatad --->
+		    <!--room Services end --->
 		   <div class="col-md-12 col-sm-12 col-xs-12 Five_star">
 		     	<div class="re_cont">
 				   <!--div class="Five_text">
-				      <h1 style="text-align: cendatater;">A five star home</h1>
+				      <h1 style="text-align: center;">A five star home</h1>
 				   </div-->
 				   <div class="Fivetext_bottom">
 				      <div id="a">
@@ -350,9 +350,9 @@ function change() {
 					     
 					  </div>
 					  <div class="testi">
-					    <h2>“There is a sendatase</h2>
+					    <h2>“There is a sense</h2>
 						<h2>of peace and calm</h2>
-						<h2>whendata you come home</h2>
+						<h2>when you come home</h2>
 						<h2>and everything looks</h2>
 						<h2>organized.</h2>
 						<h2>It’s incredible, no other </h2>
@@ -368,7 +368,7 @@ function change() {
 		   
 		   </div>
 		   
-		   <!--Five_star endatad --->
+		   <!--Five_star end --->
 		   
 		   <div class="col-md-12 col-sm-12 col-xs-12 bootom_footer" id="bootom_footer">
 		      <div class="col-md-6 col-sm-6 col-xs-12 footer_left">
@@ -376,7 +376,7 @@ function change() {
 				   <h1>Clubfred.</h1>
 				     <ul class="hot">
 				       <li>Hotel service at home</li>
-					   <li> Herendatagracht 91</li>
+					   <li> Herengracht 91</li>
 					   <li>1015 BD  Amsterdam</li>
 					   <!--li> <span class="call"> Call us </span> 24/7 020 341 38 14</li>
 					   <li>hello@clubfred.nl</li>
@@ -390,7 +390,7 @@ function change() {
 			        <div class="f_right">				 
                         <p>Stay in touch and receive hotel gifts</p>
 						<form action="" method="post">
-							<div class="input-prependatad"><input type="text" id="" name="" placeholder="EMAIL@DOMAIN.COM	">
+							<div class="input-prepend"><input type="text" id="" name="" placeholder="EMAIL@DOMAIN.COM	">
 							<input type="submit" value="Subscribe" class="btn btn-large" id="testimh" onsubmit="myFunction()">
 							</div>
 					  </form>
@@ -399,7 +399,7 @@ function change() {
 <style type="text/css">
 	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
 	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-	   We recommendatad moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
 <!--div id="mc_embed_signup">
 <form action="https://facebook.us14.list-manage.com/subscribe/post?u=b52160b705937ff2f50ef702e&amp;id=eb32e4820c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -415,13 +415,13 @@ function change() {
 		<div class="response" id="mce-error-response" style="display:none"></div>
 		<div class="response" id="mce-success-response" style="display:none"></div>
 	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hiddendata="true"><input type="text" name="b_b52160b705937ff2f50ef702e_eb32e4820c" tabindex="-1" value=""></div>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b52160b705937ff2f50ef702e_eb32e4820c" tabindex="-1" value=""></div>
     <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
     </div>
 </form>
 </div-->
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--endatad mc_embed_signup-->
+<!--End mc_embed_signup-->
 					  <!--h1>Follow Us</h1>
 						 <ul class="soc">
 							  <li><img src="../images/facebook.png"></li>
@@ -485,7 +485,7 @@ function change() {
 								    <ul class="story">
 									    <!--li> <a href="story.html">Our story |</a></li>
 									   <li><a href="pricing.html">Our plans |</a></li>
-									   <li><a href="appartmendatats.html">Apartmendatats |</a></li>
+									   <li><a href="appartments.html">Apartments |</a></li>
 									   <li><a href="hotel.html"> Hotels |</a></li>
 									   <li><a href="testimonail.html">Testimonials |</a></li>
 									   <li><a href="#">Jobs |</a></li>
@@ -507,7 +507,7 @@ function change() {
   </body>
 </html>  
 <script>
-$(documendatat).ready(function () {
+$(document).ready(function () {
     $(".dropdown").click(function () {
      
 	  var path=$(this).find('#updown').attr('src');
