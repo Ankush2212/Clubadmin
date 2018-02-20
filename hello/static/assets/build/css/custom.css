@@ -4243,10 +4243,17 @@ a.update {
     display: block;
     width: 45px;
     height: 25px;
-    background: darkgrey;
+    background: #f6735d;
     padding: 4px;
     text-align: center;
     border-radius: 1px;
     color: white;
     font-weight: bold;
+}
+button.pop {
+    background: #f6735d;
+    border: none;
+    color: #fff;
+    margin-bottom: 15px;
+    padding: 4px 10px;
 }
