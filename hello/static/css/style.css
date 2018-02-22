@@ -873,7 +873,7 @@ li.get {
     width: 60%;
     background: #f1f1f3;
     line-height: 36px;
-    border: none;
+    border: none !important;
     padding-left: 11PX;
     color: #333;
     font-family: 'poppinssemibold';
@@ -2941,7 +2941,7 @@ input#mc-embedded-subscribe {
     background: #f6735d !important;
     color: #fff;
     line-height: 38px;
-    border: none;
+    border: none !important;
     display: inline-block;
     padding: 3px 42px 0px 42px;
     margin-left: 30px;
