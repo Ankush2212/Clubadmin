@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hello'
+    'hello',
+	 'intercom'
 ]
 PREPEND_WWW = True
 MIDDLEWARE = [
@@ -55,6 +56,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+INTERCOM_APPID = "bb2tjtrb"
+#INTERCOM_SECURE_KEY = "your security_code"
 ROOT_URLCONF = 'gettingstarted.urls'
 
 TEMPLATES = [

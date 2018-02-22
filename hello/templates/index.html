@@ -77,6 +77,7 @@ function change() {
 });
 </script>
   </head>
+  {% load intercom %}
   <body>
 <div class="main">    
   <div class="container">
@@ -526,8 +527,10 @@ li.meer
     margin-top: -17px;
     color: #f6735d;
 }
-</style>		
+</style>	
+	
   </body>
+  {% intercom_tag %}
 </html>  
 <script>
 function myFunction() {
