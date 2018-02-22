@@ -1,8 +1,10 @@
 
 <!DOCTYPE html>
 {% load staticfiles %}
+
 <html>
   <head>
+    {% load intercom %}
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114375738-1"></script>
 <script>
@@ -77,7 +79,7 @@ function change() {
 });
 </script>
   </head>
-  {% load intercom %}
+
   <body>
 <div class="main">    
   <div class="container">
@@ -530,7 +532,7 @@ li.meer
 </style>	
 	
   </body>
-  {% intercom_tag %}
+  {% intercom %}
 </html>  
 <script>
 function myFunction() {
