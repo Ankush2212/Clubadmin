@@ -2937,30 +2937,13 @@ span.club_s:hover:after
     padding: 3px 24px 0px 24px !important;
     text-indent: 2%;
 }
-input#mc-embedded-subscribe {
-    background: #f6735d !important;
-    color: #fff;
-    line-height: 38px;
-    border: none !important;
-    display: inline-block;
-    padding: 3px 42px 0px 42px;
-    margin-left: 30px;
-    font-family: 'poppinsregular';
-    font-size: 14px;
-    letter-spacing: 2px;
-    border-radius: 4px !important;
-    text-transform: uppercase;
-    margin-top: -4px;
-}
 div#mc_embed_signup_scroll {
    width: 100%;
    float: left;
 }
 #mc_embed_signup .mc-field-group {
    float: left;
-   width: 50%;
-   padding-bottom: 3%;
-   min-height: 50px;
+   width: 50% !important;
 }
 #mc_embed_signup .mc-field-group input {
    display: block;
@@ -2980,8 +2963,8 @@ div#mc_embed_signup_scroll {
    display: inline-block;
    font-size: 15px;
    font-weight: normal;
-   height: 39px;
+   height: 39px !important;
    line-height: 32px;
-   margin: 0 8px 15px 21px;
-   padding: 5px 38px 19px 34px;
+   margin: 0 8px 15px 21px !important;
+   padding: 5px 38px 19px 34px !important;
 }
