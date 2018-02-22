@@ -416,7 +416,11 @@ function change() {
     </div>
 </form>
 </div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);
+setTimeout(function() {
+					$("#mce-success-response").hide()
+				}, 3000);
+</script>
 <!--End mc_embed_signup-->
 					  <!--h1>Follow Us</h1>
 						 <ul class="soc">
@@ -549,8 +553,6 @@ $(document).ready(function () {
 	
 	});
 	
-	setTimeout(function() {
-					$("#mce-success-response").hide()
-				}, 3000);
+	
 
 </script>
