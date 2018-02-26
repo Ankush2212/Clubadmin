@@ -444,8 +444,15 @@ def fullliteservice(request):
 
 	
 ##################################en.html for english integration###################################
-def en(request):
-	return render(request, 'en/index.html')
+def en(request, title=None):
+	if(title == 'hotel'):
+		return render(request, 'en/hotel.html')
+	elif(title == 'holiday'):
+			return render(request, 'en/holiday.html')
+	elif(title == 'pricing'):
+			return render(request, 'en/pricing.html')
+	else:
+		return render(request, 'en/index.html')
 
 
 ##################################hotel.html integration######################################
