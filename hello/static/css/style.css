@@ -665,7 +665,7 @@ span.num {
     margin-top: 30px;
 }
 .Five_text h1 {
-    color: #f6735d;
+    color: #f07171;
     font-family: 'youngserifregular';
     font-size: 27px;
 
@@ -792,7 +792,7 @@ ul.foot_logo {
     font-family: 'young';
     margin-top: 10px;
     margin-bottom: 10px;
-    color: #f6735d;
+    color: #f07171;
 }
 div#book {
     margin-top: 52px;
@@ -830,7 +830,7 @@ div#book button {
     font-size: 20px;
     font-size: 20px;
     font-family: 'young';
-    color: #f6735d;
+    color: #f07171;
 	margin-top: 7px;
 }
 ul.hot {
@@ -1020,7 +1020,7 @@ li.club a:hover span.club_s:after
 }
 
 ul.story li a:hover {
-    color: #f6735d;
+    color: #f07171;
 }
 li.get a {
     color: #f6735d;
@@ -1092,7 +1092,7 @@ li.get a:hover {
     margin-top: 0px;
     margin-bottom: 7px;
     font-family: 'poppinssemibold';
-    color: #f6735d;
+    color: #f07171;
 }
 .Decheck_bottom1 h3 {
     font-size: 17px;
@@ -2913,7 +2913,7 @@ li.meer
     color: #f6735d;
 }
 span.club_s {
-    color: #f6735d !important;
+    color: #f07171 !important;
 }
 span.club_s:hover {
         color: #f29e91 !important;
