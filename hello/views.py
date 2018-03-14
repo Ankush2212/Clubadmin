@@ -47,9 +47,9 @@ def send_complex_message(request):
 					)
 					
 def abd(request):
-
-	send_mail("It works!", "This will get sent through Mailgun",
-          "Anymail Sender <kalpana@codenomad.net>", ["aman@codenomad.net"])
+	return HttpResponse('Hefdd gfdgdf llo fddcccx xczfddvd x dddrom Python!')
+	# send_mail("It works!", "This will get sent through Mailgun",
+          # "Anymail Sender <kalpana@codenomad.net>", ["aman@codenomad.net"])
 
 
     # return requests.post(
