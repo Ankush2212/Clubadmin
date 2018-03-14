@@ -1083,6 +1083,7 @@ li.get a:hover {
 }
 .check_text h1 {
     color: #333;
+	color: #fff;
     font-family: 'young';
     font-size: 30px;
 }
