@@ -2920,7 +2920,7 @@ span.club_s:hover {
 }
 span.club_s:hover:after
 {
-	   /*  border: 1px solid #f6624a !important; */
+	   border: 1px solid #f6624a !important; 
 	     border: 1px solid #f29e91 !important;
 		
 }
