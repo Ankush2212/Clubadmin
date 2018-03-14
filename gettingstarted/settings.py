@@ -36,14 +36,14 @@ ALLOWED_HOSTS =  ['*']
 # Application definition
 #,  'anymail'
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'hello',
-	 'intercom'
+	'django.contrib.admin',
+	'django.contrib.auth',
+	'django.contrib.contenttypes',
+	'django.contrib.sessions',
+	'django.contrib.messages',
+	'django.contrib.staticfiles',
+	'hello',
+	'intercom'
 ]
 PREPEND_WWW = True
 MIDDLEWARE = [

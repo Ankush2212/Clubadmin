@@ -2,6 +2,6 @@ django_smtp_ssl
 django-mailgun
 django-anymail[mailgun]
 django-intercom
-gunicorn
+
 
 
