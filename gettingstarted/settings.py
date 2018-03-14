@@ -181,7 +181,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'debug.log',
+            'filename': os.path.join(PROJECT_ROOT, 'hello.log'),
         },
     },
     'loggers': {
