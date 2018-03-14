@@ -188,10 +188,14 @@ LOGGING = {
         'django': {
             'handlers': ['file'],
             'level': 'DEBUG',
-            'propagate': True,
-        },
-    },
-}
+             'propagate': True,
+         },
+     },
+ }
+
+
+
+
 
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
