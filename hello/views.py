@@ -34,7 +34,8 @@ from django.template.loader import render_to_string
 
 from django.core.mail import EmailMessage
 
-# def send_complex_message(request):
+def send_complex_message(request):
+		return HttpResponse('Hefdd gfdgdf llo fddcccx xczfddvd x dddrom Python!')
     # return requests.post(
 					# "https://api.mailgun.net/v3/sandbox8d00a0060a5c4befbd280ae759883df7.mailgun.org",
 					# auth=("api", "key-72442c5f7222d9e4ee790c61b0da37ba"),
