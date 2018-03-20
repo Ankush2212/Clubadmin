@@ -29,7 +29,7 @@ SECRET_KEY = 'CHANGE_ME!!!! (P.S. the SECRET_KEY environment variable will be us
 DEBUG = True
 
 # ALLOWED_HOSTS =  ['stark-dusk-77176.herokuapp.com', '.herokuapp.com']
-ALLOWED_HOSTS =  ['*']
+ALLOWED_HOSTS =  ['clubfred.herokuapp.com']
 
 
 
