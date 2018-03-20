@@ -77,6 +77,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'gettingstarted.wsgi.application'
+STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
 
 # DATABASES = {
     # 'default': {
