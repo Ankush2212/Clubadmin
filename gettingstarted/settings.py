@@ -29,21 +29,21 @@ SECRET_KEY = 'CHANGE_ME!!!! (P.S. the SECRET_KEY environment variable will be us
 DEBUG = True
 
 # ALLOWED_HOSTS =  ['stark-dusk-77176.herokuapp.com', '.herokuapp.com']
-ALLOWED_HOSTS =  ['*']
+ALLOWED_HOSTS =  ['clubfred.herokuapp.com']
 
 
 
 # Application definition
 #,  'anymail'
 INSTALLED_APPS = [
-	'django.contrib.admin',
-	'django.contrib.auth',
-	'django.contrib.contenttypes',
-	'django.contrib.sessions',
-	'django.contrib.messages',
-	'django.contrib.staticfiles',
-	'hello',
-	'intercom'
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'hello',
+	 'intercom'
 ]
 PREPEND_WWW = True
 MIDDLEWARE = [
@@ -181,22 +181,17 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': os.path.join(PROJECT_ROOT, 'hello.log'),
+            'filename': 'debug.log',
         },
     },
     'loggers': {
         'django': {
             'handlers': ['file'],
             'level': 'DEBUG',
-             'propagate': True,
-         },
-     },
- }
-
-
-
-
-
+            'propagate': True,
+        },
+    },
+}
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'

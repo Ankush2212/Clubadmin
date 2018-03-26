@@ -2,7 +2,3 @@ django_smtp_ssl
 django-mailgun
 django-anymail[mailgun]
 django-intercom
-psycopg2==2.4.5
-
-
-
