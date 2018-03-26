@@ -1,4 +1,4 @@
-gunicron
+gunicron 
 django_smtp_ssl
 django-mailgun
 django-anymail[mailgun]
