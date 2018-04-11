@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hello',
-	'django-intercom'
+    'hello'
 ]
 PREPEND_WWW = True
 MIDDLEWARE = [
