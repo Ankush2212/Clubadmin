@@ -1,2 +1,2 @@
-django-intercom
+django-intercom==0.0.13
 requests==0.11.1
