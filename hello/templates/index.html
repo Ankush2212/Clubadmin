@@ -32,6 +32,7 @@
 	<link rel="stylesheet" href="{% static 'css/style.css'%}"/>
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}"/>
 	<link rel="stylesheet" href="{% static 'css/responsive.css'%}"/>
+	<link rel="stylesheet" href="{% static 'css/mobile-responisve.css'%}"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/youngserif" type="text/css"/>
 	<link rel='stylesheet prefetch' href='https://daneden.github.io/animate.css/animate.min.css'>
@@ -112,7 +113,7 @@ function change() {
 					<div class="col-md-9 col-sm-9 col-xs-12 text-right">
 					   <div class="top_button">
 					     <ul>
-							  <li class="club"><a href="{% url 'onzeprijzen' %}"><span class="club_s">Join the clubkk</span></a></li>
+							  <li class="club"><a href="{% url 'onzeprijzen' %}"><span class="club_s">Join the club</span></a></li>
 							  <li class="eng_list"><a href="{% url 'en'%}"><span class="eng">ENG</span>/</a><a href="{% url 'index' %}"><span class="nll underline">NL</span></a></li>
 						 </ul>	  
 					   </div>
@@ -128,7 +129,7 @@ function change() {
 						<div class="mobile_navigation">
 						<ul class="nav navbar-nav">
 						  <li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">HOUSEKEEPING
+							<a class="dropdown-toggle top-nav1" data-toggle="dropdown" href="#">HOUSEKEEPING
 							<!--i class="fa fa-angle-down" aria-hidden="true"></i-->
 							
 							<img id="updown"src="{% static 'images/arror.png'%}"></a>
