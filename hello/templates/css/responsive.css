@@ -575,7 +575,8 @@ ul.foot_logo {
     list-style: none;
     padding-left: 0px;
 }
-	.mobile_icon{display:block;  margin: 10px 0px;  text-align: right;}
+	.mobile_icon{display:block;  margin: 10px 0px; float: left;
+    width: 100%;}
 	.mobile_navigation {
 		display:none;
     position: absolute;
