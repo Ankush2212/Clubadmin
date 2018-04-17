@@ -6,12 +6,7 @@
 .container {
     padding: 0px;
 }
-.mobile_icon i {
-    border: none;
-       padding: 5px 0px 5px 0px;
-    font-size: 30px;
-    color: #ccc;
-    border-radius: 4px;
+.mobile_icon .hamb_div {
     float: right;
     cursor: pointer;
 }
@@ -24,6 +19,13 @@
     padding: 0px 15px;
     float: left;
     width: 100%;
+}
+.hamb_icon{
+    width: 35px;
+    height: 5px;
+    background-color: #ccc;
+    margin: 6px 0;
+
 }
 }
 
