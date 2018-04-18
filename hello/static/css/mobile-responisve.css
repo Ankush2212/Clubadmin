@@ -153,9 +153,14 @@ ul#menu a li {
 	opacity:0;
     right: 0;
 }
+.panel ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 #menu li
 {
-  padding: 10px 0;
+  padding: 0px 0;
   font-size: 22px;
 }
 .opacity_menus{opacity:1 !important;}
@@ -196,7 +201,10 @@ ul#menu a li {
 .panel ul li p {
     color: #ffa0a3;
     font-size: 15px;
+	letter-spacing: 2px;
+    line-height: 8px;
     text-align: center;
+    margin: 0px;
 	font-family: "poppinsregular";
 }
 .panel ul {
@@ -220,9 +228,20 @@ ul#menu a li {
 
 div.panel {
     padding: 0 18px;
-    background-color: white;
+    background-color: transparent;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    width: 313px;
+    margin: 0 auto;
+}
+
+li.more_anchor a {
+    width: 100%;
+    color: #ffa0a3;
+	letter-spacing: 2px;
+    line-height: 8px;
+	font-family: "poppinsregular";
+    font-size: 15px;
 }
 #desk_banner{display:none;}
 #mobile_banner {
