@@ -101,13 +101,11 @@
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #fff;
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 2px);
+    background: #fff;
 }
-
 /*
  * But let's hide the middle one.
  */
