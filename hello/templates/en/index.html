@@ -119,22 +119,43 @@ function change() {
 					   <div class="top_button">
 					     <ul>
 							  <li class="club"><a href="{% url 'en'%}pricing"><span class="club_s">Join the club</span></a></li>
-							  <li class="eng_list"><a href="{% url 'en'%}"><span class="eng underline">ENG</span>/</a><a href="{% url 'index'%}"><span class="nll">NL</span></a></li>
+							  <li class="eng_list"><a href="{% url 'en'%}"><span class="eng underline">ENG</span>/</a><a href="{% url 'index'%}"><span class="nll">N</span></a></li>
 						 </ul>	  
 					   </div>
 					</div>
 				</div>
 				<div class="bottom_right">
-				    <nav class="navbar">
-					<div class="mobile_icon"><div class="logo-out"><a href="{% url 'index' %}"><img src="{% static 'images/logoo.png'%}"></a>
-					<div class="hamber_div">
-					<div class="hamb-icon"></div>
-                    <div class="hamb-icon"></div>
-                    <div class="hamb-icon"></div>
-					</div>
-					</div>
-					</nav> 
-				</div>
+					<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+    
+    <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a href="#"><li>Home</li></a>
+      <a href="#"><li>About</li></a>
+      <a href="#"><li>Info</li></a>
+      <a href="#"><li>Contact</li></a>
+      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+    </ul>
+  </div>
+</nav>
 		   <div class="clear" style="clear: both;"></div>		   
 		 <!--end Header Sections--->
 		 
