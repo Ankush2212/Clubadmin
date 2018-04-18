@@ -158,17 +158,17 @@ ul#menu a li {
     margin: 0;
     list-style: none;
 }
-#menu li
-{
-  padding: 0px 0;
-  font-size: 15px;
-  text-align: center;
+#menu li {
+    padding: 0px 0;
+    font-size: 15px;
+    text-align: center;
+    line-height: 33px;
 }
 .opacity_menus{opacity:1 !important;}
 .accordion {
     color: #444;
     cursor: pointer;
-    padding: 18px;
+       padding: 4px 18px 0px;
     width: 100%;
     border: none;
     text-align: left;
@@ -256,9 +256,9 @@ div.panel {
 li.more_anchor a {
     width: 100%;
     color: #ffa0a3;
-	letter-spacing: 2px;
+    letter-spacing: 2px;
     line-height: 8px;
-	font-family: "poppinsregular";
+    font-family: "poppinsregular";
     font-size: 15px;
 }
 #desk_banner{display:none;}
