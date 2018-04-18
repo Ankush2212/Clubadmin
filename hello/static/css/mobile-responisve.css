@@ -39,6 +39,7 @@
     margin: 0 auto;
     background: #fff;
     padding: 19px 0px;
+	top: 0;
 }
 #mobile_view , .bottom_right nav{display:block;}
 #desk_view{display:none;}
@@ -225,6 +226,9 @@ div.panel {
 .bottom_right nav {
     width: 90%;
     margin: 0 auto;
+}
+.bottom_right.top_menu_padding nav {
+    width: 100%;
 }
 }
 
