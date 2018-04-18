@@ -285,7 +285,7 @@ li.more_anchor a {
     color: #fff;
 	text-decoration:none;
 }
-.lang_mobile .eng_list a:hover , .lang_mobile .eng_list a:focus, .lang_mobile .eng_list a:active{color:#ffa0a3;text-decoration:none;}
+.lang_mobile .eng_list a:hover , .lang_mobile .eng_list a:focus, .lang_mobile .eng_list a:active{color:#ffa0a3 !important;text-decoration:none;}
 .all_menus {
     float: left;
     width: 100%;
