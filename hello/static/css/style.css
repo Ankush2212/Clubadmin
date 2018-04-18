@@ -759,6 +759,7 @@ div#c
     width: 76%;
     position: relative;
     padding-bottom: 23px;
+	    z-index: -1;
 }
 .recont_secright {
     width: 49%;
@@ -829,6 +830,7 @@ div#book button {
     padding-right: 0px;
     padding-top: 0px;
     padding-bottom: 25px;
+	    z-index: -1;
 }
 .col-md-6.col-sm-6.col-xs-12.footer_left {
     padding-left: 0px;
@@ -1183,6 +1185,7 @@ div#c h2 {
 
 div#bootom_footer {
     padding-bottom: 0px;
+	    z-index: -1;
 }
 div#f_right h1 {
     padding-top: 0px;

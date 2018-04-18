@@ -490,6 +490,7 @@ ul.foot_logo {
     width: 100%;
     position: relative;
     padding-bottom: 20px;
+	    z-index: -1;
 }
 .recon_right {
     width: 100%;
