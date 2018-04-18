@@ -222,6 +222,10 @@ div.panel {
     margin-top: 73px;
 }
 .top_menu_padding{padding-top:0px !important;}
+.bottom_right nav {
+    width: 90%;
+    margin: 0 auto;
+}
 }
 
  
