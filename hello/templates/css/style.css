@@ -299,6 +299,7 @@ span.caret {
 .bottom_right {
     float: left;
     width: 100%;
+	display:none;
 }
 .col-md-2.col-sm-2.col-xs-2.hed_left {
     padding-left: 0px;
