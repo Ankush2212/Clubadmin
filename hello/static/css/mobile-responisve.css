@@ -171,15 +171,12 @@ ul#menu a li {
     transition: 0.4s;
 }
 
-.active, .accordion:hover {
-    background-color: #ccc; 
-}
-
 .panel {
     padding: 0 18px;
     display: none;
     background-color: white;
     overflow: hidden;
+	width: 313px;
 }
 .accordion {
 	background-color: transparent;
@@ -194,18 +191,27 @@ ul#menu a li {
     color: rgb(255,255,255);
     font-family: "poppinsregular";
 	text-transform: uppercase;
+	    text-align: center;
 }
-
-.accordion.active, .accordion:hover {
-
+.panel ul li p {
+    color: #ffa0a3;
+    font-size: 15px;
+    text-align: center;
+	font-family: "poppinsregular";
+}
+.panel ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .accordion:after {
     content: '\002B';
-    color: #777;
+    color: #ffa0a3;
     font-weight: bold;
-        float: left;
+    float: left;
     margin-right: 10px;
+    font-size: 15px;
 }
 
 .accordion.active:after {
