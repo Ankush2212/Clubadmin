@@ -286,6 +286,21 @@ li.more_anchor a {
 	text-decoration:none;
 }
 .lang_mobile .eng_list a:hover , .lang_mobile .eng_list a:focus, .lang_mobile .eng_list a:active{color:#ffa0a3;text-decoration:none;}
+.all_menus {
+    float: left;
+    width: 100%;
+}
+.mobile_socila_icons {
+    float: left;
+    width: 100%;
+    position: absolute;
+	padding-top:64px;
+}
+.mobile_socila_icons ul li {
+    display: block;
+    margin: 14px 0px !important;
+}
+
 }
 
  
