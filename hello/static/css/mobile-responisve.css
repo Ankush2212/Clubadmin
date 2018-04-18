@@ -40,7 +40,7 @@
 #menuToggle {
     display: block;
     position: relative;
-    top: 0;
+    top: 8px;
     right: 0;
     z-index: 1;
     -webkit-user-select: none;
@@ -72,7 +72,7 @@
   display: block;
   width: 33px;
   height: 4px;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   position: relative;
   
   background: #cdcdcd;
