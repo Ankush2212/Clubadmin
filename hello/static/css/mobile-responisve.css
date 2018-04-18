@@ -189,11 +189,11 @@ ul#menu a li {
     font-size: 15px;
     transition: 0.4s;
     width: 313px;
-    font-size: 14px;
     letter-spacing: 2px;
     line-height: 8px;
     color: rgb(255,255,255);
     font-family: "poppinsregular";
+	text-transform: uppercase;
 }
 
 .accordion.active, .accordion:hover {
