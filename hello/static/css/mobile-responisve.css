@@ -20,11 +20,12 @@
     float: left;
     width: 100%;
 }
-.hamb_icon{
-    width: 35px;
-    height: 5px;
-    background-color: #ccc;
-    margin: 6px 0;
+.hamb-icon {
+    width: 30px;
+    height: 4px;
+    background-color: #D9D9D9;
+    margin: 8px 0;
+    border-radius: 2px;
 
 }
 .bottom_right ,  #mobile_view{display:block;}
