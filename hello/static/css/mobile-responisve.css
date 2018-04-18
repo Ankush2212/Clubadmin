@@ -144,7 +144,7 @@ ul#menu a li {
     width: 100%;
     margin: -68px auto -50px;
     padding: 50px;
-    padding-top: 61px;
+    padding-top: 64px;
     background: #E97373;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -189,7 +189,7 @@ ul.lang_mobile {
     padding: 0;
     margin: 0;
     width: 313px;
-    margin: 0 auto;
+    margin: 0 auto 56px;
 }
 .lang_mobile .eng_list a {
     font-family: poppinsregular;
