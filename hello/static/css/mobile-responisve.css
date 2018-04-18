@@ -299,7 +299,7 @@ li.more_anchor a {
 }
 .mobile_socila_icons ul li {
     display: block;
-    margin: 14px 0px !important;
+        margin: 10px 0px !important;
 }
 .mobile_socila_icons.opacity_menus ul li a i {
     color: #fff;
