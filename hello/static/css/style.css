@@ -255,6 +255,7 @@ span.caret {
     padding-right: 0px;
     padding-top: 50px;
 	padding-bottom: 50px;
+	z-index: -1;
 }
 .De_check .container {
     padding-left: 90px;
