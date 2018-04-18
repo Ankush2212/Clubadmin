@@ -124,6 +124,10 @@
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
+ul#menu a li {
+    color: #fff !important;
+}
+
 
 /*
  * Make this absolute positioned
@@ -135,7 +139,7 @@
     margin: -100px 65px -50px;
     padding: 50px;
     padding-top: 125px;
-    background: #ededed;
+    background: #E97373;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
