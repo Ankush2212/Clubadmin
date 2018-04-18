@@ -212,6 +212,7 @@ ul.lang_mobile {
     font-family: "poppinsregular";
     text-transform: uppercase;
     text-align: center;
+    position: relative;
     height: 57px;
 }
 .panel ul li p {
