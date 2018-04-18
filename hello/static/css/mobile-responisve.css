@@ -70,8 +70,8 @@
 #menuToggle span
 {
   display: block;
-  width: 33px;
-  height: 4px;
+  width: 36px;
+    height: 4px;
   margin-bottom: 7px;
   position: relative;
   
@@ -103,8 +103,9 @@
  */
 #menuToggle input:checked ~ span {
     opacity: 1;
-    transform: rotate(45deg) translate(0px, 2px);
+    transform: rotate(45deg) translate(-8px, -18px);
     background: #fff;
+    height: 3px;
 }
 /*
  * But let's hide the middle one.
@@ -118,9 +119,8 @@
 /*
  * Ohyeah and the last one should go the other direction
  */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(-4px, 15px);
 }
 ul#menu a li {
     color: #fff !important;
@@ -133,15 +133,15 @@ ul#menu a li {
  */
 #menu {
     position: absolute;
-    width: 700px;
-    margin: -100px 65px -50px;
+    width: 100%;
+    margin: -68px auto -50px;
     padding: 50px;
     padding-top: 125px;
     background: #E97373;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
-    transform: translate(0, 0);
+    transform: translate(-110%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     left: 0;
     right: 0;
@@ -156,8 +156,8 @@ ul#menu a li {
 /*
  * And let's slide it in from the left
  */
-#menuToggle input:checked ~ ul {
-    transform: translate(-100%, 0);
+#menuToggle input:checked #menu {
+    transform:none;
 }
 
 
