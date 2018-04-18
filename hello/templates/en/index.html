@@ -45,11 +45,12 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js'></script>
     <script  src="{% static '/js/index.js'%}"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script>
+
+<script>
 $(document).ready(function(){
-    $("#menuToggle").click(function(){
-	alert('ds0');
-        $("#menu").css("opacity", "1");
+    $("#menuToggle").toggle(
+        function(){$("#menu").css({"opacity": "0"});},
+        function(){$("#menu").css({"opacity": "1"});
     });
 });
 </script>
