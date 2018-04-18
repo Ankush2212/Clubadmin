@@ -293,14 +293,17 @@ li.more_anchor a {
 .mobile_socila_icons {
     float: left;
     position: absolute;
-	padding-top:64px;
+	padding-top:76px;
 	    opacity: 0;
 }
 .mobile_socila_icons ul li {
     display: block;
     margin: 14px 0px !important;
 }
-
+.mobile_socila_icons.opacity_menus ul li a i {
+    color: #fff;
+    font-size: 26px;
+}
 }
 
  
