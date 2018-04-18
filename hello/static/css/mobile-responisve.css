@@ -305,6 +305,9 @@ li.more_anchor a {
     color: #fff;
     font-size: 29px;
 }
+.bottom_right.top_menu_padding .logo-out {
+    padding-top: 14px;
+}
 }
 
  
