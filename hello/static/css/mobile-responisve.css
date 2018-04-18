@@ -112,7 +112,7 @@
     opacity: 1;
     background: #fff;
     height: 3px;
-    transform: rotate(45deg) translate(-16px, -33px);
+        transform: rotate(45deg) translate(-30px, -42px);
 	top: 20px;
 }
 /*
@@ -128,7 +128,7 @@
  * Ohyeah and the last one should go the other direction
  */
 #menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(12px, 5px);
+   transform: rotate(-45deg) translate(21px, -8px);
 }
 ul#menu a li {
     color: #fff !important;
@@ -144,7 +144,7 @@ ul#menu a li {
     width: 100%;
     margin: -68px auto -50px;
     padding: 50px;
-    padding-top: 48px;
+    padding-top: 27px;
     background: #E97373;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
