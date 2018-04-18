@@ -132,6 +132,7 @@ li.club a:hover{text-decoration:none;}
 .header {
     padding-top: 20px;
 	float: left;
+	width:100%;
 }
 .top_button ul
      {
