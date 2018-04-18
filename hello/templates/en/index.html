@@ -3,13 +3,7 @@
 {% load staticfiles %} 
 <html>
   <head>
-<script>
-$(document).ready(function(){
-    $("#menuToggle").click(function(){
-        $("#menu").css("opacity", "1");
-    });
-});
-</script>
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114375738-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -51,6 +45,14 @@ $(document).ready(function(){
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js'></script>
     <script  src="{% static '/js/index.js'%}"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+$(document).ready(function(){
+    $("#menuToggle").click(function(){
+	alert('ds0');
+        $("#menu").css("opacity", "1");
+    });
+});
+</script>
 	<script>
 $(document).ready(function(){
     $(".mobile_icon .hamber_div").click(function(){
