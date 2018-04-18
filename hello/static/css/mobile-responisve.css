@@ -27,7 +27,8 @@
     margin: 6px 0;
 
 }
-.bottom_right{display:block;}
+.bottom_right ,  #mobile_view{display:block;}
+#desk_view{display:none;}
 }
 
  
