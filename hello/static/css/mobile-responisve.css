@@ -209,7 +209,8 @@ div.panel {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
-
+#desk_banner{display:none;}
+#mobile_banner{display:block;}
 }
 
  
