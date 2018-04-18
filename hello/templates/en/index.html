@@ -3,7 +3,13 @@
 {% load staticfiles %} 
 <html>
   <head>
-
+<script>
+$(document).ready(function(){
+    $("#menuToggle").click(function(){
+        $("#menu").css("opacity", "1");
+    });
+});
+</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114375738-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -12,6 +18,7 @@
 
   gtag('config', 'UA-114375738-1');
 </script>
+
 <!-- Hotjar Tracking Code for www.clubfred.nl -->
 <script>
     (function(h,o,t,j,a,r){
