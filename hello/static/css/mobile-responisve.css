@@ -112,6 +112,7 @@
     background: #fff;
     height: 3px;
     transform: rotate(45deg) translate(-16px, -33px);
+	top: 20px;
 }
 /*
  * But let's hide the middle one.
