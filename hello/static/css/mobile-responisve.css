@@ -165,10 +165,10 @@ ul#menu a li {
     line-height: 33px;
 }
 .opacity_menus{opacity:1 !important;}
-.accordion {
+/* .accordion {
     color: #444;
     cursor: pointer;
-       padding: 4px 18px 0px;
+     
     width: 100%;
     border: none;
     text-align: left;
@@ -176,7 +176,7 @@ ul#menu a li {
     font-size: 15px;
     transition: 0.4s;
 }
-
+ */
 .panel {
     padding: 0 18px;
     display: none;
@@ -213,7 +213,8 @@ ul.lang_mobile {
     text-transform: uppercase;
     text-align: center;
     position: relative;
-    height: 57px;
+    height: 34px;
+	  padding: 4px 18px 0px;
 }
 .panel ul li p {
     color: #ffa0a3;
@@ -273,6 +274,12 @@ li.more_anchor a {
 }
 .bottom_right.top_menu_padding nav {
     width: 100%;
+}
+.seprator {
+    width: 210px;
+    height: 1px;
+    background-color: #f88084;
+    margin: 9px auto;
 }
 }
 
