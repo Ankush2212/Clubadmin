@@ -48,9 +48,9 @@
 
 <script>
 $(document).ready(function(){
-    $("#menuToggle").toggle(function(){
-        $("#menu").css("opacity",1),
-        $("#menu").css("opacity",0);
+    $("#menuToggle").click(function(){
+	alert('d');
+        $("#menu").toggleClass("opacity_menus");
     });
 });
 </script>
