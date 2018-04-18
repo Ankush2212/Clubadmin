@@ -293,7 +293,7 @@ li.more_anchor a {
 .mobile_socila_icons {
     float: left;
     position: absolute;
-	padding-top:76px;
+	padding-top:88px;
 	    opacity: 0;
 }
 .mobile_socila_icons ul li {
@@ -302,7 +302,7 @@ li.more_anchor a {
 }
 .mobile_socila_icons.opacity_menus ul li a i {
     color: #fff;
-    font-size: 26px;
+    font-size: 31px;
 }
 }
 
