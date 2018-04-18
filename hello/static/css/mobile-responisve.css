@@ -161,7 +161,7 @@ ul#menu a li {
 #menu li
 {
   padding: 0px 0;
-  font-size: 22px;
+  font-size: 15px;
   text-align: center;
 }
 .opacity_menus{opacity:1 !important;}
@@ -183,6 +183,20 @@ ul#menu a li {
     background-color: white;
     overflow: hidden;
 	width: 313px;
+}
+ul.lang_mobile {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 313px;
+    margin: 0 auto;
+}
+.lang_mobile .eng_list a {
+    font-family: poppinsregular;
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 8px;
+    color: rgb(255,255,255);
 }
 .accordion {
     background-color: transparent;
