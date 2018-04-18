@@ -302,6 +302,7 @@ span.caret {
 }
 .bottom_right nav {
     display: none;
+	text-align:center;
 }
 .col-md-2.col-sm-2.col-xs-2.hed_left {
     padding-left: 0px;
