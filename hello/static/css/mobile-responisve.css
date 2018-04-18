@@ -174,7 +174,7 @@ ul#menu a li {
     background-color: white;
     overflow: hidden;
 }
-button.accordion {
+.accordion {
     background-color: #eee;
     color: #444;
     cursor: pointer;
@@ -187,26 +187,25 @@ button.accordion {
     transition: 0.4s;
 }
 
-button.accordion.active, button.accordion:hover {
+.accordion.active, .accordion:hover {
     background-color: #ccc;
 }
 
-button.accordion:after {
+.accordion:after {
     content: '\002B';
     color: #777;
     font-weight: bold;
-    float: right;
-    margin-left: 5px;
+        float: left;
+    margin-right: 10px;
 }
 
-button.accordion.active:after {
+.accordion.active:after {
     content: "\2212";
 }
 
 div.panel {
     padding: 0 18px;
     background-color: white;
-    max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
