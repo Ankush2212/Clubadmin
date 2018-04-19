@@ -633,8 +633,7 @@ li.dropdown img {
 }
 .recon_right img {
     margin-top: 12px;
-    width: 245px;
-    height: 305px;
+    width:auto;
 }
 
 
