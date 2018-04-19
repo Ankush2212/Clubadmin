@@ -554,11 +554,12 @@ ul.lang_mobile {
     padding: 0;
     margin: 0;
     width: 313px;
-    margin: 0 auto 20px;
+    margin: 15px auto 20px;
+	    height: 76px;
 }
 .lang_mobile .eng_list a {
     font-family: poppinsregular;
-    font-size: 14px !important;
+    font-size: 15px !important;
     letter-spacing: 2px;
     line-height: 8px;
     color: rgb(255,255,255);
