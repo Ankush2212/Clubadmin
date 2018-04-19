@@ -674,8 +674,10 @@ li.more_anchor a {
     padding-top: 14px;
 }
 .mobile_socila_icons ul.soc{float:inherit;    width: 100%;}
-.menus_mobile600.opacity_menus{display:none;}
-.menus_mobile320{display:block;}
+.all_menus.menus_mobile600 {
+    display: none;
+}
+.menus_mobile320{display:block !important;}
 }
 
  
