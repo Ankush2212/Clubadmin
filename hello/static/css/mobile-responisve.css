@@ -359,6 +359,50 @@ li.more_anchor a {
 
 
  @media only screen and (max-width:599px) {
+	 .banner_top h1 {
+    width: 91%;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: rgb(255,255,255);
+    text-align: center;
+    font-size: 28px !important;
+}
+.bdr {
+    width: 197px;
+    height: 4px;
+    background-color: #ffffff;
+    margin: 20px auto 20px !important;
+    float: none;
+}
+.banner_bottom .Made {
+    width: 756px;
+    height: 244px;
+    font-size: 17px !important;
+    letter-spacing: 1px;
+    line-height: 19px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+
+
+.bdr img {
+    width: 43%;
+    display: none;
+}
+
+.banner_bottom .COUPLES {
+    width: 756px;
+    height: 244px;
+    font-size: 17px !important;
+    letter-spacing: 1px;
+    line-height: 19px !important;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+.circle_div img {
+    margin-top: 20px;
+    width: 35%;
+}
 	 .logo-out img {
     max-width: 170px !important;
 }
