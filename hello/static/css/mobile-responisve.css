@@ -416,7 +416,7 @@ ul.week li a {
     width: 51%;
     float: left;
 }
-#re_cont_desktop{display:block;}
+#re_cont_desktop{display:none;}
 #re_cont_mobile{display:block;}
 }
 
