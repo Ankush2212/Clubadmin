@@ -442,6 +442,9 @@ div#b h2 {
 .abc {
     vertical-align: center;
 }
+ul.week li {
+    margin-bottom: 11px;
+}
 }
 
 
