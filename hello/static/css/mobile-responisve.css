@@ -330,6 +330,24 @@ li.more_anchor a {
     width: 43%;
     display: none;
 }
+.banner_bottom .Made {
+    width: 756px;
+    height: 244px;
+    font-size: 24px !important;
+    letter-spacing: 1px;
+    line-height: 28px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+.banner_bottom .COUPLES {
+    width: 756px;
+    height: 244px;
+    font-size: 24px !important;
+    letter-spacing: 1px;
+    line-height: 28px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
 }
 
 
