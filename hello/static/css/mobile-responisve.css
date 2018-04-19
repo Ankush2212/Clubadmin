@@ -486,6 +486,16 @@ line-height: 20px;
 }
 #re_cont_mobile {display:none;}
  #re_cont_mobile_320{display:block;}
+ .recon_right {
+    width: 97%;
+    float: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+}
 	 .check_text h1 {
     margin-top: 37px;
 	    margin-bottom: 0;
