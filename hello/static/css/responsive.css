@@ -803,9 +803,7 @@ li.club a{font-size:11px !important;}
 }
 }
 @media (max-width: 476px){
-	.step_four {
-    text-align: center;
-}
+	
 .fout_left.tes11, .fout_right.tes11.text-center, .fout_right.tes11.text-center, .fout_rightt.tes11.text-center, .pricing_single_service .room-bottom {
     text-align: center !important;
 }
