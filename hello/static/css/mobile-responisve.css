@@ -381,9 +381,13 @@ letter-spacing: 1px;
 line-height: 22px;
 }
 .Five_text h1 {
+   font-size: 28px;
     margin-top: 0px;
-	    margin-bottom: 0;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    line-height: 7px;
 }
+
 .Five_text {
     margin-top: 60px;
 }
