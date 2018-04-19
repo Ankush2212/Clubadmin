@@ -488,7 +488,7 @@ li.more_anchor a {
 #menuToggle input:checked ~ span:nth-last-child(2) {
 transform: rotate(-45deg) translate(19px, -9px);
 }
-ul#menu a li {
+ul#menu a li , ul#menu1 a li{
     color: #fff !important;
 }
 
@@ -497,7 +497,7 @@ ul#menu a li {
  * Make this absolute positioned
  * at the top left of the screen
  */
-#menu {
+#menu , #menu1 {
     position: absolute;
     width: 100%;
     margin: -68px auto -50px;
@@ -519,7 +519,7 @@ ul#menu a li {
     margin: 0;
     list-style: none;
 }
-#menu li {
+#menu li , #menu1 li{
     padding: 0px 0;
     font-size: 15px;
     text-align: center;
@@ -643,7 +643,7 @@ li.more_anchor a {
     background-color: #f88084;
     margin: 9px auto;
 }
-#menu li:hover a , #menu li:focus a  , #menu li:active a {
+#menu li:hover a , #menu li:focus a  , #menu li:active a , #menu1 li:hover a , #menu1 li:focus a  , #menu1 li:active a {
     color: #fff;
 	text-decoration:none;
 }
