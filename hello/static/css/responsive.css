@@ -770,9 +770,7 @@ li.club a{font-size:11px !important;}
 		    margin-top: 17px;
 	}
 	p.appartment{    margin-top: 73px;}
-	.banner_top h1 {
-    font-size: 18px !important;
-}
+
 .banner_bottom {
     margin-top: 16px;
 }
@@ -973,17 +971,7 @@ p.appartment {
 		    margin-top: 0px;
     font-size: 14px !important;
 }
-	.banner_top h1 {
-    font-size: 13px !important;
-}
-.banner_bottom .Made{line-height:0px !important;}
-.banner_bottom .COUPLES, .banner_bottom .Made {
-    font-size: 11px !important;
-}
-.bdr {
-    margin-bottom: 0px;
-    margin-top: -15px;
-}
+
 .apparments h1 {
     font-size: 30px;
 }
