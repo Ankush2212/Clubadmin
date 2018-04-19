@@ -488,7 +488,7 @@ ul.foot_logo {
 	.re_cont {
     background: #fbf5f4;
     float: left;
-    width: 91%;
+    width: 92%;
     position: relative;
     padding-bottom: 20px;
 }
@@ -633,7 +633,7 @@ li.dropdown img {
 }
 .recon_right img {
     margin-top: 12px;
-    width: 300px;
+    width: auto;
 }
 }
 @media (max-width:730px) {
