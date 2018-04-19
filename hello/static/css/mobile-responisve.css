@@ -400,7 +400,7 @@ line-height: 22px;
     letter-spacing: 0;
 	margin-bottom: 18px;
 }
-div#a img {
+div#a img , div#b img {
     width: 12px;
 }
 ul.week li a {
@@ -513,6 +513,10 @@ line-height: 20px;
 .Fivetext_bottom {
     width: 100%;
     float: left;
+}
+.Fivetext_bottom, .room_services {
+    padding-left: 30px;
+    padding-right: 15px;
 }
 .Fivetext_bottom h2 {
     text-align: left !important;
