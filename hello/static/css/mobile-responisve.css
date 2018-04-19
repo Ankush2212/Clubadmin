@@ -412,7 +412,7 @@ li.more_anchor a {
 #menuToggle {
     display: block;
     position: relative;
-    top: 8px;
+    top: 5px;
     right: 0;
     z-index: 1;
     -webkit-user-select: none;
