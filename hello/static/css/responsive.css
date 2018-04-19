@@ -555,8 +555,7 @@ ul.foot_logo {
 .check_text {
     margin-bottom: 10px;
 }
-	#desktop-arrow{display:none;}
-	#mobile-arrow{display:block !important;}
+
 	.circle_div {
     animation-name: inherit !important;
 }
