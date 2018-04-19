@@ -380,6 +380,12 @@ li.more_anchor a {
 letter-spacing: 1px;
 line-height: 22px;
 }
+.Five_text h1 {
+    margin-top: 0px;
+}
+.Five_text {
+    margin-top: 60px;
+}
 }
 
 
