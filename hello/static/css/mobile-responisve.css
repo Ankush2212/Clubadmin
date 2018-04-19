@@ -511,7 +511,7 @@ ul#menu a li {
     right: 0;
 	padding-bottom: 15px;
 	    overflow-y: auto;
-        min-height: 518px;
+        min-height: 470px;
 	display:none;
 	}
 .panel ul {
@@ -657,7 +657,7 @@ li.more_anchor a {
     position: absolute;
     padding-top: 16px;
     width: 100%;
-    top: 614%;
+    top: 580%;
     display: none;
     left: 0;
     right: 0;
