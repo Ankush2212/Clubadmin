@@ -662,8 +662,8 @@ li.more_anchor a {
 	    display:none;
 }
 .mobile_socila_icons ul li {
-    display: block;
-        margin: 10px 0px !important;
+    display: inline-block;
+    margin: 10px 17px !important;
 }
 .mobile_socila_icons.opacity_menus ul li a i {
     color: #fff;
@@ -672,6 +672,7 @@ li.more_anchor a {
 .bottom_right.top_menu_padding .logo-out {
     padding-top: 14px;
 }
+.mobile_socila_icons ul.soc{float:inherit;}
 }
 
  
