@@ -358,14 +358,28 @@ li.more_anchor a {
     margin-top: 59px;
 	    margin-bottom: 0;
 }
+.check_text {
+    margin-bottom: 0px;
+}
+.step_four:nth-child(even) {
+    padding-right: 0px;
+}
+
+.step_four:nth-child(odd) {
+    padding-left: 0px;
+}
 }
 
 
 
  @media only screen and (max-width:599px) {
+	 
 	 .check_text h1 {
     margin-top: 37px;
 	    margin-bottom: 0;
+}
+.check_text {
+    margin-bottom: 0px;
 }
 	 .banner_top h1 {
     width: 91%;
