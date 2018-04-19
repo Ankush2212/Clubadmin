@@ -439,6 +439,9 @@ div#b h2 {
     font-family: 'youngserifregular';
     padding-left: 0px;
 }
+.abc {
+    vertical-align: center;
+}
 }
 
 
