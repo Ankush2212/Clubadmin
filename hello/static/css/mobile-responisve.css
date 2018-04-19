@@ -493,13 +493,13 @@ line-height: 20px;
     position: relative;
     padding-bottom: 60px;
 }
- .recon_right {
-    width: 97%;
-    float: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
+.recon_right {
+    width: 100% !important;
+    float: none !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
     margin: 0 auto;
     text-align: center;
 }
