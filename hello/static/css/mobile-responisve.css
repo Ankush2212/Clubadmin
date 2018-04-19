@@ -326,6 +326,10 @@ li.more_anchor a {
         margin: 19px auto 10px !important;
     float: none;
 }
+.bdr img {
+    width: 43%;
+    display: none;
+}
 }
 
 
