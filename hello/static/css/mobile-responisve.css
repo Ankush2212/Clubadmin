@@ -639,7 +639,8 @@ li.more_anchor a {
     width: 100%;
 }
 .seprator {
-       width: 100%;
+       width: 86%;
+
     height: 1px;
     background-color: #f88084;
     margin: 9px auto;
