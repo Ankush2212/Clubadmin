@@ -40,6 +40,7 @@
     background: #fff;
     padding: 19px 0px;
 	top: 0;
+	    z-index: 9;
 }
 #mobile_view , .bottom_right nav{display:block;}
 #desk_view{display:none;}
