@@ -468,10 +468,10 @@ li.hire {
     margin-top: 19px;
     margin-left: 0px;
 }
-	.week_right , .week_left{
-    width: 100%;
-    float: left;
-}
+	/* .week_right , .week_left{ */
+    /* width: 100%; */
+    /* float: left; */
+/* } */
 .footer_logo {
     padding-right: 15px;
     padding-left: 15px;
