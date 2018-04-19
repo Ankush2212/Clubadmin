@@ -344,7 +344,7 @@ li.more_anchor a {
     height: 244px;
     font-size: 24px !important;
     letter-spacing: 1px;
-    line-height: 28px;
+    line-height: 37px !important;
     color: rgb(255,255,255);
     text-align: center;
 }
