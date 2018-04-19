@@ -418,6 +418,10 @@ ul.week li a {
 }
 #re_cont_desktop{display:none;}
 #re_cont_mobile{display:block;}
+.bottom_manager {
+    float: left;
+    width: 100%;
+}
 }
 
 
