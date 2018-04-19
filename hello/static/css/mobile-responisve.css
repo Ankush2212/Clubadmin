@@ -395,6 +395,11 @@ line-height: 22px;
     padding-top: 0;
     margin-top: 38px;
 }
+.Fivetext_bottom h2 {
+    font-size: 15px;
+    letter-spacing: 0;
+	margin-bottom: 18px;
+}
 }
 
 
