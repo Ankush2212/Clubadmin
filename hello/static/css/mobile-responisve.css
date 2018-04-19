@@ -348,6 +348,10 @@ li.more_anchor a {
     color: rgb(255,255,255);
     text-align: center;
 }
+.circle_div img {
+    margin-top: 20px;
+    width: 35%;
+}
 }
 
 
