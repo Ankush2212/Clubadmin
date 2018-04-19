@@ -497,11 +497,14 @@ line-height: 20px;
     width: 100% !important;
     float: none !important;
     position: absolute !important;
-    top: -189px !important;
+    top: -120px !important;
     right: 0 !important;
     left: 0 !important;
     margin: 0 auto;
     text-align: center;
+}
+.col-md-12.col-sm-12.col-xs-12.Five_star {
+    padding-top: 10px;
 }
 	 .check_text h1 {
     margin-top: 37px;
