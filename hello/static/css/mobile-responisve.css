@@ -389,7 +389,16 @@ li.more_anchor a {
     width: 43%;
     display: none;
 }
-
+.circle_div {
+    background: #fff;
+    text-align: center;
+    margin: 0 auto;
+    width: 27px;
+    height: 27px;
+    border-radius: 24px;
+    background-color: #ffffff;
+    animation-name: inherit !important;
+}
 .banner_bottom .COUPLES {
     width: 756px;
     height: 244px;
@@ -400,7 +409,7 @@ li.more_anchor a {
     text-align: center;
 }
 .circle_div img {
-    margin-top: 20px;
+    margin-top: 8px;
     width: 35%;
 }
 	 .logo-out img {
