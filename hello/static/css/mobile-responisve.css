@@ -506,6 +506,23 @@ line-height: 20px;
 .col-md-12.col-sm-12.col-xs-12.Five_star {
     padding-top: 10px;
 }
+.Five_text {
+    margin-top: 120px;
+}
+
+.Fivetext_bottom {
+    width: 100%;
+    float: left;
+}
+.Fivetext_bottom h2 {
+    text-align: left !important;
+}
+div#c h2 {
+    font-size: 14px;
+    font-family: 'youngserifregular';
+    padding-left: 0;
+    text-align: left !important;
+}
 	 .check_text h1 {
     margin-top: 37px;
 	    margin-bottom: 0;
