@@ -753,6 +753,7 @@ div#c
     padding-right: 0px;
 	padding-top: 50px;
     padding-bottom: 50px;
+	 z-index: -1;
 }
 .recont_sec {
     background: #f1f1f3;

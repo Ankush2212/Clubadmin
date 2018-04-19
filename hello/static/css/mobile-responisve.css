@@ -312,4 +312,320 @@ li.more_anchor a {
 }
 }
 
+
+
+ @media only screen and (max-width:480px) {
+.desk_logo{display:none;}
+.logo-out img {
+    max-width: 200px;
+}
+.logo-out {
+    padding-top: 0;
+}
+.container {
+    padding: 0px;
+}
+.mobile_icon .hamber_div {
+    float: right;
+    cursor: pointer;
+}
+.hed_right {
+    padding-right: 15px;
+    padding-left: 15px !important;
+}
+.top_right{display:none;}
+.header {
+    padding: 0px 15px;
+    float: left;
+    width: 100%;
+}
+.hamb-icon {
+    width: 30px;
+    height: 4px;
+    background-color: #D9D9D9;
+    margin: 8px 0;
+    border-radius: 2px;
+
+}
+.bottom_right {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #fff;
+    padding: 19px 0px;
+	top: 0;
+}
+#mobile_view , .bottom_right nav{display:block;}
+#desk_view{display:none;}
+
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 8px;
+    right: 0;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    float: right;
+}
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+    height: 4px;
+  margin-bottom: 7px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    background: #fff;
+    height: 3px;
+        transform: rotate(45deg) translate(-30px, -42px);
+	top: 20px;
+}
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+   transform: rotate(-45deg) translate(21px, -8px);
+}
+ul#menu a li {
+    color: #fff !important;
+}
+
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+    position: absolute;
+    width: 100%;
+    margin: -68px auto -50px;
+    padding: 50px;
+    padding-top: 27px;
+    background: #E97373;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    left: 0;
+	opacity:0;
+    right: 0;
+	padding-bottom: 15px;
+	    overflow-y: auto;
+    height: 292px;
+	}
+.panel ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#menu li {
+    padding: 0px 0;
+    font-size: 15px;
+    text-align: center;
+    line-height: 36px;
+}
+.opacity_menus{opacity:1 !important;}
+/* .accordion {
+    color: #444;
+    cursor: pointer;
+     
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+ */
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+	width: 313px;
+}
+ul.lang_mobile {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 313px;
+    margin: 0 auto 20px;
+}
+.lang_mobile .eng_list a {
+    font-family: poppinsregular;
+    font-size: 14px !important;
+    letter-spacing: 2px;
+    line-height: 8px;
+    color: rgb(255,255,255);
+}
+.accordion {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    transition: 0.4s;
+    width: 313px;
+    letter-spacing: 2px;
+    line-height: 8px;
+    color: rgb(255,255,255);
+    font-family: "poppinsregular";
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    height: 34px;
+	  padding: 4px 18px 0px;
+}
+.panel ul li p {
+    color: #ffa0a3;
+    font-size: 15px;
+	letter-spacing: 2px;
+    text-align: center;
+    margin: 0px;
+	font-family: "poppinsregular";
+}
+.panel ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #ffa0a3;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    font-size: 19px;
+	left: 16%;
+    position: absolute;
+}
+
+.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: transparent;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    width: 313px;
+    margin: 0 auto;
+}
+
+li.more_anchor a {
+    width: 100%;
+    color: #ffa0a3;
+    letter-spacing: 2px;
+    line-height: 8px;
+    font-family: "poppinsregular";
+    font-size: 15px;
+}
+#desk_banner{display:none;}
+#mobile_banner {
+    display: block;
+    margin-top: 73px;
+}
+.top_menu_padding{padding-top:0px !important;}
+.bottom_right nav {
+    width: 90%;
+    margin: 0 auto;
+}
+.bottom_right.top_menu_padding nav {
+    width: 100%;
+}
+.seprator {
+    width: 250px;
+    height: 1px;
+    background-color: #f88084;
+    margin: 9px auto;
+}
+#menu li:hover a , #menu li:focus a  , #menu li:active a {
+    color: #fff;
+	text-decoration:none;
+}
+.lang_mobile .eng_list a:hover , .lang_mobile .eng_list a:focus, .lang_mobile .eng_list a:active{color:#ffa0a3 !important;text-decoration:none;}
+.all_menus {
+    float: left;
+    width: 100%;
+}
+.mobile_socila_icons {
+    float: left;
+    position: absolute;
+	    padding-top: 16px;
+	    opacity: 0;
+}
+.mobile_socila_icons ul li {
+    display: block;
+        margin: 10px 0px !important;
+}
+.mobile_socila_icons.opacity_menus ul li a i {
+    color: #fff;
+    font-size: 29px;
+}
+.bottom_right.top_menu_padding .logo-out {
+    padding-top: 14px;
+}
+}
+
  
