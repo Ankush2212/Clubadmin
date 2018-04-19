@@ -486,6 +486,13 @@ line-height: 20px;
 }
 #re_cont_mobile {display:none;}
  #re_cont_mobile_320{display:block;}
+ .re_cont {
+    background: #fbf5f4;
+    float: left;
+    width: 100%;
+    position: relative;
+    padding-bottom: 60px;
+}
  .recon_right {
     width: 97%;
     float: none;
