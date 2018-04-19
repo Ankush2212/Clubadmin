@@ -567,7 +567,7 @@ ul.lang_mobile {
     outline: none;
     font-size: 17px;
     transition: 0.4s;
-        width: auto;
+        width: 100%;
     letter-spacing: 2px;
     line-height: 8px;
     color: rgb(255,255,255);
@@ -599,7 +599,7 @@ ul.lang_mobile {
     float: left;
     margin-right: 10px;
     font-size: 19px;
-	left: 16%;
+	left: 117px;
     position: absolute;
 }
 
