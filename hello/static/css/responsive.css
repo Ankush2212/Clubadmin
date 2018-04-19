@@ -492,7 +492,7 @@ ul.foot_logo {
     position: relative;
     padding-bottom: 20px;
 }
-.recon_right {
+/* .recon_right {
     width: 100%;
     float: right;
     position: relative;
@@ -500,7 +500,7 @@ ul.foot_logo {
     padding-right: 15px;
     padding-left: 15px;
 
-}
+} */
 .room ul li, .whychooseus ul li {
     line-height: 30px !important;
     
