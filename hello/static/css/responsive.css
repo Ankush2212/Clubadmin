@@ -986,20 +986,11 @@ p.appartment {
 	.map {
     margin: 98px 0 280px;
 }
-		.banner_top h1 {
-    font-size: 13px !important;
-}
-.banner_bottom .Made{line-height:0px !important;}
-.banner_bottom .COUPLES, .banner_bottom .Made {
-    font-size: 11px !important;
-}
+
 .banner_bottom {
     margin-top: 8px;
 }
-.bdr {
-    margin-bottom: 0px;
-    margin-top: -15px;
-}
+
 .banner_top h1 {
     font-size: 28px;
 }
