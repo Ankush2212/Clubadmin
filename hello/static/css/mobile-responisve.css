@@ -673,7 +673,7 @@ li.more_anchor a {
 .bottom_right.top_menu_padding .logo-out {
     padding-top: 14px;
 }
-.mobile_socila_icons ul.soc{float:inherit;}
+.mobile_socila_icons ul.soc{float:inherit;    width: 100%;}
 }
 
  
