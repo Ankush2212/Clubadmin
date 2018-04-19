@@ -354,11 +354,17 @@ li.more_anchor a {
     width: 35%;
 }
 .body-overlay-index{z-index:-1 !important;}
+.check_text h1 {
+    margin-top: 59px;
+}
 }
 
 
 
  @media only screen and (max-width:599px) {
+	 .check_text h1 {
+    margin-top: 37px;
+}
 	 .banner_top h1 {
     width: 91%;
     letter-spacing: 1px;
