@@ -455,6 +455,9 @@ div#c h2 {
 
 
  @media only screen and (max-width:599px) {
+	 .book {
+    margin-top: 25px !important;
+}
 	.step_four {
     text-align: left;
 }
