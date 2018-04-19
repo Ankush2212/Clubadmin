@@ -356,6 +356,7 @@ li.more_anchor a {
 .body-overlay-index{z-index:-1 !important;}
 .check_text h1 {
     margin-top: 59px;
+	    margin-bottom: 0;
 }
 }
 
@@ -364,6 +365,7 @@ li.more_anchor a {
  @media only screen and (max-width:599px) {
 	 .check_text h1 {
     margin-top: 37px;
+	    margin-bottom: 0;
 }
 	 .banner_top h1 {
     width: 91%;
