@@ -461,6 +461,11 @@ div#c h2 {
 	.step_four {
     text-align: left;
 }
+.col-md-12.bottom_manager {
+    padding-left: 30px;
+}
+
+
 .step_four h4 {
     font-family: 'youngserifregular';
     font-size: 12px;
@@ -517,8 +522,11 @@ line-height: 20px;
     width: 100%;
     float: left;
 }
-.Fivetext_bottom, .room_services {
+.bottom_manager {
     padding-left: 30px;
+}
+.Fivetext_bottom, .room_services {
+    padding-left: 30px !important;
     padding-right: 15px;
 }
 .Fivetext_bottom h2 {
