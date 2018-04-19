@@ -422,6 +422,13 @@ ul.week li a {
     float: left;
     width: 100%;
 }
+.recon_right {
+    width: 97%;
+    float: right;
+    position: absolute;
+    top: 17%;
+    right: -48%;
+}
 }
 
 
