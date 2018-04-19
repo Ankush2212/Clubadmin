@@ -359,7 +359,7 @@ li.more_anchor a {
 
 
  @media only screen and (max-width:599px) {
-	  #mobile_banner{display:none;}
+	  #mobile_banner{display:none !important;}
 	 #mobile_banner2{display:block;}
 .desk_logo{display:none;}
 .logo-out img {
