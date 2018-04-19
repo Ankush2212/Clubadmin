@@ -212,7 +212,6 @@ span.caret {
 .col-md-12.col-sm-12.col-xs-12.banner_out {
     padding-left: 0px;
     padding-right: 0px;
-	z-index: -1;
 }
 .col-md-2.col-sm-2.col-xs-12.hed_left {
     padding-left: 0px;
@@ -255,7 +254,6 @@ span.caret {
     padding-right: 0px;
     padding-top: 50px;
 	padding-bottom: 50px;
-	z-index: -1;
 }
 #mobile_banner{display:none;}
 .De_check .container {
