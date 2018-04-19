@@ -153,6 +153,7 @@ ul#menu a li {
 	opacity:0;
     right: 0;
 	padding-bottom: 15px;
+	    overflow-y: scroll;
 	}
 .panel ul {
     padding: 0;
