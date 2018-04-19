@@ -748,8 +748,8 @@ li.club a{font-size:11px !important;}
     width: 52%;
 }
 .recon_right img {
-    margin-top: 42px;
-	    width: 250px;
+    margin-top:0px;
+	    width: auto;
 }
 .img_story3 img {
     width: 250px;
