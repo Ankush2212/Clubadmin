@@ -489,7 +489,7 @@ line-height: 20px;
  .re_cont {
     background: #fbf5f4;
     float: left;
-    width: 100%;
+    width: 100% !important;
     position: relative;
     padding-bottom: 60px;
 }
