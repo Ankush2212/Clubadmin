@@ -486,7 +486,7 @@ li.more_anchor a {
  * Ohyeah and the last one should go the other direction
  */
 #menuToggle input:checked ~ span:nth-last-child(2) {
-transform: rotate(-45deg) translate(19px, -9px);
+transform: rotate(-45deg) translate(20px, -9px);
 }
 ul#menu a li , ul#menu1 a li{
     color: #fff !important;
