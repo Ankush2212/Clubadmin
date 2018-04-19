@@ -497,10 +497,10 @@ ul#menu a li , ul#menu1 a li{
  * Make this absolute positioned
  * at the top left of the screen
  */
-#menu , #menu1 {
+#menu, #menu1 {
     position: absolute;
     width: 100%;
-    margin: -68px auto -50px;
+    margin: -68px auto 0px;
     padding: 50px;
     padding-top: 27px;
     background: #E97373;
@@ -509,11 +509,11 @@ ul#menu a li , ul#menu1 a li{
     transform-origin: 0% 0%;
     left: 0;
     right: 0;
-	padding-bottom: 15px;
-	    overflow-y: auto;
-        min-height: 470px;
-	display:none;
-	}
+    padding-bottom: 0px;
+    overflow-y: auto;
+    min-height: auto;
+    display: none;
+}
 .panel ul {
     padding: 0;
     margin: 0;
