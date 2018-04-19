@@ -412,6 +412,12 @@ ul.week li a {
     text-decoration: none;
     letter-spacing: 1px;
 }
+.Fivetext_bottom {
+    width: 51%;
+    float: left;
+}
+#re_cont_desktop{display:block;}
+#re_cont_mobile{display:block;}
 }
 
 
