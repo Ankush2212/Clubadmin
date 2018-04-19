@@ -366,12 +366,13 @@ li.more_anchor a {
     color: rgb(255,255,255);
     text-align: center;
     font-size: 28px !important;
+	    padding-bottom: 0;
 }
 .bdr {
     width: 197px;
     height: 4px;
     background-color: #ffffff;
-    margin: 20px auto 20px !important;
+        margin: 16px auto !important;
     float: none;
 }
 .banner_bottom .Made {
