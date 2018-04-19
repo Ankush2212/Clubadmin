@@ -678,7 +678,7 @@ li.more_anchor a {
     display: none;
 }
 .menus_mobile320{display:block !important;}
-.menus_mobile320 .mobile_socila_icons{position:static;top:0px;}
+.menus_mobile320 .mobile_socila_icons{position:static;top:0px;margin-top: 55px;}
 }
 
  
