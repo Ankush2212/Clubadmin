@@ -490,7 +490,7 @@ li.more_anchor a {
  * Ohyeah and the last one should go the other direction
  */
 #menuToggle input:checked ~ span:nth-last-child(2) {
-   transform: rotate(-45deg) translate(21px, -8px);
+transform: rotate(-45deg) translate(21px, -9px);
 }
 ul#menu a li {
     color: #fff !important;
@@ -515,7 +515,7 @@ ul#menu a li {
     right: 0;
 	padding-bottom: 15px;
 	    overflow-y: auto;
-    height: auto;
+        min-height: 518px;
 	display:none;
 	}
 .panel ul {
