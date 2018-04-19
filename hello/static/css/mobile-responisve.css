@@ -553,7 +553,7 @@ ul.lang_mobile {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 313px;
+        width: auto;
     margin: 15px auto 20px;
 	    height: 76px;
 }
@@ -571,7 +571,7 @@ ul.lang_mobile {
     outline: none;
     font-size: 17px;
     transition: 0.4s;
-    width: 313px;
+        width: auto;
     letter-spacing: 2px;
     line-height: 8px;
     color: rgb(255,255,255);
