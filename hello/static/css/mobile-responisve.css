@@ -297,7 +297,7 @@ li.more_anchor a {
     float: left;
     position: absolute;
 	    padding-top: 16px;
-	    opacity: 0;
+	    display:none;
 }
 .mobile_socila_icons ul li {
     display: block;
