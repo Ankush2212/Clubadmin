@@ -445,6 +445,11 @@ div#b h2 {
 ul.week li {
     margin-bottom: 11px;
 }
+div#c h2 {
+    font-size: 17px;
+    font-family: 'youngserifregular';
+    padding-left: 0;
+}
 }
 
 
