@@ -512,6 +512,10 @@ div#gram_600 .recon_right {
 div#gram_600 .recon_right img {
     width: auto;
 }
+.testi {
+    width: 100% !important;
+    float: left;
+}
 }
 
 
