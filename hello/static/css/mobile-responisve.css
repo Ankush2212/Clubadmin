@@ -704,7 +704,7 @@ ul.hot li {
 }
 #mc_embed_signup .mc-field-group input {
     display: block;
-    width: auto !important;
+   width: 191px !important;
     background: #f1f1f3;
     line-height: 36px;
     border: none !important;
@@ -724,7 +724,7 @@ ul.hot li {
     padding: 0px 15px !important;
     font-size: 11px !important;
     border-radius: 0px !important;
-    margin-left: 4px !important;
+    margin-left: 2px !important;
     width: 107px !important
 }
 .col-md-12.bootom_footer12 {
