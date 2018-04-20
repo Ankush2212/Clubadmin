@@ -502,8 +502,8 @@ div#Five_star {
 .recont_sec{padding-bottom: 55px;}
 #gram_600{display:block;}
 #gram_desktop{display:none;}
-.fout_left.tes11.text-center , .fout_right.tes11.text-center , .fout_rightt.tes11.text-center  {
-    text-align: left;
+.fout_left , .fout_right, .fout_rightt {
+    text-align: left !important;
 }
 }
 
@@ -529,7 +529,7 @@ div#room_services {
     margin: 0 auto;
     text-align: center;
 }
-	.fout_left.tes11.text-center , .fout_right.tes11.text-center , .fout_rightt.tes11.text-center  {
+	.fout_left , .fout_right, .fout_rightt {
     text-align: center !important;
 }
 .out_four {
