@@ -654,7 +654,8 @@ ul.hot li {
     letter-spacing: 1px;
     width: 90%;
     line-height: 18px;
-    margin-bottom: 0px;
+        margin-bottom: 4px;
+
     padding: 0px;
 }
 #mc_embed_signup .mc-field-group {
@@ -686,6 +687,9 @@ ul.hot li {
     border-radius: 0px !important;
     margin-left: 2px !important;
     width: 111px !important;
+}
+.col-md-12.bootom_footer12 {
+    border: 1px solid #dddde1;
 }
 
 ul.hot1 li:first-child {
