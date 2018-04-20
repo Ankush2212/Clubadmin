@@ -580,10 +580,18 @@ div#room_services {
     margin-bottom: 0;
     font-size: 14px;
     letter-spacing: 0px;
+	    text-align: center !important;
 }
 #gram_320 .Fivetext_bottom {
     padding-top: 0;
     margin-top: 81px;
+}
+ul.week.Graham li {
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-bottom: 0px;
+    text-align: center;
 }
 	.fout_left , .fout_right, .fout_rightt {
     text-align: center !important;
