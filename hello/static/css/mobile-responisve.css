@@ -509,6 +509,8 @@ div#gram_600 .recon_right {
     right:-50px;
     float: right;
     top: 61px;
+	    width: auto;
+
 }
 div#gram_600 .recon_right img {
     width: auto;
