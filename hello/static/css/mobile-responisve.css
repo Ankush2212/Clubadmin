@@ -788,6 +788,7 @@ ul.week.Graham li {
     margin-bottom: 0px;
     text-align: center;
 }
+
 .testi h2 {
     font-size: 22px !important;
     letter-spacing: 1px;
@@ -822,13 +823,14 @@ ul.week.Graham li {
     line-height: 20px;
 }
 .Decheck_bottom h3 {
-    font-size: 12px;
-    margin-bottom: 0px;
-    margin-top: 5px;
-    font-family: 'youngserifregular';
-letter-spacing: 1px;
-line-height: 20px;
+    font-size: 12px !important;
+    margin-bottom: 0px !important;
+    margin-top: 5px !important;
+    letter-spacing: 1px;
+    line-height: 20px !important;
 }
+
+
 .Decheck_bottom p {
     font-size: 12px;
     margin-bottom: 0px;
