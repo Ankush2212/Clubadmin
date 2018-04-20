@@ -467,7 +467,7 @@ div#c h2 {
     margin-left: 0;
 }
 .hed {
-    min-height: auto;
+    min-height: auto !important;
 }
 .tes11 {
     padding-top: 0;
