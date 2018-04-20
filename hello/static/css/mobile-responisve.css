@@ -599,6 +599,26 @@ div#bootom_footer {
 	    padding-left: 15px;
     padding-right: 15px;
 }
+h5.fred {
+    font-size: 15px;
+    font-family: 'young';
+    color: #333;
+    padding-top: 0px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+ul.story li a {
+    color: #333;
+    font-family: 'poppinsregular';
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+ul.story {
+    padding-left: 0;
+    list-style: none;
+}
 }
 
 
