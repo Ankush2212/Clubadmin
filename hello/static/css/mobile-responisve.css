@@ -512,6 +512,25 @@ div#Five_star {
     padding-top: 20px !important;
 }
 	 #recont_sec_320{display:block;}
+	 
+	 .recont_secright {
+    padding: 0px 15px;
+    width: auto;
+    float: left;
+    position: absolute;
+    top: -120px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+	.fout_left.tes11 {
+    text-align: center !important;
+}
+.out_four {
+    width: 100%;
+    float: right;
+} 
 	 .book {
     margin-top: 25px !important;
 }
