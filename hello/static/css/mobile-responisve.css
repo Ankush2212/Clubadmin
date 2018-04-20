@@ -568,8 +568,10 @@ line-height: 20px;
     text-align: center;
 }
 .col-md-12.col-sm-12.col-xs-12.Five_star {
-    padding-top: 10px;
+    padding-top: 40px !important;
 }
+
+
 .Five_text {
     margin-top: 120px;
 }
