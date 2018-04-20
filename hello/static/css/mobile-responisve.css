@@ -626,6 +626,10 @@ ul.story {
     border: 1px solid #ccc;
 	    margin: 15px 0px 40px;
 }
+.how {
+    width: 90%;
+    float: left;
+}
 }
 
 
