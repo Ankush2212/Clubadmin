@@ -552,18 +552,20 @@ ul.week.Graham li {
     text-align: center;
 	    margin-top: 50px;
 }
+
+#mobile_footer_320 , #desktop_footer{display:none;}
 }
 
 
 
  @media only screen and (max-width:599px) {
 	 #gram_600{display:none;}
-	 #recont_sec_600 , #gram_600{display:none;}
+	 #recont_sec_600 , #gram_600 , #mobile_footer_600{display:none;}
 div#room_services {
     padding: 0px !important;
     padding-top: 75px !important;
 }
-	 #recont_sec_320 , #gram_320{display:block;}
+	 #recont_sec_320 , #gram_320 , #mobile_footer_320{display:block;}
 	 
 	 .recont_secright {
     padding: 0px 15px;
