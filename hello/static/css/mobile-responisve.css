@@ -584,6 +584,12 @@ ul.hot i {
 #mc_embed_signup form {
     padding: 0px;
 }
+#mc_embed_signup .button {
+    width: auto;
+    margin: 0px !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 }
 
 
