@@ -500,12 +500,13 @@ div#Five_star {
     left: -57px;
 }
 .recont_sec{padding-bottom: 55px;}
-#recont_sec_320{display:block;}
+
 }
 
 
 
  @media only screen and (max-width:599px) {
+	 #recont_sec_600{display:none;}
 	 div#room_services {
     padding: 0px !important;
 }
