@@ -636,6 +636,12 @@ ul.story {
     font-size: 15px;
     letter-spacing: 2px;
 }
+.step_four h4 {
+    font-family: 'youngserifregular';
+    font-size: 16px;
+    margin-left: 0;
+    color: rgb(238,111,115);
+}
 }
 
 
