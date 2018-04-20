@@ -625,6 +625,69 @@ ul.story {
 
 
  @media only screen and (max-width:599px) {
+	 .col-md-6.col-sm-6.col-xs-6.footer_left {
+    width: 100%;
+}
+.col-md-6.col-sm-6.col-xs-6.footer_right {
+    width: 100%;
+	    padding-left: 15px !important;
+}
+
+div#mobile_footer_320 {
+    padding: 0px;
+}
+ul.hot li {
+    text-align: left;
+    padding: 3px 0px;
+    font-family: 'poppinsregular';
+    color: #333;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.f_right p {
+    text-align: left;
+    padding: 7px 0px;
+    font-family: 'poppinsregular';
+    font-size: 12px;
+    color: #333;
+    letter-spacing: 1px;
+    width: 90%;
+    line-height: 18px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+#mc_embed_signup .mc-field-group {
+    min-height: 50px;
+    width: auto !important;
+	
+}
+#mc_embed_signup .mc-field-group input {
+    display: block;
+    width: auto !important;
+    background: #f1f1f3;
+    line-height: 36px;
+    border: none !important;
+    color: black;
+    font-family: 'poppinssemibold';
+    font-size: 13px;
+    letter-spacing: 2px;
+    padding: 3px 24px 0px 24px !important;
+    text-indent: 2%;
+	border-radius: 0px;
+}
+#mc_embed_signup .button {
+    width: auto !important;
+    margin: 0px !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0px 15px !important;
+    font-size: 11px !important;
+    border-radius: 0px !important;
+    margin-left: 2px !important;
+    width: 111px !important;
+}
+
+
 	 #gram_600{display:none;}
 	 #recont_sec_600 , #gram_600 , #mobile_footer_600{display:none;}
 div#room_services {
