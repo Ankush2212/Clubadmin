@@ -620,6 +620,11 @@ ul.story {
     padding-left: 0;
     list-style: none
 }
+.footer_seprator {
+    float: left;
+    width: 100%;
+    border: 1px solid #ccc;
+}
 }
 
 
