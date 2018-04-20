@@ -593,6 +593,10 @@ ul.week.Graham li {
     margin-bottom: 0px;
     text-align: center;
 }
+.testi h2 {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
 	.fout_left , .fout_right, .fout_rightt {
     text-align: center !important;
 }
