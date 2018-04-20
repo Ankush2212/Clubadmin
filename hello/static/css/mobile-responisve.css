@@ -589,6 +589,7 @@ ul.hot i {
     margin: 0px !important;
     text-transform: uppercase;
     letter-spacing: 2px;
+	padding: 0px 18px !important;
 }
 }
 
