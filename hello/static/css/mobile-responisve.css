@@ -565,6 +565,25 @@ ul.hot li {
 ul.hot i {
     margin-right: 7px;
 }
+.f_right p {
+    text-align: left;
+    padding: 7px 0px;
+    font-family: 'poppinsregular';
+    font-size: 15px;
+    color: #333;
+    letter-spacing: 1px;
+    width: 90%;
+    line-height: 27px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+#mc_embed_signup .mc-field-group {
+    min-height: 50px;
+    width: 100% !important;
+}
+#mc_embed_signup form {
+    padding: 0px;
+}
 }
 
 
