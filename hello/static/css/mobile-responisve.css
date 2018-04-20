@@ -643,6 +643,7 @@ ul.hot li {
     color: #333;
     font-size: 12px;
     letter-spacing: 1px;
+	line-height:18px;
 }
 .f_right p {
     text-align: left;
@@ -686,10 +687,22 @@ ul.hot li {
     margin-left: 2px !important;
     width: 111px !important;
 }
-ul.hot1 li {
-    display: -webkit-inline-box;
+
+ul.hot1 li:first-child {
+    margin-right: 29px;
 }
 
+ul.hot1 li {
+    display: inline-block;
+}
+ul.hot {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+ul.hot.hot1 {
+    margin-bottom: 15px;
+}
 
 
 	 #gram_600{display:none;}
