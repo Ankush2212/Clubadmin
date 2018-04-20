@@ -466,6 +466,35 @@ div#c h2 {
 .recont_sec .Five_text h1 {
     margin-left: 0;
 }
+.hed {
+    min-height: auto;
+}
+.tes11 {
+    padding-top: 0;
+}
+.hed h2 {
+    font-size: 15px;
+    font-family: 'young';
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+    line-height: 23px;
+}
+.hed h4 {
+    font-size: 15px;
+    font-family: 'poppinsregular';
+    line-height: 23px;
+    color: #333;
+    letter-spacing: 1px;
+    margin-top: 3px;
+}
+.recont_secright {
+    padding: 0px 15px;
+    width: 97%;
+    float: left;
+    position: absolute;
+    top: 19%;
+    left: -135px;
+}
 }
 
 
