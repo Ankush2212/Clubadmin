@@ -603,7 +603,7 @@ div#c h2 {
 }
 	  #mobile_banner{display:none !important;}
 	  
-	 #mobile_banner2{display:block;    margin-top: 64px;}
+	 #mobile_banner2{display:block;}
 .desk_logo{display:none;}
 .logo-out img {
     max-width: 200px;
@@ -624,7 +624,7 @@ div#c h2 {
 }
 .top_right{display:none;}
 .header {
-    padding: 0px 15px;
+    padding: 18px 15px;
     float: left;
     width: 100%;
 }
@@ -658,6 +658,7 @@ div#c h2 {
     -webkit-user-select: none;
     user-select: none;
     float: right;
+	z-index: 2;
 }
 #menuToggle input
 {
@@ -738,9 +739,9 @@ ul#menu a li , ul#menu1 a li{
  */
 #menu, #menu1 {
     position: absolute;
-    width: 100%;
+    width: 99%;
     margin: -68px auto 0px;
-    padding: 50px;
+    padding: 20px;
     padding-top: 27px;
     background: #E97373;
     list-style-type: none;
