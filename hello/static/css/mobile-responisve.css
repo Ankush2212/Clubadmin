@@ -505,6 +505,13 @@ div#Five_star {
 .fout_left , .fout_right, .fout_rightt {
     text-align: left !important;
 }
+div#gram_600 .recon_right {
+    right: 0;
+    float: right;
+}
+div#gram_600 .recon_right img {
+    width: 55%;
+}
 }
 
 
