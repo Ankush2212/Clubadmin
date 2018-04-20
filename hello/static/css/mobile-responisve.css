@@ -508,7 +508,7 @@ div#Five_star {
 div#gram_600 .recon_right {
     right:-50px;
     float: right;
-    top: 47px;
+    top: 61px;
 }
 div#gram_600 .recon_right img {
     width: auto;
@@ -525,7 +525,7 @@ div#gram_600 .recon_right img {
 }
 div#room_services{padding-bottom: 0px !important;}
 div#gram_600 .Fivetext_bottom {
-    margin-top: 90px;
+        margin-top: 116px;
     margin-bottom: 72px;
 }
 
@@ -548,6 +548,7 @@ ul.week.Graham li {
     letter-spacing: 1px;
     color: rgb(238,111,115);
     text-align: center;
+	    margin-top: 50px;
 }
 }
 
