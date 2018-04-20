@@ -508,6 +508,7 @@ div#Five_star {
 div#gram_600 .recon_right {
     right: 0;
     float: right;
+    top: 47px;
 }
 div#gram_600 .recon_right img {
     width: auto;
@@ -519,6 +520,10 @@ div#gram_600 .recon_right img {
 #gram_600 div#book {
     text-align: center;
 }
+.Five_star {
+    padding-top: 0px !important;
+}
+div#room_services{padding-bottom: 0px !important;}
 }
 
 
