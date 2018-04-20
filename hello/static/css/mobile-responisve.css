@@ -582,7 +582,7 @@ ul.hot i {
     width: 100% !important;
 }
 #mc_embed_signup form {
-    padding: 0px;
+        padding: 0px !important;
 }
 #mc_embed_signup .button {
     width: auto;
@@ -592,10 +592,10 @@ ul.hot i {
 	padding: 0px 18px !important;
 }
 div#bootom_footer {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 .col-md-12.col-sm-12.col-xs-12.bootom_footer12 {
-    padding-top: 40px;
+    padding-top: 35px;
 	    padding-left: 15px;
     padding-right: 15px;
 }
