@@ -544,7 +544,7 @@ ul.week.Graham li {
 }
 .testi h2 {
     width: 100%;
-    font-size: 34px;
+    font-size: 34px !important;
     letter-spacing: 1px;
     color: rgb(238,111,115);
     text-align: center;
