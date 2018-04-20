@@ -552,7 +552,7 @@ ul.week.Graham li {
     text-align: center;
 	    margin-top: 50px;
 }
-
+#mobile_footer_600{display:block;}
 #mobile_footer_320 , #desktop_footer{display:none;}
 }
 
