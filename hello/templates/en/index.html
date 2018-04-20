@@ -138,6 +138,33 @@ function change() {
 					</div>
 				</div>
 				<div class="bottom_right">
+						 				<div class="container-fluid">
+						<div class="mobile_navigation">
+						<ul class="nav navbar-nav">
+						  <li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">HOUSEKEEPING
+							
+							<!--i class="fa fa-angle-down" aria-hidden="true"></i--><img id="updown"src=" {% static 'images/arror.png'%}"></a>
+							<ul class="dropdown-menu personnal" id="js-scroll-nav3">
+							  <li><p>A fresh home every week</p></li>
+							  <li class="more"><a href="#Five_star">More about Housekeeping</a></li>
+							</ul>
+						  </li>	
+                           <li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">ROOM SERVICE
+							 
+							<!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --><img id="updown"src="{% static 'images/arror.png'%}"></a>
+							<ul class="dropdown-menu personnal_one" id="js-scroll-nav4">
+							  <li><p>Cooking becomes </br>fun when Fred</br>cooks for you.</p></li>
+							  <li class="more"><a href="#room_services">More about</a></li>
+							  <li class="more"><a href="#">Fred cuisine.</a></li>
+							</ul>
+						  </li> 
+						  <li><a href="{% url 'holiday'%}">AIRBNB</a></li>
+						  <li><a href="{% url 'hotel'%}">HOTELS</a></li>					  
+						</ul>
+						</div>
+					  </div>
 				<div class="container">
 					<nav role="navigation">
 					<div class="logo-out"><a href="{% url 'en'%}"><img src=" {% static '/images/logo.png'%}"></a>
@@ -263,36 +290,7 @@ function change() {
 		   <div class="clear" style="clear: both;"></div>		   
 		 <!--end Header Sections--->
 		 
-		 					  <div class="container-fluid">
-						<!--div class="navbar-header">
-						  <a class="navbar-brand" href="#">WebSiteName</a>
-						</div-->
-						<div class="mobile_navigation">
-						<ul class="nav navbar-nav">
-						  <li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">HOUSEKEEPING
-							
-							<!--i class="fa fa-angle-down" aria-hidden="true"></i--><img id="updown"src=" {% static 'images/arror.png'%}"></a>
-							<ul class="dropdown-menu personnal" id="js-scroll-nav3">
-							  <li><p>A fresh home every week</p></li>
-							  <li class="more"><a href="#Five_star">More about Housekeeping</a></li>
-							</ul>
-						  </li>	
-                           <li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">ROOM SERVICE
-							 
-							<!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --><img id="updown"src="{% static 'images/arror.png'%}"></a>
-							<ul class="dropdown-menu personnal_one" id="js-scroll-nav4">
-							  <li><p>Cooking becomes </br>fun when Fred</br>cooks for you.</p></li>
-							  <li class="more"><a href="#room_services">More about</a></li>
-							  <li class="more"><a href="#">Fred cuisine.</a></li>
-							</ul>
-						  </li> 
-						  <li><a href="{% url 'holiday'%}">AIRBNB</a></li>
-						  <li><a href="{% url 'hotel'%}">HOTELS</a></li>					  
-						</ul>
-						</div>
-					  </div>
+
 					 
 		 </div>
 		 </div>
