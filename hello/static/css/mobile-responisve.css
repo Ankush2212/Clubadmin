@@ -524,6 +524,23 @@ div#gram_600 .recon_right img {
     padding-top: 0px !important;
 }
 div#room_services{padding-bottom: 0px !important;}
+div#gram_600 .Fivetext_bottom {
+    margin-top: 90px;
+    margin-bottom: 72px;
+}
+
+div#gram_600 .Fivetext_bottom h2 {
+    width: 429px;
+    height: 31px;
+    font-size: 15px;
+    letter-spacing: 0px;
+}
+ul.week.Graham li {
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-bottom: 0px;
+}
 }
 
 
