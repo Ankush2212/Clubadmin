@@ -730,7 +730,28 @@ ul.hot.hot1 {
     margin-bottom: 15px;
 }
 
-
+h5.fred {
+    font-size: 11px;
+    font-family: 'young';
+    color: #333;
+    padding-top: 0px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+ul.story li a {
+    color: #333;
+    font-family: 'poppinsregular';
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 18px;
+}
+.footer_seprator {
+    float: left;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin: 0px 0px 20px;
+}
 	 #gram_600{display:none;}
 	 #recont_sec_600 , #gram_600 , #mobile_footer_600{display:none;}
 div#room_services {
