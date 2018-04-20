@@ -902,6 +902,7 @@ li.more_anchor a {
     display: none;
     left: 0;
     right: 0;
+	    z-index: 1;
 }
 .mobile_socila_icons ul li {
     display: inline-block;
