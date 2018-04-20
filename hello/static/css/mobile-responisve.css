@@ -679,7 +679,7 @@ ul.hot li {
     text-align: left;
     padding: 3px 0px;
     font-family: 'poppinsregular';
-    color: #333;
+        color: #333 !important;
     font-size: 12px;
     letter-spacing: 1px;
 	line-height:18px;
