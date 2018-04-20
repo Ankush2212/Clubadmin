@@ -686,6 +686,10 @@ ul.hot li {
     margin-left: 2px !important;
     width: 111px !important;
 }
+ul.hot1 li {
+    display: -webkit-inline-box;
+}
+
 
 
 	 #gram_600{display:none;}
