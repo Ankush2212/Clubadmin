@@ -500,18 +500,20 @@ div#Five_star {
     left: -57px;
 }
 .recont_sec{padding-bottom: 55px;}
-
+#gram_600{display:block;}
+#gram_desktop{display:none;}
 }
 
 
 
  @media only screen and (max-width:599px) {
-	 #recont_sec_600{display:none;}
+	 #gram_600{display:none;}
+	 #recont_sec_600 , #gram_600{display:none;}
 div#room_services {
     padding: 0px !important;
     padding-top: 75px !important;
 }
-	 #recont_sec_320{display:block;}
+	 #recont_sec_320 , #gram_320{display:block;}
 	 
 	 .recont_secright {
     padding: 0px 15px;

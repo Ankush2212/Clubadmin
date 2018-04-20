@@ -677,7 +677,7 @@ span.num {
 }
 #re_cont_mobile , #re_cont_mobile_320{display:none;}
 .menus_mobile320{display:none;}
-#mobile_banner2 , #recont_sec_320 , #recont_sec_600{display:none;}
+#mobile_banner2 , #recont_sec_320 , #recont_sec_600 ,#gram_600 , #gram_320{display:none;}
 .recont_sec .Five_text h1{margin-left:100px;}
 div#pricing-single .Five_text h1 {
     color: #f6735d;
