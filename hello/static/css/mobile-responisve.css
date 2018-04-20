@@ -9,6 +9,7 @@
 }
 .logo-out {
     padding-top: 0;
+	text-align: center;
 }
 .container {
     padding: 0px;
@@ -23,7 +24,7 @@
 }
 .top_right{display:none;}
 .header {
-    padding: 0px 15px;
+    padding: 18px 15px;
     float: left;
     width: 100%;
 }
@@ -54,7 +55,7 @@
     position: relative;
     top: 8px;
     right: 0;
-    z-index: 1;
+       z-index: 2;
     -webkit-user-select: none;
     user-select: none;
     float: right;
@@ -160,6 +161,7 @@ ul#menu a li {
 	    overflow-y: auto;
     height: 292px;
 	display: none;
+	    z-index: 1;
 	}
 .panel ul {
     padding: 0;
@@ -172,7 +174,7 @@ ul#menu a li {
     text-align: center;
     line-height: 36px;
 }
-.opacity_menus{display:block !important;}
+.opacity_menus{display:block !important;    z-index: 1;}
 /* .accordion {
     color: #444;
     cursor: pointer;
@@ -273,7 +275,6 @@ li.more_anchor a {
 #desk_banner{display:none;}
 #mobile_banner {
     display: block;
-    margin-top: 73px;
 }
 .top_menu_padding{padding-top:0px !important;}
 .bottom_right nav {
