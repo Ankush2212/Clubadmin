@@ -506,6 +506,10 @@ div#Five_star {
 
 
  @media only screen and (max-width:599px) {
+	 div#room_services {
+    padding: 0px !important;
+}
+	 #recont_sec_320{display:block;}
 	 .book {
     margin-top: 25px !important;
 }
