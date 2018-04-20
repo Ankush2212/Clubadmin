@@ -455,6 +455,8 @@ div#c h2 {
     font-family: 'youngserifregular';
     padding-left: 0;
 }
+#secont_sec_desktop{display:none;}
+#recont_sec_600{display:block;}
 }
 
 
