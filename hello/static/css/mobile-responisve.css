@@ -516,6 +516,9 @@ div#gram_600 .recon_right img {
     width: 100% !important;
     float: left;
 }
+#gram_600 div#book {
+    text-align: center;
+}
 }
 
 
