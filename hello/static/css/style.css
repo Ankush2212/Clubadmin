@@ -2977,3 +2977,6 @@ div#mc_embed_signup_scroll {
    margin: 0 8px 15px 21px !important;
    padding: 5px 38px 19px 34px !important;
 }
+#mob_head{
+	display:none;
+}

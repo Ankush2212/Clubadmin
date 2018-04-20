@@ -1,4 +1,8 @@
  @media only screen and (max-width:768px) {
+	 #mob_head{
+	display:block;
+}
+#desk_head{display:none;}
 .desk_logo{display:none;}
 .logo-out img {
     max-width: 200px;
