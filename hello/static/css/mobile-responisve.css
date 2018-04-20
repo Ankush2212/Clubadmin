@@ -554,6 +554,17 @@ ul.week.Graham li {
 }
 #mobile_footer_600{display:block;}
 #mobile_footer_320 , #desktop_footer{display:none;}
+ul.hot li {
+    text-align: left;
+    padding: 3px 0px;
+    font-family: 'poppinsregular';
+    color: #333;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+ul.hot i {
+    margin-right: 7px;
+}
 }
 
 
