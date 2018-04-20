@@ -506,7 +506,7 @@ div#Five_star {
     text-align: left !important;
 }
 div#gram_600 .recon_right {
-    right: 0;
+    right:-50px;
     float: right;
     top: 47px;
 }
