@@ -456,9 +456,10 @@ div#c h2 {
     padding-left: 0;
 }
 #secont_sec_desktop{display:none;}
-#recont_sec_600{display:block;}
+#recont_sec_600{display:block;    width: 92%;}
 .Five_star{padding-bottom: 0;padding-top: 0;}
 .De_check{padding-bottom: 0;}
+.room_services{padding-top:0px;}
 }
 
 
