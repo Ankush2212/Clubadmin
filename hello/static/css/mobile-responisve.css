@@ -147,7 +147,7 @@ ul#menu a li {
  */
 #menu {
     position: absolute;
-    width: 100%;
+    width:99%;
     margin: -68px auto -50px;
     padding: 50px;
     padding-top: 27px;
