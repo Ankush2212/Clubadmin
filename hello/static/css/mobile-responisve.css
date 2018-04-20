@@ -777,8 +777,8 @@ div#room_services {
 }
 	 #recont_sec_320 , #gram_320 , #mobile_footer_320{display:block;}
 	 
-	 .recont_secright {
-    padding: 0px 15px;
+.recont_secright {
+    padding: 0px 0px;
     width: auto;
     float: left;
     position: absolute;
@@ -787,6 +787,7 @@ div#room_services {
     right: 0;
     margin: 0 auto;
     text-align: center;
+    width: 100% !important;
 }
 #gram_320 .Fivetext_bottom h2 {
     margin-bottom: 0;
