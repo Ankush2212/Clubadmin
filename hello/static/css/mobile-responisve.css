@@ -679,7 +679,7 @@ ul.hot li {
     text-align: left;
     padding: 3px 0px;
     font-family: 'poppinsregular';
-        color: #333 !important;
+    color: #333;
     font-size: 12px;
     letter-spacing: 1px;
 	line-height:18px;
@@ -704,7 +704,7 @@ ul.hot li {
 }
 #mc_embed_signup .mc-field-group input {
     display: block;
-   width: 191px !important;
+    width: auto !important;
     background: #f1f1f3;
     line-height: 36px;
     border: none !important;
@@ -724,8 +724,8 @@ ul.hot li {
     padding: 0px 15px !important;
     font-size: 11px !important;
     border-radius: 0px !important;
-    margin-left: 2px !important;
-    width: 107px !important
+    margin-left: 4px !important;
+    width: 107px !important;
 }
 .col-md-12.bootom_footer12 {
     border: 1px solid #dddde1;
