@@ -481,6 +481,7 @@ div#Five_star {
     margin-bottom: 0px;
     letter-spacing: 1px;
     line-height: 23px;
+    margin-top: 24px;
 }
 .hed h4 {
     font-size: 15px;
@@ -498,7 +499,7 @@ div#Five_star {
     top: 20%;
     left: -57px;
 }
-.recont_sec{padding-bottom: 88px;}
+.recont_sec{padding-bottom: 55px;}
 }
 
 
