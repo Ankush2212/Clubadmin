@@ -460,6 +460,9 @@ div#c h2 {
 .Five_star{padding-bottom: 0;padding-top: 0;}
 .De_check{padding-bottom: 0;}
 .room_services{padding-top:0px;}
+.icon {
+    display:none;
+}
 }
 
 

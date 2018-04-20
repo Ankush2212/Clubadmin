@@ -526,7 +526,10 @@ ul.foot_logo {
 	.banner_arrow {
     margin-top: 8px;
 }
-.out_four , .hed , .icon{width:100% !important;}
+.out_four {
+    width: 51%;
+    float: right;
+}
 .recont_secright img {
     width: 300px;
     height: auto;
