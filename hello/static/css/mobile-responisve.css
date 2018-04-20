@@ -576,6 +576,15 @@ div#room_services {
     margin: 0 auto;
     text-align: center;
 }
+#gram_320 .Fivetext_bottom h2 {
+    margin-bottom: 0;
+    font-size: 14px;
+    letter-spacing: 0px;
+}
+#gram_320 .Fivetext_bottom {
+    padding-top: 0;
+    margin-top: 81px;
+}
 	.fout_left , .fout_right, .fout_rightt {
     text-align: center !important;
 }
@@ -662,6 +671,7 @@ line-height: 20px;
 .Fivetext_bottom h2 {
     text-align: left !important;
 }
+
 div#c h2 {
     font-size: 14px;
     font-family: 'youngserifregular';
