@@ -1,5 +1,4 @@
-body{overflow-x:hidden;}
- @media only screen and (max-width:768px) {
+body{overflow-x:hidden;} @media only screen and (max-width:768px) {
 	 #mob_head{
 	display:block;
 }
@@ -1005,7 +1004,7 @@ div#c h2 {
 	  #mobile_banner{display:none !important;}
 	  
 	 #mobile_banner2{display:block;}
-	
+	 .col-md-12.col-sm-12.col-xs-12.banner_out{overflow-x: hidden;}
 .desk_logo{display:none;}
 .logo-out img {
     max-width: 200px;
