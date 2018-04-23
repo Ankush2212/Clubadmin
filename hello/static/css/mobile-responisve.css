@@ -674,9 +674,14 @@ ul.story {
 
 
  @media only screen and (max-width:599px) {
-	 .laundry img {
+	li.laundry {
+    margin-top: -5px;
+}
+
+li.laundry img {
     vertical-align: middle;
 }
+
 	 .book button a, .book button a:link, .g_start a, .g_start a:link {
     color: #fff;
     font-family: 'poppinsregular';
