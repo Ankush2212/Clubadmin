@@ -677,7 +677,10 @@ ul.story {
 	li.laundry {
     margin-top: -2px;
 }
-
+#c ul.week li a {
+    padding-left: 28px;
+    margin-top: -24px !important;
+}
 	 .book button a, .book button a:link, .g_start a, .g_start a:link {
     color: #fff;
     font-family: 'poppinsregular';
