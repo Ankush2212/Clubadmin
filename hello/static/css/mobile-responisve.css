@@ -1107,7 +1107,7 @@ div#c h2 {
     opacity: 1;
     background: #fff;
     height: 3px;
-    transform: rotate(45deg) translate(-27px, -36px);
+        transform: rotate(45deg) translate(-18px, -53px);
 	top: 20px;
 }
 /*
@@ -1123,7 +1123,7 @@ div#c h2 {
  * Ohyeah and the last one should go the other direction
  */
 #menuToggle input:checked ~ span:nth-last-child(2) {
-transform: rotate(-45deg) translate(20px, -9px);
+    transform: rotate(-45deg) translate(37px, 0px);
 }
 ul#menu a li , ul#menu1 a li{
     color: #fff !important;
