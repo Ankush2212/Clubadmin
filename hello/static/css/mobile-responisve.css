@@ -479,6 +479,7 @@ div#c h2 {
     font-size: 14px;
     font-family: 'youngserifregular';
     padding-left: 0;
+	    margin-bottom: 20px;
 }
 #secont_sec_desktop{display:none;}
 #recont_sec_600{display:block;    width: 92%;}
