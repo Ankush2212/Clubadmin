@@ -651,7 +651,7 @@ ul.story {
 .footer_seprator {
     float: left;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #dddde1;
 	    margin: 15px 0px 40px;
 }
 .how {
@@ -798,7 +798,7 @@ ul.story li a {
 .footer_seprator {
     float: left;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #dddde1;
     margin: 0px 0px 20px;
 }
 	 #gram_600{display:none;}
