@@ -675,7 +675,7 @@ ul.story {
 
  @media only screen and (max-width:599px) {
 	 .book {
-    text-align: center;
+    text-align: center !important;
 }
 	li.laundry {
     margin-top: -2px;
