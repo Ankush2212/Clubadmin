@@ -675,11 +675,7 @@ ul.story {
 
  @media only screen and (max-width:599px) {
 	li.laundry {
-    margin-top: -5px;
-}
-
-li.laundry img {
-    vertical-align: middle;
+    margin-top: -2px;
 }
 
 	 .book button a, .book button a:link, .g_start a, .g_start a:link {
