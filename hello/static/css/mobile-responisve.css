@@ -417,6 +417,7 @@ background: rgb(238,111,115);
 }
 div#a img , div#b img {
     width: 12px;
+	    vertical-align: baseline;
 }
 ul.week li a {
     /* padding-left: 14px;
