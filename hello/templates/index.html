@@ -67,12 +67,12 @@
 	});
 	</script>
 	<script>
-$(document).ready(function(){
-    $(".mobile_icon i").click(function(){
-        $(".mobile_navigation").slideToggle();
-    });
-});
-</script>
+        $(document).ready(function(){
+            $(".mobile_icon .hamber_div").click(function(){
+                $(".mobile_navigation").slideToggle();
+            });
+        });
+    </script>
 
 <script>
 $(document).ready(function(){
@@ -97,7 +97,7 @@ function change() {
   <div class="container">
 	   <div class="most_outer">
 		 <!-- header Sections -->
-		   <div class="header">
+		   <div class="header" id="desk_head">
 			 <div class="col-md-2 col-sm-2 col-xs-12 hed_left">
 				<div class="logo-out desk_logo"><a href="{% url 'index' %}"><img src="{% static 'images/logo.png'%}"></a></div>
 			 </div>
@@ -120,17 +120,12 @@ function change() {
 					</div>
 				</div>
 				<div class="bottom_right">
-				    <nav class="navbar">
-					<div class="mobile_icon"><div class="logo-out"><a href="{% url 'index' %}"><img src="{% static 'images/logo.png'%}"></a>
-					<i class="fa fa-bars" aria-hidden="true"></i>
-					</div>
-					</div>
+
 					  <div class="container-fluid">
 						<!--div class="navbar-header">
 						  <a class="navbar-brand" href="#">WebSiteName</a>
 						</div-->
 						<div class="mobile_navigation">
-						
 						<ul class="nav navbar-nav">
 						  <li class="dropdown">
 						  <a class="dropdown-toggle" data-toggle="dropdown" href="#">HOUSEKEEPING
@@ -158,40 +153,259 @@ function change() {
 						</ul>
 						</div>
 					  </div>
-					</nav> 
+					  
+					 <div class="clear" style="clear: both;"></div>	 
+					  <!--end Header Sections--->
+					  
+					  
+					  
+					  
 				</div>
 			 </div>
 		   </div>
-		   <div class="clear" style="clear: both;"></div>		   
-		 <!--end Header Sections--->
+		   
+		   
+		   <!--------- desktopp menu--------------------->
+		   
+		     
+
+                <div class="header" id="mob_head">
+                    <nav role="navigation">
+                        <div class="logo-out"><a href="{% url 'en'%}"><img src=" {% static '/images/logo.png'%}"></a>
+                            <div id="menuToggle">
+                                <input type="checkbox" />
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="all_menus menus_mobile600">
+                                <div id="menu">
+                                    <ul class="lang_mobile">
+                                        <li class="eng_list"><a href="{% url 'index'%}"><span class="eng">Dutch</span>/</a><a href="{% url 'en'%}"><span class="nll">English</span></a></li>
+                                    </ul>
+                                    <button class="accordion">HouseKeeping</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">FRED KOOKT</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">WONING VERHUUR</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">Hotels</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="mobile_socila_icons">
+                                    <ul class="soc">
+                                        <li><a href="https://www.facebook.com/hulpje" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                        <li><a href="https://twitter.com/hulpje" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="https://www.instagram.com/clubfred_/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="https://in.pinterest.com/clubfredNL/" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/clubfred" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="menus_mobile320">
+                                <div id="menu1">
+                                    <ul class="lang_mobile">
+                                        <li class="eng_list"><a href="{% url 'index'%}"><span class="eng">Dutch</span>/</a><a href="{% url 'en'%}"><span class="nll">English</span></a></li>
+                                    </ul>
+                                    <button class="accordion">HouseKeeping</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">FRED KOOKT</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">WONING VERHUUR</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">Hotels</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+
+
+                                    <div class="mobile_socila_icons">
+                                        <ul class="soc">
+                                            <li><a href="https://www.facebook.com/hulpje" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                            <li><a href="https://twitter.com/hulpje" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="https://www.instagram.com/clubfred_/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="https://in.pinterest.com/clubfredNL/" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/clubfred" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                    </nav>
+                </div>
+            </div>
+
+
+        </div>
+		
+		
+		<!----------- mobile menus close ---------->
 		 
 		 
+		 
+		 
+	
+		  <div class="body-overlay">
 		 <!--Banner Sections--->
-		  <div class="col-md-12 col-sm-12 col-xs-12 banner_out">
-		  
-		    <div class="banner"><img src="{% static 'images/banner.jpg'%}">
-			</div>
-			<div class="banner_text">
-			    <div class="banner_top"><h1>Het gemak van een </br>hotel aan huis.</h1></div> 
-				 
-				<div class="bdr"><img src="{% static 'images/bdr.jpg'%}"></div>    
-				<div class="banner_bottom"><h5><span class="Made">Perfect voor</span></br><span id="changeText" class="COUPLES">KOPPELS</span></h5></div>
-                
-					<div class="banner_arrow" id="desktop-arrow">
-					    <div class="circle_div" data-wow-duration="20s" data-wow-iteration="100" style="visibility: visible; animation-duration: 10s; animation-iteration-count: 100; animation-name: bounce;"><a href="#check-in"><!--i class="fa fa-angle-down" aria-hidden="true"></i-->
-						
-						<img src="{% static 'images/arror.png'%}"></a></div>
-					</div>				
-			</div>
-		  </div>
-		   <div class="clear" style="clear: both;"></div>	
-		   <!--Banner Sections End--->
-		   <div class="banner_arrow" id="mobile-arrow">
-					    <div class="circle_div"><a href="#check-in"><!--i class="fa fa-angle-down" aria-hidden="true"></i-->
-						
-						<img src="{% static 'images/arror.png'%}"></a></div>
-					</div>	
+		 
+		 <div class="container" id="desk_banner">
+                <div class="most_outer">
+                    <div class="header" style="padding-top:0px;">
+                        <div class="col-md-12 col-sm-12 col-xs-12 banner_out">
+
+                            <div class="banner"><img src="{% static 'images/banner.jpg'%}">
+                            </div>
+                            <div class="banner_text">
+                                <div class="banner_top">
+                                    <h1>Het gemak van een </br>hotel aan huis.</h1>
+                                </div>
+
+                                <div class="bdr"><img src="{% static 'images/bdr.jpg'%}"></div>
+                                <div class="banner_bottom">
+                                    <h5><span class="Made">Perfect voor</span></br><span id="changeText" class="COUPLES">KOPPELS</span></h5>
+                                </div>
+
+                                <div class="banner_arrow" id="desktop-arrow">
+                                    <div class="circle_div" data-wow-duration="20s" data-wow-iteration="100" style="visibility: visible; animation-duration: 20s; animation-iteration-count: 100; animation-name: bounce;"><a href="#check-in"><!--i class="fa fa-angle-down" aria-hidden="true"></i--><img src="{% static 'images/arror.png'%}"></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear" style="clear: both;"></div>
+                        <!--Banner Sections End--->
+                        <!--Banner Sections bottom--->
+                    </div>
+                </div>
+            </div>
+
+		   <!--mobile 768px-600px Banner Sections--->
+            <div id="mobile_banner">
+                <div class="most_outer">
+                    <div class="col-md-12 col-sm-12 col-xs-12 banner_out">
+
+                        <div class="banner"><img src="{% static 'images/ban-600.jpg'%}">
+                        </div>
+                        <div class="banner_text">
+                            <div class="banner_top">
+                                <h1>Het gemak van een </br>hotel aan huis.</h1>
+                            </div>
+
+                            <div class="bdr"><img src="{% static 'images/bdr.jpg'%}"></div>
+                            <div class="banner_bottom">
+                                <h5><span class="Made">Perfect voor</span></br><span id="changeText" class="COUPLES">KOPPELS</span></h5>
+                            </div>
+
+                            <div class="banner_arrow" id="desktop-arrow">
+                                <div class="circle_div" data-wow-duration="20s" data-wow-iteration="100" style="visibility: visible; animation-duration: 20s; animation-iteration-count: 100; animation-name: bounce;"><a href="#check-in"><!--i class="fa fa-angle-down" aria-hidden="true"></i--><img src="{% static 'images/arror.png'%}"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear" style="clear: both;"></div>
+                    <!--Banner Sections End--->
+                    <!--Banner Sections bottom--->
+                    <div class="banner_arrow" id="mobile-arrow">
+                        <div class="circle_div"><a href="#check-in"><!--i class="fa fa-angle-down" aria-hidden="true"></i--><img src="{% static 'images/arror.png'%}"></a></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--mobile 599px-320px Banner Sections--->
+            <div id="mobile_banner2">
+                <div class="most_outer">
+                    <div class="col-md-12 col-sm-12 col-xs-12 banner_out">
+
+                        <div class="banner"><img src="{% static 'images/ban-320.jpg'%}">
+                        </div>
+                        <div class="banner_text">
+                            <div class="banner_top">
+                                <h1>Het gemak van een </br>hotel aan huis.</h1>
+                            </div>
+
+                            <div class="bdr"><img src="{% static 'images/bdr.jpg'%}"></div>
+                            <div class="banner_bottom">
+                                <h5><span class="Made">Perfect voor</span></br><span id="changeText" class="COUPLES">KOPPELS</span></h5>
+                            </div>
+
+                            <div class="banner_arrow" id="desktop-arrow">
+                                <div class="circle_div" data-wow-duration="20s" data-wow-iteration="100" style="visibility: visible; animation-duration: 20s; animation-iteration-count: 100; animation-name: bounce;"><a href="#check-in"><!--i class="fa fa-angle-down" aria-hidden="true"></i--><img src="{% static 'images/arror.png'%}"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear" style="clear: both;"></div>
+                    <!--Banner Sections End--->
+                    <!--Banner Sections bottom--->
+                    <div class="banner_arrow" id="mobile-arrow">
+                        <div class="circle_div"><a href="#check-in"><!--i class="fa fa-angle-down" aria-hidden="true"></i--><img src="{% static 'images/arror.png'%}"></a></div>
+                    </div>
+                </div>
+            </div>
+			
+			
+			
+	
 		 <!--Banner Sections bottom--->
+		 <div class="container">
+                <div class="most_outer">
+                    <div class="header">
 		  <div class="col-md-12 col-sm-12 col-xs-12 De_check" id="check-in">
 		       <div class="container">
 			      <div class="check_text" id="check-in">
@@ -224,10 +438,18 @@ function change() {
 					   </div>   
 				</div>  
 			</div>
+			
 			<div class="clear" style="clear: both;"></div>	
+			</div>
+			</div>
+			</div>
+			
 			<!--4 step end--->	
+			<div class="container">
+                <div class="most_outer">
+                    <div class="header">
 			<div class="col-md-12 col-sm-12 col-xs-12 Five_star" id="Een_vijf">
-			    <div class="re_cont">
+			    <div class="re_cont" id="re_cont_desktop">
 				   <div class="Five_text">
 				      <h1 style="text-align: center;">Een vijf sterren huis </h1>
 				   </div>
@@ -281,7 +503,124 @@ function change() {
 					</button>
 					</div>				
 			   </div>
+			   
+			   <div class="re_cont" id="re_cont_mobile">
+				   <div class="Five_text">
+				      <h1 style="text-align: center;">Een vijf sterren huis </h1>
+				   </div>
+				   <div class="Fivetext_bottom">
+				      <div id="a">
+					     <h2>Elke week een fris huis</h2>
+					     <ul class="week">
+						 <li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Hotel housekeeping service</a></li>
+							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Een werkwijze met oog voor detail</a></li>
+							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Extra aandacht voor objecten in huis</a></li>
+							
+						 </ul>
+					     
+					  </div>
+					  <div id="b">
+					    <h2> Een betrouwbare home manager</h2>
+					     <ul class="week">
+						
+							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Screening en training op hotel etiquette</a></li>
+							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Uw woning met liefde verzorgd</a></li>
+							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Sleutel service</a></li>
+						 </ul>
+					  </div>
+					  <div id="c">
+					    <h2>Op maat gemaakt </h2>
+						<div class="week_left">
+					       
+					       
+					       <ul class="week">
+						    <li><img class="abc" src="{% static 'images/tidy.png'%}"><a>Kamers opgeruimd</a></li>
+							<li><img class="abc" src="{% static 'images/dil.png'%}"><a>Bedden opgemaakt</a></li>
+							<li><img class="abc" src="{% static 'images/flower.png'%}"><a>Bloemen verzorgd</a></li>
+						 </ul>
+					    </div>
+						<div class="week_right">
+					       <ul class="week"> 
+					      
+						    <li><img class="abc" src="{% static 'images/laundary.png'%}"><a>Wassen en strijken</a></li>
+							<li><img class="abc" src="{% static 'images/home1.png'%}"><a>Een schoon huis</a></li>
+							<li><img class="abc" src="{% static 'images/wastage.png'%}"><a>Afval gescheiden</a></li>
+						 </ul>
+					    </div>
+				      </div>
+					  
+					</div>	
+					<div class="recon_right">
+					  <img src="{% static 'images/right-side.jpg'%}">
+					</div>	
+					<div class="book">
+					<button class="button" type="button" ><a href="{% url 'onzeprijzen' %}" style="text-transform: uppercase;">Bekijk prijzen</a></span>
+					</button>
+					</div>				
+			   </div>
+			   
+			   
+			   
+		   </div> 
+		   </div>  
+		   </div> 
 		   </div>
+		   <div class="col-md-12 col-sm-12 col-xs-12 Five_star" id="Een_vijf">
+		   <div class="re_cont" id="re_cont_mobile_320">
+				   <div class="Five_text">
+				      <h1 style="text-align: center;">Een vijf sterren huis </h1>
+				   </div>
+				   <div class="Fivetext_bottom">
+				      <div id="a">
+					     <h2>Elke week een fris huis</h2>
+					     <ul class="week">
+						 <li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Hotel housekeeping service</a></li>
+							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Een werkwijze met oog voor detail</a></li>
+							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Extra aandacht voor objecten in huis</a></li>
+							
+						 </ul>
+					     
+					  </div>
+					  <div id="b">
+					    <h2> Een betrouwbare home manager</h2>
+					     <ul class="week">
+						
+							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Screening en training op hotel etiquette</a></li>
+							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Uw woning met liefde verzorgd</a></li>
+							<li><img class="abc" src="{% static 'images/Websiteicons15.png'%}"><a>Sleutel service</a></li>
+						 </ul>
+					  </div>
+					  <div id="c">
+					    <h2>Op maat gemaakt </h2>
+						<div class="week_left">
+					       
+					       
+					       <ul class="week">
+						    <li><img class="abc" src="{% static 'images/tidy.png'%}"><a>Kamers opgeruimd</a></li>
+							<li><img class="abc" src="{% static 'images/dil.png'%}"><a>Bedden opgemaakt</a></li>
+							<li><img class="abc" src="{% static 'images/flower.png'%}"><a>Bloemen verzorgd</a></li>
+						 </ul>
+					    </div>
+						<div class="week_right">
+					       <ul class="week"> 
+					      
+						    <li><img class="abc" src="{% static 'images/laundary.png'%}"><a>Wassen en strijken</a></li>
+							<li><img class="abc" src="{% static 'images/home1.png'%}"><a>Een schoon huis</a></li>
+							<li><img class="abc" src="{% static 'images/wastage.png'%}"><a>Afval gescheiden</a></li>
+						 </ul>
+					    </div>
+				      </div>
+					  
+					</div>	
+					<div class="recon_right">
+					  <img src="{% static 'images/right-side.jpg'%}">
+					</div>	
+					<div class="book">
+					<button class="button" type="button" ><a href="{% url 'onzeprijzen' %}" style="text-transform: uppercase;">Bekijk prijzen</a></span>
+					</button>
+					</div>				
+			   </div>
+			   </div>
 		     <div class="clear" style="clear: both;"></div>	
 		   <!--4 step end--->	
 		   
@@ -526,7 +865,8 @@ setTimeout(function() {
 		   
 		   
 </div>
-</div>		
+</div>	
+</div>	
 <style>
 .input-prepend input.btn.btn-large {
     padding: 3px 33px 0px 32px;
