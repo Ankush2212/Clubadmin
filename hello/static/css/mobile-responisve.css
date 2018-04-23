@@ -674,8 +674,14 @@ ul.story {
 
 
  @media only screen and (max-width:599px) {
+	 .book {
+    text-align: center;
+}
 	li.laundry {
     margin-top: -2px;
+}
+#c .abc {
+    vertical-align: super;
 }
 #c ul.week li a {
     padding-left: 28px;
