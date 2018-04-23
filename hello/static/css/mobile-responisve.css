@@ -420,6 +420,7 @@ div#a img , div#b img {
 	    vertical-align: baseline;
 }
 ul.week li a {
+	
     /* padding-left: 14px;
     color: #333;
     font-family: 'poppinsregular';
@@ -437,6 +438,9 @@ ul.week li a {
     letter-spacing: 1px;
     display: block;
     margin-top: -22px;
+}
+#c ul.week li a {
+    padding-left: 28px;
 }
 .Fivetext_bottom {
     width: 51%;
