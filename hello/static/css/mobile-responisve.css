@@ -1003,7 +1003,7 @@ div#c h2 {
 }
 	  #mobile_banner{display:none !important;}
 	  
-	 #mobile_banner2{display:block;}
+	 #mobile_banner2{display:block;overflow-x: hidden;}
 .desk_logo{display:none;}
 .logo-out img {
     max-width: 200px;
