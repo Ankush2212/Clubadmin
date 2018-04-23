@@ -972,7 +972,10 @@ div#c h2 {
     color: rgb(255,255,255);
     text-align: center;
 }
-
+.banner img {
+    width: 100%;
+    height: 239px;
+}
 
 .bdr img {
     width: 43%;
