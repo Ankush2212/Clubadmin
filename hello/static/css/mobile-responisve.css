@@ -870,7 +870,7 @@ ul.week.Graham li {
     letter-spacing: 1px;
     line-height: 20px;
 }
-.Decheck_bottom h3 {
+.Decheck_bottom h3 , .Decheck_bottom1 h3{
     font-size: 12px !important;
     margin-bottom: 0px !important;
     margin-top: 5px !important;
@@ -879,11 +879,10 @@ ul.week.Graham li {
 }
 
 
-.Decheck_bottom p {
+.Decheck_bottom p , .Decheck_bottom1 p{
     font-size: 12px;
     margin-bottom: 0px;
     margin-top: 9px;
-    font-family: 'poppinsregular';
     padding-right: 36px;
     color: #333;
     padding: 2px;
