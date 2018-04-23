@@ -466,7 +466,7 @@ div#b h2 {
     padding-left: 0px;
 }
 .abc {
-    vertical-align:middle;
+    vertical-align: baseline;
 }
 ul.week li {
     margin-bottom: 11px;
