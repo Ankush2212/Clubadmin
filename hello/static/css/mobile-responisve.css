@@ -1004,6 +1004,7 @@ div#c h2 {
 	  #mobile_banner{display:none !important;}
 	  
 	 #mobile_banner2{display:block;overflow-x: hidden;}
+	 .col-md-12.col-sm-12.col-xs-12.banner_out{overflow-x: hidden;}
 .desk_logo{display:none;}
 .logo-out img {
     max-width: 200px;
