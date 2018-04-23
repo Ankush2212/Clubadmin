@@ -408,7 +408,7 @@ background: rgb(238,111,115);
 }
 .Fivetext_bottom {
     padding-top: 0;
-    margin-top: 38px;
+    margin-top: 27px;
 }
 .Fivetext_bottom h2 {
     font-size: 15px;
@@ -456,7 +456,7 @@ ul.week li a {
     width: auto;
     float: right;
     position: absolute;
-    top: 16%;
+    top: 111px;
     right: -9%;
 }
 div#b h2 {
