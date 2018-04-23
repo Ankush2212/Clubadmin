@@ -68,6 +68,17 @@
 	</script>
 	<script>
         $(document).ready(function(){
+            $("#menuToggle").click(function(){
+        	$("#menu").toggleClass( "opacity_menus",'slow', "easeOutSine" );
+        	$("#menu1").toggleClass( "opacity_menus",'slow', "easeOutSine" );
+        	$(".mobile_socila_icons").toggleClass( "opacity_menus");
+        	$(".bottom_right").toggleClass( "top_menu_padding",'slow', "easeOutSine" );
+        	$(".body-overlay").toggleClass( "body-overlay-index");
+            });
+        });
+    </script>
+	<script>
+        $(document).ready(function(){
             $(".mobile_icon .hamber_div").click(function(){
                 $(".mobile_navigation").slideToggle();
             });
@@ -1274,6 +1285,22 @@ var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator
 
 
 </html>  
+ <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        </script>
 <script>
 function myFunction() {
     alert("Thank you, we’ll handle your email with care");
