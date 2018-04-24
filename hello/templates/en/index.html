@@ -58,8 +58,8 @@
     </script> 
 	<script>
         $(document).ready(function(){
-            $("#menuToggle input:checked").click(function(){
-        	$("#menuToggle input").toggleClass( "neha",'slow', "easeOutSine" );
+            $("#menuToggle .input_check:checked").click(function(){
+        	$("#menuToggle").toggleClass( "neha",'slow', "easeOutSine" );
             });
         });
     </script>
@@ -196,7 +196,7 @@
                     <nav role="navigation">
                         <div class="logo-out"><a href="{% url 'en'%}"><img src=" {% static '/images/clb-logo.png'%}"></a>
                             <div id="menuToggle">
-                                <input type="checkbox" />
+                                <input type="checkbox" class="input_check" />
                                 <span></span>
                                 <span></span>
                                 <span></span>
