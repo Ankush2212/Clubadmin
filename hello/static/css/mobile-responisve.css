@@ -91,7 +91,7 @@ body{overflow-x:hidden;} @media only screen and (max-width:768px) {
   background: #cdcdcd;
   border-radius: 3px;
   
-  z-index: 1;
+/*   z-index: 1; */
   
   transform-origin: 4px 0px;
   
