@@ -48,7 +48,7 @@
     <script>
         $(document).ready(function(){
             $("#menuToggle").click(function(){
-        	$("#menu").toggleClass( "opacity_menus",'slow', "easeOutSine" );
+        	$(".menuss").toggleClass( "opacity_menus",'slow', "easeOutSine" );
         	$(".menuss").toggleClass( "opacity_menus",'slow', "easeOutSine" );
         	$(".mobile_socila_icons").toggleClass( "opacity_menus");
         	$(".bottom_right").toggleClass( "top_menu_padding",'slow', "easeOutSine" );
@@ -195,7 +195,7 @@
                                 <span></span>
                             </div>
                             <div class="all_menus menus_mobile600">
-                                <div id="menu">
+                                <div id="menu" class="menuss">
                                     <ul class="lang_mobile">
                                         <li class="eng_list"><a href="{% url 'index'%}"><span class="eng">Dutch</span>/</a><a href="{% url 'en'%}"><span class="nll">English</span></a></li>
                                     </ul>
