@@ -161,8 +161,8 @@ ul#menu a li {
 	 overflow-y: auto;
     height: 292px;
 	 z-index: 1;
+	 display:none;
 	}
-	.menuss{display: none;}
 .panel ul {
     padding: 0;
     margin: 0;
@@ -1157,11 +1157,10 @@ ul#menu a li , ul#menu1 a li{
     overflow-y: auto;
     height: 465px;
 	z-index: 1;
+	display:none;
     
 }
-.menuss{
-	display: none;
-}
+
 .panel ul {
     padding: 0;
     margin: 0;
