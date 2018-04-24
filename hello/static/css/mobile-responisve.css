@@ -1332,6 +1332,10 @@ li.more_anchor a {
 }
 .menus_mobile320{display:block !important;}
 .menus_mobile320 .mobile_socila_icons{position:static;top:0px;margin-top: 55px;}
+input.input_check.neha {
+    top: -21px !important;
+    left: 12px !important;
+}
 }
 
  
