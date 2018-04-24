@@ -1141,7 +1141,7 @@ ul#menu a li , ul#menu1 a li{
  ul.hot.hot1 li a{
     color: #000 !important;
 }
-#menu, #menu1 {
+#menu1 {
     position: absolute;
     width: 99%;
     margin: -68px auto 0px;
