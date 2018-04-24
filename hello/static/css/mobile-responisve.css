@@ -1210,7 +1210,7 @@ ul.lang_mobile {
     cursor: pointer;
     border: none;
     outline: none;
-    font-size: 17px;
+    font-size: 14px;
     transition: 0.4s;
          width: 230px;
     letter-spacing: 2px;
@@ -1267,7 +1267,7 @@ li.more_anchor a {
     letter-spacing: 2px;
     line-height: 8px;
     font-family: "poppinsregular";
-    font-size: 15px;
+    font-size: 12px;
 }
 #desk_banner{display:none;}
 #mobile_banner {
