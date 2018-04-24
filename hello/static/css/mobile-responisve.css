@@ -134,7 +134,7 @@ body{overflow-x:hidden;} @media only screen and (max-width:768px) {
  * Ohyeah and the last one should go the other direction
  */
 #menuToggle input:checked ~ span:nth-last-child(2) {
-   transform: rotate(-45deg) translate(21px, -8px);
+   transform: rotate(-45deg) translate(21px, -7px);
 }
 ul#menu a li {
     color: #fff !important;
