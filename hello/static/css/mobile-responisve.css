@@ -671,9 +671,13 @@ ul.story {
     color: rgb(238,111,115);
 }
 .col-md-12.col-sm-12.col-xs-12.banner_out{overflow-x: hidden;}
+
+ul.hot.hot1 li a {
+    color: #000 !important;
+}
 }
 
-
+/***************************** portrait view *****************************/
 
  @media only screen and (max-width:599px) {
 	 .book {
