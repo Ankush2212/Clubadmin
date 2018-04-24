@@ -158,11 +158,11 @@ ul#menu a li {
     left: 0;
     right: 0;
 	padding-bottom: 15px;
-	    overflow-y: auto;
+	 overflow-y: auto;
     height: 292px;
-	display: none;
-	    z-index: 1;
+	 z-index: 1;
 	}
+	.menuss{display: none;}
 .panel ul {
     padding: 0;
     margin: 0;
@@ -1156,7 +1156,11 @@ ul#menu a li , ul#menu1 a li{
     padding-bottom: 0px;
     overflow-y: auto;
     height: 465px;
-    display: none;
+	z-index: 1;
+    
+}
+.menuss{
+	display: none;
 }
 .panel ul {
     padding: 0;
