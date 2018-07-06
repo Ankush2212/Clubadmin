@@ -163,32 +163,31 @@ div#datetimepicker5 input {
 <div class="main pixel">    
   <div class="container ">
 	   <div class="most_outer">
-		 <!-- header Sectissons -->
-		<div class="header">
+		 <!-- header Sections -->
+		   <div class="header" id="desk_head">
 			 <div class="col-md-2 col-sm-2 col-xs-12 hed_left">
-				<div class="logo-out"><a href="{% url 'index' %}"><img src="{% static 'images/logo.png'%}"></a></div>
+				<div class="logo-out desk_logo"><a href="/"><img src="/static/images/clb-logo.png"></a></div>
 			 </div>
 			 <div class="col-md-10 col-sm-10 col-xs-12 hed_right">
 			    <div class="top_right">
 				    <div class="col-md-3 col-sm-3 col-xs-12 text-left">
 					   <div class="contact_no">
 					      <ul>
-							  <li><img class="phone" src="{% static 'images/phone.png'%}"><a href=""><span class="num">24/7</span> 020 341 38 14</a></li>
+							  <li><img class="phone" src="/static/images/phone.png"><a href=""><span class="num">24/7</span> 020 341 38 14</a></li>
 							</ul>
 					   </div>
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-12 text-right">
 					   <div class="top_button">
 					     <ul>
-							  <li class="club"><a href="{% url 'onzeprijzen'%}"><span class="club_s">Join the club</span></a></li>
-							  <li class="eng_list"><a href="{% url 'en'%}pricing"><span class="eng">ENG</span>/</a><a href="{% url 'onzeprijzen'%}"><span class="nll underline">NL</span></a></li>
+							  <li class="club"><a href="/onzeprijzen"><span class="club_s">Join the club</span></a></li>
+							  <li class="eng_list"><a href="/en/"><span class="eng">ENG</span>/</a><a href="/"><span class="nll underline">NL</span></a></li>
 						 </ul>	  
 					   </div>
 					</div>
 				</div>
 				<div class="bottom_right">
-				    <nav class="navbar">
-					<div class="mobile_icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+
 					  <div class="container-fluid">
 						<!--div class="navbar-header">
 						  <a class="navbar-brand" href="#">WebSiteName</a>
@@ -196,142 +195,170 @@ div#datetimepicker5 input {
 						<div class="mobile_navigation">
 						<ul class="nav navbar-nav">
 						  <li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">HOUSEKEEPING
-							<!--i class="fa fa-angle-down" aria-hidden="true"></i--><img id="updown"src="{% static 'images/arror.png'%}"></a>
-							<ul class="dropdown-menu personnal">
+						  <a class="dropdown-toggle" data-toggle="dropdown" href="#">HOUSEKEEPING
+							<!--i class="fa fa-angle-down" aria-hidden="true"></i-->
+							
+							<img id="updown" src="/static/images/arror.png"></a>
+							<ul class="dropdown-menu personnal" id="js-scroll-nav2">
 							  <li><p>Uw eigen home manager voor het huishouden.</p></li>
-							  <li class="more meer"><a href="#">Meer over housekeeping</a></li>
+							  <li class="more meer"><a id="firstone" href="#Een_vijf">Meer over housekeeping</a></li>
 							</ul>
 						  </li>	
                            <li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">FRED KOOKT
-							<!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --><img id="updown"src="{% static 'images/arror.png'%}"></a>
-							<ul class="dropdown-menu personnal_one">
-							  <li><p>Koken wordt leuker</br>als Fred het</br> voor u doet.!</p></li>
-							  <li class="more"><a href="#">Meer over koken</a></li>
+							<!-- <i class="fa fa-angle-down" aria-hidden="true"></i> -->
 							
+							<img id="updown" src="/static/images/arror.png"></a>
+							<ul class="dropdown-menu personnal_one" id="js-scroll-nav1">
+							  <li><p>Koken wordt leuker <br>als Fred het<br> voor u doet.</p></li>
+							  <li class="more"><a href="#fred_kookt">Meer over koken</a></li>
+							  <!-- <li class="more"><a href="#">See Our Prices</a></li> -->
 							</ul>
 						  </li> 
-						  <li><a href="{% url 'woningverhuur'%}">WONING VERHUUR</a></li>
-						  <li><a href="{% url 'hotel'%}">HOTELS</a></li>
+						  <li><a href="/woningverhuur">WONING VERHUUR</a></li>
+						  <li><a href="/en/hotel">HOTELS</a></li>
 						</ul>
 						</div>
 					  </div>
-					</nav> 
+					  
+					 <div class="clear" style="clear: both;"></div>	 
+					  <!--end Header Sections--->
+					  
+					  
+					  
+					  
 				</div>
 			 </div>
 		   </div>
-		   <div class="clear" style="clear: both;"></div>	   
-		 <!--end Header Sections--->
-		 
-		   <div class="clear" style="clear: both;"></div>	
 		   
 		   
+		   <!--------- desktopp menu--------------------->
 		   
-		<div class="col-md-12 col-sm-12 col-xs-12 pricingheader">
-			<img src="{% static 'images/112.jpg'%}" class="bgimge" style="width:100%; height:360px;">
-			      <div class="pricingheading">
-				     <h1 style="text-align: center;">Kies uw flexibele lidmaatschap</h1>
-				  </div>
-	
-
-
- 
-
-			<div class="service_box pull-left service_box_first">
-				<h3>De Basics</h3>
-				<div><p class="price">"De basis voor een fris en schoon huis."
-			<br><span>Wekelijks / 2.5 uur</span></p></div>
-					<div class="textbox">
-						<div class="t_left">&euro;55/week </div>
-						<div class="t_right"><span>Maandelijks gefactureerd</span></div>
-					</div>
-			<ul>
-				<li>Housekeeping service</li>
-				<li>Kamers netjes </li> 
-				<li>Afval gescheiden</li>  
-			 </ul>
-			 <div class="full-button"><input type="button"  onclick="return mypopup('Basic');" value="Selecteer" class="iddd choose_button"></div>
-			</div>
-			<div class="service_box pull-right service_box_second">
-			     <h3>All-in Service</h3>
-				 <p class="price">"Maakt balans tussen werk en prive makkelijker."
-				<span>Wekelijks / 3.5 uur </span>
-			</p>
-				<div class="textbox">
-					<div class="t_left">&euro;70/week </div>
-					<div class="t_right"><span>Maandelijks gefactureerd</span>
-					</div>
-				</div>		
-			</p>
-			<ul>
-				<li>Housekeeping service</li>   
-				<li>Kamers netjes </li>   
-				<li>Kleding gestreken </li>   
-				<li>Bedden verschoond</li>  
-				<li>Boodschappen</li>  
-				<li>Afval gescheiden </li> 
-			</ul>			
-			<div class="full-button"><input type="button" onclick="return mypopup('Pro');" value="Selecteer" class="iddd choose_button"></div>
-
-				  </div>
-				</div> 
-			 
-			<div class="clear" style="clear: both;"></div>
-			<div class="col-md-12 col-sm-12 col-xs-12 pricing_single_service" id="pricing-single">
-		        <div class="recont_sec">
-				  <div class="Five_text">
-				      <h1 style="text-align: center;">Single Services</h1>
-				   </div>
-				   <div class="room-bottom">
-					<div class="out_four">
-											 <div class="col-md-6 col-sm-6 col-xs-12 ">
-													 <div class="icon"><img src="{% static 'images/four4-black.png'%}"></div>
-													 <div class="hed hed_pricing"><h2>Fred kookt</h2>
-													   <h4>Als u thuiskomt staat het eten klaar;<br>geniet van de chef's specialiteiten.</h4>
-					<h4><span class="req">OP AANVRAAG</span>
-													  
-													 </h4></div>								 
-
-											 </div>
-											  <div class="col-md-6 col-sm-6 col-xs-12"> 
-													 <div class="icon"><img src="{% static 'images/four2-black.png'%}"></div>
-													 <div class="hed hed_pricing"><h2>Linnengoed service</h2>
-													   <h4>Uw was dezelfde week geleverd; <br>linnengoed en handdoeken verhuur.</h4>
-													   <h4><span> &euro; 24</span> / per aanvraag</h4>
-													 </div>								 
-											 </div>
-											 <div class="col-md-6 col-sm-6 col-xs-12 ">
-													<div class="icon"><img src="{% static 'images/four1-black.png'%}"></div>
-													 <div class="hed hed_pricing"><h2>Fred stock</h2>
-													   <h4>Toiletpapier, handzeep, keukenrol;<br>schone benodigdheden, vuilniszakken. </h4>
-													   <h4><span> &euro; 15</span> / per aanvraag</h4>
-													 </div>
-											 </div>
-											 
-											 <div class="col-md-6 col-sm-6 col-xs-12 ">
-													<div class="icon"><img src="{% static 'images/Prices_03-2.png'%}" width="20"></div>
-													 <div class="hed hed_pricing"><h2>Family care</h2>
-													   <h4>Betrouwbare oppas aan huis;<br>voor meer info.</h4>
-													   <h4><span class="req">OP AANVRAAG</span></h4>
-													 </div>
-											 </div>
-											 </div>
-						 <div class="div_vis"><input type="button" value="Aanvragen" onclick="return singleservice();" class=" iddd book_visit"></div>
-					 
-				   
-				   </div>
-				    <div class="recont_secright recont_secright_price">
-					  <img src="{% static 'images/Prices_03-2-1.png'%}">
-					</div>   
-				</div>
 		     
-		   
-		   </div>
-		 
-	
-					 
-				</div>
+
+                <div class="header" id="mob_head">
+                    <nav role="navigation">
+                        <div class="logo-out"><a href="/en/"><img src=" /static/images/clb-logo.png"></a>
+                            <div id="menuToggle">
+                                <input type="checkbox">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="all_menus menus_mobile600">
+                                <div id="menu">
+                                    <ul class="lang_mobile">
+                                        <li class="eng_list"><a href="/"><span class="eng">Dutch</span>/</a><a href="/en/"><span class="nll">English</span></a></li>
+                                    </ul>
+                                    <button class="accordion">HouseKeeping</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">FRED KOOKT</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">WONING VERHUUR</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">Hotels</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="mobile_socila_icons">
+                                    <ul class="soc">
+                                        <li><a href="https://www.facebook.com/hulpje" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                        <li><a href="https://twitter.com/hulpje" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="https://www.instagram.com/clubfred_/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="https://in.pinterest.com/clubfredNL/" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/clubfred" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="menus_mobile320">
+                                <div id="menu1">
+                                    <ul class="lang_mobile">
+                                        <li class="eng_list"><a href="/"><span class="eng">Dutch</span>/</a><a href="/en/"><span class="nll">English</span></a></li>
+                                    </ul>
+                                    <button class="accordion">HouseKeeping</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">FRED KOOKT</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">WONING VERHUUR</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">Hotels</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+
+
+                                    <div class="mobile_socila_icons">
+                                        <ul class="soc">
+                                            <li><a href="https://www.facebook.com/hulpje" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                            <li><a href="https://twitter.com/hulpje" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="https://www.instagram.com/clubfred_/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="https://in.pinterest.com/clubfredNL/" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/clubfred" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                    </nav>
+                </div>
+            </div>
 				<div class="clear" style="clear: both;"></div>	
 			
            <div class="col-md-12 col-sm-12 col-xs-12 whychooseus">
