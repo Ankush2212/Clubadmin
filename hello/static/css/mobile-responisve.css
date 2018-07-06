@@ -1350,6 +1350,7 @@ div#accordion div.panel {
     font-size: 16px;
 }
 div#accordion .panel-body {
+	font-size: 13px;
     padding: 0px 10px 15px 10px !important;
 }
 }
