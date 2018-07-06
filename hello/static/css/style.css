@@ -675,7 +675,7 @@ span.num {
     font-size: 27px;
 
 }
-#re_cont_mobile , #re_cont_mobile_320{display:none;}
+#re_cont_mobile , #re_cont_mobile_320, div#Five_star{display:none;}
 .menus_mobile320{display:none;}
 #mobile_banner2 , #recont_sec_320 , #recont_sec_600 ,#gram_600 , #gram_320, #mobile_footer_320 , #mobile_footer_600{display:none;}
 .recont_sec .Five_text h1{margin-left:100px;}

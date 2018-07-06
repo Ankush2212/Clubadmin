@@ -811,7 +811,7 @@ div#room_services {
     padding: 0px !important;
     padding-top: 75px !important;
 }
-	 #recont_sec_320 , #gram_320 , #mobile_footer_320{display:block;}
+	 #recont_sec_320 , #gram_320 , #mobile_footer_320, div#room_services{display:block;}
 	 
 .recont_secright {
     padding: 0px 0px;
@@ -896,7 +896,7 @@ ul.week.Graham li {
     line-height: 20px;
 }
 #re_cont_mobile {display:none;}
- #re_cont_mobile_320{display:block;}
+ #re_cont_mobile_320,div#Five_star{display:block;}
  .re_cont {
     background: #fbf5f4;
     float: left;
