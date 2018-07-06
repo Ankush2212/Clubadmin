@@ -1342,6 +1342,14 @@ input.input_check.neha {
     left: 12px !important;
 }
 }
+@media only screen and (max-width:380px) {
+div#accordion div.panel {
+    padding: 0 0px;
+}
+.Frequently_asked .panel-default>.panel-heading a {
+    font-size: 16px;
+}
+}
 @media only screen and (max-width:330px) {
 .Five_text h1 {
     font-size: 26px;
