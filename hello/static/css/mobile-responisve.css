@@ -194,6 +194,11 @@ ul#menu a li {
     overflow: hidden;
 	width: 313px;
 }
+div#accordion .panel {
+    width: 100%;
+    display: block;
+    overflow: unset;
+}
 ul.lang_mobile {
     list-style: none;
     padding: 0;
