@@ -48,15 +48,20 @@
   
   
   
-  
-  
-	<script>
-$(document).ready(function(){
-    $(".mobile_icon i").click(function(){
-        $(".mobile_navigation").slideToggle();
-    });
-});
-</script>
+<script>
+        $(document).ready(function(){
+            $("#menuToggle .input_check").click(function(){
+        	$(".input_check").toggleClass( "neha",'slow', "easeOutSine" );
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".mobile_icon .hamber_div").click(function(){
+                $(".mobile_navigation").slideToggle();
+            });
+        });
+    </script>
 <style>
 #login-dp{
     min-width: 250px;
@@ -190,7 +195,7 @@ div#datetimepicker5 input {
 	   <div class="most_outer">
 		 <!-- header Sections -->
 		
-		   <div class="header">
+		   <div class="header" id="desk_head">
 			 <div class="col-md-2 col-sm-2 col-xs-12 hed_left">
 				<div class="logo-out"><a href="{% url 'en'%}"><img src="{% static 'images/logo.png'%}"></a></div>
 			 </div>
@@ -213,41 +218,186 @@ div#datetimepicker5 input {
 					</div>
 				</div>
 				<div class="bottom_right">
-				    <nav class="navbar">
-					<div class="mobile_icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
-					  <div class="container-fluid">
-						<!--div class="navbar-header">
+
+                            <div class="container-fluid">
+                                <!--div class="navbar-header">
 						  <a class="navbar-brand" href="#">WebSiteName</a>
 						</div-->
-						<div class="mobile_navigation">
-						<ul class="nav navbar-nav">
-						  <li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">HOUSEKEEPING
-							<!--i class="fa fa-angle-down" aria-hidden="true"></i--><img id="updown" src="{% static 'images/arror.png'%}"></a>
-							<ul class="dropdown-menu personnal">
-							  <li><p>Your personnal manager has just arrived</p></li>
-							  <li class="more"><a href="#">More Info</a></li>
-							</ul>
-						  </li>	
-                           <li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">ROOM SERVICE
-							<!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --><img id="updown" src="
-{% static 'images/arror.png'%}"></a>
-							<ul class="dropdown-menu personnal_one">
-							  <li><p>Like your favorite </br>hotel, only this</br> time at home !</p></li>
-							  <li class="more"><a href="#">More Info</a></li>
-							  <li class="more"><a href="#">See Our Prices</a></li>
-							</ul>
-						  </li> 
-						  <li><a href="{% url 'en'%}holiday">AIRBNB</a></li>
-						  <li><a href="{% url 'en'%}hotel">HOTELS</a></li>					  
-						</ul>
-						</div>
-					  </div>
-					</nav> 
-				</div>
+                                <div class="mobile_navigation">
+                                    <ul class="nav navbar-nav">
+                                        <li class="dropdown">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">HOUSEKEEPING
+							
+							<!--i class="fa fa-angle-down" aria-hidden="true"></i--><img id="updown"src=" {% static 'images/arror.png'%}"></a>
+                                            <ul class="dropdown-menu personnal" id="js-scroll-nav3">
+                                                <li>
+                                                    <p>A fresh home every week</p>
+                                                </li>
+                                                <li class="more"><a href="#Five_star">More about Housekeeping</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ROOM SERVICE
+							 
+							<!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --><img id="updown"src="{% static 'images/arror.png'%}"></a>
+                                            <ul class="dropdown-menu personnal_one" id="js-scroll-nav4">
+                                                <li>
+                                                    <p>Cooking becomes </br>fun when Fred</br>cooks for you.</p>
+                                                </li>
+                                                <li class="more"><a href="#room_services">More about</a></li>
+                                                <li class="more"><a href="#">Fred cuisine.</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'holiday'%}">AIRBNB</a></li>
+                                        <li><a href="{% url 'hotel'%}">HOTELS</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="clear" style="clear: both;"></div>
+                            <!--end Header Sections--->
+
+
+
+                        </div>
+
 			 </div>
 		   </div>
+		   
+		   
+		   <!--------- desktopp menu--------------------->
+		   
+		   
+		   
+		    <div class="header" id="mob_head">
+                    <nav role="navigation">
+                        <div class="logo-out"><a href="{% url 'en'%}"><img src=" {% static '/images/clb-logo.png'%}"></a>
+                            <div id="menuToggle">
+                                <input type="checkbox" class="input_check" />
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="all_menus menus_mobile600">
+                                <div id="menu">
+                                    <ul class="lang_mobile">
+                                        <li class="eng_list"><a href="{% url 'index'%}"><span class="eng">Dutch</span>/</a><a href="{% url 'en'%}"><span class="nll">English</span></a></li>
+                                    </ul>
+                                    <button class="accordion">HouseKeeping</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">Room Service</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">Airbnb</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">Hotels</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="mobile_socila_icons">
+                                    <ul class="soc">
+                                        <li><a href="https://www.facebook.com/hulpje" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                        <li><a href="https://twitter.com/hulpje" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="https://www.instagram.com/clubfred_/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="https://in.pinterest.com/clubfredNL/" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/clubfred" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="menus_mobile320">
+                                <div id="menu1">
+                                    <ul class="lang_mobile">
+                                        <li class="eng_list"><a href="{% url 'index'%}"><span class="eng">Dutch</span>/</a><a href="{% url 'en'%}"><span class="nll">English</span></a></li>
+                                    </ul>
+                                    <button class="accordion">HouseKeeping</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">Room Service</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">Airbnb</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="seprator"></div>
+                                    <button class="accordion">Hotels</button>
+                                    <div class="panel">
+                                        <ul>
+                                            <li class="more_anchor"><a href="#">Page1</a></li>
+                                            <li class="more_anchor"><a href="#">Testimonials Page</a></li>
+                                            <li class="more_anchor"><a href="#">Join Clubfred</a></li>
+                                        </ul>
+                                    </div>
+
+
+                                    <div class="mobile_socila_icons">
+                                        <ul class="soc">
+                                            <li><a href="https://www.facebook.com/hulpje" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                            <li><a href="https://twitter.com/hulpje" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="https://www.instagram.com/clubfred_/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="https://in.pinterest.com/clubfredNL/" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/clubfred" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                    </nav>
+                </div>
+		     </div>
+
+
+        </div>
+
+        <!----------- mobile menus close ---------->
+		   
 		   <div class="clear" style="clear: both;"></div>	
 		   
 		   <!--banner Sections--->
