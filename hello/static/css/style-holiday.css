@@ -1787,9 +1787,12 @@ ul.included_one li {
 }
 ul.included_one {
     list-style: none;
-    padding-left: 70px;
-    width: 85%;
+    padding-left: 0px;
+    width: 92%;
+    margin: 0 auto;
 }
+
+
 ul.included_one li {
     text-align: left;
     padding: 12px 27px;
