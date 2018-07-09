@@ -1850,6 +1850,10 @@ ul.soc li img {
 }
 
 @media only screen and (max-width: 425px) {
+	.textbox {
+    padding: 20px;
+    float: left;
+}
 	ul.story {
     padding-left: 0px;
     list-style: none;
