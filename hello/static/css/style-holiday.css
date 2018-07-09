@@ -2009,3 +2009,6 @@ ul.included_one li {
 }
 }
 
+#mob_head {
+    display: none;
+}
