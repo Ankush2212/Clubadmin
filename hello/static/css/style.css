@@ -104,7 +104,7 @@ top_button ul li a:hover, .top_button ul li a:link, .top_button ul li a:active {
     width: 100%;
     padding: 0px;
     height: 100%;
-    overflow: auto;
+  /*   overflow: auto; */
     color: #333;
     font-family: 'young';
 }
