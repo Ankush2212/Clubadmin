@@ -2980,3 +2980,6 @@ div#mc_embed_signup_scroll {
 #mob_head{
 	display:none;
 }
+#mc_embed_signup form{
+	padding: 10px 0 10px 0% !important;
+}
