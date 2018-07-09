@@ -2049,3 +2049,10 @@ ul.included_one li {
     margin: 0 8px 15px 21px !important;
     padding: 5px 38px 19px 34px !important;
 }
+#mc_embed_signup form {
+    padding: 10px 0 10px 0% !important;
+}
+#mc_embed_signup .mc-field-group {
+    float: left;
+    width: 50% !important;
+}
