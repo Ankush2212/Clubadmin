@@ -2020,3 +2020,32 @@ ul.included_one li {
 #mobile_banner2, #recont_sec_320, #recont_sec_600, #gram_600, #gram_320, #mobile_footer_320, #mobile_footer_600 {
     display: none;
 }
+#mc_embed_signup .mc-field-group input {
+    display: block;
+    width: 100% !important;
+    background: #f1f1f3;
+    line-height: 36px;
+    border: none !important;
+    color: black;
+    font-family: 'poppinssemibold';
+    font-size: 13px;
+    letter-spacing: 2px;
+    padding: 3px 24px 0px 24px !important;
+    text-indent: 2%;
+}
+#mc_embed_signup .button {
+    clear: both;
+    background-color: #f6735d !important;
+    border: 0 none;
+    border-radius: 4px;
+    transition: all 0.23s ease-in-out 0s;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: normal;
+    height: 39px !important;
+    line-height: 32px;
+    margin: 0 8px 15px 21px !important;
+    padding: 5px 38px 19px 34px !important;
+}
