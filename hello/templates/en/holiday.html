@@ -1039,23 +1039,24 @@ var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator
             }
         </script>
 <script>
-$(document).ready(function () {
-    $(".dropdown").click(function () {
-     
-	  var path=$(this).find('#updown').attr('src');
-	if(path == "/static/images/arror.png"){
-	var chec=$(this).find('#updown').attr('src','/static/images/up.png');
-	}else
-	{
-	var chec=$(this).find('#updown').attr('src','/static/images/arror.png');
-	}
+    $(document).ready(function () {
+        $(".dropdown").click(function () {
+         
+    	  var path=$(this).find('#updown').attr('src');
+    	if(path == "/static/images/arror.png"){
+    	var chec=$(this).find('#updown').attr('src','/static/images/up.png');
+    	}else
+    	{
+    	var chec=$(this).find('#updown').attr('src','/static/images/arror.png');
+    	}
+        });
     });
-});
-    $("#testimh").click(function () {
-	alert("Thank you, we'll handle your email with care");
-	
-	});
-</script>  
+    
+        $("#testimh").click(function () {
+    	alert("Thank you, we'll handle your email with care");
+    	
+    	});
+</script>
 <script>
 $(document).ready(function(){
     $(".iddd").click(function(){
