@@ -2059,3 +2059,6 @@ ul.included_one li {
 #mc_embed_signup .clear {
     clear: none !important;
 }
+.menus_mobile320 {
+    display: none;
+}
