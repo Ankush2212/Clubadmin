@@ -2056,3 +2056,6 @@ ul.included_one li {
     float: left;
     width: 50% !important;
 }
+#mc_embed_signup .clear {
+    clear: none !important;
+}
