@@ -47,13 +47,32 @@
 	
 	
 	
-	<script>
-$(document).ready(function(){
-    $(".mobile_icon i").click(function(){
-        $(".mobile_navigation").slideToggle();
-    });
-});
-</script>
+		<script>
+	$(document).ready(function(){
+	  // Add smooth scrolling to all links
+	  $("a").on('click', function(event) {
+
+		// Make sure this.hash has a value before overriding default behavior
+		if (this.hash !== "") {
+		  // Prevent default anchor click behavior
+		  event.preventDefault();
+
+		  // Store hash
+		  var hash = this.hash;
+
+		  // Using jQuery's animate() method to add smooth page scroll
+		  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		  $('html, body').animate({
+			scrollTop: $(hash).offset().top
+		  }, 800, function(){
+	   
+			// Add hash (#) to URL when done scrolling (default click behavior)
+			window.location.hash = hash;
+		  });
+		} // End if
+	  });
+	});
+	</script>
 	<script>
         $(document).ready(function(){
             $("#menuToggle").click(function(){
@@ -67,58 +86,11 @@ $(document).ready(function(){
     </script>
 	<script>
         $(document).ready(function(){
-            $("#menuToggle .input_check").click(function(){
-        	$(".input_check").toggleClass( "neha",'slow', "easeOutSine" );
+            $(".mobile_icon .hamber_div").click(function(){
+                $(".mobile_navigation").slideToggle();
             });
         });
     </script>
-	 <script>
-            var acc = document.getElementsByClassName("accordion");
-            var i;
-            
-            for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    if (panel.style.display === "block") {
-                        panel.style.display = "none";
-                    } else {
-                        panel.style.display = "block";
-                    }
-                });
-            }
-        </script>
-		
-		<script>
-$(document).ready(function() {
-
-  $(".toggle-accordion").on("click", function() {
-    var accordionId = $(this).attr("accordion-id"),
-      numPanelOpen = $(accordionId + ' .collapse.in').length;
-    
-    $(this).toggleClass("active");
-
-    if (numPanelOpen == 0) {
-      openAllPanels(accordionId);
-    } else {
-      closeAllPanels(accordionId);
-    }
-  })
-
-  openAllPanels = function(aId) {
-    console.log("setAllPanelOpen");
-    $(aId + ' .panel-collapse:not(".in")').collapse('show');
-  }
-  closeAllPanels = function(aId) {
-    console.log("setAllPanelclose");
-    $(aId + ' .panel-collapse.in').collapse('hide');
-  }
-     
-});
-
-
-
-</script>
 		
 <style>
 #login-dp{
@@ -1035,7 +1007,23 @@ $(document).ready(function () {
 	alert("Thank you, we'll handle your email with care");
 	
 	});
-</script>  
+</script> 
+ <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        </script> 
 <script>
 $(document).ready(function(){
     $(".iddd").click(function(){
