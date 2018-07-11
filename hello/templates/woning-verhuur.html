@@ -568,16 +568,16 @@ zijn uw woning en gasten altijd in goede handen.</h5>
 			
 		
 		
-<div class="most_outer">
-            <div class="header" id="desktop_footer">
+    <div class="most_outer">
+                    <div class="header" id="desktop_footer">
 		   <div class="col-md-12 col-sm-12 col-xs-12 bootom_footer" id="bootom_footer">
 		      <div class="col-md-6 col-sm-6 col-xs-12 footer_left">
 			    <div class="f_left">
 				   <h1>Clubfred B.V.</h1>
 				     <ul class="hot">
 				       <li> Hotelservice aan huis</li>
-					   <li> Herengracht 91</li>
-					   <li>1015 BD  Amsterdam</li>
+					   <li> Utrechtsedwarstraat 36 & 38</li>
+					   <li>1017 WG Amsterdam</li>
 				     </ul>
 
 				</div>
@@ -594,12 +594,12 @@ zijn uw woning en gasten altijd in goede handen.</h5>
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
 <div id="mc_embed_signup">
-<form action="https://clubfred.us17.list-manage.com/subscribe/post?u=994abdd638edc3cf3d31a40c8&amp;id=887f8695c8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
+<form action="https://clubfred.us17.list-manage.com/subscribe/post?u=994abdd638edc3cf3d31a40c8&amp;id=887f8695c8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
 	
 <div class="mc-field-group">
 
-	<input type="email" value="" name="EMAIL" placeholder="EMAIL@DOMAIN.COM" class="required email" id="mce-EMAIL" aria-required="true">
+	<input type="email" value="" name="EMAIL" placeholder="EMAIL@DOMAIN.COM" class="required email" id="mce-EMAIL">
 </div>
 	<div id="mce-responses" class="clear">
 		<div class="response" id="mce-error-response" style="display:none"></div>
@@ -610,7 +610,7 @@ zijn uw woning en gasten altijd in goede handen.</h5>
     </div>
 </form>
 </div>
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);
 setTimeout(function() {
 					$("#mce-success-response").hide()
 				}, 3000);
@@ -628,10 +628,10 @@ setTimeout(function() {
 				     <ul class="hot">
 					   <li> <span class="call"> Bel ons  </span> 24/7 020 341 38 14</li>
 					   <li>hello@clubfred.nl</li>
-					    <li class="get"><a href="/onzeprijzen">Get started with Fred.</a></li>
+					    <li class="get"><a href="{% url 'onzeprijzen' %}">Haal Fred vandaag nog in huis.</a></li>
 					  
 				     </ul>
-					
+					 
 
 				</div>
 			  </div>
@@ -641,15 +641,15 @@ setTimeout(function() {
 						 <ul class="soc">
 						
 							   <li><a href="https://www.facebook.com/CIubfred" target="_blank">
-							   <img src="/static/images/facebook.png"></a></li>
+							   <img src="{% static 'images/facebook.png'%}"></a></li>
 							   <li><a href="https://twitter.com/CIubfred" target="_blank">
-							   <img src="/static/images/twitter.png"></a></li>
-							   <li><a href="https://www.instagram.com/clubfred_/" target="_blank">
-							   <img src="/static/images/instagram.png"></a></li>
-							   <li><a href="https://in.pinterest.com/clubfredNL/" target="_blank">
-							   <img src="/static/images/pintrest.png"></a></li>
-							   <li><a href="https://www.linkedin.com/company/CIubfred/" target="_blank">
-							   <img src="/static/images/linkdin.png"></a></li>							   
+							   <img src="{% static 'images/twitter.png'%}"></a></li>
+							   <li><a href ="https://www.instagram.com/clubfred_/" target="_blank">
+							   <img src="{% static 'images/instagram.png'%}"></a></li>
+							   <li><a href ="https://in.pinterest.com/clubfredNL/" target="_blank">
+							   <img src="{% static 'images/pintrest.png'%}"></a></li>
+							   <li><a href ="https://www.linkedin.com/company/CIubfred/" target="_blank">
+							   <img src="{% static 'images/linkdin.png'%}"></a></li>							   
 						 </ul>					 						 
 						 
 						 
@@ -669,7 +669,7 @@ setTimeout(function() {
 				   </div>
 				   <div class="footer_right pull-right">
 					  <div class="how">
-								   <ul class="story">
+								   <ul class="story1">
 									   <!--li> <a href="#cheaack-in">Ons verhaal |</a></li>
 									
 									  <li><a href="#">Onze prijzen |</a></li>
@@ -678,10 +678,10 @@ setTimeout(function() {
 									   <li><a href="#">Testimonials |</a></li>
 									   <li><a href="#">Vacatures |</a></li>
 									   <li><a href="#">Fred Academy</a></li-->	
-									   <li><a href="/onzeprijzen">Onze prijzen |</a></li>
-									   <li><a href="/woningverhuur">Woning verhuur |</a></li>									  
+									   <li><a href="{% url 'onzeprijzen' %}">Onze prijzen |</a></li>
+									   <li><a href="{% url 'woningverhuur'%}">Woning verhuur |</a></li>									  
 									   <!--li><a href="http://www.clubfred.nl/en/hotel.html"> Hotels |</a></li-->
-									   <li><a href="/en/hotel"> Hotels |</a></li>
+									   <li><a href="{% url 'en'%}hotel"> Hotels |</a></li>
 									   <li><a href="https://clubfred.recruitee.com/" target="_blank">Vacatures </a></li>									   
 								 </ul>
 							 </div>
@@ -717,7 +717,7 @@ setTimeout(function() {
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
 <div id="mc_embed_signup">
-<form action="https://clubfred.us17.list-manage.com/subscribe/post?u=994abdd638edc3cf3d31a40c8&amp;id=887f8695c8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+<form action="https://clubfred.us17.list-manage.com/subscribe/post?u=994abdd638edc3cf3d31a40c8&amp;id=887f8695c8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
 	
 <div class="mc-field-group">
@@ -733,7 +733,7 @@ setTimeout(function() {
     </div>
 </form>
 </div>
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);
 setTimeout(function() {
 					$("#mce-success-response").hide()
 				}, 3000);
@@ -750,20 +750,20 @@ setTimeout(function() {
 			  
 			   <div class="col-md-12 col-sm-12 col-xs-12 bootom_footer12">
 				   <div class="footer_left pull-left">
-				   <h5 class="fred">© 2018 Clubfred B.V.</h5>
+				   <h5 class="fred"> © 2018 Clubfred B.V.</h5>
 				   </div>
 				   <div class="footer_right pull-right">
 					  <div class="how">
-								   <ul class="story">
+								   <ul class="story1">
 								       <li><a href="#">Our Story |</a></li>
 									   <li><a href="#">How it works |</a></li>
-									   <li><a href="/en/pricing">Onze prijzen |</a></li>
-									   <li><a href="/en/holiday">Apartments |</a></li>
+									   <li><a href="{% url 'en'%}pricing">Onze prijzen |</a></li>
+									   <li><a href="{% url 'en'%}holiday">Apartments |</a></li>
 									   <li><a href="#">Testimonials |</a></li>
 									   <li><a href="#">Fred Academy </a></li>
-									   <!--li><a href="/onzeprijzen">Onze prijzen |</a></li>
-									   <li><a href="/woningverhuur">Woning verhuur |</a></li>									  
-									   <li><a href="/en/hotel"> Hotels |</a></li>
+									   <!--li><a href="{% url 'onzeprijzen' %}">Onze prijzen |</a></li>
+									   <li><a href="{% url 'woningverhuur'%}">Woning verhuur |</a></li>									  
+									   <li><a href="{% url 'en'%}hotel"> Hotels |</a></li>
 									   <li><a href="https://clubfred.recruitee.com/" target="_blank">Vacatures </a></li-->									   
 								 </ul>
 							 </div>
@@ -802,7 +802,7 @@ setTimeout(function() {
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
 <div id="mc_embed_signup">
-<form action="https://clubfred.us17.list-manage.com/subscribe/post?u=994abdd638edc3cf3d31a40c8&amp;id=887f8695c8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+<form action="https://clubfred.us17.list-manage.com/subscribe/post?u=994abdd638edc3cf3d31a40c8&amp;id=887f8695c8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
 	
 <div class="mc-field-group">
@@ -818,7 +818,7 @@ setTimeout(function() {
     </div>
 </form>
 </div>
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);
 setTimeout(function() {
 					$("#mce-success-response").hide()
 				}, 3000);
@@ -835,20 +835,20 @@ setTimeout(function() {
 			  
 			   <div class="col-md-12 col-sm-12 col-xs-12 bootom_footer12">
 				   <div class="footer_left pull-left">
-				   <h5 class="fred">© 2018 Clubfred B.V.</h5>
+				   <h5 class="fred">© 2018 Clubfred B.V. </h5>
 				   </div>
 				   <div class="footer_right pull-right">
 					  <div class="how">
-								   <ul class="story">
+								   <ul class="story1">
 								       <li><a href="#">Our Story |</a></li>
 									   <li><a href="#">How it works |</a></li>
-									   <li><a href="/en/pricing">Onze prijzen |</a></li>
-									   <li><a href="/en/holiday">Apartments |</a></li>
+									   <li><a href="{% url 'en'%}pricing">Onze prijzen |</a></li>
+									   <li><a href="{% url 'en'%}holiday">Apartments |</a></li>
 									   <li><a href="#">Testimonials |</a></li>
 									   <li><a href="#">Fred Academy </a></li>
-									   <!--li><a href="/onzeprijzen">Onze prijzen |</a></li>
-									   <li><a href="/woningverhuur">Woning verhuur |</a></li>									  
-									   <li><a href="/en/hotel"> Hotels |</a></li>
+									   <!--li><a href="{% url 'onzeprijzen' %}">Onze prijzen |</a></li>
+									   <li><a href="{% url 'woningverhuur'%}">Woning verhuur |</a></li>									  
+									   <li><a href="{% url 'en'%}hotel"> Hotels |</a></li>
 									   <li><a href="https://clubfred.recruitee.com/" target="_blank">Vacatures </a></li-->									   
 								 </ul>
 							 </div>
