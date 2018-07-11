@@ -1022,7 +1022,7 @@
 
                     <div class="col-md-12 col-sm-12 col-xs-12 bootom_footer12">
                         <div class="footer_left pull-left">
-                            <h5 class="fred">&copy; 2018 Clubfred.</h5>
+                            <h5 class="fred">© 2018 Clubfred B.V.</h5>
                         </div>
                         <div class="footer_right pull-right">
                             <div class="how">
@@ -1115,7 +1115,7 @@
                    <div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="footer_seprator"></div>
                         <div class="footer_left pull-left">
-                            <h5 class="fred">&copy; 2018 Clubfred.</h5>
+                            <h5 class="fred">© 2018 Clubfred B.V.</h5>
                         </div>
                         <div class="footer_right pull-right">
                             <div class="how">
@@ -1206,7 +1206,22 @@
                         </div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="footer_seprator"></div>
-                        <div class="footer_left pull-left"> 
+                        <div class="footer_left pull-left"> <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        </script>
                             <h5 class="fred">© 2018 Clubfred B.V.</h5>
                         </div>
                         <div class="footer_right pull-right">
@@ -1236,22 +1251,7 @@
             </div>
         </div>
         <!--log out scripttttttttttttttttttt--------->
-        <script>
-            var acc = document.getElementsByClassName("accordion");
-            var i;
-            
-            for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    if (panel.style.display === "block") {
-                        panel.style.display = "none";
-                    } else {
-                        panel.style.display = "block";
-                    }
-                });
-            }
-        </script>
+        
         <script>
             var APP_ID = "bb2tjtrb";
               window.intercomSettings = {

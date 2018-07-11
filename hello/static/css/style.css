@@ -104,7 +104,7 @@ top_button ul li a:hover, .top_button ul li a:link, .top_button ul li a:active {
     width: 100%;
     padding: 0px;
     height: 100%;
-    overflow: auto;
+  /*   overflow: auto; */
     color: #333;
     font-family: 'young';
 }
@@ -2979,4 +2979,7 @@ div#mc_embed_signup_scroll {
 }
 #mob_head{
 	display:none;
+}
+#mc_embed_signup form{
+	padding: 10px 0 10px 0% !important;
 }
