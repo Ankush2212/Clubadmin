@@ -72,6 +72,53 @@ $(document).ready(function(){
     });
 });
 </script>
+ <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        </script>
+		
+		<script>
+$(document).ready(function() {
+
+  $(".toggle-accordion").on("click", function() {
+    var accordionId = $(this).attr("accordion-id"),
+      numPanelOpen = $(accordionId + ' .collapse.in').length;
+    
+    $(this).toggleClass("active");
+
+    if (numPanelOpen == 0) {
+      openAllPanels(accordionId);
+    } else {
+      closeAllPanels(accordionId);
+    }
+  })
+
+  openAllPanels = function(aId) {
+    console.log("setAllPanelOpen");
+    $(aId + ' .panel-collapse:not(".in")').collapse('show');
+  }
+  closeAllPanels = function(aId) {
+    console.log("setAllPanelclose");
+    $(aId + ' .panel-collapse.in').collapse('hide');
+  }
+     
+});
+
+
+
+</script>
 <style>
 #login-dp{
     min-width: 250px;
@@ -1021,53 +1068,7 @@ var APP_ID = "bb2tjtrb";
 var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/bb2tjtrb';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>		
   </body>
 </html>  
- <script>
-            var acc = document.getElementsByClassName("accordion");
-            var i;
-            
-            for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    if (panel.style.display === "block") {
-                        panel.style.display = "none";
-                    } else {
-                        panel.style.display = "block";
-                    }
-                });
-            }
-        </script>
-		
-		<script>
-$(document).ready(function() {
 
-  $(".toggle-accordion").on("click", function() {
-    var accordionId = $(this).attr("accordion-id"),
-      numPanelOpen = $(accordionId + ' .collapse.in').length;
-    
-    $(this).toggleClass("active");
-
-    if (numPanelOpen == 0) {
-      openAllPanels(accordionId);
-    } else {
-      closeAllPanels(accordionId);
-    }
-  })
-
-  openAllPanels = function(aId) {
-    console.log("setAllPanelOpen");
-    $(aId + ' .panel-collapse:not(".in")').collapse('show');
-  }
-  closeAllPanels = function(aId) {
-    console.log("setAllPanelclose");
-    $(aId + ' .panel-collapse.in').collapse('hide');
-  }
-     
-});
-
-
-
-</script>
 <script>
     $(document).ready(function () {
         $(".dropdown").click(function () {
